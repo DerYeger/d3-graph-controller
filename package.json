@@ -17,7 +17,7 @@
     "controller"
   ],
   "scripts": {
-    "postinstall": "yarn build",
+    "prepare": "yarn build",
     "prebuild": "rimraf ./dist",
     "build": "tsc",
     "postbuild": "yalc push",

@@ -83,11 +83,11 @@ function defaultGraphConfig<
     forces: {
       centering: {
         enabled: true,
-        strength: 5,
+        strength: 0.1,
       },
       charge: {
         enabled: true,
-        strength: -10,
+        strength: -1,
       },
       collision: {
         enabled: true,

@@ -24,7 +24,18 @@ export function defineNode<T extends NodeTypeToken = NodeTypeToken>(
   return data
 }
 
-export const nodeDefaults = {
+export function defineNodeWithDefaults<T extends NodeTypeToken = NodeTypeToken>(
+  data: Partial<GraphNode<T>> & Pick<GraphNode, 'id' | 'type'>
+): GraphNode<T> {
+  return {
+    ...nodeDefaults,
+    ...data,
+  }
+}
+
+const nodeDefaults: Omit<GraphNode, 'id' | 'type'> = {
+  color: 'lightgray',
+  label: '',
   fontSize: '1rem',
   isFocused: false,
   labelColor: 'black',

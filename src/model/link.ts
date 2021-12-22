@@ -16,6 +16,21 @@ export interface GraphLink<
   showLabel: boolean
 }
 
+export function defineLink<
+  T extends NodeTypeToken = NodeTypeToken,
+  SourceNode extends GraphNode<T> = GraphNode<T>,
+  TargetNode extends GraphNode<T> = SourceNode,
+  Link extends GraphLink<T, SourceNode, TargetNode> = GraphLink<
+    T,
+    SourceNode,
+    TargetNode
+  >
+>(data: Link): Link {
+  return {
+    ...data,
+  }
+}
+
 export function getLinkId<
   T extends NodeTypeToken,
   Node extends GraphNode<T>,

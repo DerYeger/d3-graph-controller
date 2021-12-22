@@ -676,7 +676,7 @@ d3-geo@3:
   dependencies:
     d3-array "2.5.0 - 3"
 
-"d3-graph-controller@file:.yalc/d3-graph-controller":
+"d3-graph-controller@file:.":
   version "0.0.0"
   dependencies:
     d3 "7.2.1"

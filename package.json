@@ -17,6 +17,7 @@
     "controller"
   ],
   "scripts": {
+    "postinstall": "yarn build",
     "prebuild": "rimraf ./dist",
     "build": "tsc",
     "postbuild": "yalc push",
@@ -49,7 +50,7 @@
     "@typescript-eslint/eslint-plugin": "5.8.0",
     "@typescript-eslint/parser": "5.8.0",
     "@vitejs/plugin-vue": "2.0.1",
-    "d3-graph-controller": "file:.yalc/d3-graph-controller",
+    "d3-graph-controller": "file:.",
     "eslint": "8.5.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",

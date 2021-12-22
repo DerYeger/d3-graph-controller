@@ -1,12 +1,8 @@
 import { Matrix } from 'ml-matrix'
-
-import {
-  GraphConfig,
-  GraphLink,
-  GraphNode,
-  markerConfig,
-  NodeTypeToken,
-} from 'src/model'
+import { NodeTypeToken } from '@src/model/graph'
+import { GraphNode } from '@src/model/node'
+import { GraphLink } from '@src/model/link'
+import { GraphConfig, markerConfig } from '@src/model/config'
 
 // ##################################################
 // COMMON

@@ -1,38 +1,32 @@
 /* eslint-disable no-underscore-dangle */
 import * as d3 from 'd3'
 import { D3ZoomEvent } from 'd3'
-
+import { Graph, NodeTypeToken } from '@src/model/graph'
+import { GraphNode } from '@src/model/node'
+import { GraphLink } from '@src/model/link'
+import { GraphConfig, LinkFilter } from '@src/model/config'
+import { defineSimulation, Simulation } from '@src/lib/simulation'
+import { Canvas, defineCanvas, updateCanvasTransform } from '@src/lib/canvas'
+import { filterGraph } from '@src/lib/filter'
 import {
   createLinks,
-  createMarkers,
-  createNodes,
-  defineSimulation,
-  defineZoom,
-  defineDrag,
   defineLinkSelection,
-  defineMarkerSelection,
-  defineNodeSelection,
-  updateLinks,
-  updateNodes,
-  filterGraph,
-  MarkerSelection,
-  Zoom,
-  Drag,
-  Canvas,
-  defineCanvas,
-  updateCanvasTransform,
-  Simulation,
   LinkSelection,
-  NodeSelection,
-} from 'src/lib'
+  updateLinks,
+} from '@src/lib/link'
 import {
-  GraphConfig,
-  NodeTypeToken,
-  GraphNode,
-  GraphLink,
-  Graph,
-  LinkFilter,
-} from 'src/model'
+  createNodes,
+  defineNodeSelection,
+  NodeSelection,
+  updateNodes,
+} from '@src/lib/node'
+import {
+  createMarkers,
+  defineMarkerSelection,
+  MarkerSelection,
+} from '@src/lib/marker'
+import { defineZoom, Zoom } from '@src/lib/zoom'
+import { defineDrag, Drag } from '@src/lib/drag'
 
 export class GraphController<
   T extends NodeTypeToken = NodeTypeToken,
@@ -113,7 +107,7 @@ export class GraphController<
     this.restart(0.1)
   }
 
-  public set linkFilter(value: (link: GraphLink<T, Node>) => boolean) {
+  public set linkFilter(value: LinkFilter<T, Node, Link>) {
     this._linkFilter = value
     this.filterGraph(this.focusedNode)
     this.restart(0.1)

@@ -6,8 +6,24 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { demoGraph } from './model/graph-model'
-import { GraphController, defineGraphConfig } from '../src'
+import { GraphController } from '@src/controller'
+import { defineGraphConfig } from '@src/model/config'
+import { Graph } from '@src/model/graph'
+import { defineNode, nodeDefaults } from '@src/model/node'
+import { GraphLink } from '@src/model/link'
+
+const demoGraph: Graph = {
+  nodes: [
+    defineNode({
+      ...nodeDefaults,
+      type: 'node',
+      id: '0',
+      color: 'green',
+      label: 'Test',
+    }),
+  ],
+  links: [] as GraphLink[],
+}
 
 export default defineComponent({
   name: 'GraphComponent',

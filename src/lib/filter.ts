@@ -1,10 +1,7 @@
-import {
-  Graph,
-  GraphLink,
-  GraphNode,
-  LinkFilter,
-  NodeTypeToken,
-} from 'src/model'
+import { Graph, NodeTypeToken } from '@src/model/graph'
+import { GraphLink } from '@src/model/link'
+import { GraphNode } from '@src/model/node'
+import { LinkFilter } from '@src/model/config'
 
 export interface GraphFilterParams<
   T extends NodeTypeToken,

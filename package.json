@@ -18,10 +18,9 @@
   ],
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "tsc --emitDeclarationOnly && vite build",
-    "postbuild": "yalc push",
-    "demo:serve": "yarn build && vite --config demo/vite.config.ts",
-    "demo:build": "yarn build && vite --config demo/vite.config.ts build",
+    "build": "vite build",
+    "demo:serve": "vite --config demo/vite.config.ts",
+    "demo:build": "vite --config demo/vite.config.ts build",
     "demo:preview": "yarn demo:build && vite --config demo/vite.config.ts preview",
     "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:eslint": "eslint \"./**/*.{js,ts,vue}\"",
@@ -33,23 +32,25 @@
     "dist",
     "default.css"
   ],
-  "main": "./dist/index.js",
+  "main": "./dist/d3-graph-controller.umd.js",
+  "module": "./dist/d3-graph-controller.es.js",
   "exports": {
     ".": {
-      "import": "./dist/index.js"
+      "import": "./dist/d3-graph-controller.es.js",
+      "require": "./dist/d3-graph-controller.umd.js"
     },
     "./default.css": {
-      "import": "./default.css"
+      "import": "./default.css",
+      "require": "./default.css"
     }
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/types/src/main.d.ts",
   "devDependencies": {
     "@types/d3": "7.1.0",
     "@types/node": "16.11.15",
     "@typescript-eslint/eslint-plugin": "5.8.0",
     "@typescript-eslint/parser": "5.8.0",
     "@vitejs/plugin-vue": "2.0.1",
-    "d3-graph-controller": "file:.yalc/d3-graph-controller",
     "eslint": "8.5.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
@@ -58,6 +59,7 @@
     "rimraf": "3.0.2",
     "typescript": "4.5.4",
     "vite": "2.7.6",
+    "vite-plugin-dts": "0.9.6",
     "vue": "3.2.26",
     "vue-eslint-parser": "8.0.1"
   },

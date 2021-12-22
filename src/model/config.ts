@@ -1,6 +1,6 @@
-import { NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import { NodeTypeToken } from '@src/model/graph'
+import { GraphLink } from '@src/model/link'
+import { GraphNode } from '@src/model/node'
 
 const markerBoxSize = 4
 

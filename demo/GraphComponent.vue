@@ -9,20 +9,33 @@ import { defineComponent } from 'vue'
 import { GraphController } from '@src/controller'
 import { defineGraphConfig } from '@src/model/config'
 import { Graph } from '@src/model/graph'
-import { defineNode, nodeDefaults } from '@src/model/node'
-import { GraphLink } from '@src/model/link'
+import { defineNodeWithDefaults } from '@src/model/node'
+import { defineLink } from '@src/model/link'
 
-const demoGraph: Graph = {
-  nodes: [
-    defineNode({
-      ...nodeDefaults,
-      type: 'node',
-      id: '0',
-      color: 'green',
-      label: 'Test',
-    }),
-  ],
-  links: [] as GraphLink[],
+const a = defineNodeWithDefaults({
+  type: 'node',
+  id: 'a',
+  label: 'A',
+})
+
+const b = defineNodeWithDefaults({
+  type: 'node',
+  id: 'b',
+  label: 'B',
+})
+
+const link = defineLink({
+  source: a,
+  target: b,
+  color: 'gray',
+  label: '',
+  labelColor: 'black',
+  showLabel: false,
+})
+
+const demoGraph: Graph<string> = {
+  nodes: [a, b],
+  links: [link],
 }
 
 export default defineComponent({
@@ -34,8 +47,17 @@ export default defineComponent({
       controller: undefined as GraphController | undefined,
     }
   },
+  computed: {
+    resizeObserver(): ResizeObserver {
+      return new ResizeObserver(() => this.controller?.resize())
+    },
+  },
   mounted() {
     this.resetGraphController()
+    this.resizeObserver.observe(this.$refs.graph)
+  },
+  beforeDestroy() {
+    this.resizeObserver.unobserve(this.$refs.graph)
   },
   methods: {
     resetGraphController(): void {

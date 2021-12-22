@@ -1,0 +1,6 @@
+.cache
+.nyc_output
+coverage
+dist
+documentation
+node_modules

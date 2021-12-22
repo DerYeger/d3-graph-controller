@@ -24,7 +24,7 @@ import {
   Simulation,
   LinkSelection,
   NodeSelection,
-} from './lib'
+} from 'src/lib'
 import {
   GraphConfig,
   NodeTypeToken,
@@ -32,7 +32,7 @@ import {
   GraphLink,
   Graph,
   LinkFilter,
-} from './model'
+} from 'src/model'
 
 export class GraphController<
   T extends NodeTypeToken = NodeTypeToken,

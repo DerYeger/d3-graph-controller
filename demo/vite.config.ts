@@ -5,6 +5,14 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   root: 'demo',
   plugins: [vue()],
+  resolve: {
+    alias: [
+      {
+        find: 'src',
+        replacement: '../src',
+      },
+    ],
+  },
   server: {
     fs: {
       // Allow serving files from one level up to the project root

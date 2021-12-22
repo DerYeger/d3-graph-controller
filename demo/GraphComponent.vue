@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { demoGraph } from './model/graph-model'
-import { GraphController, defineGraphConfig } from 'd3-graph-controller'
+import { GraphController, defineGraphConfig } from '../src'
 
 export default defineComponent({
   name: 'GraphComponent',

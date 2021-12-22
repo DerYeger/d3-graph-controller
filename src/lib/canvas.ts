@@ -1,7 +1,7 @@
 import * as d3 from 'd3'
 
-import { Zoom } from './zoom'
-import { terminateEvent } from './utils'
+import { Zoom } from 'src/lib/zoom'
+import { terminateEvent } from 'src/lib/utils'
 
 export type GraphHost = d3.Selection<HTMLDivElement, undefined, null, undefined>
 

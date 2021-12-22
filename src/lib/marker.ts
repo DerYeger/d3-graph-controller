@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
 
-import { Canvas } from './canvas'
+import { Canvas } from 'src/lib/canvas'
 import {
   getMarkerId,
   Graph,
@@ -8,7 +8,7 @@ import {
   GraphNode,
   markerConfig,
   NodeTypeToken,
-} from '../model'
+} from 'src/model'
 
 export type MarkerSelection = d3.Selection<
   SVGMarkerElement,

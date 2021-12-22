@@ -1,4 +1,4 @@
-import { defineNode, nodeDefaults, Graph } from 'd3-graph-controller'
+import { defineNode, nodeDefaults, Graph } from '../../src'
 
 export const demoGraph: Graph = {
   nodes: [

@@ -6,7 +6,7 @@ import {
   GraphNode,
   markerConfig,
   NodeTypeToken,
-} from '../model'
+} from 'src/model'
 
 // ##################################################
 // COMMON

@@ -1,7 +1,7 @@
 import * as d3 from 'd3'
 import { D3DragEvent } from 'd3'
 
-import { GraphNode, NodeTypeToken } from '../model'
+import { GraphNode, NodeTypeToken } from 'src/model'
 
 export type Drag<
   T extends NodeTypeToken,

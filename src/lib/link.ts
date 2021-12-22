@@ -1,7 +1,7 @@
 import * as d3 from 'd3'
 
-import { Canvas } from './canvas'
-import Paths from './paths'
+import { Canvas } from 'src/lib/canvas'
+import Paths from 'src/lib/paths'
 import {
   getLinkId,
   getMarkerUrl,
@@ -10,7 +10,7 @@ import {
   GraphLink,
   GraphNode,
   NodeTypeToken,
-} from '../model'
+} from 'src/model'
 
 export type LinkSelection<
   T extends NodeTypeToken,

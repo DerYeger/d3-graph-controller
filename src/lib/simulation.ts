@@ -1,12 +1,5 @@
 import * as d3 from 'd3'
-
-import {
-  Graph,
-  GraphConfig,
-  GraphLink,
-  GraphNode,
-  NodeTypeToken,
-} from '../model'
+import { Graph, GraphConfig, GraphLink, GraphNode, NodeTypeToken } from 'src/model'
 
 export type Simulation<
   T extends NodeTypeToken,

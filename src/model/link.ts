@@ -1,7 +1,7 @@
 import { SimulationLinkDatum } from 'd3'
 
-import { NodeTypeToken } from './graph'
-import { GraphNode } from './node'
+import { NodeTypeToken } from 'src/model/graph'
+import { GraphNode } from 'src/model/node'
 
 export interface GraphLink<
   T extends NodeTypeToken = NodeTypeToken,

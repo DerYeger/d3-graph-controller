@@ -1,3 +1,3 @@
-export * from './controller'
-export * from './lib'
-export * from './model'
+export * from 'src/controller'
+export * from 'src/lib'
+export * from 'src/model'

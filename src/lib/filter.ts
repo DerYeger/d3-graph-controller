@@ -4,7 +4,7 @@ import {
   GraphNode,
   LinkFilter,
   NodeTypeToken,
-} from '../model'
+} from 'src/model'
 
 export interface GraphFilterParams<
   T extends NodeTypeToken,

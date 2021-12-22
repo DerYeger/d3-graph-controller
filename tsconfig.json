@@ -15,7 +15,10 @@
     "esModuleInterop": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "paths": {
+      "src/*": ["src/*"]
+    }
   },
   "include": ["./src"]
 }

@@ -1,15 +1,15 @@
 import * as d3 from 'd3'
 
-import { Canvas } from './canvas'
-import { Drag } from './drag'
-import { terminateEvent } from './utils'
+import { Canvas } from 'src/lib/canvas'
+import { Drag } from 'src/lib/drag'
+import { terminateEvent } from 'src/lib/utils'
 import {
   Graph,
   GraphConfig,
   GraphLink,
   GraphNode,
   NodeTypeToken,
-} from '../model'
+} from 'src/model'
 
 export type NodeSelection<
   T extends NodeTypeToken,

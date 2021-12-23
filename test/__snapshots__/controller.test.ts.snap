@@ -22,6 +22,39 @@ exports[`GraphController > renders links 1`] = `
             style="fill: black;"
           />
         </g>
+        <g>
+          <path
+            class="link"
+            style="marker-end: url(#link-arrow-gray); stroke: gray;"
+          />
+          <text
+            class="link__label"
+            opacity="0"
+            style="fill: black;"
+          />
+        </g>
+        <g>
+          <path
+            class="link"
+            style="marker-end: url(#link-arrow-gray); stroke: gray;"
+          />
+          <text
+            class="link__label"
+            opacity="0"
+            style="fill: black;"
+          />
+        </g>
+        <g>
+          <path
+            class="link"
+            style="marker-end: url(#link-arrow-gray); stroke: gray;"
+          />
+          <text
+            class="link__label"
+            opacity="0"
+            style="fill: black;"
+          />
+        </g>
       </g>
       <g
         class="nodes"
@@ -56,6 +89,22 @@ exports[`GraphController > renders links 1`] = `
             style="fill: black; font-size: 1rem; stroke: none;"
           >
             B
+          </text>
+        </g>
+        <g>
+          <circle
+            aria-label="C"
+            class="node"
+            r="16"
+            style="fill: lightgray;"
+          />
+          <text
+            class="node__label"
+            dy="0.33em"
+            opacity="1"
+            style="fill: black; font-size: 1rem; stroke: none;"
+          >
+            C
           </text>
         </g>
       </g>
@@ -102,6 +151,39 @@ exports[`GraphController > renders nodes 1`] = `
             style="fill: black;"
           />
         </g>
+        <g>
+          <path
+            class="link"
+            style="marker-end: url(#link-arrow-gray); stroke: gray;"
+          />
+          <text
+            class="link__label"
+            opacity="0"
+            style="fill: black;"
+          />
+        </g>
+        <g>
+          <path
+            class="link"
+            style="marker-end: url(#link-arrow-gray); stroke: gray;"
+          />
+          <text
+            class="link__label"
+            opacity="0"
+            style="fill: black;"
+          />
+        </g>
+        <g>
+          <path
+            class="link"
+            style="marker-end: url(#link-arrow-gray); stroke: gray;"
+          />
+          <text
+            class="link__label"
+            opacity="0"
+            style="fill: black;"
+          />
+        </g>
       </g>
       <g
         class="nodes"
@@ -136,6 +218,22 @@ exports[`GraphController > renders nodes 1`] = `
             style="fill: black; font-size: 1rem; stroke: none;"
           >
             B
+          </text>
+        </g>
+        <g>
+          <circle
+            aria-label="C"
+            class="node"
+            r="16"
+            style="fill: lightgray;"
+          />
+          <text
+            class="node__label"
+            dy="0.33em"
+            opacity="1"
+            style="fill: black; font-size: 1rem; stroke: none;"
+          >
+            C
           </text>
         </g>
       </g>

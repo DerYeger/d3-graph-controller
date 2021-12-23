@@ -24,7 +24,13 @@ const b = defineNodeWithDefaults({
   label: 'B',
 })
 
-const link = defineLink({
+const c = defineNodeWithDefaults({
+  type: 'node',
+  id: 'c',
+  label: 'C',
+})
+
+const aToB = defineLink({
   source: a,
   target: b,
   color: 'gray',
@@ -33,9 +39,36 @@ const link = defineLink({
   showLabel: false,
 })
 
+const bToA = defineLink({
+  source: b,
+  target: a,
+  color: 'gray',
+  label: '',
+  labelColor: 'black',
+  showLabel: false,
+})
+
+const bToC = defineLink({
+  source: b,
+  target: c,
+  color: 'gray',
+  label: '',
+  labelColor: 'black',
+  showLabel: false,
+})
+
+const cToC = defineLink({
+  source: c,
+  target: c,
+  color: 'gray',
+  label: '',
+  labelColor: 'black',
+  showLabel: false,
+})
+
 const demoGraph: Graph<string> = {
-  nodes: [a, b],
-  links: [link],
+  nodes: [a, b, c],
+  links: [aToB, bToA, bToC, cToC],
 }
 
 export default defineComponent({

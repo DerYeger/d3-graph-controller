@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`GraphController > renders links 1`] = `
+exports[`GraphController > matches the snapshot 1`] = `
 <div>
   <svg
     height="100%"
@@ -107,90 +107,9 @@ exports[`GraphController > renders links 1`] = `
             C
           </text>
         </g>
-      </g>
-      <defs>
-        <marker
-          id="link-arrow-gray"
-          markerHeight="4"
-          markerWidth="4"
-          orient="auto"
-          refX="2"
-          refY="2"
-          style="fill: gray;"
-          viewBox="0,0,4,4"
-        >
-          <path
-            d="M0,0L0,4L4,2"
-          />
-        </marker>
-      </defs>
-    </g>
-  </svg>
-</div>
-`;
-
-exports[`GraphController > renders nodes 1`] = `
-<div>
-  <svg
-    height="100%"
-    style="cursor: grab;"
-    width="100%"
-  >
-    <g>
-      <g
-        class="links"
-      >
-        <g>
-          <path
-            class="link"
-            style="marker-end: url(#link-arrow-gray); stroke: gray;"
-          />
-          <text
-            class="link__label"
-            opacity="0"
-            style="fill: black;"
-          />
-        </g>
-        <g>
-          <path
-            class="link"
-            style="marker-end: url(#link-arrow-gray); stroke: gray;"
-          />
-          <text
-            class="link__label"
-            opacity="0"
-            style="fill: black;"
-          />
-        </g>
-        <g>
-          <path
-            class="link"
-            style="marker-end: url(#link-arrow-gray); stroke: gray;"
-          />
-          <text
-            class="link__label"
-            opacity="0"
-            style="fill: black;"
-          />
-        </g>
-        <g>
-          <path
-            class="link"
-            style="marker-end: url(#link-arrow-gray); stroke: gray;"
-          />
-          <text
-            class="link__label"
-            opacity="0"
-            style="fill: black;"
-          />
-        </g>
-      </g>
-      <g
-        class="nodes"
-      >
         <g>
           <circle
-            aria-label="A"
+            aria-label="D"
             class="node"
             r="16"
             style="fill: lightgray;"
@@ -201,39 +120,7 @@ exports[`GraphController > renders nodes 1`] = `
             opacity="1"
             style="fill: black; font-size: 1rem; stroke: none;"
           >
-            A
-          </text>
-        </g>
-        <g>
-          <circle
-            aria-label="B"
-            class="node"
-            r="16"
-            style="fill: lightgray;"
-          />
-          <text
-            class="node__label"
-            dy="0.33em"
-            opacity="1"
-            style="fill: black; font-size: 1rem; stroke: none;"
-          >
-            B
-          </text>
-        </g>
-        <g>
-          <circle
-            aria-label="C"
-            class="node"
-            r="16"
-            style="fill: lightgray;"
-          />
-          <text
-            class="node__label"
-            dy="0.33em"
-            opacity="1"
-            style="fill: black; font-size: 1rem; stroke: none;"
-          >
-            C
+            D
           </text>
         </g>
       </g>

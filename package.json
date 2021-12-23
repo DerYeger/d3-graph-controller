@@ -31,7 +31,7 @@
     "lint:eslint": "eslint \"./**/*.{js,ts,vue}\"",
     "lint:prettier": "prettier --check \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
     "test": "vitest",
-    "test:ci": "rimraf ./coverage && c8 --reporter=lcov vitest",
+    "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text vitest",
     "pretty": "prettier --write \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
     "prepublishOnly": "yarn build"
   },

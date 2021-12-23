@@ -3,25 +3,33 @@ import { defineLink } from '@src/model/link'
 import { Graph } from '@src/model/graph'
 import { defineGraphConfig } from '@src/model/config'
 
-const a = defineNodeWithDefaults({
-  type: 'node',
+export type TestNodeType = 'first' | 'second'
+
+const a = defineNodeWithDefaults<TestNodeType>({
+  type: 'first',
   id: 'a',
   label: 'A',
 })
 
-const b = defineNodeWithDefaults({
-  type: 'node',
+const b = defineNodeWithDefaults<TestNodeType>({
+  type: 'first',
   id: 'b',
   label: 'B',
 })
 
-const c = defineNodeWithDefaults({
-  type: 'node',
+const c = defineNodeWithDefaults<TestNodeType>({
+  type: 'first',
   id: 'c',
   label: 'C',
 })
 
-const aToB = defineLink({
+const d = defineNodeWithDefaults<TestNodeType>({
+  type: 'second',
+  id: 'd',
+  label: 'D',
+})
+
+const aToB = defineLink<TestNodeType>({
   source: a,
   target: b,
   color: 'gray',
@@ -30,7 +38,7 @@ const aToB = defineLink({
   showLabel: false,
 })
 
-const bToA = defineLink({
+const bToA = defineLink<TestNodeType>({
   source: b,
   target: a,
   color: 'gray',
@@ -39,7 +47,7 @@ const bToA = defineLink({
   showLabel: false,
 })
 
-const bToC = defineLink({
+const bToC = defineLink<TestNodeType>({
   source: b,
   target: c,
   color: 'gray',
@@ -48,7 +56,7 @@ const bToC = defineLink({
   showLabel: false,
 })
 
-const cToC = defineLink({
+const cToC = defineLink<TestNodeType>({
   source: c,
   target: c,
   color: 'gray',
@@ -57,8 +65,8 @@ const cToC = defineLink({
   showLabel: false,
 })
 
-const graph: Graph<string> = {
-  nodes: [a, b, c],
+const graph: Graph<TestNodeType> = {
+  nodes: [a, b, c, d],
   links: [aToB, bToA, bToC, cToC],
 }
 

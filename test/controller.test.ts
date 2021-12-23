@@ -3,38 +3,35 @@
  */
 import { describe, expect, it } from 'vitest'
 import { defineGraphConfig, GraphController } from '@src/main'
-import TestData from '@test/test-data'
+import TestData, { TestNodeType } from '@test/test-data'
 
 describe('GraphController', () => {
-  it('renders nodes', () => {
-    expect(window).toBeDefined()
+  it('matches the snapshot', () => {
+    const container = document.createElement('div')
+    new GraphController(container, TestData.graph, TestData.config)
 
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders nodes', () => {
     const container = document.createElement('div')
     new GraphController(container, TestData.graph, TestData.config)
 
     expect(container.querySelectorAll('.node').length).toEqual(
       TestData.graph.nodes.length
     )
-
-    expect(container).toMatchSnapshot()
   })
 
   it('renders links', () => {
-    expect(window).toBeDefined()
-
     const container = document.createElement('div')
     new GraphController(container, TestData.graph, TestData.config)
 
     expect(container.querySelectorAll('.link').length).toEqual(
       TestData.graph.links.length
     )
-
-    expect(container).toMatchSnapshot()
   })
 
   it('respect initial configuration', () => {
-    expect(window).toBeDefined()
-
     const container = document.createElement('div')
     new GraphController(
       container,
@@ -44,5 +41,59 @@ describe('GraphController', () => {
 
     expect(container.querySelectorAll('.node').length).toEqual(0)
     expect(container.querySelectorAll('.link').length).toEqual(0)
+  })
+
+  it('can filter by node type', () => {
+    const container = document.createElement('div')
+    const controller = new GraphController(
+      container,
+      TestData.graph,
+      defineGraphConfig<string>()
+    )
+
+    const currentlyExcluded: TestNodeType[] = []
+
+    const checkIncludedNodes = () => {
+      expect(container.querySelectorAll('.node').length).toEqual(
+        TestData.graph.nodes.filter(
+          (node) => !currentlyExcluded.includes(node.type)
+        ).length
+      )
+    }
+
+    checkIncludedNodes()
+
+    controller.filterNodesByType(false, 'second')
+    currentlyExcluded.push('second')
+    checkIncludedNodes()
+
+    controller.filterNodesByType(false, 'first')
+    currentlyExcluded.push('first')
+    checkIncludedNodes()
+
+    controller.filterNodesByType(true, 'first')
+    currentlyExcluded.pop()
+    checkIncludedNodes()
+
+    controller.filterNodesByType(true, 'second')
+    currentlyExcluded.pop()
+    checkIncludedNodes()
+  })
+
+  it('can exclude unlinked', () => {
+    const container = document.createElement('div')
+    const controller = new GraphController(
+      container,
+      TestData.graph,
+      defineGraphConfig<string>()
+    )
+
+    expect(container.querySelectorAll('.node').length).toEqual(
+      TestData.graph.nodes.length
+    )
+
+    controller.includeUnlinked = false
+
+    expect(container.querySelectorAll('.node').length).toEqual(3)
   })
 })

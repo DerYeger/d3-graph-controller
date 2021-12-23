@@ -2,7 +2,6 @@ import * as path from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     dts({
@@ -32,6 +31,10 @@ export default defineConfig({
       {
         find: '@src',
         replacement: path.resolve(__dirname, 'src'),
+      },
+      {
+        find: '@test',
+        replacement: path.resolve(__dirname, 'test'),
       },
     ],
   },

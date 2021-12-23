@@ -1,81 +1,20 @@
 <template>
-  <div class="container">
-    <div ref="graph" class="graph" />
+  <div class="settings card">
+    <button @click="resetGraphController()">Reset</button>
   </div>
+  <div ref="graph" class="graph card" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { GraphController } from '@src/controller'
-import { defineGraphConfig } from '@src/model/config'
-import { Graph } from '@src/model/graph'
-import { defineNodeWithDefaults } from '@src/model/node'
-import { defineLink } from '@src/model/link'
-
-const a = defineNodeWithDefaults({
-  type: 'node',
-  id: 'a',
-  label: 'A',
-})
-
-const b = defineNodeWithDefaults({
-  type: 'node',
-  id: 'b',
-  label: 'B',
-})
-
-const c = defineNodeWithDefaults({
-  type: 'node',
-  id: 'c',
-  label: 'C',
-})
-
-const aToB = defineLink({
-  source: a,
-  target: b,
-  color: 'gray',
-  label: '',
-  labelColor: 'black',
-  showLabel: false,
-})
-
-const bToA = defineLink({
-  source: b,
-  target: a,
-  color: 'gray',
-  label: '',
-  labelColor: 'black',
-  showLabel: false,
-})
-
-const bToC = defineLink({
-  source: b,
-  target: c,
-  color: 'gray',
-  label: '',
-  labelColor: 'black',
-  showLabel: false,
-})
-
-const cToC = defineLink({
-  source: c,
-  target: c,
-  color: 'gray',
-  label: '',
-  labelColor: 'black',
-  showLabel: false,
-})
-
-const demoGraph: Graph<string> = {
-  nodes: [a, b, c],
-  links: [aToB, bToA, bToC, cToC],
-}
+import { demoGraph, demoGraphConfig } from '@demo/model'
 
 export default defineComponent({
   name: 'GraphComponent',
   data() {
     return {
-      config: defineGraphConfig(),
+      config: demoGraphConfig,
       graph: demoGraph,
       controller: undefined as GraphController | undefined,
     }
@@ -106,7 +45,17 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.container {
+.settings {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.graph {
   flex-grow: 1;
+  margin: 1rem;
+  max-height: 960px;
+  max-width: 960px;
+  width: calc(100% - 2rem);
 }
 </style>

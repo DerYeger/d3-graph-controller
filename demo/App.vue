@@ -3,8 +3,8 @@
   <GraphComponent />
 </template>
 <script>
-import DemoHeader from './DemoHeader.vue'
-import GraphComponent from './GraphComponent.vue'
+import DemoHeader from '@demo/DemoHeader.vue'
+import GraphComponent from '@demo/GraphComponent.vue'
 
 export default {
   components: { GraphComponent, DemoHeader },

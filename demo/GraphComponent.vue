@@ -56,7 +56,7 @@ export default defineComponent({
     this.resetGraphController()
     this.resizeObserver.observe(this.$refs.graph)
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.resizeObserver.unobserve(this.$refs.graph)
   },
   methods: {

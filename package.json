@@ -17,6 +17,7 @@
     "controller"
   ],
   "scripts": {
+    "prepare": "husky install",
     "prebuild": "rimraf ./dist",
     "build": "vite build",
     "demo:serve": "vite --config demo/vite.config.ts",
@@ -46,6 +47,8 @@
   },
   "types": "dist/types/src/main.d.ts",
   "devDependencies": {
+    "@commitlint/cli": "15.0.0",
+    "@commitlint/config-conventional": "15.0.0",
     "@types/d3": "7.1.0",
     "@types/node": "16.11.15",
     "@types/resize-observer-browser": "0.1.6",
@@ -56,6 +59,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "8.2.0",
+    "husky": "7.0.4",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "typescript": "4.5.4",

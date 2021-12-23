@@ -20,7 +20,9 @@ exports[`GraphController > matches the snapshot 1`] = `
             class="link__label"
             opacity="0"
             style="fill: black;"
-          />
+          >
+            aToB
+          </text>
         </g>
         <g>
           <path
@@ -31,7 +33,9 @@ exports[`GraphController > matches the snapshot 1`] = `
             class="link__label"
             opacity="0"
             style="fill: black;"
-          />
+          >
+            bToA
+          </text>
         </g>
         <g>
           <path
@@ -42,7 +46,9 @@ exports[`GraphController > matches the snapshot 1`] = `
             class="link__label"
             opacity="0"
             style="fill: black;"
-          />
+          >
+            bToC
+          </text>
         </g>
         <g>
           <path
@@ -53,7 +59,9 @@ exports[`GraphController > matches the snapshot 1`] = `
             class="link__label"
             opacity="0"
             style="fill: black;"
-          />
+          >
+            cToC
+          </text>
         </g>
       </g>
       <g

@@ -30,6 +30,7 @@ export default defineComponent({
   },
   beforeUnmount() {
     this.resizeObserver.unobserve(this.$refs.graph)
+    this.controller?.shutdown()
   },
   methods: {
     resetGraphController(): void {

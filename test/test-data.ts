@@ -33,7 +33,7 @@ const aToB = defineLink<TestNodeType>({
   source: a,
   target: b,
   color: 'gray',
-  label: '',
+  label: 'aToB',
   labelColor: 'black',
   showLabel: false,
 })
@@ -42,7 +42,7 @@ const bToA = defineLink<TestNodeType>({
   source: b,
   target: a,
   color: 'gray',
-  label: '',
+  label: 'bToA',
   labelColor: 'black',
   showLabel: false,
 })
@@ -51,7 +51,7 @@ const bToC = defineLink<TestNodeType>({
   source: b,
   target: c,
   color: 'gray',
-  label: '',
+  label: 'bToC',
   labelColor: 'black',
   showLabel: false,
 })
@@ -60,7 +60,7 @@ const cToC = defineLink<TestNodeType>({
   source: c,
   target: c,
   color: 'gray',
-  label: '',
+  label: 'cToC',
   labelColor: 'black',
   showLabel: false,
 })
@@ -70,7 +70,7 @@ const graph: Graph<TestNodeType> = {
   links: [aToB, bToA, bToC, cToC],
 }
 
-const config = defineGraphConfig()
+const config = defineGraphConfig<TestNodeType>()
 
 export default {
   graph,

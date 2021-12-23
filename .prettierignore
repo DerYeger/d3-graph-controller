@@ -2,5 +2,5 @@
 .nyc_output
 coverage
 dist
-documentation
+docs/components.d.ts
 node_modules

@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.1.0...v1.2.0) (2021-12-23)
+
+
+### Features
+
+* **simulation:** make collision force radius multiplier configurable ([9f10136](https://github.com/DerYeger/d3-graph-controller/commit/9f10136b063e181bf3fad5d3e7e9a48ee7bc8cea))
+
 # [1.1.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.0.0...v1.1.0) (2021-12-23)
 
 

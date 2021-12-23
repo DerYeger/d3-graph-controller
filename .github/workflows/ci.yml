@@ -33,6 +33,17 @@ jobs:
           node-version: 16
       - name: Build
         run: yarn demo:build
+  docs:
+    name: Build docs
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - name: Yarn setup
+        uses: DerYeger/yarn-setup-action@master
+        with:
+          node-version: 16
+      - name: Build
+        run: yarn docs:build
   lint:
     name: Lint
     runs-on: ubuntu-latest

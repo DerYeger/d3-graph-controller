@@ -28,7 +28,7 @@
     "lint:eslint": "eslint \"./**/*.{js,ts,vue}\"",
     "lint:prettier": "prettier --check \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
     "test": "vitest",
-    "test:ci": "c8 vitest",
+    "test:ci": "c8 --reporter=lcov vitest",
     "pretty": "prettier --write \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
     "prepublishOnly": "yarn build"
   },

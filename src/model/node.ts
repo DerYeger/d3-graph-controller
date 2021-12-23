@@ -18,9 +18,10 @@ export interface GraphNode<T extends NodeTypeToken = NodeTypeToken>
   lastInteractionTimestamp?: number
 }
 
-export function defineNode<T extends NodeTypeToken = NodeTypeToken>(
-  data: GraphNode<T>
-): GraphNode<T> {
+export function defineNode<
+  T extends NodeTypeToken = NodeTypeToken,
+  Node extends GraphNode<T> = GraphNode<T>
+>(data: Node): Node {
   return data
 }
 

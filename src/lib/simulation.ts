@@ -49,7 +49,13 @@ export function defineSimulation<
   if (config.forces.collision?.enabled) {
     simulation.force(
       'collision',
-      d3.forceCollide<Node>().radius((d) => 1.4 * config.getNodeRadius(d))
+      d3
+        .forceCollide<Node>()
+        .radius(
+          (d) =>
+            (config.forces.collision?.radiusMultiplier ?? 1) *
+            config.getNodeRadius(d)
+        )
     )
   }
   if (config.forces.link?.enabled) {

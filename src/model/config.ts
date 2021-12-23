@@ -49,6 +49,13 @@ export interface Force<
   strength: number | ((subject: Subject) => number)
 }
 
+export interface CollisionForce<
+  T extends NodeTypeToken,
+  Node extends GraphNode<T>
+> extends Force<T, Node> {
+  radiusMultiplier: number
+}
+
 export interface SimulationForceConfig<
   T extends NodeTypeToken,
   Node extends GraphNode<T>,
@@ -56,7 +63,7 @@ export interface SimulationForceConfig<
 > {
   centering: Force<T, Node>
   charge: Force<T, Node>
-  collision: Force<T, Node>
+  collision: CollisionForce<T, Node>
   link: Force<T, Link>
 }
 
@@ -92,6 +99,7 @@ function defaultGraphConfig<
       collision: {
         enabled: true,
         strength: 1,
+        radiusMultiplier: 2,
       },
       link: {
         enabled: true,

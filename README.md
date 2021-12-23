@@ -15,12 +15,9 @@
   <a href="https://www.npmjs.com/package/d3-graph-controller">
     <img alt="NPM" src="https://img.shields.io/npm/v/d3-graph-controller?logo=npm">
   </a>
-
-[//]: # (  <a href="https://codecov.io/gh/DerYeger/d3-graph-controller">)
-
-[//]: # (    <img alt="Coverage" src="https://codecov.io/gh/DerYeger/d3-graph-controller/branch/master/graph/badge.svg?token=p35W6u2noe">)
-
-[//]: # (  </a>)
+  <a href="https://codecov.io/gh/DerYeger/d3-graph-controller">
+    <img alt="Coverage" src="https://codecov.io/gh/DerYeger/d3-graph-controller/branch/master/graph/badge.svg?token=p35W6u2noe">
+  </a>
   <a href="https://lgtm.com/projects/g/DerYeger/d3-graph-controller">
     <img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/javascript/github/DerYeger/d3-graph-controller?logo=lgtm">
   </a>

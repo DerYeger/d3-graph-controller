@@ -1,0 +1,14 @@
+:root {
+  --color-primary: #729B1B;
+  --color-secondary: #AF8A1D;
+  --text-on-primary: white;
+  --text-on-secondary: black;
+}
+
+.graph {
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  height: 480px !important;
+  overflow: hidden;
+  margin: 0 !important;
+}

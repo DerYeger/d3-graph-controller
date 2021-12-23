@@ -1,7 +1,7 @@
 <h1 align="center">d3-graph-controller</h1>
 
 <p align="center">
-  <img src="demo/public/logo.png" alt="Logo" width="128px" height="128px">
+  <img src="docs/public/logo.png" alt="Logo" width="128px" height="128px">
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@
 
 - 👉 Fully **interactive** dragging, panning, zooming and more. Supports **touch input** and uses multi-touch.
 - 🔎 Allows **focusing nodes** by double- or right-clicking and long presses via touch. This will only show the subgraph containing the node.
-- 📱 Creating **responsive** graph components is easy thanks the `resize` method.
+- 📱 Creating **responsive** graph components is easy thanks to the `resize` method.
 - 🔧 Behaviour and appearance are highly **configurable**.
 
 ## Links
@@ -125,10 +125,10 @@ $ yarn build
 $ yarn lint
 
 # serve demo
-$ yarn demo:serve
+$ yarn demo:dev
 
-# build demo for production
-$ yarn demo:build
+# serve docs
+$ yarn docs:dev
 ```
 
 ## License

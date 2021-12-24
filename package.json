@@ -26,7 +26,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "yarn docs:build && vitepress serve docs",
-    "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:commits",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:commits": "yarn commitlint --from=HEAD~1",
     "lint:eslint": "eslint \"./**/*.{js,ts,vue}\"",
     "lint:prettier": "prettier --check \"./**/*.{js,json,html,scss,ts,vue,yml}\"",

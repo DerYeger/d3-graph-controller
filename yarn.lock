@@ -3794,10 +3794,10 @@ unocss@0.18.0:
     "@unocss/reset" "0.18.0"
     "@unocss/vite" "0.18.0"
 
-unplugin-vue-components@0.17.9:
-  version "0.17.9"
-  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.17.9.tgz#a2acc9b4e073f52df82d2036a318d76f0c66538b"
-  integrity sha512-SZrK3T/uEoP2g2bH+8DwBznoqlS0dI7kQvCmHmL8HmTXdM78kh5P/9SN5IwuNpfbmXoGXWJPB8Pr8Ke8zsgpmA==
+unplugin-vue-components@0.17.10:
+  version "0.17.10"
+  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.17.10.tgz#232f0d9bbf3e6bd2747c1b44e3013cd4876afac2"
+  integrity sha512-7FXgLcDl+ZOFqezlSVPs+t4vP7hV3FhR+nOJs6IpkX7zBWHKNy1YeHSBn+By1p8vBbLLDRYDxL11KQqjrwPK3Q==
   dependencies:
     "@antfu/utils" "^0.3.0"
     "@rollup/pluginutils" "^4.1.1"

@@ -1177,7 +1177,7 @@ builtins@^4.0.0:
   dependencies:
     semver "^7.0.0"
 
-c8@^7.10.0:
+c8@7.10.0:
   version "7.10.0"
   resolved "https://registry.yarnpkg.com/c8/-/c8-7.10.0.tgz#c539ebb15d246b03b0c887165982c49293958a73"
   integrity sha512-OAwfC5+emvA6R7pkYFVBTOtI5ruf9DahffGmIqUc9l6wEh0h7iAFP6dt/V9Ioqlr2zW5avX9U9/w1I4alTRHkA==

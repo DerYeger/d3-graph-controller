@@ -23,8 +23,8 @@
 }
 
 .node {
-  --shadow: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.25));
-  --color-stroke: rgba(0, 0, 0, 0.5);
+  --shadow: drop-shadow(0 0 0.25rem var(--color-node-shadow, rgba(0, 0, 0, 0.25)));
+  --color-stroke: var(--color-node-stroke, rgba(0, 0, 0, 0.5));
 
   cursor: pointer;
   filter: var(--shadow);
@@ -40,7 +40,7 @@
 }
 
 .node.focused {
-   --shadow: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.8));
+   --shadow: drop-shadow(0 0 1rem var(--color-node-shadow-focused, var(--color-node-shadow, rgba(0, 0, 0, 0.8))));
    stroke: var(--color-stroke);
 }
 

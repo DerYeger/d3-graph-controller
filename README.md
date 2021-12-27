@@ -89,7 +89,7 @@ const container = TODO
 const controller = new GraphController(container, graph, defineGraphConfig())
 ```
 
-### Style
+### Styling
 
 In addition to the default style, that is available by adding `import 'd3-graph-controller/default.css'` to your project, it is possible to configure font-size and color of graph elements.
 Both properties of nodes and links accept valid CSS expressions.
@@ -111,6 +111,8 @@ const a = defineNodeWithDefaults({
   color: 'var(--color-primary)'
 })
 ```
+
+For customization of the default theme, the custom CSS properties `--color-node-shadow`, `--color-node-shadow-focused` and `--color-node-stroke` can be used.
 
 ## Development
 

@@ -3,6 +3,9 @@
   --color-secondary: #AF8A1D;
   --color-background: #141414;
   --color-surface: #242424;
+  --color-node-shadow: #666;
+  --color-node-shadow-focused: #888;
+  --color-node-stroke: white;
   --text-on-surface: white;
   --text-on-primary: white;
   --text-on-secondary: white;

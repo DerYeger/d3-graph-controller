@@ -225,3 +225,5 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm+all,node
+
+.temp

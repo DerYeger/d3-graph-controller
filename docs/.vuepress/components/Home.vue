@@ -14,7 +14,7 @@
       <a class="btn bg-yellow600 hover:bg-yellow700 saturate-80" href="/guide/">
         <span>Guide</span>
       </a>
-      <a class="btn bg-lime600 hover:bg-lime700 saturate-80" href="/demo/">
+      <a class="btn bg-lime600 hover:bg-lime700 saturate-80" href="/demo">
         <span>Demo</span>
       </a>
     </div>

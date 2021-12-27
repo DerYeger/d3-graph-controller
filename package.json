@@ -19,7 +19,7 @@
   "scripts": {
     "prepare": "husky install",
     "prebuild": "rimraf ./dist",
-    "build": "vite build",
+    "build": "tsc --noEmit && vite build",
     "demo:dev": "vite --config demo/vite.config.ts",
     "demo:build": "vite --config demo/vite.config.ts build",
     "demo:preview": "yarn demo:build && vite --config demo/vite.config.ts preview",

@@ -1,7 +1,14 @@
-export default {
-  title: 'd3-graph-controller',
-  description:
-    'A TypeScript library for visualizing and simulating directed, interactive graphs.',
+import { defineUserConfig, ViteBundlerOptions } from 'vuepress'
+import type { DefaultThemeOptions } from 'vuepress'
+import Package from '../../package.json'
+import * as path from 'path'
+
+export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
+  // site config
+  lang: 'en-US',
+  title: Package.name,
+  description: Package.description,
+
   head: [
     ['meta', { property: 'og:title', content: 'd3-graph-controller' }],
     [
@@ -49,30 +56,34 @@ export default {
       },
     ],
   ],
+
+  // theme and its config
+  theme: '@vuepress/theme-default',
   themeConfig: {
+    logo: '/logo.png',
     repo: 'DerYeger/d3-graph-controller',
-    logo: '/logo.svg',
-    docsDir: 'docs',
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/guide/' },
+      { text: 'Demo', link: '/demo/' },
+    ],
     docsBranch: 'master',
-    editLinks: true,
-    editLinkText: 'Suggest changes to this page',
+    docsDir: 'docs',
   },
-  nav: [
-    { text: 'Guide', link: '/guide/' },
-    { text: 'Demo', link: '/demo/' },
-  ],
-  sidebar: {
-    '/guide/': 'auto',
-    '/demo/': 'auto',
-    '/': [
+
+  bundler: '@vuepress/vite',
+  bundlerConfig: {
+    viteOptions: {
+      configFile: 'docs/vite.config.ts',
+    },
+  },
+
+  plugins: [
+    [
+      '@vuepress/plugin-register-components',
       {
-        text: 'Guide',
-        link: '/guide',
-      },
-      {
-        text: 'Demo',
-        link: '/demo',
+        componentsDir: path.resolve(__dirname, './components'),
       },
     ],
-  },
-}
+  ],
+})

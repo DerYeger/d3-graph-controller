@@ -24,8 +24,8 @@
     "demo:dev": "vite --config demo/vite.config.ts",
     "demo:build": "vite --config demo/vite.config.ts build",
     "demo:preview": "yarn demo:build && vite --config demo/vite.config.ts preview",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "docs:preview": "yarn docs:build && vitepress serve docs",
     "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:commits": "yarn commitlint --from=HEAD~1",
@@ -89,7 +89,8 @@
     "vitepress": "0.20.10",
     "vitest": "0.0.134",
     "vue": "3.2.26",
-    "vue-eslint-parser": "8.0.1"
+    "vue-eslint-parser": "8.0.1",
+    "vuepress": "2.0.0-beta.31"
   },
   "dependencies": {
     "d3-drag": "3.0.0",

@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.2.0...v1.3.0) (2021-12-27)
+
+
+### Features
+
+* make all colors of `default.css` configurable via variables ([19436d3](https://github.com/DerYeger/d3-graph-controller/commit/19436d3237a8bc94addb28dc43927fbc94c44bc7)), closes [#3](https://github.com/DerYeger/d3-graph-controller/issues/3)
+
 # [1.2.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.1.0...v1.2.0) (2021-12-23)
 
 

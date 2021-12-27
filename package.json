@@ -55,7 +55,11 @@
   "devDependencies": {
     "@commitlint/cli": "16.0.0",
     "@commitlint/config-conventional": "16.0.0",
-    "@types/d3": "7.1.0",
+    "@types/d3-drag": "3.0.1",
+    "@types/d3-force": "3.0.3",
+    "@types/d3-selection": "3.0.2",
+    "@types/d3-shape": "3.0.2",
+    "@types/d3-zoom": "3.0.1",
     "@types/node": "16.11.17",
     "@types/resize-observer-browser": "0.1.6",
     "@typescript-eslint/eslint-plugin": "5.8.0",
@@ -82,7 +86,11 @@
     "vue-eslint-parser": "8.0.1"
   },
   "dependencies": {
-    "d3": "7.2.1",
+    "d3-drag": "3.0.0",
+    "d3-force": "3.0.0",
+    "d3-selection": "3.0.0",
+    "d3-shape": "3.0.1",
+    "d3-zoom": "3.0.0",
     "ml-matrix": "6.8.2"
   },
   "publishConfig": {

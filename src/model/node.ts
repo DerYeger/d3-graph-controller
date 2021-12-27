@@ -1,4 +1,4 @@
-import { SimulationNodeDatum } from 'd3'
+import { SimulationNodeDatum } from 'd3-force'
 
 import { NodeTypeToken } from '@src/model/graph'
 

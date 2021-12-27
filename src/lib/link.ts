@@ -1,4 +1,4 @@
-import * as d3 from 'd3'
+import { Selection } from 'd3-selection'
 
 import { Canvas } from '@src/lib/canvas'
 import Paths from '@src/lib/paths'
@@ -11,7 +11,7 @@ export type LinkSelection<
   T extends NodeTypeToken,
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
-> = d3.Selection<SVGGElement, Link, SVGGElement, undefined>
+> = Selection<SVGGElement, Link, SVGGElement, undefined>
 
 export function defineLinkSelection<
   T extends NodeTypeToken,

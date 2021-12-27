@@ -1,4 +1,5 @@
-import * as d3 from 'd3'
+import { Selection } from 'd3-selection'
+import { line } from 'd3-shape'
 
 import { Canvas } from '@src/lib/canvas'
 import { Graph, NodeTypeToken } from '@src/model/graph'
@@ -6,7 +7,7 @@ import { GraphNode } from '@src/model/node'
 import { getMarkerId, GraphLink } from '@src/model/link'
 import { markerConfig } from '@src/model/config'
 
-export type MarkerSelection = d3.Selection<
+export type MarkerSelection = Selection<
   SVGMarkerElement,
   string,
   SVGGElement,
@@ -47,7 +48,7 @@ export function createMarkers<
         .attr('refY', markerConfig.markerRef)
         .attr('viewBox', markerConfig.markerPath)
         .style('fill', (d) => d)
-      marker.append('path').attr('d', `${d3.line()(markerConfig.arrowPoints)}`)
+      marker.append('path').attr('d', `${line()(markerConfig.arrowPoints)}`)
       return marker
     })
 }

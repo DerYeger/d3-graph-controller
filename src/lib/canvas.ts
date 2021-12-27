@@ -1,11 +1,10 @@
-import * as d3 from 'd3'
-
+import { Selection } from 'd3-selection'
 import { Zoom } from '@src/lib/zoom'
 import { terminateEvent } from '@src/lib/utils'
 
-export type GraphHost = d3.Selection<HTMLDivElement, undefined, null, undefined>
+export type GraphHost = Selection<HTMLDivElement, undefined, null, undefined>
 
-export type Canvas = d3.Selection<SVGGElement, undefined, null, undefined>
+export type Canvas = Selection<SVGGElement, undefined, null, undefined>
 
 export interface DefineCanvasParams {
   container: GraphHost

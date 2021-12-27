@@ -1,14 +1,22 @@
-import * as d3 from 'd3'
+import {
+  forceCollide,
+  forceLink,
+  forceManyBody,
+  forceSimulation,
+  forceX,
+  forceY,
+  Simulation,
+} from 'd3-force'
 import { Graph, NodeTypeToken } from '@src/model/graph'
 import { GraphNode } from '@src/model/node'
 import { GraphLink } from '@src/model/link'
 import { GraphConfig } from '@src/model/config'
 
-export type Simulation<
+export type GraphSimulation<
   T extends NodeTypeToken,
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
-> = d3.Simulation<Node, Link>
+> = Simulation<Node, Link>
 
 export interface DefineSimulationParams<
   T extends NodeTypeToken,
@@ -32,37 +40,34 @@ export function defineSimulation<
   height,
   onTick,
   width,
-}: DefineSimulationParams<T, Node, Link>): Simulation<T, Node, Link> {
-  const simulation = d3.forceSimulation<Node, Link>(graph.nodes)
+}: DefineSimulationParams<T, Node, Link>): GraphSimulation<T, Node, Link> {
+  const simulation = forceSimulation<Node, Link>(graph.nodes)
   if (config.forces.centering?.enabled) {
     const strength = config.forces.centering.strength
     simulation
-      .force('x', d3.forceX<Node>(width / 2).strength(strength))
-      .force('y', d3.forceY<Node>(height / 2).strength(strength))
+      .force('x', forceX<Node>(width / 2).strength(strength))
+      .force('y', forceY<Node>(height / 2).strength(strength))
   }
   if (config.forces.charge?.enabled) {
     simulation.force(
       'charge',
-      d3.forceManyBody<Node>().strength(config.forces.charge.strength)
+      forceManyBody<Node>().strength(config.forces.charge.strength)
     )
   }
   if (config.forces.collision?.enabled) {
     simulation.force(
       'collision',
-      d3
-        .forceCollide<Node>()
-        .radius(
-          (d) =>
-            (config.forces.collision?.radiusMultiplier ?? 1) *
-            config.getNodeRadius(d)
-        )
+      forceCollide<Node>().radius(
+        (d) =>
+          (config.forces.collision?.radiusMultiplier ?? 1) *
+          config.getNodeRadius(d)
+      )
     )
   }
   if (config.forces.link?.enabled) {
     simulation.force(
       'link',
-      d3
-        .forceLink<Node, Link>(graph.links)
+      forceLink<Node, Link>(graph.links)
         .id((d) => d.id)
         .distance((d) => config.getLinkLength(d))
         .strength(config.forces.link.strength)

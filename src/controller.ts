@@ -1,11 +1,10 @@
 /* eslint-disable no-underscore-dangle */
-import * as d3 from 'd3'
-import { D3ZoomEvent } from 'd3'
+import { D3ZoomEvent } from 'd3-zoom'
 import { Graph, NodeTypeToken } from '@src/model/graph'
 import { GraphNode } from '@src/model/node'
 import { GraphLink } from '@src/model/link'
 import { GraphConfig, LinkFilter } from '@src/model/config'
-import { defineSimulation, Simulation } from '@src/lib/simulation'
+import { defineSimulation, GraphSimulation } from '@src/lib/simulation'
 import { Canvas, defineCanvas, updateCanvasTransform } from '@src/lib/canvas'
 import { filterGraph } from '@src/lib/filter'
 import {
@@ -27,6 +26,7 @@ import {
 } from '@src/lib/marker'
 import { defineZoom, Zoom } from '@src/lib/zoom'
 import { defineDrag, Drag } from '@src/lib/drag'
+import { select } from 'd3-selection'
 
 export class GraphController<
   T extends NodeTypeToken = NodeTypeToken,
@@ -47,7 +47,7 @@ export class GraphController<
   private width = 0
   private height = 0
 
-  private simulation?: Simulation<T, Node, Link>
+  private simulation?: GraphSimulation<T, Node, Link>
 
   private canvas?: Canvas
   private linkSelection?: LinkSelection<T, Node, Link>
@@ -200,13 +200,13 @@ export class GraphController<
 
   private initGraph(): void {
     this.zoom = defineZoom({
-      canvasContainer: () => d3.select(this.container).select('svg'),
+      canvasContainer: () => select(this.container).select('svg'),
       min: 0.01,
       max: 3,
       onZoom: (event) => this.onZoom(event),
     })
     this.canvas = defineCanvas({
-      container: d3.select(this.container),
+      container: select(this.container),
       zoom: this.zoom,
     })
     this.linkSelection = defineLinkSelection(this.canvas)
@@ -233,7 +233,7 @@ export class GraphController<
 
   private resetView(): void {
     this.simulation?.stop()
-    d3.select(this.container).selectChildren().remove()
+    select(this.container).selectChildren().remove()
     this.zoom = undefined
     this.canvas = undefined
     this.linkSelection = undefined

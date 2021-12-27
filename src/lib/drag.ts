@@ -1,12 +1,12 @@
-import * as d3 from 'd3'
-import { D3DragEvent } from 'd3'
+import { select } from 'd3-selection'
+import { D3DragEvent, drag, DragBehavior } from 'd3-drag'
 import { NodeTypeToken } from '@src/model/graph'
 import { GraphNode } from '@src/model/node'
 
 export type Drag<
   T extends NodeTypeToken,
   Node extends GraphNode<T>
-> = d3.DragBehavior<SVGGElement, Node, Node>
+> = DragBehavior<SVGGElement, Node, Node>
 export type NodeDragEvent<
   T extends NodeTypeToken,
   Node extends GraphNode<T>
@@ -24,8 +24,7 @@ export function defineDrag<T extends NodeTypeToken, Node extends GraphNode<T>>({
   onDragStart,
   onDragEnd,
 }: DefineDragParams<T, Node>): Drag<T, Node> {
-  return d3
-    .drag<SVGGElement, Node, Node>()
+  return drag<SVGGElement, Node, Node>()
     .filter((event: MouseEvent | TouchEvent) => {
       if (event.type === 'mousedown') {
         return (event as MouseEvent).button === 0 // primary (left) mouse button
@@ -38,7 +37,7 @@ export function defineDrag<T extends NodeTypeToken, Node extends GraphNode<T>>({
       if (event.active === 0) {
         onDragStart(event, d)
       }
-      d3.select(event.sourceEvent.target).classed('grabbed', true)
+      select(event.sourceEvent.target).classed('grabbed', true)
       d.fx = d.x
       d.fy = d.y
     })
@@ -50,7 +49,7 @@ export function defineDrag<T extends NodeTypeToken, Node extends GraphNode<T>>({
       if (event.active === 0) {
         onDragEnd(event, d)
       }
-      d3.select(event.sourceEvent.target).classed('grabbed', false)
+      select(event.sourceEvent.target).classed('grabbed', false)
       d.fx = undefined
       d.fy = undefined
     })

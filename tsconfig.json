@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
-    "declaration": true,
-    "declarationDir": "./dist",
     "strict": true,
     "sourceMap": true,
     "resolveJsonModule": true,

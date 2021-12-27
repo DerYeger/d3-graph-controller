@@ -1,4 +1,4 @@
-import * as d3 from 'd3'
+import { Selection } from 'd3-selection'
 
 import { Canvas } from '@src/lib/canvas'
 import { Drag } from '@src/lib/drag'
@@ -11,7 +11,7 @@ import { GraphConfig } from '@src/model/config'
 export type NodeSelection<
   T extends NodeTypeToken,
   Node extends GraphNode<T>
-> = d3.Selection<SVGGElement, Node, SVGGElement, undefined>
+> = Selection<SVGGElement, Node, SVGGElement, undefined>
 
 export function defineNodeSelection<
   T extends NodeTypeToken,

@@ -3,7 +3,6 @@
   --color-secondary: #AF8A1D;
   --text-on-primary: white;
   --text-on-secondary: black;
-}
 
 @media (prefers-color-scheme: dark) {
   :root {

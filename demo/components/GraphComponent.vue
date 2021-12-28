@@ -105,9 +105,8 @@ export default defineComponent({
   display: flex;
   flex-grow: 1;
   gap: 1rem;
-  max-height: 960px;
-  max-width: 960px;
-  width: calc(100% - 2rem);
+  max-width: 1280px;
+  width: 100%;
 }
 
 .settings {
@@ -115,7 +114,12 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: fit-content;
   padding: 1rem;
+}
+
+.settings > div {
+  width: 100%;
 }
 
 .settings input[type='range'] {
@@ -130,5 +134,17 @@ export default defineComponent({
 
 .type-checkbox > label {
   text-transform: capitalize;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    max-height: unset;
+  }
+
+  .graph {
+    flex-grow: 1;
+    height: unset;
+  }
 }
 </style>

@@ -112,7 +112,7 @@ const a = defineNodeWithDefaults({
 })
 ```
 
-For customization of the default theme, the custom CSS properties `--color-node-shadow`, `--color-node-shadow-focused` and `--color-node-stroke` can be used.
+For customization of the default theme, the custom CSS property `--color-node-stroke` can be used.
 
 ## Development
 

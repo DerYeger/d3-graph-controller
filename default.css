@@ -23,24 +23,21 @@
 }
 
 .node {
-  --shadow: drop-shadow(0 0 0.25rem var(--color-node-shadow, rgba(0, 0, 0, 0.25)));
   --color-stroke: var(--color-node-stroke, rgba(0, 0, 0, 0.5));
 
   cursor: pointer;
-  filter: var(--shadow);
   stroke: none;
   stroke-width: 2px;
   transition: filter 0.25s ease, stroke 0.25s ease, stroke-dasharray 0.25s ease;
 }
 
 .node:hover:not(.focused) {
-   filter: var(--shadow) brightness(80%);
+   filter: brightness(80%);
    stroke: var(--color-stroke);
    stroke-dasharray: 4px;
 }
 
 .node.focused {
-   --shadow: drop-shadow(0 0 1rem var(--color-node-shadow-focused, var(--color-node-shadow, rgba(0, 0, 0, 0.8))));
    stroke: var(--color-stroke);
 }
 

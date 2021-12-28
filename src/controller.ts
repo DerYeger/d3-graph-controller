@@ -1,5 +1,5 @@
-/* eslint-disable no-underscore-dangle */
-import { GraphConfig, LinkFilter } from '@src/config/config'
+import { GraphConfig } from '@src/config/config'
+import { LinkFilter } from '@src/config/filter'
 import { Canvas, defineCanvas, updateCanvasTransform } from '@src/lib/canvas'
 import { defineDrag, Drag } from '@src/lib/drag'
 import { filterGraph } from '@src/lib/filter'

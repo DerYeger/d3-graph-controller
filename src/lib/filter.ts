@@ -1,4 +1,4 @@
-import { LinkFilter } from '@src/config/config'
+import { LinkFilter } from '@src/config/filter'
 import { Graph, NodeTypeToken } from '@src/model/graph'
 import { GraphLink } from '@src/model/link'
 import { GraphNode } from '@src/model/node'

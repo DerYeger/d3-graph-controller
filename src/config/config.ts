@@ -1,14 +1,9 @@
+import { LinkFilter } from '@src/config/filter'
 import { SimulationForceConfig } from '@src/config/forces'
 import { defaultMarkerConfig, MarkerConfig } from '@src/config/marker'
 import { NodeTypeToken } from '@src/model/graph'
 import { GraphLink } from '@src/model/link'
 import { GraphNode } from '@src/model/node'
-
-export type LinkFilter<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>,
-  Link extends GraphLink<T, Node>
-> = (link: Link) => boolean
 
 export interface InitialGraphSettings<
   T extends NodeTypeToken,
@@ -28,13 +23,9 @@ export interface GraphConfig<
   Link extends GraphLink<T, Node>
 > {
   forces: Partial<SimulationForceConfig<T, Node, Link>>
-
   getNodeRadius(node: Node): number
-
   getLinkLength(link: Link): number
-
   initial?: Partial<InitialGraphSettings<T, Node, Link>>
-
   marker: MarkerConfig
 }
 

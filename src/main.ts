@@ -1,4 +1,5 @@
 export * from '@src/config/config'
+export * from '@src/config/filter'
 export * from '@src/config/forces'
 export * from '@src/config/marker'
 export * from '@src/controller'

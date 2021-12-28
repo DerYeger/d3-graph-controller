@@ -51,4 +51,14 @@ export default defineConfig({
       },
     ],
   },
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  test: {
+    include: ['test/**/*.test.ts'],
+    exclude: ['**/*.vue'],
+    deps: {
+      inline: ['ts-deepmerge'],
+    },
+    environment: 'jsdom',
+  },
 })

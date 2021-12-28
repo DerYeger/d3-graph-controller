@@ -1,16 +1,23 @@
-import { DemoGraph, DemoGraphConfig, demoGraphConfig } from '@demo/src/model'
+import { DemoGraph, DemoGraphConfig } from '@demo/src/model'
 import { defineDemoNode, DemoNode } from '@demo/src/node'
+import { defineGraphConfig } from '@src/config/config'
 import { PositionInitializers } from '@src/config/position'
 
-export const randomGraphConfig: DemoGraphConfig = {
-  ...demoGraphConfig,
+export const randomGraphConfig: DemoGraphConfig = defineGraphConfig({
+  getNodeRadius(node: DemoNode): number {
+    return node.radiusMultiplier * 4
+  },
   initial: {
     showLinkLabels: false,
     showNodeLabels: false,
   },
-  getNodeRadius: (node: DemoNode) => node.radiusMultiplier * 4,
   positionInitializer: PositionInitializers.Randomized,
-}
+  forces: {
+    charge: {
+      strength: -50,
+    },
+  },
+})
 
 export function generateRandomGraph(): DemoGraph {
   const nodeCount = 200

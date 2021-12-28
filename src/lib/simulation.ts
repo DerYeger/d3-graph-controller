@@ -42,35 +42,41 @@ export function defineSimulation<
   width,
 }: DefineSimulationParams<T, Node, Link>): GraphSimulation<T, Node, Link> {
   const simulation = forceSimulation<Node, Link>(graph.nodes)
-  if (config.forces.centering?.enabled) {
-    const strength = config.forces.centering.strength
+
+  const centeringForce = config.forces.centering
+  if (centeringForce && centeringForce.enabled) {
+    const strength = centeringForce.strength
     simulation
       .force('x', forceX<Node>(width / 2).strength(strength))
       .force('y', forceY<Node>(height / 2).strength(strength))
   }
-  if (config.forces.charge?.enabled) {
+
+  const chargeForce = config.forces.charge
+  if (chargeForce && chargeForce.enabled) {
     simulation.force(
       'charge',
-      forceManyBody<Node>().strength(config.forces.charge.strength)
+      forceManyBody<Node>().strength(chargeForce.strength)
     )
   }
-  if (config.forces.collision?.enabled) {
+
+  const collisionForce = config.forces.collision
+  if (collisionForce && collisionForce.enabled) {
     simulation.force(
       'collision',
       forceCollide<Node>().radius(
-        (d) =>
-          (config.forces.collision?.radiusMultiplier ?? 1) *
-          config.getNodeRadius(d)
+        (d) => (collisionForce.radiusMultiplier ?? 1) * config.getNodeRadius(d)
       )
     )
   }
-  if (config.forces.link?.enabled) {
+
+  const linkForce = config.forces.link
+  if (linkForce && linkForce.enabled) {
     simulation.force(
       'link',
       forceLink<Node, Link>(graph.links)
         .id((d) => d.id)
         .distance((d) => config.getLinkLength(d))
-        .strength(config.forces.link.strength)
+        .strength(linkForce.strength)
     )
   }
   return simulation.on('tick', () => onTick())

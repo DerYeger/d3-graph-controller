@@ -30,8 +30,34 @@ export interface SimulationForceConfig<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  centering: NodeForce<T, Node>
-  charge: NodeForce<T, Node>
-  collision: CollisionForce<T, Node>
-  link: LinkForce<T, Node, Link>
+  centering: false | NodeForce<T, Node>
+  charge: false | NodeForce<T, Node>
+  collision: false | CollisionForce<T, Node>
+  link: false | LinkForce<T, Node, Link>
+}
+
+export function createDefaultForces<
+  T extends NodeTypeToken,
+  Node extends GraphNode<T>,
+  Link extends GraphLink<T, Node>
+>(): SimulationForceConfig<T, Node, Link> {
+  return {
+    centering: {
+      enabled: true,
+      strength: 0.1,
+    },
+    charge: {
+      enabled: true,
+      strength: -1,
+    },
+    collision: {
+      enabled: true,
+      strength: 1,
+      radiusMultiplier: 2,
+    },
+    link: {
+      enabled: true,
+      strength: 1,
+    },
+  }
 }

@@ -26,6 +26,7 @@ export default defineConfig({
         'd3-shape',
         'd3-zoom',
         'ml-matrix',
+        'ts-deepmerge',
       ],
       output: {
         globals: {

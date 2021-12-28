@@ -7,8 +7,8 @@
   <GraphComponent :config="config" :graph="graph" />
 </template>
 <script>
-import { demoGraph, demoGraphConfig } from '@demo/src/model'
-import { generateRandomGraph, randomGraphConfig } from '@demo/src/random-graph'
+import { demoGraph, demoGraphConfig } from 'demo/src/model'
+import { generateRandomGraph, randomGraphConfig } from 'demo/src/random-graph'
 import { defineComponent } from 'vue'
 
 export default defineComponent({

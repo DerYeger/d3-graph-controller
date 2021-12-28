@@ -1,6 +1,6 @@
-import { terminateEvent } from '@src/lib/utils'
-import { Zoom } from '@src/lib/zoom'
 import { Selection } from 'd3-selection'
+import { terminateEvent } from 'src/lib/utils'
+import { Zoom } from 'src/lib/zoom'
 
 export type GraphHost = Selection<HTMLDivElement, undefined, null, undefined>
 
@@ -36,7 +36,7 @@ export function defineCanvas({
 }
 
 export interface UpdateCanvasParams {
-  canvas?: Canvas
+  canvas?: Canvas | undefined
   scale: number
   xOffset: number
   yOffset: number

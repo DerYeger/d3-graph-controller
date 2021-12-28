@@ -15,9 +15,9 @@
     "noImplicitReturns": true,
     "exactOptionalPropertyTypes": true,
     "paths": {
-      "@src/*": ["src/*"],
-      "@test/*": ["test/*"],
-      "@demo/*": ["demo/*"]
+      "src/*": ["src/*"],
+      "test/*": ["test/*"],
+      "demo/*": ["demo/*"]
     }
   },
   "include": ["./src"]

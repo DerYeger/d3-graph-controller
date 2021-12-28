@@ -1,7 +1,7 @@
-import { GraphConfig } from '@src/config/config'
-import { NodeTypeToken } from '@src/model/graph'
-import { GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
+import { GraphConfig } from 'src/config/config'
+import { NodeTypeToken } from 'src/model/graph'
+import { GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 
 export interface MarkerConfig {
   markerBoxSize: number

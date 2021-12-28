@@ -1,7 +1,7 @@
-import { NodeTypeToken } from '@src/model/graph'
-import { GraphNode } from '@src/model/node'
 import { D3DragEvent, drag, DragBehavior } from 'd3-drag'
 import { select } from 'd3-selection'
+import { NodeTypeToken } from 'src/model/graph'
+import { GraphNode } from 'src/model/node'
 
 export type Drag<
   T extends NodeTypeToken,

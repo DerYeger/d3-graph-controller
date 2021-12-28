@@ -1,5 +1,5 @@
-import { DemoType } from '@demo/src/model'
-import { defineNode, GraphNode } from '@src/model/node'
+import { DemoType } from 'demo/src/model'
+import { defineNode, GraphNode } from 'src/model/node'
 
 export interface DemoNode extends GraphNode<DemoType> {
   radiusMultiplier: number

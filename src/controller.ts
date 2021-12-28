@@ -1,32 +1,32 @@
-import { GraphConfig } from '@src/config/config'
-import { LinkFilter } from '@src/config/filter'
-import { Canvas, defineCanvas, updateCanvasTransform } from '@src/lib/canvas'
-import { defineDrag, Drag } from '@src/lib/drag'
-import { filterGraph } from '@src/lib/filter'
+import { select } from 'd3-selection'
+import { D3ZoomEvent } from 'd3-zoom'
+import { GraphConfig } from 'src/config/config'
+import { LinkFilter } from 'src/config/filter'
+import { Canvas, defineCanvas, updateCanvasTransform } from 'src/lib/canvas'
+import { defineDrag, Drag } from 'src/lib/drag'
+import { filterGraph } from 'src/lib/filter'
 import {
   createLinks,
   defineLinkSelection,
   LinkSelection,
   updateLinks,
-} from '@src/lib/link'
+} from 'src/lib/link'
 import {
   createMarkers,
   defineMarkerSelection,
   MarkerSelection,
-} from '@src/lib/marker'
+} from 'src/lib/marker'
 import {
   createNodes,
   defineNodeSelection,
   NodeSelection,
   updateNodes,
-} from '@src/lib/node'
-import { defineSimulation, GraphSimulation } from '@src/lib/simulation'
-import { defineZoom, Zoom } from '@src/lib/zoom'
-import { Graph, NodeTypeToken } from '@src/model/graph'
-import { GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
-import { select } from 'd3-selection'
-import { D3ZoomEvent } from 'd3-zoom'
+} from 'src/lib/node'
+import { defineSimulation, GraphSimulation } from 'src/lib/simulation'
+import { defineZoom, Zoom } from 'src/lib/zoom'
+import { Graph, NodeTypeToken } from 'src/model/graph'
+import { GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 
 export class GraphController<
   T extends NodeTypeToken = NodeTypeToken,
@@ -47,17 +47,17 @@ export class GraphController<
   private width = 0
   private height = 0
 
-  private simulation?: GraphSimulation<T, Node, Link>
+  private simulation: GraphSimulation<T, Node, Link> | undefined
 
-  private canvas?: Canvas
-  private linkSelection?: LinkSelection<T, Node, Link>
-  private nodeSelection?: NodeSelection<T, Node>
-  private markerSelection?: MarkerSelection
+  private canvas: Canvas | undefined
+  private linkSelection: LinkSelection<T, Node, Link> | undefined
+  private nodeSelection: NodeSelection<T, Node> | undefined
+  private markerSelection: MarkerSelection | undefined
 
-  private zoom?: Zoom
-  private drag?: Drag<T, Node>
+  private zoom: Zoom | undefined
+  private drag: Drag<T, Node> | undefined
 
-  private focusedNode?: Node = undefined
+  private focusedNode: Node | undefined = undefined
 
   public constructor(
     private readonly container: HTMLDivElement,

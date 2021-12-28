@@ -1,10 +1,10 @@
-import { GraphConfig } from '@src/config/config'
-import { Canvas } from '@src/lib/canvas'
-import { Graph, NodeTypeToken } from '@src/model/graph'
-import { getMarkerId, GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
 import { Selection } from 'd3-selection'
 import { line } from 'd3-shape'
+import { GraphConfig } from 'src/config/config'
+import { Canvas } from 'src/lib/canvas'
+import { Graph, NodeTypeToken } from 'src/model/graph'
+import { getMarkerId, GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 
 export type MarkerSelection = Selection<
   SVGMarkerElement,
@@ -24,7 +24,7 @@ export interface CreateMarkerParams<
 > {
   config: GraphConfig<T, Node, Link>
   graph: Graph<T, Node, Link>
-  selection?: MarkerSelection
+  selection?: MarkerSelection | undefined
 }
 
 export function createMarkers<

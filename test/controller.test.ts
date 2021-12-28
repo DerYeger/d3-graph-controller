@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import { defineGraphConfig, GraphController, GraphLink } from '@src/main'
-import TestData, { TestNodeType } from '@test/test-data'
+import { defineGraphConfig, GraphController, GraphLink } from 'src/main'
+import TestData, { TestNodeType } from 'test/test-data'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 describe('GraphController', () => {

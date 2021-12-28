@@ -1,10 +1,10 @@
-import { GraphConfig } from '@src/config/config'
-import { Canvas } from '@src/lib/canvas'
-import Paths from '@src/lib/paths'
-import { Graph, NodeTypeToken } from '@src/model/graph'
-import { getLinkId, getMarkerUrl, GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
 import { Selection } from 'd3-selection'
+import { GraphConfig } from 'src/config/config'
+import { Canvas } from 'src/lib/canvas'
+import Paths from 'src/lib/paths'
+import { Graph, NodeTypeToken } from 'src/model/graph'
+import { getLinkId, getMarkerUrl, GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 
 export type LinkSelection<
   T extends NodeTypeToken,
@@ -26,7 +26,7 @@ export interface CreateLinksParams<
   Link extends GraphLink<T, Node>
 > {
   graph: Graph<T, Node, Link>
-  selection?: LinkSelection<T, Node, Link>
+  selection?: LinkSelection<T, Node, Link> | undefined
   showLabels: boolean
 }
 
@@ -72,7 +72,7 @@ export interface UpdateLinksParams<
   graph: Graph<T, Node, Link>
   graphWidth: number
   graphHeight: number
-  selection?: LinkSelection<T, Node, Link>
+  selection: LinkSelection<T, Node, Link> | undefined
 }
 
 export function updateLinks<

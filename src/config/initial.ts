@@ -1,7 +1,7 @@
-import { LinkFilter } from '@src/config/filter'
-import { NodeTypeToken } from '@src/model/graph'
-import { GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
+import { LinkFilter } from 'src/config/filter'
+import { NodeTypeToken } from 'src/model/graph'
+import { GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 
 export interface InitialGraphSettings<
   T extends NodeTypeToken,
@@ -10,7 +10,7 @@ export interface InitialGraphSettings<
 > {
   includeUnlinked: boolean
   linkFilter: LinkFilter<T, Node, Link>
-  nodeTypeFilter?: T[]
+  nodeTypeFilter?: T[] | undefined
   showLinkLabels: boolean
   showNodeLabels: boolean
 }

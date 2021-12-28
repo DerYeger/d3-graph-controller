@@ -36,12 +36,8 @@
 </template>
 
 <script lang="ts">
-import {
-  DemoGraph,
-  DemoGraphConfig,
-  DemoGraphController,
-} from '@demo/src/model'
-import { GraphController } from '@src/controller'
+import { DemoGraph, DemoGraphConfig, DemoGraphController } from 'demo/src/model'
+import { GraphController } from 'src/controller'
 import { defineComponent, PropType } from 'vue'
 
 function debounce(cb: () => void) {

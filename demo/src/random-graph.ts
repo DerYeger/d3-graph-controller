@@ -1,7 +1,7 @@
-import { DemoGraph, DemoGraphConfig } from '@demo/src/model'
-import { defineDemoNode, DemoNode } from '@demo/src/node'
-import { defineGraphConfig } from '@src/config/config'
-import { PositionInitializers } from '@src/config/position'
+import { DemoGraph, DemoGraphConfig } from 'demo/src/model'
+import { defineDemoNode, DemoNode } from 'demo/src/node'
+import { defineGraphConfig } from 'src/config/config'
+import { PositionInitializers } from 'src/config/position'
 
 export const randomGraphConfig: DemoGraphConfig = defineGraphConfig({
   getNodeRadius(node: DemoNode): number {
@@ -24,7 +24,7 @@ export function generateRandomGraph(): DemoGraph {
   const nodes: DemoNode[] = [...new Array(nodeCount)].map((_, id) =>
     defineDemoNode(
       id.toString(),
-      id % 4 === 0 ? 'secondary' : 'primary',
+      id % 4 === 1 ? 'secondary' : 'primary',
       1 + Math.random() * (id % (3 * Math.random()))
     )
   )

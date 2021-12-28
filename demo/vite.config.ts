@@ -22,11 +22,11 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@src',
+        find: 'src',
         replacement: path.resolve(__dirname, '../src'),
       },
       {
-        find: '@demo',
+        find: 'demo',
         replacement: path.resolve(__dirname, './'),
       },
     ],

@@ -1,7 +1,7 @@
-import { LinkFilter } from '@src/config/filter'
-import { Graph, NodeTypeToken } from '@src/model/graph'
-import { GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
+import { LinkFilter } from 'src/config/filter'
+import { Graph, NodeTypeToken } from 'src/model/graph'
+import { GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 
 export interface GraphFilterParams<
   T extends NodeTypeToken,
@@ -10,7 +10,7 @@ export interface GraphFilterParams<
 > {
   graph: Graph<T, Node, Link>
   filter: T[]
-  focusedNode?: Node
+  focusedNode?: Node | undefined
   includeUnlinked: boolean
   linkFilter: LinkFilter<T, Node, Link>
 }

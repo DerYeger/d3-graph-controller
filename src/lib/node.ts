@@ -1,11 +1,11 @@
-import { GraphConfig } from '@src/config/config'
-import { Canvas } from '@src/lib/canvas'
-import { Drag } from '@src/lib/drag'
-import { terminateEvent } from '@src/lib/utils'
-import { Graph, NodeTypeToken } from '@src/model/graph'
-import { GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
 import { Selection } from 'd3-selection'
+import { GraphConfig } from 'src/config/config'
+import { Canvas } from 'src/lib/canvas'
+import { Drag } from 'src/lib/drag'
+import { terminateEvent } from 'src/lib/utils'
+import { Graph, NodeTypeToken } from 'src/model/graph'
+import { GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 
 export type NodeSelection<
   T extends NodeTypeToken,
@@ -25,10 +25,10 @@ export interface CreateNodesParams<
   Link extends GraphLink<T, Node>
 > {
   config: GraphConfig<T, Node, Link>
-  drag?: Drag<T, Node>
+  drag?: Drag<T, Node> | undefined
   graph: Graph<T, Node, Link>
   onNodeSelected: (node: Node) => void
-  selection?: NodeSelection<T, Node>
+  selection?: NodeSelection<T, Node> | undefined
   showLabels: boolean
 }
 

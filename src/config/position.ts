@@ -1,5 +1,5 @@
-import { NodeTypeToken } from '@src/model/graph'
-import { GraphNode } from '@src/model/node'
+import { NodeTypeToken } from 'src/model/graph'
+import { GraphNode } from 'src/model/node'
 
 export type PositionInitializer<
   T extends NodeTypeToken,

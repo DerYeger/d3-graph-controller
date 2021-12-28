@@ -1,13 +1,13 @@
-import { createDefaultForces, SimulationForceConfig } from '@src/config/forces'
+import { createDefaultForces, SimulationForceConfig } from 'src/config/forces'
 import {
   createDefaultInitialGraphSettings,
   InitialGraphSettings,
-} from '@src/config/initial'
-import { defaultMarkerConfig, MarkerConfig } from '@src/config/marker'
-import { PositionInitializer, PositionInitializers } from '@src/config/position'
-import { NodeTypeToken } from '@src/model/graph'
-import { GraphLink } from '@src/model/link'
-import { GraphNode } from '@src/model/node'
+} from 'src/config/initial'
+import { defaultMarkerConfig, MarkerConfig } from 'src/config/marker'
+import { PositionInitializer, PositionInitializers } from 'src/config/position'
+import { NodeTypeToken } from 'src/model/graph'
+import { GraphLink } from 'src/model/link'
+import { GraphNode } from 'src/model/node'
 import merge from 'ts-deepmerge'
 
 export interface GraphConfig<

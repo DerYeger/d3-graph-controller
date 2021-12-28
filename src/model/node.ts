@@ -1,5 +1,5 @@
-import { NodeTypeToken } from '@src/model/graph'
 import { SimulationNodeDatum } from 'd3-force'
+import { NodeTypeToken } from 'src/model/graph'
 
 export interface GraphNode<T extends NodeTypeToken = NodeTypeToken>
   extends SimulationNodeDatum {
@@ -10,11 +10,11 @@ export interface GraphNode<T extends NodeTypeToken = NodeTypeToken>
   labelColor: string
   isFocused: boolean
   fontSize: string
-  x?: number
-  y?: number
-  fx?: number
-  fy?: number
-  lastInteractionTimestamp?: number
+  x?: number | undefined
+  y?: number | undefined
+  fx?: number | undefined
+  fy?: number | undefined
+  lastInteractionTimestamp?: number | undefined
 }
 
 export function defineNode<

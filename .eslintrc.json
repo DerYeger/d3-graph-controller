@@ -6,6 +6,7 @@
   "plugins": ["@typescript-eslint", "import", "unused-imports"],
   "extends": [
     "eslint:recommended",
+    "plugin:import/recommended",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:vue/vue3-recommended"
@@ -38,6 +39,8 @@
         }
       }
     ],
+    "import/named": "off",
+    "import/no-unresolved": "off",
     "no-console": ["error", { "allow": [""] }],
     "no-multiple-empty-lines": [
       "error",

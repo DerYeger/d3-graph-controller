@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.3.0...v1.4.0) (2021-12-28)
+
+
+### Features
+
+* **config:** make `markerConfig` part of `GraphConfig` ([694f4ad](https://github.com/DerYeger/d3-graph-controller/commit/694f4adf33d3dd8c03b86d31c325a833642ef369)), closes [#2](https://github.com/DerYeger/d3-graph-controller/issues/2)
+
 # [1.3.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.2.0...v1.3.0) (2021-12-27)
 
 

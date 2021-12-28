@@ -44,6 +44,14 @@ import {
 import { GraphController } from '@src/controller'
 import { defineComponent, PropType } from 'vue'
 
+function debounce(cb: () => void) {
+  let h = 0
+  return () => {
+    window.clearTimeout(h)
+    h = window.setTimeout(() => cb())
+  }
+}
+
 export default defineComponent({
   props: {
     config: {
@@ -63,7 +71,7 @@ export default defineComponent({
   },
   computed: {
     resizeObserver(): ResizeObserver {
-      return new ResizeObserver(() => this.controller?.resize())
+      return new ResizeObserver(debounce(() => this.controller?.resize()))
     },
   },
   watch: {

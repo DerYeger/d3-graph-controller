@@ -67,8 +67,9 @@ export class GraphController<
     this.resetView()
 
     this.graph.nodes.forEach((node) => {
-      node.x = node.x ?? this.width / 2
-      node.y = node.y ?? this.height / 2
+      const [x, y] = config.positionInitializer(node, this.width, this.height)
+      node.x = node.x ?? x
+      node.y = node.y ?? y
     })
 
     this.nodeTypes = [...new Set(graph.nodes.map((d) => d.type))]

@@ -6,8 +6,9 @@
         href="https://github.com/DerYeger/d3-graph-controller"
         target="_blank"
         rel="noopener"
-        >GitHub</a
       >
+        GitHub
+      </a>
     </div>
   </header>
 </template>

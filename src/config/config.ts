@@ -1,6 +1,7 @@
 import { LinkFilter } from '@src/config/filter'
 import { SimulationForceConfig } from '@src/config/forces'
 import { defaultMarkerConfig, MarkerConfig } from '@src/config/marker'
+import { PositionInitializer, PositionInitializers } from '@src/config/position'
 import { NodeTypeToken } from '@src/model/graph'
 import { GraphLink } from '@src/model/link'
 import { GraphNode } from '@src/model/node'
@@ -26,6 +27,7 @@ export interface GraphConfig<
   getNodeRadius(node: Node): number
   getLinkLength(link: Link): number
   initial?: Partial<InitialGraphSettings<T, Node, Link>>
+  positionInitializer: PositionInitializer<NodeTypeToken, Node>
   marker: MarkerConfig
 }
 
@@ -56,6 +58,7 @@ function defaultGraphConfig<
     },
     getLinkLength: () => 128,
     getNodeRadius: () => 16,
+    positionInitializer: PositionInitializers.Centered,
     marker: defaultMarkerConfig,
   }
 }

@@ -15,9 +15,9 @@
       <div>
         <span>Included Node Types</span>
         <div
-          class="type-checkbox"
           v-for="type of controller?.nodeTypes"
           :key="type"
+          class="type-checkbox"
         >
           <input
             :id="`type-${type}`"
@@ -36,17 +36,18 @@
 </template>
 
 <script lang="ts">
-import { DemoLink } from '@demo/src/link'
-import { DemoGraph, DemoType } from '@demo/src/model'
-import { DemoNode } from '@demo/src/node'
-import { GraphConfig } from '@src/config/config'
+import {
+  DemoGraph,
+  DemoGraphConfig,
+  DemoGraphController,
+} from '@demo/src/model'
 import { GraphController } from '@src/controller'
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
   props: {
     config: {
-      type: Object as PropType<GraphConfig<DemoType, DemoNode, DemoLink>>,
+      type: Object as PropType<DemoGraphConfig>,
       required: true,
     },
     graph: {
@@ -56,9 +57,7 @@ export default defineComponent({
   },
   data() {
     return {
-      controller: undefined as
-        | GraphController<DemoType, DemoNode, DemoLink>
-        | undefined,
+      controller: undefined as DemoGraphController | undefined,
       maxWeight: 5,
     }
   },

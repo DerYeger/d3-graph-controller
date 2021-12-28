@@ -5,7 +5,7 @@ export interface DemoNode extends GraphNode<DemoType> {
   radiusMultiplier: number
 }
 
-function defineDemoNode(
+export function defineDemoNode(
   id: string,
   type: DemoType,
   radiusMultiplier: number

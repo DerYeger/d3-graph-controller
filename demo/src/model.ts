@@ -1,7 +1,8 @@
 import { DemoLink, links } from '@demo/src/link'
 import { DemoNode, nodes } from '@demo/src/node'
-import { defineGraphConfig } from '@src/config/config'
+import { defineGraphConfig, GraphConfig } from '@src/config/config'
 import { Graph } from '@src/model/graph'
+import { GraphController } from 'src/controller'
 
 export type DemoType = 'primary' | 'secondary'
 
@@ -12,7 +13,15 @@ export const demoGraph: DemoGraph = {
   links: Object.values(links),
 }
 
-export const demoGraphConfig = defineGraphConfig<DemoType, DemoNode, DemoLink>({
+export type DemoGraphController = GraphController<DemoType, DemoNode, DemoLink>
+
+export type DemoGraphConfig = GraphConfig<DemoType, DemoNode, DemoLink>
+
+export const demoGraphConfig: DemoGraphConfig = defineGraphConfig<
+  DemoType,
+  DemoNode,
+  DemoLink
+>({
   getNodeRadius(node: DemoNode): number {
     return node.radiusMultiplier * 32
   },

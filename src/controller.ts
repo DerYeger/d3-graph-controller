@@ -1,11 +1,7 @@
 /* eslint-disable no-underscore-dangle */
-import { D3ZoomEvent } from 'd3-zoom'
-import { Graph, NodeTypeToken } from '@src/model/graph'
-import { GraphNode } from '@src/model/node'
-import { GraphLink } from '@src/model/link'
-import { GraphConfig, LinkFilter } from '@src/model/config'
-import { defineSimulation, GraphSimulation } from '@src/lib/simulation'
+import { GraphConfig, LinkFilter } from '@src/config/config'
 import { Canvas, defineCanvas, updateCanvasTransform } from '@src/lib/canvas'
+import { defineDrag, Drag } from '@src/lib/drag'
 import { filterGraph } from '@src/lib/filter'
 import {
   createLinks,
@@ -14,19 +10,23 @@ import {
   updateLinks,
 } from '@src/lib/link'
 import {
+  createMarkers,
+  defineMarkerSelection,
+  MarkerSelection,
+} from '@src/lib/marker'
+import {
   createNodes,
   defineNodeSelection,
   NodeSelection,
   updateNodes,
 } from '@src/lib/node'
-import {
-  createMarkers,
-  defineMarkerSelection,
-  MarkerSelection,
-} from '@src/lib/marker'
+import { defineSimulation, GraphSimulation } from '@src/lib/simulation'
 import { defineZoom, Zoom } from '@src/lib/zoom'
-import { defineDrag, Drag } from '@src/lib/drag'
+import { Graph, NodeTypeToken } from '@src/model/graph'
+import { GraphLink } from '@src/model/link'
+import { GraphNode } from '@src/model/node'
 import { select } from 'd3-selection'
+import { D3ZoomEvent } from 'd3-zoom'
 
 export class GraphController<
   T extends NodeTypeToken = NodeTypeToken,
@@ -147,6 +147,7 @@ export class GraphController<
 
   public restart(alpha = 0.5): void {
     this.markerSelection = createMarkers({
+      config: this.config,
       graph: this.filteredGraph,
       selection: this.markerSelection,
     })

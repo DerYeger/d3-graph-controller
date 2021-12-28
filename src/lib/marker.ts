@@ -1,11 +1,10 @@
-import { Selection } from 'd3-selection'
-import { line } from 'd3-shape'
-
+import { GraphConfig } from '@src/config/config'
 import { Canvas } from '@src/lib/canvas'
 import { Graph, NodeTypeToken } from '@src/model/graph'
-import { GraphNode } from '@src/model/node'
 import { getMarkerId, GraphLink } from '@src/model/link'
-import { markerConfig } from '@src/model/config'
+import { GraphNode } from '@src/model/node'
+import { Selection } from 'd3-selection'
+import { line } from 'd3-shape'
 
 export type MarkerSelection = Selection<
   SVGMarkerElement,
@@ -23,8 +22,9 @@ export interface CreateMarkerParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  selection?: MarkerSelection
+  config: GraphConfig<T, Node, Link>
   graph: Graph<T, Node, Link>
+  selection?: MarkerSelection
 }
 
 export function createMarkers<
@@ -32,6 +32,7 @@ export function createMarkers<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 >({
+  config,
   graph,
   selection,
 }: CreateMarkerParams<T, Node, Link>): MarkerSelection | undefined {
@@ -41,14 +42,14 @@ export function createMarkers<
       const marker = enter
         .append('marker')
         .attr('id', (d) => getMarkerId(d))
-        .attr('markerHeight', markerConfig.markerBoxSize)
-        .attr('markerWidth', markerConfig.markerBoxSize)
+        .attr('markerHeight', config.marker.markerBoxSize)
+        .attr('markerWidth', config.marker.markerBoxSize)
         .attr('orient', 'auto')
-        .attr('refX', markerConfig.markerRef)
-        .attr('refY', markerConfig.markerRef)
-        .attr('viewBox', markerConfig.markerPath)
+        .attr('refX', config.marker.markerRef)
+        .attr('refY', config.marker.markerRef)
+        .attr('viewBox', config.marker.markerPath)
         .style('fill', (d) => d)
-      marker.append('path').attr('d', `${line()(markerConfig.arrowPoints)}`)
+      marker.append('path').attr('d', `${line()(config.marker.markerPoints)}`)
       return marker
     })
 }

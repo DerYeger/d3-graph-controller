@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite'
 import * as path from 'path'
-import UnoCSS from 'unocss/vite'
+
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
+import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: 'docs',

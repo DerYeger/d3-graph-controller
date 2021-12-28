@@ -1,7 +1,7 @@
-import { defineNode, GraphNode } from '@src/model/node'
-import { defineLink, GraphLink } from '@src/model/link'
+import { defineGraphConfig } from '@src/config/config'
 import { Graph } from '@src/model/graph'
-import { defineGraphConfig } from '@src/model/config'
+import { defineLink, GraphLink } from '@src/model/link'
+import { defineNode, GraphNode } from '@src/model/node'
 
 export interface DemoNode extends GraphNode {
   radiusMultiplier: number

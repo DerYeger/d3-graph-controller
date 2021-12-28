@@ -1,3 +1,7 @@
+import { GraphConfig } from '@src/config/config'
+import { Graph, NodeTypeToken } from '@src/model/graph'
+import { GraphLink } from '@src/model/link'
+import { GraphNode } from '@src/model/node'
 import {
   forceCollide,
   forceLink,
@@ -7,10 +11,6 @@ import {
   forceY,
   Simulation,
 } from 'd3-force'
-import { Graph, NodeTypeToken } from '@src/model/graph'
-import { GraphNode } from '@src/model/node'
-import { GraphLink } from '@src/model/link'
-import { GraphConfig } from '@src/model/config'
 
 export type GraphSimulation<
   T extends NodeTypeToken,

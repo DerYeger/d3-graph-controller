@@ -1,12 +1,11 @@
-import { Selection } from 'd3-selection'
-
+import { GraphConfig } from '@src/config/config'
 import { Canvas } from '@src/lib/canvas'
 import { Drag } from '@src/lib/drag'
 import { terminateEvent } from '@src/lib/utils'
 import { Graph, NodeTypeToken } from '@src/model/graph'
-import { GraphNode } from '@src/model/node'
 import { GraphLink } from '@src/model/link'
-import { GraphConfig } from '@src/model/config'
+import { GraphNode } from '@src/model/node'
+import { Selection } from 'd3-selection'
 
 export type NodeSelection<
   T extends NodeTypeToken,

@@ -6,9 +6,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { GraphController } from '@src/controller'
 import { demoGraph, demoGraphConfig } from '@demo/model'
+import { GraphController } from '@src/controller'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'GraphComponent',

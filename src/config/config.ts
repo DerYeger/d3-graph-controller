@@ -1,27 +1,8 @@
+import { SimulationForceConfig } from '@src/config/forces'
+import { defaultMarkerConfig, MarkerConfig } from '@src/config/marker'
 import { NodeTypeToken } from '@src/model/graph'
 import { GraphLink } from '@src/model/link'
 import { GraphNode } from '@src/model/node'
-
-const markerBoxSize = 4
-
-export const markerConfig = {
-  markerBoxSize,
-  getMarkerPadding: <
-    T extends NodeTypeToken,
-    Node extends GraphNode<T>,
-    Link extends GraphLink<T, Node>
-  >(
-    node: Node,
-    config: GraphConfig<T, Node, Link>
-  ) => config.getNodeRadius(node) + 2 * markerBoxSize,
-  markerRef: markerBoxSize / 2,
-  arrowPoints: [
-    [0, 0],
-    [0, markerBoxSize],
-    [markerBoxSize, markerBoxSize / 2],
-  ] as [number, number][],
-  markerPath: [0, 0, markerBoxSize, markerBoxSize].join(','),
-}
 
 export type LinkFilter<
   T extends NodeTypeToken,
@@ -41,32 +22,6 @@ export interface InitialGraphSettings<
   showNodeLabels: boolean
 }
 
-export interface Force<
-  T extends NodeTypeToken,
-  Subject extends GraphNode<T> | GraphLink<T, GraphNode<T>>
-> {
-  enabled: boolean
-  strength: number | ((subject: Subject) => number)
-}
-
-export interface CollisionForce<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>
-> extends Force<T, Node> {
-  radiusMultiplier: number
-}
-
-export interface SimulationForceConfig<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>,
-  Link extends GraphLink<T, Node>
-> {
-  centering: Force<T, Node>
-  charge: Force<T, Node>
-  collision: CollisionForce<T, Node>
-  link: Force<T, Link>
-}
-
 export interface GraphConfig<
   T extends NodeTypeToken,
   Node extends GraphNode<T>,
@@ -79,6 +34,8 @@ export interface GraphConfig<
   getLinkLength(link: Link): number
 
   initial?: Partial<InitialGraphSettings<T, Node, Link>>
+
+  marker: MarkerConfig
 }
 
 function defaultGraphConfig<
@@ -108,6 +65,7 @@ function defaultGraphConfig<
     },
     getLinkLength: () => 128,
     getNodeRadius: () => 16,
+    marker: defaultMarkerConfig,
   }
 }
 

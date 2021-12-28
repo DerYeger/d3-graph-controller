@@ -1,6 +1,6 @@
-import { Selection } from 'd3-selection'
-import { Zoom } from '@src/lib/zoom'
 import { terminateEvent } from '@src/lib/utils'
+import { Zoom } from '@src/lib/zoom'
+import { Selection } from 'd3-selection'
 
 export type GraphHost = Selection<HTMLDivElement, undefined, null, undefined>
 

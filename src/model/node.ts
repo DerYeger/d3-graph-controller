@@ -1,6 +1,5 @@
-import { SimulationNodeDatum } from 'd3-force'
-
 import { NodeTypeToken } from '@src/model/graph'
+import { SimulationNodeDatum } from 'd3-force'
 
 export interface GraphNode<T extends NodeTypeToken = NodeTypeToken>
   extends SimulationNodeDatum {

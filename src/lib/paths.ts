@@ -1,8 +1,8 @@
-import { Matrix } from 'ml-matrix'
+import { GraphConfig } from '@src/config/config'
 import { NodeTypeToken } from '@src/model/graph'
-import { GraphNode } from '@src/model/node'
 import { GraphLink } from '@src/model/link'
-import { GraphConfig, markerConfig } from '@src/model/config'
+import { GraphNode } from '@src/model/node'
+import { Matrix } from 'ml-matrix'
 
 // ##################################################
 // COMMON
@@ -72,9 +72,9 @@ function calculateSourceAndTarget<
   const sourceX = getX(source) + (config.getNodeRadius(source) - 1) * normX
   const sourceY = getY(source) + (config.getNodeRadius(source) - 1) * normY
   const targetX =
-    getX(target) - markerConfig.getMarkerPadding(target, config) * normX
+    getX(target) - config.marker.getMarkerPadding(target, config) * normX
   const targetY =
-    getY(target) - markerConfig.getMarkerPadding(target, config) * normY
+    getY(target) - config.marker.getMarkerPadding(target, config) * normY
 
   return {
     sourceX,
@@ -134,7 +134,7 @@ function paddedArcPath<
   const end = rotate(endNorm, rotation)
     .multiply(config.getNodeRadius(target))
     .add(t)
-    .add(rotate(endNorm, rotation).multiply(2 * markerConfig.markerBoxSize))
+    .add(rotate(endNorm, rotation).multiply(2 * config.marker.markerBoxSize))
   const arcRadius = 1.2 * dist
   return `M${start.get(0, 0)},${start.get(0, 1)}
           A${arcRadius},${arcRadius},0,0,1,${end.get(0, 0)},${end.get(0, 1)}`
@@ -152,7 +152,8 @@ function calculateCenter<
   const n = new Matrix([[getX(node), getY(node)]])
   const c = new Matrix([center])
   if (n.get(0, 0) === c.get(0, 0) && n.get(0, 1) === c.get(0, 1)) {
-    c.add([[0, 1]]) // Nodes at the exact center of the Graph should have their reflexive edge above them.
+    // Nodes at the exact center of the Graph should have their reflexive edge above them.
+    c.add([[0, 1]])
   }
   return {
     n,
@@ -176,7 +177,7 @@ function paddedReflexivePath<
   const end = rotate(norm, -rotation)
     .multiply(radius)
     .add(n)
-    .add(rotate(norm, -rotation).multiply(2 * markerConfig.markerBoxSize))
+    .add(rotate(norm, -rotation).multiply(2 * config.marker.markerBoxSize))
   return `M${start.get(0, 0)},${start.get(0, 1)}
           A${radius},${radius},0,1,0,${end.get(0, 0)},${end.get(0, 1)}`
 }

@@ -49,5 +49,9 @@ export function defineGraphConfig<
 >(
   config: DeepPartial<GraphConfig<T, Node, Link>> = {}
 ): GraphConfig<T, Node, Link> {
-  return merge(defaultGraphConfig<T, Node, Link>(), config)
+  return merge.withOptions(
+    { mergeArrays: true },
+    defaultGraphConfig<T, Node, Link>(),
+    config
+  )
 }

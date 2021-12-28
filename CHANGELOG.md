@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.4.0...v1.5.0) (2021-12-28)
+
+
+### Features
+
+* make location initialization configurable ([2791ec4](https://github.com/DerYeger/d3-graph-controller/commit/2791ec46a3a11c1339c5eb1724a633566053a45d))
+
 # [1.4.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.3.0...v1.4.0) (2021-12-28)
 
 

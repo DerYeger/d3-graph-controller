@@ -1,3 +1,20 @@
+# [1.6.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.5.0...v1.6.0) (2021-12-28)
+
+
+### Bug Fixes
+
+* **config:** merge arrays in config ([d7ebc7f](https://github.com/DerYeger/d3-graph-controller/commit/d7ebc7fea5e659255627aded08648e9a3feffb87))
+
+
+### Features
+
+* **config:** deep-merge config with default config ([ae65c38](https://github.com/DerYeger/d3-graph-controller/commit/ae65c38adddcebfc6aab495113fa51724dbb17ec))
+
+
+### Performance Improvements
+
+* **style:** remove shadow filter from default theme ([3316e44](https://github.com/DerYeger/d3-graph-controller/commit/3316e44c0350d659af89ee4ed7c0a7683311fe31))
+
 # [1.5.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.4.0...v1.5.0) (2021-12-28)
 
 

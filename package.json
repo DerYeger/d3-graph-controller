@@ -102,6 +102,7 @@
     "access": "public"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint"
+    "*.{js,json,html,scss,ts,vue,yml}": "prettier --write",
+    "*.{js,json,ts,vue}": "eslint --fix"
   }
 }

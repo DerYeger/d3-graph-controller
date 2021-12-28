@@ -4,12 +4,6 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: 'DemoHeader',
-}
-</script>
-
 <style scoped>
 header {
   align-content: center;

@@ -1,0 +1,134 @@
+<template>
+  <div class="container">
+    <div class="settings card">
+      <button @click="resetGraphController()">Reset</button>
+      <div>
+        <label for="maxWeight">Max. Weight: {{ maxWeight }}</label>
+        <input
+          id="maxWeight"
+          v-model="maxWeight"
+          type="range"
+          min="0"
+          max="5"
+        />
+      </div>
+      <div>
+        <span>Included Node Types</span>
+        <div
+          class="type-checkbox"
+          v-for="type of controller?.nodeTypes"
+          :key="type"
+        >
+          <input
+            :id="`type-${type}`"
+            type="checkbox"
+            :checked="controller?.nodeTypeFilter.includes(type)"
+            @change="
+              controller?.filterNodesByType($event.currentTarget.checked, type)
+            "
+          />
+          <label :for="`type-${type}`">{{ type }}</label>
+        </div>
+      </div>
+    </div>
+    <div ref="graph" class="graph card" />
+  </div>
+</template>
+
+<script lang="ts">
+import { DemoLink } from '@demo/src/link'
+import { DemoGraph, DemoType } from '@demo/src/model'
+import { DemoNode } from '@demo/src/node'
+import { GraphConfig } from '@src/config/config'
+import { GraphController } from '@src/controller'
+import { defineComponent, PropType } from 'vue'
+
+export default defineComponent({
+  props: {
+    config: {
+      type: Object as PropType<GraphConfig<DemoType, DemoNode, DemoLink>>,
+      required: true,
+    },
+    graph: {
+      type: Object as PropType<DemoGraph>,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      controller: undefined as
+        | GraphController<DemoType, DemoNode, DemoLink>
+        | undefined,
+      maxWeight: 5,
+    }
+  },
+  computed: {
+    resizeObserver(): ResizeObserver {
+      return new ResizeObserver(() => this.controller?.resize())
+    },
+  },
+  watch: {
+    config() {
+      this.resetGraphController()
+    },
+    graph() {
+      this.resetGraphController()
+    },
+    maxWeight(value: number) {
+      this.controller.linkFilter = (link) => link.weight <= value
+    },
+  },
+  mounted() {
+    this.resetGraphController()
+    this.resizeObserver.observe(this.$refs.graph)
+  },
+  beforeUnmount() {
+    this.resizeObserver.unobserve(this.$refs.graph)
+    this.controller?.shutdown()
+  },
+  methods: {
+    resetGraphController(): void {
+      this.controller?.shutdown()
+      this.controller = new GraphController(
+        this.$refs.graph,
+        this.graph,
+        this.config
+      )
+      this.maxWeight = 5
+    },
+  },
+})
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-grow: 1;
+  gap: 1rem;
+  max-height: 960px;
+  max-width: 960px;
+  width: calc(100% - 2rem);
+}
+
+.settings {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.settings input[type='range'] {
+  width: 100%;
+}
+
+.type-checkbox {
+  align-items: center;
+  display: flex;
+  gap: 0.25em;
+}
+
+.type-checkbox > label {
+  text-transform: capitalize;
+}
+</style>

@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.6.0...v1.7.0) (2021-12-29)
+
+
+### Features
+
+* **paths:** replace `ml-matrix` with `ts-matrix` ([0887b53](https://github.com/DerYeger/d3-graph-controller/commit/0887b53045dc6da1763d7c9da678e115a85e3e44))
+
 # [1.6.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.5.0...v1.6.0) (2021-12-28)
 
 

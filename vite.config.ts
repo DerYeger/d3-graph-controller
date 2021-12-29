@@ -53,10 +53,6 @@ export default defineConfig({
   },
   test: {
     include: ['test/**/*.test.ts'],
-    exclude: ['**/*.vue'],
-    deps: {
-      inline: ['ts-deepmerge'],
-    },
     environment: 'jsdom',
   },
 })

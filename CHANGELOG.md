@@ -1,3 +1,11 @@
+# [1.8.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.7.0...v1.8.0) (2021-12-29)
+
+
+### Features
+
+* **paths:** replace `ts-matrix` with `vecti` ([b61e394](https://github.com/DerYeger/d3-graph-controller/commit/b61e394feb0430c546a5afcb5299449cde7676a9))
+* **paths:** use custom svg line builder ([5461c1b](https://github.com/DerYeger/d3-graph-controller/commit/5461c1b06acc8ae4120b107f637812469210fdb0))
+
 # [1.7.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.6.0...v1.7.0) (2021-12-29)
 
 

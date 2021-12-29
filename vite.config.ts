@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import * as path from 'path'
 
 import { defineConfig } from 'vite'
@@ -51,8 +52,6 @@ export default defineConfig({
       },
     ],
   },
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   test: {
     include: ['test/**/*.test.ts'],
     exclude: ['**/*.vue'],

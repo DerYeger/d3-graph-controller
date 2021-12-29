@@ -2389,11 +2389,6 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
-is-any-array@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-any-array/-/is-any-array-1.0.1.tgz#05fedec1a4dced1854bd279b2ec5df431e5bea9e"
-  integrity sha512-m+FSiaONxBt2W0h9XOUngMBu/WW8uzAKbSk4Ty2aeCcQJ+muBqENexvxUHtDpX65fk5AMCROxqgNX0sSAHstcw==
-
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -2884,36 +2879,6 @@ mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
-
-ml-array-max@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/ml-array-max/-/ml-array-max-1.2.3.tgz#92d1ffef667432d1451d35817a7276c528635e64"
-  integrity sha512-49YwnLlAf4/E/VyezUz+SNfSBhPE8JTahxRPuyM9S9Uv+ft5x0C8A4trtkDgrttMxoxbhudTA1yg8zgJZaYtpA==
-  dependencies:
-    is-any-array "^1.0.0"
-
-ml-array-min@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/ml-array-min/-/ml-array-min-1.2.2.tgz#abd68512a57fe8499513e6f2265533807e2bbe6b"
-  integrity sha512-yidQcOHFaGEuVr6FcwAn+QvKXJv1Lxel5fyKrO+aXGJGp97Mt+p8r21WYtikS/PTVbxdSrliQ0UK4wSHYHHgzQ==
-  dependencies:
-    is-any-array "^1.0.0"
-
-ml-array-rescale@^1.3.6:
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/ml-array-rescale/-/ml-array-rescale-1.3.6.tgz#060d1c636fbb5f877265f4fcc4e0e157521d615a"
-  integrity sha512-Lzj45T6hvHNdht924JQhHzInIK+ilC55zn98uraZUvLBkOWOJGOztEkRM0xyzAjWvVuhpszLADOnoVwfBSnj8w==
-  dependencies:
-    is-any-array "^1.0.0"
-    ml-array-max "^1.2.3"
-    ml-array-min "^1.2.2"
-
-ml-matrix@6.8.2:
-  version "6.8.2"
-  resolved "https://registry.yarnpkg.com/ml-matrix/-/ml-matrix-6.8.2.tgz#79849c909afa114f8227c5b52a2040e2e5381daf"
-  integrity sha512-5o2gVLFyieDSgsStEU5mqty4MZqfeytYA/gJqBSw5/Xuob0X2UrFX/k7FDh+YAwjzG/1l8nYa0oDaJ0sGs/RlA==
-  dependencies:
-    ml-array-rescale "^1.3.6"
 
 mlly@^0.2.2:
   version "0.2.10"
@@ -3736,6 +3701,11 @@ ts-deepmerge@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ts-deepmerge/-/ts-deepmerge-1.1.0.tgz#4236ae102199affe2e77690dcf198a420160eef2"
   integrity sha512-VvwaV/6RyYMwT9d8dClmfHIsG2PCdm6WY430QKOIbPRR50Y/1Q2ilp4i2XEZeHFcNqfaYnAQzpyUC6XA0AqqBg==
+
+ts-matrix@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ts-matrix/-/ts-matrix-1.1.0.tgz#079ab70f06a4bac14e10e284f470b822012b46f8"
+  integrity sha512-6T5IZlsbPo0w33fBCITbl9tnTx8a6Enxv6ChsCQCejiZC2DKkS/VgcT92JLP5g31XgifynbdUM4v6fpP/gRzFg==
 
 ts-morph@^13.0.0:
   version "13.0.2"

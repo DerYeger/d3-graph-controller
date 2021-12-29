@@ -1,5 +1,6 @@
 {
   "name": "d3-graph-controller",
+  "description": "A TypeScript library for visualizing and simulating directed, interactive graphs.",
   "version": "1.7.0",
   "license": "MIT",
   "repository": "github:DerYeger/d3-graph-controller",

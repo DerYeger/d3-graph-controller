@@ -27,7 +27,7 @@ export default defineConfig({
         'd3-shape',
         'd3-zoom',
         'ts-deepmerge',
-        'ts-matrix',
+        'vecti',
       ],
       output: {
         globals: {
@@ -36,6 +36,7 @@ export default defineConfig({
           'd3-selection': 'd3',
           'd3-shape': 'd3',
           'd3-zoom': 'd3',
+          vecti: 'vecti',
         },
       },
     },

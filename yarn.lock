@@ -3702,11 +3702,6 @@ ts-deepmerge@1.1.0:
   resolved "https://registry.yarnpkg.com/ts-deepmerge/-/ts-deepmerge-1.1.0.tgz#4236ae102199affe2e77690dcf198a420160eef2"
   integrity sha512-VvwaV/6RyYMwT9d8dClmfHIsG2PCdm6WY430QKOIbPRR50Y/1Q2ilp4i2XEZeHFcNqfaYnAQzpyUC6XA0AqqBg==
 
-ts-matrix@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/ts-matrix/-/ts-matrix-1.1.0.tgz#079ab70f06a4bac14e10e284f470b822012b46f8"
-  integrity sha512-6T5IZlsbPo0w33fBCITbl9tnTx8a6Enxv6ChsCQCejiZC2DKkS/VgcT92JLP5g31XgifynbdUM4v6fpP/gRzFg==
-
 ts-morph@^13.0.0:
   version "13.0.2"
   resolved "https://registry.yarnpkg.com/ts-morph/-/ts-morph-13.0.2.tgz#55546023493ef82389d9e4f28848a556c784bac4"
@@ -3912,6 +3907,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vecti@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vecti/-/vecti-1.0.0.tgz#2c64e635b1800c89fdf5ad98089e111a68336887"
+  integrity sha512-gupty+MuIX5S60/I/Sd906BaPfB6FTt/hpUdADGqH/kNmgdVI5PskFIudD9uO458gPQcakQQzfhN3CpmWs3emw==
 
 vite-plugin-dts@0.9.6:
   version "0.9.6"

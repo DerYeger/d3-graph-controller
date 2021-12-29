@@ -3934,10 +3934,10 @@ vitepress@0.20.10:
     vite "^2.7.0"
     vue "^3.2.26"
 
-vitest@0.0.118:
-  version "0.0.118"
-  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.0.118.tgz#d6a726d10487b33e362feadb4ae8944925dfd6dc"
-  integrity sha512-2zBpowIaVAMPFB+/DkHFpt63QNXMz737dKTpLtC2t4RNUfLS4n+KKg14nFexj5VlhMf4ntSkrvDHnrE+6gFTmg==
+vitest@0.0.120:
+  version "0.0.120"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.0.120.tgz#ac29fbcd9cba58b2976613e8832a8195797e5273"
+  integrity sha512-puJ8I/FpRpCwif4z9hcZ55PY6oszZNw+1rMdY+YkbtcnCFnKt8sqREnLUDcsvcA8wbM5G//Oa5kohR6CTaXCUA==
   dependencies:
     "@types/chai" "^4.3.0"
     "@types/chai-subset" "^1.3.3"

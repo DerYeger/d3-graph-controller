@@ -84,7 +84,7 @@
     "unocss": "0.18.1",
     "unplugin-vue-components": "0.17.11",
     "vite": "2.7.9",
-    "vite-plugin-dts": "0.9.6",
+    "vite-plugin-dts": "0.9.7",
     "vitepress": "0.20.10",
     "vitest": "0.0.122",
     "vue": "3.2.26",

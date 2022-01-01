@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.9.0...v1.10.0) (2022-01-01)
+
+
+### Features
+
+* **config:** make alpha for resizing configurable ([aaf6010](https://github.com/DerYeger/d3-graph-controller/commit/aaf6010939c93e95f0bdc60caee925cf3bee571e))
+
 # [1.9.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.8.1...v1.9.0) (2022-01-01)
 
 

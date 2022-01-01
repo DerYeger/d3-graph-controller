@@ -33,7 +33,7 @@
     "lint:prettier": "prettier --check \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
     "fix": "yarn pretty && yarn lint:eslint --fix ",
     "test": "vitest",
-    "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text vitest --run",
+    "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text --all --src \"src\" --include \"src/*\" vitest --run",
     "test:run": "vitest --run",
     "pretty": "prettier --write \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
     "prepublishOnly": "yarn build"

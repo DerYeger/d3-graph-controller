@@ -86,7 +86,7 @@
     "vite": "2.7.10",
     "vite-plugin-dts": "0.9.7",
     "vitepress": "0.20.10",
-    "vitest": "0.0.124",
+    "vitest": "0.0.125",
     "vue": "3.2.26",
     "vue-eslint-parser": "8.0.1"
   },

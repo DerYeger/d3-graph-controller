@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.8.1...v1.9.0) (2022-01-01)
+
+
+### Features
+
+* **config:** make alpha values configurable ([b5e0d81](https://github.com/DerYeger/d3-graph-controller/commit/b5e0d81a4e270269d539ef13f49d1ca959903ba4))
+
 ## [1.8.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.8.0...v1.8.1) (2021-12-30)
 
 

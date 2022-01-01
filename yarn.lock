@@ -730,6 +730,13 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.0.1.tgz#db0e5eacf96358e04cc501c9008079b25a70a4ac"
   integrity sha512-wtdMnGVvys9K8tg+DxowU1ytTrdVveXr3LzdhaKakysgGXyrsfaeds2cDywtvujEASjWOwWL/OgWM+qoeM8Plg==
 
+"@vitest/ui@0.0.125":
+  version "0.0.125"
+  resolved "https://registry.yarnpkg.com/@vitest/ui/-/ui-0.0.125.tgz#af6afb9b1e72cb7cf3965b6c38bcfb7be8ec9ce8"
+  integrity sha512-o+bK7o3mKTnnoL6dqsD19DNHfp+fg3U8sHVl9x9HC0N1nrFdcXMrCHWeTcOWB64n3vbN0vALWAjpDRolXpuCFA==
+  dependencies:
+    sirv "^1.0.19"
+
 "@vue/compiler-core@3.2.26":
   version "3.2.26"
   resolved "https://registry.yarnpkg.com/@vue/compiler-core/-/compiler-core-3.2.26.tgz#9ab92ae624da51f7b6064f4679c2d4564f437cc8"

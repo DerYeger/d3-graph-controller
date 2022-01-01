@@ -28,4 +28,5 @@ export interface Alphas<T extends NodeTypeToken, Node extends GraphNode<T>> {
     links: LabelAlphas
     nodes: LabelAlphas
   }
+  resize: number
 }

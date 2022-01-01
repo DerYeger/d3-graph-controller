@@ -59,6 +59,7 @@ function defaultGraphConfig<
           show: 0,
         },
       },
+      resize: 0.5,
     },
     forces: createDefaultForces(),
     initial: createDefaultInitialGraphSettings(),

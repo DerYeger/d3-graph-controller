@@ -92,6 +92,7 @@ export class GraphController<
 
     this.filterGraph(undefined)
     this.initGraph()
+    this.restart(this.config.alphas.initialize)
   }
 
   public get nodeTypeFilter(): T[] {
@@ -150,6 +151,7 @@ export class GraphController<
 
     this.resetView()
     this.initGraph()
+    this.restart(this.config.alphas.resize)
   }
 
   public restart(alpha: number): void {
@@ -226,7 +228,6 @@ export class GraphController<
       onDragEnd: () =>
         this.simulation?.alphaTarget(this.config.alphas.drag.end).restart(),
     })
-    this.restart(this.config.alphas.initialize)
   }
 
   private onTick(): void {

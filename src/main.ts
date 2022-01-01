@@ -1,3 +1,4 @@
+export * from 'src/config/alpha'
 export * from 'src/config/config'
 export * from 'src/config/filter'
 export * from 'src/config/forces'

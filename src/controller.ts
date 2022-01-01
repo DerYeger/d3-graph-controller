@@ -105,13 +105,15 @@ export class GraphController<
   public set includeUnlinked(value: boolean) {
     this._includeUnlinked = value
     this.filterGraph(this.focusedNode)
-    this.restart(0.1)
+    const { include, exclude } = this.config.alphas.filter.unlinked
+    const alpha = value ? include : exclude
+    this.restart(alpha)
   }
 
   public set linkFilter(value: LinkFilter<T, Node, Link>) {
     this._linkFilter = value
     this.filterGraph(this.focusedNode)
-    this.restart(0.1)
+    this.restart(this.config.alphas.filter.link)
   }
 
   public get showNodeLabels(): boolean {
@@ -120,7 +122,9 @@ export class GraphController<
 
   public set showNodeLabels(value: boolean) {
     this._showNodeLabels = value
-    this.restart(0)
+    const { hide, show } = this.config.alphas.labels.nodes
+    const alpha = value ? show : hide
+    this.restart(alpha)
   }
 
   public get showLinkLabels(): boolean {
@@ -129,7 +133,9 @@ export class GraphController<
 
   public set showLinkLabels(value: boolean) {
     this._showLinkLabels = value
-    this.restart(0)
+    const { hide, show } = this.config.alphas.labels.links
+    const alpha = value ? show : hide
+    this.restart(alpha)
   }
 
   public resize(): void {
@@ -146,7 +152,7 @@ export class GraphController<
     this.initGraph()
   }
 
-  public restart(alpha = 0.5): void {
+  public restart(alpha: number): void {
     this.markerSelection = createMarkers({
       config: this.config,
       graph: this.filteredGraph,
@@ -189,7 +195,7 @@ export class GraphController<
       )
     }
     this.filterGraph(this.focusedNode)
-    this.restart(0.1)
+    this.restart(this.config.alphas.filter.type)
   }
 
   public shutdown(): void {
@@ -215,10 +221,12 @@ export class GraphController<
     this.nodeSelection = defineNodeSelection(this.canvas)
     this.markerSelection = defineMarkerSelection(this.canvas)
     this.drag = defineDrag({
-      onDragStart: () => this.simulation?.alphaTarget(0.1).restart(),
-      onDragEnd: () => this.simulation?.alphaTarget(0),
+      onDragStart: () =>
+        this.simulation?.alphaTarget(this.config.alphas.drag.start).restart(),
+      onDragEnd: () =>
+        this.simulation?.alphaTarget(this.config.alphas.drag.end).restart(),
     })
-    this.restart(0.5)
+    this.restart(this.config.alphas.initialize)
   }
 
   private onTick(): void {
@@ -258,7 +266,7 @@ export class GraphController<
   private toggleNodeFocus(node: Node): void {
     if (node.isFocused) {
       this.filterGraph(undefined)
-      this.restart()
+      this.restart(this.config.alphas.focus.release(node))
     } else {
       this.focusNode(node)
     }
@@ -266,7 +274,7 @@ export class GraphController<
 
   private focusNode(node: Node): void {
     this.filterGraph(node)
-    this.restart()
+    this.restart(this.config.alphas.focus.acquire(node))
   }
 
   private filterGraph(nodeToFocus?: Node): void {

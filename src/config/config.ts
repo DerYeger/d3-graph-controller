@@ -1,3 +1,4 @@
+import { Alphas } from 'src/config/alpha'
 import { createDefaultForces, SimulationForceConfig } from 'src/config/forces'
 import {
   createDefaultInitialGraphSettings,
@@ -15,6 +16,7 @@ export interface GraphConfig<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
+  alphas: Alphas<T, Node>
   forces: SimulationForceConfig<T, Node, Link>
   getNodeRadius(node: Node): number
   getLinkLength(link: Link): number
@@ -29,6 +31,35 @@ function defaultGraphConfig<
   Link extends GraphLink<T, Node>
 >(): GraphConfig<T, Node, Link> {
   return {
+    alphas: {
+      drag: {
+        end: 0,
+        start: 0.1,
+      },
+      filter: {
+        link: 1,
+        type: 0.1,
+        unlinked: {
+          include: 0.1,
+          exclude: 0.1,
+        },
+      },
+      focus: {
+        acquire: () => 0.1,
+        release: () => 0.1,
+      },
+      initialize: 1,
+      labels: {
+        links: {
+          hide: 0,
+          show: 0,
+        },
+        nodes: {
+          hide: 0,
+          show: 0,
+        },
+      },
+    },
     forces: createDefaultForces(),
     initial: createDefaultInitialGraphSettings(),
     getLinkLength: () => 128,

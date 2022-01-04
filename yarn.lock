@@ -730,12 +730,12 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.0.1.tgz#db0e5eacf96358e04cc501c9008079b25a70a4ac"
   integrity sha512-wtdMnGVvys9K8tg+DxowU1ytTrdVveXr3LzdhaKakysgGXyrsfaeds2cDywtvujEASjWOwWL/OgWM+qoeM8Plg==
 
-"@vitest/ui@0.0.127":
-  version "0.0.127"
-  resolved "https://registry.yarnpkg.com/@vitest/ui/-/ui-0.0.127.tgz#d2236cb7a6adb6f0d17d222c26fbc01558020f7b"
-  integrity sha512-GSnm4WXDYsR+TE4ZJhtEJ2v0AMhRSCSLzWZX4EclaBDoJ/OUNj8XfiNb6ih0JDEozMBNysBkGGleprAHd4WMnQ==
+"@vitest/ui@0.0.131":
+  version "0.0.131"
+  resolved "https://registry.yarnpkg.com/@vitest/ui/-/ui-0.0.131.tgz#32947574966b4c0c339371690eef468c9f7095a7"
+  integrity sha512-ahXEyFPkbddma4OCDKfFAlC0pARup8xw1Ujw6ktb5qKV7lUVmCddqSuCbqNeAXVFieLYHzeD1Z7tGgzNIYzpUg==
   dependencies:
-    sirv "^1.0.19"
+    sirv "^2.0.0"
 
 "@vue/compiler-core@3.2.26":
   version "3.2.26"
@@ -3422,6 +3422,15 @@ sirv@^1.0.19:
     mrmime "^1.0.0"
     totalist "^1.0.0"
 
+sirv@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-2.0.0.tgz#e6d41213d3b192f2207f551ba5c03e1cc7e11e31"
+  integrity sha512-TT+4+zSM9LR8soWT5/4gOYHfB5a5XEOSV2LtmBRN5MUxi8kh7BSRGuoRYjeBaqhR4w+yx+k6t0OibDNgoLfF7w==
+  dependencies:
+    "@polka/url" "^1.0.0-next.20"
+    mrmime "^1.0.0"
+    totalist "^2.0.0"
+
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
@@ -3664,6 +3673,11 @@ totalist@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/totalist/-/totalist-1.1.0.tgz#a4d65a3e546517701e3e5c37a47a70ac97fe56df"
   integrity sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB/cwXvT1i4Bue0s9g5g==
+
+totalist@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/totalist/-/totalist-2.0.0.tgz#db6f1e19c0fa63e71339bbb8fba89653c18c7eec"
+  integrity sha512-+Y17F0YzxfACxTyjfhnJQEe7afPA0GSpYlFkl2VFMxYP7jshQf9gXV7cH47EfToBumFThfKBvfAcoUn6fdNeRQ==
 
 tough-cookie@^4.0.0:
   version "4.0.0"

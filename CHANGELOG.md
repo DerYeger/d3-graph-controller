@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.0...v1.13.1) (2022-01-05)
+
+
+### Bug Fixes
+
+* **config:** do not use `any` type ([4de3194](https://github.com/DerYeger/d3-graph-controller/commit/4de31949901dd44711493702e73d36e5b8a3268a))
+
 # [1.13.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.12.0...v1.13.0) (2022-01-05)
 
 

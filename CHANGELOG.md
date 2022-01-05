@@ -1,3 +1,15 @@
+# [1.13.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.12.0...v1.13.0) (2022-01-05)
+
+
+### Bug Fixes
+
+* **nodes:** only trigger `onNodeSelected` if double-clicked ([68841e3](https://github.com/DerYeger/d3-graph-controller/commit/68841e3e491e7b112efbfe9a71946c9346fa2edf))
+
+
+### Features
+
+* **config:** expose low-level modifier for nodes ([7742d34](https://github.com/DerYeger/d3-graph-controller/commit/7742d34e4259b4cc8da7a2bb54fa5a54951d1cee))
+
 # [1.12.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.11.0...v1.12.0) (2022-01-05)
 
 

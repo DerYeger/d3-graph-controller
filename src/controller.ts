@@ -23,6 +23,7 @@ import {
   updateNodes,
 } from 'src/lib/node'
 import { defineSimulation, GraphSimulation } from 'src/lib/simulation'
+import { isNumber } from 'src/lib/utils'
 import { defineZoom, Zoom } from 'src/lib/zoom'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
@@ -140,10 +141,12 @@ export class GraphController<
   }
 
   public resize(): void {
+    const oldWidth = this.width
+    const oldHeight = this.height
     const newWidth = this.container.offsetWidth
     const newHeight = this.container.offsetHeight
-    const widthDiffers = this.width.toFixed() !== newWidth.toFixed()
-    const heightDiffers = this.height.toFixed() !== newHeight.toFixed()
+    const widthDiffers = oldWidth.toFixed() !== newWidth.toFixed()
+    const heightDiffers = oldHeight.toFixed() !== newHeight.toFixed()
 
     if (!widthDiffers && !heightDiffers) {
       return
@@ -151,7 +154,12 @@ export class GraphController<
 
     this.resetView()
     this.initGraph()
-    this.restart(this.config.alphas.resize)
+    const alpha = this.config.alphas.resize
+    this.restart(
+      isNumber(alpha)
+        ? alpha
+        : alpha({ oldWidth, oldHeight, newWidth, newHeight })
+    )
   }
 
   public restart(alpha: number): void {

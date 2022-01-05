@@ -6,6 +6,13 @@ export interface LabelAlphas {
   show: number
 }
 
+export interface ResizeContext {
+  oldHeight: number
+  oldWidth: number
+  newHeight: number
+  newWidth: number
+}
+
 export interface Alphas<T extends NodeTypeToken, Node extends GraphNode<T>> {
   drag: {
     start: number
@@ -28,5 +35,5 @@ export interface Alphas<T extends NodeTypeToken, Node extends GraphNode<T>> {
     links: LabelAlphas
     nodes: LabelAlphas
   }
-  resize: number
+  resize: number | ((context: ResizeContext) => number)
 }

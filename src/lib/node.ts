@@ -65,9 +65,7 @@ export function createNodes<
           onNodeContext(d)
         })
         .on('pointerdown', (event: PointerEvent, d) =>
-          onNodeSelected
-            ? onNodeSelected(d)
-            : onPointerDown(event, d, onNodeContext)
+          onPointerDown(event, d, onNodeSelected ?? onNodeContext)
         )
         .style('fill', (d) => d.color)
 

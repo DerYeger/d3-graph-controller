@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.10.1...v1.11.0) (2022-01-05)
+
+
+### Features
+
+* **config:** make resize alpha configurable by context ([e940f53](https://github.com/DerYeger/d3-graph-controller/commit/e940f5304a99899b18f3d46590be3f16912e9f3a))
+
 ## [1.10.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.10.0...v1.10.1) (2022-01-03)
 
 

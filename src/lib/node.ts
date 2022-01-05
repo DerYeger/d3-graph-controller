@@ -27,6 +27,9 @@ export interface CreateNodesParams<
   config: GraphConfig<T, Node, Link>
   drag?: Drag<T, Node> | undefined
   graph: Graph<T, Node, Link>
+  modifier:
+    | ((selection: Selection<SVGCircleElement, Node, any, any>) => void)
+    | undefined
   onNodeSelected: ((node: Node) => void) | undefined
   onNodeContext: (node: Node) => void
   selection?: NodeSelection<T, Node> | undefined
@@ -41,6 +44,7 @@ export function createNodes<
   config,
   drag,
   graph,
+  modifier,
   onNodeContext,
   onNodeSelected,
   selection,
@@ -55,7 +59,7 @@ export function createNodes<
         nodeGroup.call(drag)
       }
 
-      nodeGroup
+      const nodeCircle = nodeGroup
         .append('circle')
         .classed('node', true)
         .attr('aria-label', (d) => d.label)
@@ -68,6 +72,10 @@ export function createNodes<
           onPointerDown(event, d, onNodeSelected ?? onNodeContext)
         )
         .style('fill', (d) => d.color)
+
+      if (modifier !== undefined) {
+        modifier(nodeCircle)
+      }
 
       nodeGroup
         .append('text')

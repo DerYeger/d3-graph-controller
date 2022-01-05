@@ -6,6 +6,7 @@ import {
   InitialGraphSettings,
 } from 'src/config/initial'
 import { defaultMarkerConfig, MarkerConfig } from 'src/config/marker'
+import { Modifiers } from 'src/config/modifiers'
 import { PositionInitializer, PositionInitializers } from 'src/config/position'
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
@@ -23,8 +24,9 @@ export interface GraphConfig<
   getNodeRadius(node: Node): number
   getLinkLength(link: Link): number
   initial: InitialGraphSettings<T, Node, Link>
-  positionInitializer: PositionInitializer<NodeTypeToken, Node>
   marker: MarkerConfig
+  modifiers: Modifiers<T, Node>
+  positionInitializer: PositionInitializer<NodeTypeToken, Node>
 }
 
 function defaultGraphConfig<
@@ -68,8 +70,9 @@ function defaultGraphConfig<
     initial: createDefaultInitialGraphSettings(),
     getLinkLength: () => 128,
     getNodeRadius: () => 16,
-    positionInitializer: PositionInitializers.Centered,
     marker: defaultMarkerConfig,
+    modifiers: {},
+    positionInitializer: PositionInitializers.Centered,
   }
 }
 

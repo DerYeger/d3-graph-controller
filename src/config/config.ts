@@ -1,4 +1,5 @@
 import { Alphas } from 'src/config/alpha'
+import { Callbacks } from 'src/config/callbacks'
 import { createDefaultForces, SimulationForceConfig } from 'src/config/forces'
 import {
   createDefaultInitialGraphSettings,
@@ -17,6 +18,7 @@ export interface GraphConfig<
   Link extends GraphLink<T, Node>
 > {
   alphas: Alphas<T, Node>
+  callbacks: Callbacks<T, Node>
   forces: SimulationForceConfig<T, Node, Link>
   getNodeRadius(node: Node): number
   getLinkLength(link: Link): number
@@ -61,6 +63,7 @@ function defaultGraphConfig<
       },
       resize: 0.5,
     },
+    callbacks: {},
     forces: createDefaultForces(),
     initial: createDefaultInitialGraphSettings(),
     getLinkLength: () => 128,

@@ -179,7 +179,8 @@ export class GraphController<
       config: this.config,
       drag: this.drag,
       graph: this.filteredGraph,
-      onNodeSelected: (d) => this.toggleNodeFocus(d),
+      onNodeContext: (d) => this.toggleNodeFocus(d),
+      onNodeSelected: this.config.callbacks.nodeClicked,
       selection: this.nodeSelection,
       showLabels: this._showNodeLabels,
     })

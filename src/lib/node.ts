@@ -27,7 +27,8 @@ export interface CreateNodesParams<
   config: GraphConfig<T, Node, Link>
   drag?: Drag<T, Node> | undefined
   graph: Graph<T, Node, Link>
-  onNodeSelected: (node: Node) => void
+  onNodeSelected: ((node: Node) => void) | undefined
+  onNodeContext: (node: Node) => void
   selection?: NodeSelection<T, Node> | undefined
   showLabels: boolean
 }
@@ -40,6 +41,7 @@ export function createNodes<
   config,
   drag,
   graph,
+  onNodeContext,
   onNodeSelected,
   selection,
   showLabels,
@@ -60,10 +62,12 @@ export function createNodes<
         .attr('r', (d) => config.getNodeRadius(d))
         .on('contextmenu', (event, d) => {
           terminateEvent(event)
-          onNodeSelected(d)
+          onNodeContext(d)
         })
         .on('pointerdown', (event: PointerEvent, d) =>
-          onPointerDown(event, d, onNodeSelected)
+          onNodeSelected
+            ? onNodeSelected(d)
+            : onPointerDown(event, d, onNodeContext)
         )
         .style('fill', (d) => d.color)
 

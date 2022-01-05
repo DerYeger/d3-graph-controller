@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.11.0...v1.12.0) (2022-01-05)
+
+
+### Features
+
+* **config:** add configurable `nodeSelected` callback ([c7eb223](https://github.com/DerYeger/d3-graph-controller/commit/c7eb223197c51266d66386b0373a9098985b0139))
+
 # [1.11.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.10.1...v1.11.0) (2022-01-05)
 
 

@@ -68,7 +68,7 @@
     "@typescript-eslint/eslint-plugin": "5.9.0",
     "@typescript-eslint/parser": "5.9.0",
     "@vitejs/plugin-vue": "2.0.1",
-    "@vitest/ui": "0.0.131",
+    "@vitest/ui": "0.0.132",
     "c8": "7.11.0",
     "eslint": "8.6.0",
     "eslint-config-prettier": "8.3.0",

@@ -28,7 +28,9 @@ export interface CreateNodesParams<
   drag?: Drag<T, Node> | undefined
   graph: Graph<T, Node, Link>
   modifier:
-    | ((selection: Selection<SVGCircleElement, Node, any, any>) => void)
+    | ((
+        selection: Selection<SVGCircleElement, Node, SVGGElement, undefined>
+      ) => void)
     | undefined
   onNodeSelected: ((node: Node) => void) | undefined
   onNodeContext: (node: Node) => void

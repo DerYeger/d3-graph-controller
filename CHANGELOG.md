@@ -1,3 +1,12 @@
+## [1.14.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.14.0...v1.14.1) (2022-01-06)
+
+
+### Bug Fixes
+
+* consider effective size for simulation ([163f551](https://github.com/DerYeger/d3-graph-controller/commit/163f551941e83cb290a816455ae914ee85600c85))
+* properly calculate graph center ([1ba6d74](https://github.com/DerYeger/d3-graph-controller/commit/1ba6d7474c5ab469e87a49db084284f76e320287))
+* **zoom:** call `zoom.transform` ([519b263](https://github.com/DerYeger/d3-graph-controller/commit/519b2630d09c6e2ed3af28d6090d5fdc213fe0c2))
+
 # [1.14.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.3...v1.14.0) (2022-01-06)
 
 

@@ -28,6 +28,7 @@ import { defineZoom, Zoom } from 'src/lib/zoom'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
+import { Vector } from 'vecti'
 
 export class GraphController<
   T extends NodeTypeToken = NodeTypeToken,
@@ -264,12 +265,14 @@ export class GraphController<
 
   private onTick(): void {
     updateNodes(this.nodeSelection)
-
+    const center = Vector.of([this.width, this.height])
+      .divide(2)
+      .subtract(Vector.of([this.xOffset, this.yOffset]))
+      .divide(this.scale)
     updateLinks({
       config: this.config,
+      center,
       graph: this.filteredGraph,
-      graphHeight: this.height,
-      graphWidth: this.width,
       selection: this.linkSelection,
     })
   }

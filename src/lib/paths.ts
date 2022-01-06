@@ -25,7 +25,7 @@ export interface ReflexivePathParams<
 > {
   config: GraphConfig<T, Node, Link>
   node: Node
-  center: [number, number]
+  center: Vector
 }
 
 function getX<T extends NodeTypeToken, Node extends GraphNode<T>>(
@@ -74,7 +74,7 @@ function calculateCenter<
   Link extends GraphLink<T, Node>
 >({ center, node }: ReflexivePathParams<T, Node, Link>) {
   const n = new Vector(getX(node), getY(node))
-  let c = Vector.of(center)
+  let c = center
   if (n.x === c.x && n.y === c.y) {
     // Nodes at the exact center of the Graph should have their reflexive edge above them.
     c = c.add(new Vector(0, 1))

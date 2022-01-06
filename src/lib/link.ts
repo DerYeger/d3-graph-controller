@@ -5,6 +5,7 @@ import Paths from 'src/lib/paths'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { getLinkId, getMarkerUrl, GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
+import { Vector } from 'vecti'
 
 export type LinkSelection<
   T extends NodeTypeToken,
@@ -68,10 +69,9 @@ export interface UpdateLinksParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
+  center: Vector
   config: GraphConfig<T, Node, Link>
   graph: Graph<T, Node, Link>
-  graphWidth: number
-  graphHeight: number
   selection: LinkSelection<T, Node, Link> | undefined
 }
 
@@ -89,10 +89,9 @@ function updateLinkPaths<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 >({
+  center,
   config,
   graph,
-  graphHeight,
-  graphWidth,
   selection,
 }: UpdateLinksParams<T, Node, Link>): void {
   selection?.selectAll<SVGPathElement, Link>('path').attr('d', (d) => {
@@ -108,7 +107,7 @@ function updateLinkPaths<
       return Paths.reflexive.path({
         config,
         node: d.source,
-        center: [graphWidth / 2, graphHeight / 2],
+        center,
       })
     } else if (areBidirectionallyConnected(graph, d.source, d.target)) {
       return Paths.arc.path({ config, source: d.source, target: d.target })
@@ -124,9 +123,8 @@ function updateLinkLabels<
   Link extends GraphLink<T, Node>
 >({
   config,
+  center,
   graph,
-  graphHeight,
-  graphWidth,
   selection,
 }: UpdateLinksParams<T, Node, Link>): void {
   selection?.select('.link__label').attr('transform', (d) => {
@@ -142,7 +140,7 @@ function updateLinkLabels<
       return Paths.reflexive.labelTransform({
         config,
         node: d.source,
-        center: [graphWidth / 2, graphHeight / 2],
+        center,
       })
     } else if (areBidirectionallyConnected(graph, d.source, d.target)) {
       return Paths.arc.labelTransform({

@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.2...v1.13.3) (2022-01-06)
+
+
+### Bug Fixes
+
+* use named export ([4ee23d7](https://github.com/DerYeger/d3-graph-controller/commit/4ee23d7660af3dca3a998286c2584e7cb6879abf))
+
 ## [1.13.2](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.1...v1.13.2) (2022-01-06)
 
 

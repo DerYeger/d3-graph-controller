@@ -8,6 +8,7 @@ import {
 import { MarkerConfig, Markers } from 'src/config/marker'
 import { Modifiers } from 'src/config/modifiers'
 import { PositionInitializer, PositionInitializers } from 'src/config/position'
+import { ZoomConfig } from 'src/config/zoom'
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
@@ -27,6 +28,7 @@ export interface GraphConfig<
   marker: MarkerConfig
   modifiers: Modifiers<T, Node>
   positionInitializer: PositionInitializer<NodeTypeToken, Node>
+  zoom: ZoomConfig
 }
 
 function defaultGraphConfig<
@@ -73,6 +75,11 @@ function defaultGraphConfig<
     marker: Markers.Arrow(4),
     modifiers: {},
     positionInitializer: PositionInitializers.Centered,
+    zoom: {
+      initial: 1,
+      min: 0.1,
+      max: 2,
+    },
   }
 }
 

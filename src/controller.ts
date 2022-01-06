@@ -226,8 +226,8 @@ export class GraphController<
   private initGraph(isInitial: boolean): void {
     this.zoom = defineZoom({
       canvasContainer: () => select(this.container).select('svg'),
-      min: 0.01,
-      max: 3,
+      min: this.config.zoom.min,
+      max: this.config.zoom.max,
       onZoom: (event) => this.onZoom(event),
     })
     this.canvas = defineCanvas({

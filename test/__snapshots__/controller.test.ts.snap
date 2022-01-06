@@ -135,8 +135,9 @@ exports[`GraphController > matches the snapshot 1`] = `
       <defs>
         <marker
           id="link-arrow-gray"
-          markerHeight="4"
-          markerWidth="4"
+          markerHeight="16"
+          markerUnits="userSpaceOnUse"
+          markerWidth="16"
           orient="auto"
           refX="2"
           refY="2"

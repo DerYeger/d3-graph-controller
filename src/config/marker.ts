@@ -13,28 +13,36 @@ export interface MarkerConfig {
     node: Node,
     config: GraphConfig<T, Node, Link>
   ) => number
-  markerRef: number
+  markerRef: [number, number]
+  // TODO: rename to path
   markerPoints: [number, number][]
+  // TODO: Rename to viewBox
   markerPath: string
 }
 
-const defaultMarkerBoxSize = 4
-
-export const defaultMarkerConfig: MarkerConfig = {
-  markerBoxSize: defaultMarkerBoxSize,
-  getMarkerPadding: <
-    T extends NodeTypeToken,
-    Node extends GraphNode<T>,
-    Link extends GraphLink<T, Node>
-  >(
-    node: Node,
-    config: GraphConfig<T, Node, Link>
-  ) => config.getNodeRadius(node) + 2 * defaultMarkerBoxSize,
-  markerRef: defaultMarkerBoxSize / 2,
-  markerPoints: [
-    [0, 0],
-    [0, defaultMarkerBoxSize],
-    [defaultMarkerBoxSize, defaultMarkerBoxSize / 2],
-  ] as [number, number][],
-  markerPath: [0, 0, defaultMarkerBoxSize, defaultMarkerBoxSize].join(','),
+function defaultMarkerConfig(size: number): MarkerConfig {
+  return {
+    markerBoxSize: size,
+    getMarkerPadding: <
+      T extends NodeTypeToken,
+      Node extends GraphNode<T>,
+      Link extends GraphLink<T, Node>
+    >(
+      node: Node,
+      config: GraphConfig<T, Node, Link>
+    ) => config.getNodeRadius(node) + 2 * size,
+    markerRef: [size / 2, size / 2],
+    markerPoints: [
+      [0, 0],
+      [0, size],
+      [size, size / 2],
+    ] as [number, number][],
+    markerPath: [0, 0, size, size].join(','),
+  }
 }
+
+const Markers = {
+  Arrow: (size: number): MarkerConfig => defaultMarkerConfig(size),
+}
+
+export default Markers

@@ -5,7 +5,7 @@ import {
   createDefaultInitialGraphSettings,
   InitialGraphSettings,
 } from 'src/config/initial'
-import { defaultMarkerConfig, MarkerConfig } from 'src/config/marker'
+import Markers, { MarkerConfig } from 'src/config/marker'
 import { Modifiers } from 'src/config/modifiers'
 import { PositionInitializer, PositionInitializers } from 'src/config/position'
 import { NodeTypeToken } from 'src/model/graph'
@@ -70,7 +70,7 @@ function defaultGraphConfig<
     initial: createDefaultInitialGraphSettings(),
     getLinkLength: () => 128,
     getNodeRadius: () => 16,
-    marker: defaultMarkerConfig,
+    marker: Markers.Arrow(4),
     modifiers: {},
     positionInitializer: PositionInitializers.Centered,
   }
@@ -88,7 +88,7 @@ export function defineGraphConfig<
   config: DeepPartial<GraphConfig<T, Node, Link>> = {}
 ): GraphConfig<T, Node, Link> {
   return merge.withOptions(
-    { mergeArrays: true },
+    { mergeArrays: false },
     defaultGraphConfig<T, Node, Link>(),
     config
   )

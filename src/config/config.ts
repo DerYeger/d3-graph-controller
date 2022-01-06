@@ -5,7 +5,7 @@ import {
   createDefaultInitialGraphSettings,
   InitialGraphSettings,
 } from 'src/config/initial'
-import Markers, { MarkerConfig } from 'src/config/marker'
+import { MarkerConfig, Markers } from 'src/config/marker'
 import { Modifiers } from 'src/config/modifiers'
 import { PositionInitializer, PositionInitializers } from 'src/config/position'
 import { NodeTypeToken } from 'src/model/graph'

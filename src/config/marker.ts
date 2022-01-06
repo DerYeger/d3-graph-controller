@@ -41,8 +41,6 @@ function defaultMarkerConfig(size: number): MarkerConfig {
   }
 }
 
-const Markers = {
+export const Markers = {
   Arrow: (size: number): MarkerConfig => defaultMarkerConfig(size),
 }
-
-export default Markers

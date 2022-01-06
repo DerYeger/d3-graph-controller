@@ -1,3 +1,15 @@
+# [1.14.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.3...v1.14.0) (2022-01-06)
+
+
+### Bug Fixes
+
+* **zoom:** persist state on resize ([cce354d](https://github.com/DerYeger/d3-graph-controller/commit/cce354d4fa63b7cd80287922b5d0f2bc6ef30988))
+
+
+### Features
+
+* **config:** make initial and boundary zoom values configurable ([f2fb7bc](https://github.com/DerYeger/d3-graph-controller/commit/f2fb7bc76dc04ac42bf53dfe318ef12eb07364df))
+
 ## [1.13.3](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.2...v1.13.3) (2022-01-06)
 
 

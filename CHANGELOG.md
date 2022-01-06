@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.1...v1.13.2) (2022-01-06)
+
+
+### Bug Fixes
+
+* **marker:** use `userSpaceOnUse` as `markerUnits` ([bd146d7](https://github.com/DerYeger/d3-graph-controller/commit/bd146d71883ab5258b47943d36864f991e8aa2e9))
+
 ## [1.13.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.13.0...v1.13.1) (2022-01-05)
 
 

@@ -1,4 +1,5 @@
 import { Selection } from 'd3-selection'
+import { zoomIdentity } from 'd3-zoom'
 import { terminateEvent } from 'src/lib/utils'
 import { Zoom } from 'src/lib/zoom'
 
@@ -7,21 +8,27 @@ export type GraphHost = Selection<HTMLDivElement, undefined, null, undefined>
 export type Canvas = Selection<SVGGElement, undefined, null, undefined>
 
 export interface DefineCanvasParams {
+  applyZoom: boolean
   container: GraphHost
+  offset: [number, number]
   onDoubleClick?: (event: PointerEvent) => void
   onPointerMoved?: (event: PointerEvent) => void
   onPointerUp?: (event: PointerEvent) => void
+  scale: number
   zoom: Zoom
 }
 
 export function defineCanvas({
+  applyZoom,
   container,
   onDoubleClick,
   onPointerMoved,
   onPointerUp,
+  offset: [xOffset, yOffset],
+  scale,
   zoom,
 }: DefineCanvasParams): Canvas {
-  return container
+  const svg = container
     .append('svg')
     .attr('height', '100%')
     .attr('width', '100%')
@@ -32,7 +39,15 @@ export function defineCanvas({
     .on('pointermove', (event: PointerEvent) => onPointerMoved?.(event))
     .on('pointerup', (event: PointerEvent) => onPointerUp?.(event))
     .style('cursor', 'grab')
-    .append('g')
+
+  if (applyZoom) {
+    svg.call(
+      zoom.transform,
+      zoomIdentity.translate(xOffset, yOffset).scale(scale)
+    )
+  }
+
+  return svg.append('g')
 }
 
 export interface UpdateCanvasParams {

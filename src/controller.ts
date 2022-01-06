@@ -1,5 +1,5 @@
 import { select } from 'd3-selection'
-import { D3ZoomEvent, zoomIdentity } from 'd3-zoom'
+import { D3ZoomEvent } from 'd3-zoom'
 import { GraphConfig } from 'src/config/config'
 import { LinkFilter } from 'src/config/filter'
 import { Canvas, defineCanvas, updateCanvasTransform } from 'src/lib/canvas'
@@ -70,6 +70,7 @@ export class GraphController<
     private readonly config: GraphConfig<T, Node, Link>
   ) {
     this.scale = this.config.zoom.initial
+
     this.resetView()
 
     this.graph.nodes.forEach((node) => {
@@ -231,16 +232,13 @@ export class GraphController<
       onZoom: (event) => this.onZoom(event),
     })
     this.canvas = defineCanvas({
+      applyZoom: !isInitial || this.scale !== 1,
       container: select(this.container),
+      offset: [this.xOffset, this.yOffset],
+      scale: this.scale,
       zoom: this.zoom,
     })
-    if (!isInitial || this.scale !== 1) {
-      this.zoom.transform(
-        this.canvas.select('g'),
-        zoomIdentity.translate(this.xOffset, this.yOffset).scale(this.scale)
-      )
-      this.applyZoom()
-    }
+    this.applyZoom()
     this.linkSelection = defineLinkSelection(this.canvas)
     this.nodeSelection = defineNodeSelection(this.canvas)
     this.markerSelection = defineMarkerSelection(this.canvas)

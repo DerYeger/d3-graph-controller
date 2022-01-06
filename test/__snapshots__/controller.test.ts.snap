@@ -7,7 +7,9 @@ exports[`GraphController > matches the snapshot 1`] = `
     style="cursor: grab;"
     width="100%"
   >
-    <g>
+    <g
+      transform="translate(0,0)scale(1)"
+    >
       <g
         class="links"
       >

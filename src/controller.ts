@@ -74,7 +74,11 @@ export class GraphController<
     this.resetView()
 
     this.graph.nodes.forEach((node) => {
-      const [x, y] = config.positionInitializer(node, this.width, this.height)
+      const [x, y] = config.positionInitializer(
+        node,
+        this.effectiveWidth,
+        this.effectiveHeight
+      )
       node.x = node.x ?? x
       node.y = node.y ?? y
     })
@@ -146,6 +150,14 @@ export class GraphController<
     this.restart(alpha)
   }
 
+  private get effectiveWidth(): number {
+    return this.width / this.scale
+  }
+
+  private get effectiveHeight(): number {
+    return this.height / this.scale
+  }
+
   public resize(): void {
     const oldWidth = this.width
     const oldHeight = this.height
@@ -196,9 +208,9 @@ export class GraphController<
     this.simulation = defineSimulation({
       config: this.config,
       graph: this.filteredGraph,
-      height: this.height,
+      height: this.effectiveHeight,
       onTick: () => this.onTick(),
-      width: this.width,
+      width: this.effectiveWidth,
     })
       .alpha(alpha)
       .restart()

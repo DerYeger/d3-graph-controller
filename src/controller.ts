@@ -1,5 +1,5 @@
 import { select } from 'd3-selection'
-import { D3ZoomEvent } from 'd3-zoom'
+import { D3ZoomEvent, zoomIdentity } from 'd3-zoom'
 import { GraphConfig } from 'src/config/config'
 import { LinkFilter } from 'src/config/filter'
 import { Canvas, defineCanvas, updateCanvasTransform } from 'src/lib/canvas'
@@ -58,6 +58,10 @@ export class GraphController<
   private zoom: Zoom | undefined
   private drag: Drag<T, Node> | undefined
 
+  private xOffset = 0
+  private yOffset = 0
+  private scale: number
+
   private focusedNode: Node | undefined = undefined
 
   public constructor(
@@ -65,6 +69,7 @@ export class GraphController<
     private readonly graph: Graph<T, Node, Link>,
     private readonly config: GraphConfig<T, Node, Link>
   ) {
+    this.scale = this.config.zoom.initial
     this.resetView()
 
     this.graph.nodes.forEach((node) => {
@@ -92,7 +97,7 @@ export class GraphController<
     }
 
     this.filterGraph(undefined)
-    this.initGraph()
+    this.initGraph(true)
     this.restart(this.config.alphas.initialize)
   }
 
@@ -153,7 +158,7 @@ export class GraphController<
     }
 
     this.resetView()
-    this.initGraph()
+    this.initGraph(false)
     const alpha = this.config.alphas.resize
     this.restart(
       isNumber(alpha)
@@ -218,7 +223,7 @@ export class GraphController<
     this.simulation?.stop()
   }
 
-  private initGraph(): void {
+  private initGraph(isInitial: boolean): void {
     this.zoom = defineZoom({
       canvasContainer: () => select(this.container).select('svg'),
       min: 0.01,
@@ -229,6 +234,13 @@ export class GraphController<
       container: select(this.container),
       zoom: this.zoom,
     })
+    if (!isInitial || this.scale !== 1) {
+      this.zoom.transform(
+        this.canvas.select('g'),
+        zoomIdentity.translate(this.xOffset, this.yOffset).scale(this.scale)
+      )
+      this.applyZoom()
+    }
     this.linkSelection = defineLinkSelection(this.canvas)
     this.nodeSelection = defineNodeSelection(this.canvas)
     this.markerSelection = defineMarkerSelection(this.canvas)
@@ -266,11 +278,18 @@ export class GraphController<
   }
 
   private onZoom(event: D3ZoomEvent<SVGSVGElement, undefined>): void {
+    this.xOffset = event.transform.x
+    this.yOffset = event.transform.y
+    this.scale = event.transform.k
+    this.applyZoom()
+  }
+
+  private applyZoom() {
     updateCanvasTransform({
       canvas: this.canvas,
-      scale: event.transform.k,
-      xOffset: event.transform.x,
-      yOffset: event.transform.y,
+      scale: this.scale,
+      xOffset: this.xOffset,
+      yOffset: this.yOffset,
     })
   }
 

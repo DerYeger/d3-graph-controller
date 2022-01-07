@@ -22,8 +22,6 @@ const confi = defineGraphConfig({
 
 ## Callbacks
 
-The following callbacks can be configured.
-
 ### nodeClicked
 
 The `nodeClicked` callback is called whenever a node is double-clicked (using the primary mouse button) or double-tapped in a short time.
@@ -57,15 +55,87 @@ const confi = defineGraphConfig<string, CustomNode>({
 
 ## Initial settings
 
+The `GraphController` settings that can be changed after initialization can have their initial values configured.
+The reference below shows the default configuration.
+
+`linkFilter` receives a link as its parameter.
+
+`nodeTypeFilter` is an array of type tokens.
+Only nodes whose type is included in the array will be shown.
+If omitted, the graph will include all nodes.
+
+```ts
+import { defineGraphConfig } from 'd3-graph-controller'
+
+const confi = defineGraphConfig({
+  initial: {
+    includeUnlinked: true,
+    linkFilter: () => true,
+    nodeTypeFilter: undefined,
+    showLinkLabels: true,
+    showNodeLabels: true,
+  },
+})
+```
+
 ## Markers
+
+Markers are displayed at the end of links.
+Because precise marker dimensions are required for path calculations, it is necessary to provide a lot of data.
+Hence, it is recommended to only use the default marker `Markers.Arrow` with customizable size as seen below.
+
+```ts
+import { Markers, defineGraphConfig } from 'd3-graph-controller'
+
+const confi = defineGraphConfig({
+  marker:  Markers.Arrow(4),
+})
+```
 
 ## Modifiers
 
+If absolute control is required, `modifiers` can be used to customize the d3-selections.
+
+```ts
+import { defineGraphConfig } from 'd3-graph-controller'
+import { GraphNode } from 'src/model/node'
+
+const confi = defineGraphConfig({
+  modifiers: {
+    node: (selection: Selection<SVGCircleElement, GraphNode, SVGGElement, undefined>) => {
+      // Define custom callbacks or visuals
+    },
+  },
+})
+```
+
+::: warning
+Configuring modifiers is generally only required for custom control schemes.
+Do not forget to unset `pointerdown` and `contextmenu` if required.
+:::
+
 ## Position initialization
+
+When a `GraphController` is created, it initializes the positions of nodes that do not have their coordinates set.
+The behavior of this initialization can be customized by providing a `PositionInitializer`.
+A `PositionInitializer` is a function that receives a `GraphNode` as well as the width and height of a graph and returns two coordinates.
+This library provides two `PositionInitializer`s out of the box.
+
+By default, `PositionInitializers.Centered` is used.
+Alternatively, `PositionInitializers.Randomized` or custom implementations can be used.
+
+```ts
+import { PositionInitializers, defineGraphConfig } from 'd3-graph-controller'
+
+const confi = defineGraphConfig({
+  positionInitializer: PositionInitializers.Randomized,
+})
+```
 
 ## Simulation
 
 The interactivity of the graph is driven by a d3 simulation.
+Its forces and behavior can be configured for precise control.
 
 ### Alphas
 
@@ -186,9 +256,9 @@ The `min` value must be larger than 0 and the initial value must be withing the 
 :::
 
 ```ts
-import { GraphLink, GraphNode, defineGraphConfig } from 'd3-graph-controller'
+import { defineGraphConfig } from 'd3-graph-controller'
 
-const confi = defineGraphConfig<string, GraphNode, CustomLink>({
+const confi = defineGraphConfig({
   zoom: {
     initial: 1,
     max: 2,

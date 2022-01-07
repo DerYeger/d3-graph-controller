@@ -103,7 +103,7 @@ This allows you to use dynamic colors with CSS variables:
 ```
 
 ```ts
-import { defineGraphConfig, defineLink, defineNodeWithDefaults, Graph, GraphController } from 'd3-graph-controller'
+import { defineNodeWithDefaults } from 'd3-graph-controller'
 
 const a = defineNodeWithDefaults({
   type: 'node',

@@ -140,3 +140,34 @@ const controller = new GraphController(container, graph, config)
 ::: tip
 Do not forget to call `controller.shutdown()` when the graph is no longer required or your component will be destroyed.
 :::
+
+## Styling
+
+The library provides default styles, which need to be imported manually.
+
+```ts
+import 'd3-graph-controller/default.css'
+```
+
+In addition, the properties `color` and `fontSize` of nodes and links accept any valid CSS value.
+This allows you to use dynamic colors with CSS variables.
+
+```css
+:root {
+  --color-primary: 'red';
+}
+```
+
+```ts
+import { defineNodeWithDefaults } from 'd3-graph-controller'
+
+const a = defineNodeWithDefaults({
+  type: 'node',
+  id: 'a',
+  label: 'A',
+  color: 'var(--color-primary)',
+  fontSize: '2rem',
+})
+```
+
+For customization of the default theme, the custom CSS property `--color-node-stroke` can be used.

@@ -69,6 +69,54 @@ The interactivity of the graph is driven by a d3 simulation.
 
 ### Alphas
 
+Alpha values determine the *heat* or *activity* of the similation. 
+The higher the value, the stronger the simulation will react.
+After certain actions, the simulations needs to be restarted.
+The alpha values for those restarts can be configured.
+Reference the default configuration below for the available options.
+
+```ts
+import { GraphNode, defineGraphConfig } from 'd3-graph-controller'
+
+const confi = defineGraphConfig({
+  alphas: {
+    drag: {
+      end: 0,
+      start: 0.1,
+    },
+    filter: {
+      link: 1,
+      type: 0.1,
+      unlinked: {
+        include: 0.1,
+        exclude: 0.1,
+      },
+    },
+    focus: {
+      acquire: () => 0.1,
+      release: () => 0.1,
+    },
+    initialize: 1,
+    labels: {
+      links: {
+        hide: 0,
+        show: 0,
+      },
+      nodes: {
+        hide: 0,
+        show: 0,
+      },
+    },
+    resize: 0.5,
+  },
+})
+```
+
+::: tip
+`alphas.focus.acquire` and `alphas.focus.release` receive the (un-)focused node as a parameter.
+`alphas.resize` can either be a static `number` or a function receiving a `ResizeContext` as its parameter.
+:::
+
 ### Forces
 
 Forces can be customized or disabled as required.
@@ -83,7 +131,7 @@ All `strength` properties can also be functions that receive the subject of the 
 Except `forces.link`, the subject is always a `GraphNode` (or the custom type used).
 
 ```ts
-import { GraphNode, defineGraphConfig } from 'd3-graph-controller'
+import { defineGraphConfig } from 'd3-graph-controller'
 
 const confi = defineGraphConfig({
   forces: {

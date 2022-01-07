@@ -2,10 +2,10 @@
 home: true
 heroImage: /logo.svg
 actions:
-- text: Guide
+- text: Get Started
   link: /guide/
   type: primary
-- text: Config
+- text: Learn More
   link: /config/
   type: primary
 features:

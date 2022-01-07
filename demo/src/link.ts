@@ -11,17 +11,15 @@ export function defineDemoLink(
   target: DemoNode,
   weight: number
 ): DemoLink {
-  return {
-    ...defineLink<DemoType, DemoNode>({
-      source,
-      target,
-      color: `var(--color-secondary)`,
-      label: weight.toString(),
-      labelColor: 'var(--text-on-secondary)',
-      showLabel: true,
-    }),
+  return defineLink<DemoType, DemoNode, DemoNode, DemoLink>({
+    source,
+    target,
+    color: `var(--color-secondary)`,
+    label: weight.toString(),
+    labelColor: 'var(--text-on-secondary)',
+    showLabel: true,
     weight,
-  }
+  })
 }
 
 const aToB: DemoLink = defineDemoLink(nodes.a, nodes.b, 1)

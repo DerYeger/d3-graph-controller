@@ -7,19 +7,6 @@ contributors: false
 
 Both behavior and visuals of graphs can be customized by passing additional parameters to `defineGraphConfig()`.
 
-## Resizing
-
-Graphs can be resized to fit their container.
-This can either happen manually by calling a `GraphController`'s `resize` method or automatically by setting `autoResize` to `true`.
-
-```ts
-import { defineGraphConfig } from 'd3-graph-controller'
-
-const confi = defineGraphConfig({
-  autoResize: true,
-})
-```
-
 ## Callbacks
 
 ### nodeClicked
@@ -34,22 +21,6 @@ const confi = defineGraphConfig({
   callbacks: {
     nodeClicked: (node: GraphNode) => console.log(node.id),
   },
-})
-```
-
-## Node radius
-
-The radius of nodes is used for their visualization as well as the underlying simulation.
-It can be configured using the `getNodeRadius` property of the config.
-You can use instances to calculate dynamic node radii.
-
-```ts
-import { GraphNode, defineGraphConfig } from 'd3-graph-controller'
-
-type CustomNode = GraphNode & { radius: number }
-
-const confi = defineGraphConfig<string, CustomNode>({
-  getNodeRadius: (node: CustomNode) => customNode.radius,
 })
 ```
 
@@ -114,6 +85,22 @@ Configuring modifiers is generally only required for custom control schemes.
 Do not forget to unset `pointerdown` and `contextmenu` if required.
 :::
 
+## Node radius
+
+The radius of nodes is used for their visualization as well as the underlying simulation.
+It can be configured using the `getNodeRadius` property of the config.
+You can use instances to calculate dynamic node radii.
+
+```ts
+import { GraphNode, defineGraphConfig } from 'd3-graph-controller'
+
+type CustomNode = GraphNode & { radius: number }
+
+const confi = defineGraphConfig<string, CustomNode>({
+  getNodeRadius: (node: CustomNode) => customNode.radius,
+})
+```
+
 ## Position initialization
 
 When a `GraphController` is created, it initializes the positions of nodes that do not have their coordinates set.
@@ -129,6 +116,19 @@ import { PositionInitializers, defineGraphConfig } from 'd3-graph-controller'
 
 const confi = defineGraphConfig({
   positionInitializer: PositionInitializers.Randomized,
+})
+```
+
+## Resizing
+
+Graphs can be resized to fit their container.
+This can either happen manually by calling a `GraphController`'s `resize` method or automatically by setting `autoResize` to `true`.
+
+```ts
+import { defineGraphConfig } from 'd3-graph-controller'
+
+const confi = defineGraphConfig({
+  autoResize: true,
 })
 ```
 

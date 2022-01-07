@@ -5,6 +5,12 @@
 </p>
 
 <p align="center">
+  <a href="https://graph-controller.yeger.eu">
+    Documentation
+  </a>
+</p>
+
+<p align="center">
     A TypeScript library for visualizing and simulating directed, interactive graphs.
 </p>
 
@@ -32,13 +38,8 @@
 ## Features
 
 - 👉 Fully **interactive** dragging, panning, zooming and more. Supports **touch input** and uses multi-touch.
-- 🔎 Allows **focusing nodes** by double- or right-clicking and long presses via touch. This will only show the subgraph containing the node.
-- 📱 Creating **responsive** graph components is easy thanks to the `resize` method.
-- 🔧 Behaviour and appearance are highly **configurable**.
-
-## Links
-
-- [Demo](https://graph-controller.yeger.eu/)
+- 📱 **Responsive** graphs that fit any screen thanks to automatic or manual resizing.
+- 🔧 Extensive **configuration** enables customizable behavior and visuals.
 
 ## Installation
 
@@ -84,7 +85,7 @@ const graph: Graph<string> = {
 
 // A reference to the native host element, e.g., an HTMLDivElement. This is framework agnostic.
 // You may use Angular's @ViewChild, Vue's $ref, plain JavaScript or something else entirely.
-const container = TODO
+const container = document.getElementById('graph')
 
 const controller = new GraphController(container, graph, defineGraphConfig())
 ```

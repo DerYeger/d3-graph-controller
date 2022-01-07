@@ -23,6 +23,11 @@ export const demoGraphConfig: DemoGraphConfig = defineGraphConfig<
   DemoLink
 >({
   autoResize: true,
+  forces: {
+    collision: {
+      radiusMultiplier: 4,
+    },
+  },
   getNodeRadius(node: DemoNode): number {
     return node.radiusMultiplier * 32
   },

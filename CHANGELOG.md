@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.15.0...v1.15.1) (2022-01-07)
+
+
+### Bug Fixes
+
+* apply `graph` class to container automatically ([2f39c30](https://github.com/DerYeger/d3-graph-controller/commit/2f39c30395b20d7ad4d2141cdebe7e3d0fbdd7b1))
+
 # [1.15.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.14.1...v1.15.0) (2022-01-07)
 
 

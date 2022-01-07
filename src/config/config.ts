@@ -23,8 +23,8 @@ export interface GraphConfig<
   autoResize: boolean
   callbacks: Callbacks<T, Node>
   forces: SimulationForceConfig<T, Node, Link>
-  getNodeRadius(node: Node): number
-  getLinkLength(link: Link): number
+  getNodeRadius(node: Node): number // TODO: rename to nodeRadius
+  getLinkLength(link: Link): number // TODO: move to forces.link
   initial: InitialGraphSettings<T, Node, Link>
   marker: MarkerConfig
   modifiers: Modifiers<T, Node>

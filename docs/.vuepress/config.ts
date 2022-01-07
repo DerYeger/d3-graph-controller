@@ -54,7 +54,8 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     navbar: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
-      { text: 'Demo', link: '/demo/' },
+      { text: 'Config', link: '/config/' },
+      { text: 'Demo', link: 'https://graph-controller.yeger.eu' },
     ],
     docsBranch: 'master',
     docsDir: 'docs',

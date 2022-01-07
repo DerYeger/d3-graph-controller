@@ -3,24 +3,27 @@ editLink: true
 contributors: false
 ---
 
+# Guide
+
 ## Installation
 
-```bash
-# yarn
-$ yarn add d3-graph-controller
+<CodeGroup>
+  <CodeGroupItem title="Yarn" active>
 
-# npm
-$ npm install d3-graph-controller
+```bash:no-line-numbers
+yarn add d3-graph-controller
 ```
+  </CodeGroupItem>
+  <CodeGroupItem title="npm">
 
-## Model
+```bash:no-line-numbers
+npm install d3-graph-controller
+```
+  </CodeGroupItem>
+</CodeGroup>
 
-#### Nodes
+## Usage
 
-#### Links
-
-#### Graph
-
-## Configuration
-
-## Example
+::: warning
+Under construction
+:::

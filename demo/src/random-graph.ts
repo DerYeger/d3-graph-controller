@@ -4,6 +4,7 @@ import { defineGraphConfig } from 'src/config/config'
 import { PositionInitializers } from 'src/config/position'
 
 export const randomGraphConfig: DemoGraphConfig = defineGraphConfig({
+  autoResize: true,
   getNodeRadius(node: DemoNode): number {
     return node.radiusMultiplier * 4
   },

@@ -176,8 +176,8 @@ export class GraphController<
   public resize(): void {
     const oldWidth = this.width
     const oldHeight = this.height
-    const newWidth = this.container.offsetWidth
-    const newHeight = this.container.offsetHeight
+    const newWidth = this.container.getBoundingClientRect().width
+    const newHeight = this.container.getBoundingClientRect().height
     const widthDiffers = oldWidth.toFixed() !== newWidth.toFixed()
     const heightDiffers = oldHeight.toFixed() !== newHeight.toFixed()
 
@@ -185,9 +185,11 @@ export class GraphController<
       return
     }
 
-    this.resetView()
-    this.initGraph(false)
+    this.width = this.container.getBoundingClientRect().width
+    this.height = this.container.getBoundingClientRect().height
+
     const alpha = this.config.alphas.resize
+
     this.restart(
       isNumber(alpha)
         ? alpha

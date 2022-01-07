@@ -22,6 +22,7 @@ export const demoGraphConfig: DemoGraphConfig = defineGraphConfig<
   DemoNode,
   DemoLink
 >({
+  autoResize: true,
   getNodeRadius(node: DemoNode): number {
     return node.radiusMultiplier * 32
   },

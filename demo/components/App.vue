@@ -1,5 +1,4 @@
 <template>
-  <DemoHeader />
   <div class="graph-select-buttons">
     <button @click="useDemoGraph()">Example</button>
     <button @click="useRandomGraph()">Random</button>

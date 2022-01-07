@@ -1,8 +1,8 @@
 @import "../default.css";
 
 :root {
-  --color-primary: #729B1B;
-  --color-secondary: #AF8A1D;
+  --color-primary: #349469;
+  --color-secondary: #505B6D;
   --color-background: #141414;
   --color-surface: #242424;
   --color-node-stroke: white;
@@ -22,7 +22,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background-color: var(--color-background);
+  background-color: #22272E;
 }
 
 #app {

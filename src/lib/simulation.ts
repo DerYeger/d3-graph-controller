@@ -11,6 +11,7 @@ import { GraphConfig } from 'src/config/config'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
+import { Vector } from 'vecti'
 
 export type GraphSimulation<
   T extends NodeTypeToken,
@@ -23,11 +24,10 @@ export interface DefineSimulationParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
+  center: () => Vector
   config: GraphConfig<T, Node, Link>
   graph: Graph<T, Node, Link>
-  height: number
   onTick: () => void
-  width: number
 }
 
 export function defineSimulation<
@@ -35,11 +35,10 @@ export function defineSimulation<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 >({
+  center,
   config,
   graph,
-  height,
   onTick,
-  width,
 }: DefineSimulationParams<T, Node, Link>): GraphSimulation<T, Node, Link> {
   const simulation = forceSimulation<Node, Link>(graph.nodes)
 
@@ -47,8 +46,8 @@ export function defineSimulation<
   if (centeringForce && centeringForce.enabled) {
     const strength = centeringForce.strength
     simulation
-      .force('x', forceX<Node>(width / 2).strength(strength))
-      .force('y', forceY<Node>(height / 2).strength(strength))
+      .force('x', forceX<Node>(() => center().x).strength(strength))
+      .force('y', forceY<Node>(() => center().y).strength(strength))
   }
 
   const chargeForce = config.forces.charge

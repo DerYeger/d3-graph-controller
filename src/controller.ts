@@ -159,6 +159,13 @@ export class GraphController<
     return this.height / this.scale
   }
 
+  private get effectiveCenter(): Vector {
+    return Vector.of([this.width, this.height])
+      .divide(2)
+      .subtract(Vector.of([this.xOffset, this.yOffset]))
+      .divide(this.scale)
+  }
+
   public resize(): void {
     const oldWidth = this.width
     const oldHeight = this.height
@@ -207,11 +214,10 @@ export class GraphController<
 
     this.simulation?.stop()
     this.simulation = defineSimulation({
+      center: () => this.effectiveCenter,
       config: this.config,
       graph: this.filteredGraph,
-      height: this.effectiveHeight,
       onTick: () => this.onTick(),
-      width: this.effectiveWidth,
     })
       .alpha(alpha)
       .restart()
@@ -265,13 +271,10 @@ export class GraphController<
 
   private onTick(): void {
     updateNodes(this.nodeSelection)
-    const center = Vector.of([this.width, this.height])
-      .divide(2)
-      .subtract(Vector.of([this.xOffset, this.yOffset]))
-      .divide(this.scale)
+
     updateLinks({
       config: this.config,
-      center,
+      center: this.effectiveCenter,
       graph: this.filteredGraph,
       selection: this.linkSelection,
     })
@@ -295,6 +298,7 @@ export class GraphController<
     this.yOffset = event.transform.y
     this.scale = event.transform.k
     this.applyZoom()
+    this.simulation?.restart()
   }
 
   private applyZoom() {

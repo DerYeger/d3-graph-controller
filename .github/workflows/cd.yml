@@ -30,6 +30,7 @@ jobs:
           folder: ./demo/dist
           clean: true
           single-commit: true
+          token: ${{ secrets.PAT }}
           git-config-name: Jan Müller
           git-config-email: janmueller3698@gmail.com
   build-docs:

@@ -1,4 +1,6 @@
 # Ignore artifacts
 coverage
+docs/.vuepress/.cache
+docs/.vuepress/.temp
 dist
 node_modules

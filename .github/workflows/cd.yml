@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-demo:
-    name: Build demo
+    name: Build docs
     runs-on: ubuntu-latest
     steps:
       - name: Yarn setup
@@ -18,14 +18,12 @@ jobs:
         with:
           node-version: 16
       - name: Generate files
-        run: yarn demo:build
-      - name: Create 404.html file
-        run: cp ./demo/dist/index.html ./demo/dist/404.html
+        run: yarn docs:build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.8
         with:
           branch: gh-pages
-          folder: ./demo/dist
+          folder: ./docs/.vuepress/dist
           clean: true
           single-commit: true
           git-config-name: Jan Müller

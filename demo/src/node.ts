@@ -10,18 +10,16 @@ export function defineDemoNode(
   type: DemoType,
   radiusMultiplier: number
 ): DemoNode {
-  return {
-    ...defineNode<DemoType>({
-      id,
-      type,
-      fontSize: '1rem',
-      isFocused: false,
-      color: `var(--color-${type})`,
-      label: id.toUpperCase(),
-      labelColor: 'var(--text-on-primary)',
-    }),
+  return defineNode<DemoType, DemoNode>({
+    id,
+    type,
+    fontSize: '1rem',
+    isFocused: false,
+    color: `var(--color-${type})`,
+    label: id.toUpperCase(),
+    labelColor: 'var(--text-on-primary)',
     radiusMultiplier,
-  }
+  })
 }
 
 export const nodes = {

@@ -1,7 +1,8 @@
 import { defineUserConfig, ViteBundlerOptions } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import Package from '../../package.json'
-import * as path from 'path'
+
+const ogImage = `${Package.homepage}/logo.png`
 
 export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
   // site config
@@ -10,59 +11,47 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
   description: Package.description,
 
   head: [
-    ['meta', { property: 'og:title', content: 'd3-graph-controller' }],
+    ['meta', { property: 'og:title', content: Package.name }],
     [
       'meta',
       {
         property: 'og:description',
-        content:
-          'A TypeScript library for visualizing and simulating directed, interactive graphs.',
+        content: Package.description,
       },
     ],
-    [
-      'meta',
-      { property: 'og:url', content: 'https://graph-controller.yeger.eu' },
-    ],
+    ['meta', { property: 'og:url', content: Package.homepage }],
     [
       'meta',
       {
         property: 'og:image',
-        content: 'https://graph-controller.yeger.eu/logo.png',
+        content: ogImage,
       },
     ],
-    ['meta', { name: 'twitter:title', content: 'd3-graph-controller' }],
+    ['meta', { name: 'twitter:title', content: Package.name }],
     [
       'meta',
       {
         name: 'twitter:description',
-        content:
-          'A TypeScript library for visualizing and simulating directed, interactive graphs.',
+        content: Package.description,
       },
     ],
     [
       'meta',
       {
         name: 'twitter:image',
-        content: 'https://graph-controller.yeger.eu/logo.png',
+        content: ogImage,
       },
     ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
-    [
-      'link',
-      {
-        href: 'https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap',
-        rel: 'stylesheet',
-      },
-    ],
   ],
 
   // theme and its config
   theme: '@vuepress/theme-default',
   themeConfig: {
     logo: '/logo.png',
-    repo: 'DerYeger/d3-graph-controller',
-    nav: [
+    repo: Package.repository.replace('github:', ''),
+    navbar: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Demo', link: '/demo/' },
@@ -77,13 +66,4 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
       configFile: 'docs/vite.config.ts',
     },
   },
-
-  plugins: [
-    [
-      '@vuepress/plugin-register-components',
-      {
-        componentsDir: path.resolve(__dirname, './components'),
-      },
-    ],
-  ],
 })

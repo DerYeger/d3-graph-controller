@@ -1,5 +1,6 @@
 ---
-title: Guide
+editLink: true
+contributors: false
 ---
 
 ## Installation

@@ -5,3 +5,4 @@ yarn lint-staged
 yarn build
 yarn test:run
 yarn demo:build
+yarn docs:build

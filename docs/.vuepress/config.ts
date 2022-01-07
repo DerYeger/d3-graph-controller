@@ -1,5 +1,6 @@
 import { defineUserConfig, ViteBundlerOptions } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
+// @ts-expect-error
 import Package from '../../package.json'
 
 const ogImage = `${Package.homepage}/logo.png`
@@ -55,7 +56,7 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Config', link: '/config/' },
-      { text: 'Demo', link: 'https://graph-controller-demo.yeger.eu' },
+      { text: 'Demo', link: '/demo/' },
     ],
     docsBranch: 'master',
     docsDir: 'docs',

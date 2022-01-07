@@ -27,8 +27,8 @@ jobs:
         with:
           name: dist
           path: dist
-  demo:
-    name: Demo
+  build-demo:
+    name: Build Demo
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -40,10 +40,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: dist
+          path: dist
       - name: Build
         run: yarn demo:build
-  docs:
-    name: Docs
+  build-docs:
+    name: Build Docs
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -55,6 +56,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: dist
+          path: dist
       - name: Build
         run: yarn docs:build
   lint:
@@ -86,7 +88,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: [build, demo, docs, lint, test]
+    needs: [build, build-demo, build-docs, lint, test]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     steps:
       - name: Setup

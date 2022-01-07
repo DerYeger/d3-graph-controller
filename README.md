@@ -124,6 +124,9 @@ $ yarn install
 # build for production
 $ yarn build
 
+# build in watch mode
+$ yarn dev
+
 # lint project files
 $ yarn lint
 

@@ -36,8 +36,8 @@
 </template>
 
 <script lang="ts">
+import { GraphController } from 'd3-graph-controller'
 import { DemoGraph, DemoGraphConfig, DemoGraphController } from 'demo/src/model'
-import { GraphController } from 'src/controller'
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({

@@ -1,6 +1,6 @@
+import { defineLink, GraphLink } from 'd3-graph-controller'
 import { DemoType } from 'demo/src/model'
 import { DemoNode, nodes } from 'demo/src/node'
-import { defineLink, GraphLink } from 'src/model/link'
 
 export interface DemoLink extends GraphLink<DemoType, DemoNode> {
   weight: number

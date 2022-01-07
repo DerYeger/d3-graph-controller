@@ -44,7 +44,6 @@ jobs:
           node-version: 16
       - name: Build
         run: yarn docs:build
-        continue-on-error: true
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -74,7 +73,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: [build, demo, lint, test]
+    needs: [build, demo, docs, lint, test]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     steps:
       - name: Yarn setup

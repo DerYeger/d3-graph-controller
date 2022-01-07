@@ -1,3 +1,20 @@
+# [1.15.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.14.1...v1.15.0) (2022-01-07)
+
+
+### Bug Fixes
+
+* **simulation:** use effective center ([82cbbd0](https://github.com/DerYeger/d3-graph-controller/commit/82cbbd02ca80a9a564d97479e9e5bf1efd4df288))
+
+
+### Features
+
+* implement automatic resizing ([95cda68](https://github.com/DerYeger/d3-graph-controller/commit/95cda68a186d24ee9f1c56b080b8b25b22a87a81))
+
+
+### Performance Improvements
+
+* do not redraw on resize ([30bb0c3](https://github.com/DerYeger/d3-graph-controller/commit/30bb0c3a42574e266d9acc4859de4a4c877999f4))
+
 ## [1.14.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.14.0...v1.14.1) (2022-01-06)
 
 

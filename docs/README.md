@@ -1,16 +1,17 @@
 ---
 home: true
+heroImage: /logo.svg
 actions:
 - text: Guide
-  link: /guide/README.md
+  link: /guide/
   type: primary
 - text: Config
-  link: /config/README.md
+  link: /config/
   type: primary
 features:
 - title: 👉 Interactive
-  details: Dragging, panning, zooming and more. Supports <b>touch input</b> and uses multi-touch.
-- title: 📱 Response
+  details: Dragging, panning, zooming and more. Supports touch input and uses multi-touch.
+- title: 📱 Responsive
   details: Automatic or manual resizing to fit any screen.
 - title: 🔧 Configurable
   details: Extensive configuration enables customizable behavior and visuals

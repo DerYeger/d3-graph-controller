@@ -1,7 +1,9 @@
 // Vitest Snapshot v1
 
 exports[`GraphController > matches the snapshot 1`] = `
-<div>
+<div
+  class="graph"
+>
   <svg
     height="100%"
     style="cursor: grab;"

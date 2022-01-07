@@ -29,6 +29,7 @@ export function defineCanvas({
   zoom,
 }: DefineCanvasParams): Canvas {
   const svg = container
+    .classed('graph', true)
     .append('svg')
     .attr('height', '100%')
     .attr('width', '100%')

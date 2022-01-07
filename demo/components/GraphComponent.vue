@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div ref="graph" class="graph card" />
+    <div ref="graph" class="card" />
   </div>
 </template>
 

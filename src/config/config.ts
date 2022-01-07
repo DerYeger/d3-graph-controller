@@ -20,6 +20,7 @@ export interface GraphConfig<
   Link extends GraphLink<T, Node>
 > {
   alphas: Alphas<T, Node>
+  autoResize: boolean
   callbacks: Callbacks<T, Node>
   forces: SimulationForceConfig<T, Node, Link>
   getNodeRadius(node: Node): number
@@ -67,6 +68,7 @@ function defaultGraphConfig<
       },
       resize: 0.5,
     },
+    autoResize: false,
     callbacks: {},
     forces: createDefaultForces(),
     initial: createDefaultInitialGraphSettings(),

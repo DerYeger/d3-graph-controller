@@ -23,7 +23,7 @@ import {
   updateNodes,
 } from 'src/lib/node'
 import { defineSimulation, GraphSimulation } from 'src/lib/simulation'
-import { isNumber } from 'src/lib/utils'
+import { debounce, isNumber } from 'src/lib/utils'
 import { defineZoom, Zoom } from 'src/lib/zoom'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
@@ -65,12 +65,14 @@ export class GraphController<
 
   private focusedNode: Node | undefined = undefined
 
+  private resizeObserver?: ResizeObserver
+
   public constructor(
     private readonly container: HTMLDivElement,
     private readonly graph: Graph<T, Node, Link>,
     private readonly config: GraphConfig<T, Node, Link>
   ) {
-    this.scale = this.config.zoom.initial
+    this.scale = config.zoom.initial
 
     this.resetView()
 
@@ -87,14 +89,14 @@ export class GraphController<
     this.nodeTypes = [...new Set(graph.nodes.map((d) => d.type))]
     this._nodeTypeFilter = [...this.nodeTypes]
 
-    if (this.config.initial) {
+    if (config.initial) {
       const {
         includeUnlinked,
         nodeTypeFilter,
         linkFilter,
         showLinkLabels,
         showNodeLabels,
-      } = this.config.initial
+      } = config.initial
       this._includeUnlinked = includeUnlinked ?? this._includeUnlinked
       this._showLinkLabels = showLinkLabels ?? this._showLinkLabels
       this._showNodeLabels = showNodeLabels ?? this._showNodeLabels
@@ -104,7 +106,12 @@ export class GraphController<
 
     this.filterGraph(undefined)
     this.initGraph(true)
-    this.restart(this.config.alphas.initialize)
+    this.restart(config.alphas.initialize)
+
+    if (config.autoResize) {
+      this.resizeObserver = new ResizeObserver(debounce(() => this.resize()))
+      this.resizeObserver.observe(this.container)
+    }
   }
 
   public get nodeTypeFilter(): T[] {
@@ -240,6 +247,7 @@ export class GraphController<
       this.focusedNode.isFocused = false
       this.focusedNode = undefined
     }
+    this.resizeObserver?.unobserve(this.container)
     this.simulation?.stop()
   }
 

@@ -40,14 +40,6 @@ import { DemoGraph, DemoGraphConfig, DemoGraphController } from 'demo/src/model'
 import { GraphController } from 'src/controller'
 import { defineComponent, PropType } from 'vue'
 
-function debounce(cb: () => void) {
-  let h = 0
-  return () => {
-    window.clearTimeout(h)
-    h = window.setTimeout(() => cb())
-  }
-}
-
 export default defineComponent({
   props: {
     config: {
@@ -65,11 +57,6 @@ export default defineComponent({
       maxWeight: 5,
     }
   },
-  computed: {
-    resizeObserver(): ResizeObserver {
-      return new ResizeObserver(debounce(() => this.controller?.resize()))
-    },
-  },
   watch: {
     config() {
       this.resetGraphController()
@@ -83,10 +70,8 @@ export default defineComponent({
   },
   mounted() {
     this.resetGraphController()
-    this.resizeObserver.observe(this.$refs.graph)
   },
   beforeUnmount() {
-    this.resizeObserver.unobserve(this.$refs.graph)
     this.controller?.shutdown()
   },
   methods: {

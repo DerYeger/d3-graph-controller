@@ -71,7 +71,11 @@ export function defineNode<
   T extends NodeTypeToken = NodeTypeToken,
   Node extends GraphNode<T> = GraphNode<T>
 >(data: Node): Node {
-  return data
+  return {
+    ...data,
+    isFocused: false,
+    lastInteractionTimestamp: undefined,
+  }
 }
 
 /**

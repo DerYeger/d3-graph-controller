@@ -3,7 +3,12 @@
   "env": {
     "node": true
   },
-  "plugins": ["@typescript-eslint", "import", "unused-imports"],
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-tsdoc",
+    "import",
+    "unused-imports"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
@@ -85,6 +90,7 @@
         ]
       }
     ],
+    "tsdoc/syntax": "error",
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "error",

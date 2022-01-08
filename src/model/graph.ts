@@ -1,17 +1,33 @@
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
 
+/**
+ * Type token for nodes.
+ */
 export type NodeTypeToken = string
 
+/**
+ * Graph containing nodes and links.
+ */
 export interface Graph<
   T extends NodeTypeToken = NodeTypeToken,
   Node extends GraphNode<T> = GraphNode<T>,
   Link extends GraphLink<T, Node> = GraphLink<T, Node>
 > {
+  /**
+   * The nodes of the graph.
+   */
   nodes: Node[]
+  /**
+   * The links of the graph.
+   */
   links: Link[]
 }
 
+/**
+ * Define a graph with type inference.
+ * @param data - The nodes and links of the graph. If either are omitted, they default to an empty array.
+ */
 export function defineGraph<
   T extends NodeTypeToken = NodeTypeToken,
   Node extends GraphNode<T> = GraphNode<T>,

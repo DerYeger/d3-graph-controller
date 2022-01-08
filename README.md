@@ -54,7 +54,7 @@ $ npm install d3-graph-controller
 ## Usage
 
 ```typescript
-import { defineGraphConfig, defineLink, defineNodeWithDefaults, Graph, GraphController } from 'd3-graph-controller'
+import { defineGraph, defineGraphConfig, defineLink, defineNodeWithDefaults, Graph, GraphController } from 'd3-graph-controller'
 import 'd3-graph-controller/default.css'
 
 const a = defineNodeWithDefaults({
@@ -78,10 +78,10 @@ const link = defineLink({
   showLabel: false,
 })
 
-const graph: Graph<string> = {
+const graph = defineGraph({
   nodes: [a, b],
   links: [link],
-}
+})
 
 // A reference to the native host element, e.g., an HTMLDivElement. This is framework agnostic.
 // You may use Angular's @ViewChild, Vue's $ref, plain JavaScript or something else entirely.

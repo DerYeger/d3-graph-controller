@@ -18,18 +18,18 @@ export interface CreateNodesParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  config: GraphConfig<T, Node, Link>
-  drag?: Drag<T, Node> | undefined
-  graph: Graph<T, Node, Link>
-  modifier:
+  readonly config: GraphConfig<T, Node, Link>
+  readonly drag?: Drag<T, Node> | undefined
+  readonly graph: Graph<T, Node, Link>
+  readonly modifier:
     | ((
         selection: Selection<SVGCircleElement, Node, SVGGElement, undefined>
       ) => void)
     | undefined
-  onNodeSelected: ((node: Node) => void) | undefined
-  onNodeContext: (node: Node) => void
-  selection?: NodeSelection<T, Node> | undefined
-  showLabels: boolean
+  readonly onNodeSelected: ((node: Node) => void) | undefined
+  readonly onNodeContext: (node: Node) => void
+  readonly selection?: NodeSelection<T, Node> | undefined
+  readonly showLabels: boolean
 }
 
 export function createNodes<

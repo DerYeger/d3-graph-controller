@@ -3,10 +3,15 @@ import { D3ZoomEvent, zoom } from 'd3-zoom'
 import { Zoom } from 'src/lib/types'
 
 export interface DefineZoomParams {
-  canvasContainer: () => Selection<SVGSVGElement, unknown, null, undefined>
-  min: number
-  max: number
-  onZoom: (event: D3ZoomEvent<SVGSVGElement, undefined>) => void
+  readonly canvasContainer: () => Selection<
+    SVGSVGElement,
+    unknown,
+    null,
+    undefined
+  >
+  readonly min: number
+  readonly max: number
+  readonly onZoom: (event: D3ZoomEvent<SVGSVGElement, undefined>) => void
 }
 
 export function defineZoom({

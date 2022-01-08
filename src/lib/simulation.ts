@@ -18,10 +18,10 @@ export interface DefineSimulationParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  center: () => Vector
-  config: GraphConfig<T, Node, Link>
-  graph: Graph<T, Node, Link>
-  onTick: () => void
+  readonly center: () => Vector
+  readonly config: GraphConfig<T, Node, Link>
+  readonly graph: Graph<T, Node, Link>
+  readonly onTick: () => void
 }
 
 export function defineSimulation<

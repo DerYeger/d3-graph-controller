@@ -13,9 +13,9 @@ export interface PathParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  config: GraphConfig<T, Node, Link>
-  source: Node
-  target: Node
+  readonly config: GraphConfig<T, Node, Link>
+  readonly source: Node
+  readonly target: Node
 }
 
 export interface ReflexivePathParams<
@@ -23,9 +23,9 @@ export interface ReflexivePathParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  config: GraphConfig<T, Node, Link>
-  node: Node
-  center: Vector
+  readonly config: GraphConfig<T, Node, Link>
+  readonly node: Node
+  readonly center: Vector
 }
 
 function getX<T extends NodeTypeToken, Node extends GraphNode<T>>(
@@ -41,11 +41,11 @@ function getY<T extends NodeTypeToken, Node extends GraphNode<T>>(
 }
 
 interface VectorData {
-  s: Vector
-  t: Vector
-  dist: number
-  norm: Vector
-  endNorm: Vector
+  readonly s: Vector
+  readonly t: Vector
+  readonly dist: number
+  readonly norm: Vector
+  readonly endNorm: Vector
 }
 
 function calculateVectorData<

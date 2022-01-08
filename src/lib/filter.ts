@@ -8,11 +8,11 @@ export interface GraphFilterParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  graph: Graph<T, Node, Link>
-  filter: T[]
-  focusedNode?: Node | undefined
-  includeUnlinked: boolean
-  linkFilter: LinkFilter<T, Node, Link>
+  readonly graph: Graph<T, Node, Link>
+  readonly filter: T[]
+  readonly focusedNode?: Node | undefined
+  readonly includeUnlinked: boolean
+  readonly linkFilter: LinkFilter<T, Node, Link>
 }
 
 export function filterGraph<

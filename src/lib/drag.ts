@@ -8,8 +8,8 @@ export interface DefineDragParams<
   T extends NodeTypeToken,
   Node extends GraphNode<T>
 > {
-  onDragStart: (event: NodeDragEvent<T, Node>, d: Node) => void
-  onDragEnd: (event: NodeDragEvent<T, Node>, d: Node) => void
+  readonly onDragStart: (event: NodeDragEvent<T, Node>, d: Node) => void
+  readonly onDragEnd: (event: NodeDragEvent<T, Node>, d: Node) => void
 }
 
 export function defineDrag<T extends NodeTypeToken, Node extends GraphNode<T>>({

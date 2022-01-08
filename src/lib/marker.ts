@@ -14,9 +14,9 @@ export interface CreateMarkerParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  config: GraphConfig<T, Node, Link>
-  graph: Graph<T, Node, Link>
-  selection?: MarkerSelection | undefined
+  readonly config: GraphConfig<T, Node, Link>
+  readonly graph: Graph<T, Node, Link>
+  readonly selection?: MarkerSelection | undefined
 }
 
 export function createMarkers<

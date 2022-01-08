@@ -20,9 +20,9 @@ export interface CreateLinksParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  graph: Graph<T, Node, Link>
-  selection?: LinkSelection<T, Node, Link> | undefined
-  showLabels: boolean
+  readonly graph: Graph<T, Node, Link>
+  readonly selection?: LinkSelection<T, Node, Link> | undefined
+  readonly showLabels: boolean
 }
 
 export function createLinks<
@@ -63,10 +63,10 @@ export interface UpdateLinksParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
-  center: Vector
-  config: GraphConfig<T, Node, Link>
-  graph: Graph<T, Node, Link>
-  selection: LinkSelection<T, Node, Link> | undefined
+  readonly center: Vector
+  readonly config: GraphConfig<T, Node, Link>
+  readonly graph: Graph<T, Node, Link>
+  readonly selection: LinkSelection<T, Node, Link> | undefined
 }
 
 export function updateLinks<

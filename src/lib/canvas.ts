@@ -3,14 +3,14 @@ import { Canvas, GraphHost, Zoom } from 'src/lib/types'
 import { terminateEvent } from 'src/lib/utils'
 
 export interface DefineCanvasParams {
-  applyZoom: boolean
-  container: GraphHost
-  offset: [number, number]
-  onDoubleClick?: (event: PointerEvent) => void
-  onPointerMoved?: (event: PointerEvent) => void
-  onPointerUp?: (event: PointerEvent) => void
-  scale: number
-  zoom: Zoom
+  readonly applyZoom: boolean
+  readonly container: GraphHost
+  readonly offset: [number, number]
+  readonly onDoubleClick?: (event: PointerEvent) => void
+  readonly onPointerMoved?: (event: PointerEvent) => void
+  readonly onPointerUp?: (event: PointerEvent) => void
+  readonly scale: number
+  readonly zoom: Zoom
 }
 
 export function defineCanvas({
@@ -47,10 +47,10 @@ export function defineCanvas({
 }
 
 export interface UpdateCanvasParams {
-  canvas?: Canvas | undefined
-  scale: number
-  xOffset: number
-  yOffset: number
+  readonly canvas?: Canvas | undefined
+  readonly scale: number
+  readonly xOffset: number
+  readonly yOffset: number
 }
 
 export function updateCanvasTransform({

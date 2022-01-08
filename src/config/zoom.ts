@@ -6,15 +6,15 @@ export interface ZoomConfig {
    * The initial zoom.
    * Must be in range [min, max].
    */
-  initial: number
+  readonly initial: number
   /**
    * Maximum zoom level.
    * May not be smaller than initial zoom.
    */
-  max: number
+  readonly max: number
   /**
    * Minimum zoom level.
    * May not be larger than initial zoom or less than or equal to 0.
    */
-  min: number
+  readonly min: number
 }

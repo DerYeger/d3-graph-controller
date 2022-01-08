@@ -9,12 +9,12 @@ export interface Force<Subject> {
   /**
    * Whether the force is enabled.
    */
-  enabled: boolean
+  readonly enabled: boolean
   /**
    * The strength of the force.
    * Can be a static number or a function receiving the force's subject and returning a number.
    */
-  strength: number | ((subject: Subject) => number)
+  readonly strength: number | ((subject: Subject) => number)
 }
 
 /**
@@ -45,7 +45,7 @@ export interface CollisionForce<
    * Multiplier of the node radius.
    * Tip: Large values can drastically reduce link intersection.
    */
-  radiusMultiplier: number
+  readonly radiusMultiplier: number
 }
 
 /**
@@ -59,19 +59,19 @@ export interface SimulationForceConfig<
   /**
    * Centering force applied to nodes.
    */
-  centering: false | NodeForce<T, Node>
+  readonly centering: false | NodeForce<T, Node>
   /**
    * Charge force applied to nodes.
    */
-  charge: false | NodeForce<T, Node>
+  readonly charge: false | NodeForce<T, Node>
   /**
    * Collision force applied to nodes.
    */
-  collision: false | CollisionForce<T, Node>
+  readonly collision: false | CollisionForce<T, Node>
   /**
    * Link force applied to links.
    */
-  link: false | LinkForce<T, Node, Link>
+  readonly link: false | LinkForce<T, Node, Link>
 }
 
 /**

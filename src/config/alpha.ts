@@ -47,82 +47,82 @@ export interface AlphaConfig<
   /**
    * Target alpha values for dragging.
    */
-  drag: {
+  readonly drag: {
     /**
      * Target alpha when a drag starts.
      * Should be larger than 0.
      */
-    start: number
+    readonly start: number
     /**
      * Target alpha when a drag stops.
      * Should generally be 0.
      */
-    end: number
+    readonly end: number
   }
   /**
    * Alpha values for filter changes.
    */
-  filter: {
+  readonly filter: {
     /**
      * Alpha value when the link filter changes.
      */
-    link: number
+    readonly link: number
     /**
      * Alpha value when the node type filter changes.
      */
-    type: number
+    readonly type: number
     /**
      * Alpha values when the inclusion of unlinked nodes changes.
      */
-    unlinked: {
+    readonly unlinked: {
       /**
        * Alpha value when unlinked nodes are included.
        */
-      include: number
+      readonly include: number
       /**
        * Alpha value when unlinked nodes are excluded.
        */
-      exclude: number
+      readonly exclude: number
     }
   }
   /**
    * Alpha values when node focus changes.
    */
-  focus: {
+  readonly focus: {
     /**
      * Alpha value when a node is focused.
      * @param node - The focused node.
      * @returns The alpha value.
      */
-    acquire: (node: Node) => number
+    readonly acquire: (node: Node) => number
     /**
      * Alpha value when a node is unfocused.
      * @param node - The unfocused node.
      * @returns The alpha value.
      */
-    release: (node: Node) => number
+    readonly release: (node: Node) => number
   }
   /**
    * Alpha value when the graph is initialized.
    */
-  initialize: number
+  readonly initialize: number
   /**
    * Alpha values when label display changes.
    */
-  labels: {
+  readonly labels: {
     /**
      * Alpha values when link label display changes.
      */
-    links: LabelAlphas
+    readonly links: LabelAlphas
     /**
      * Alpha values when node label display changes.
      */
-    nodes: LabelAlphas
+    readonly nodes: LabelAlphas
   }
   /**
    * Alpha values when the graph is resized.
    */
-  resize: number | ((context: ResizeContext) => number)
+  readonly resize: number | ((context: ResizeContext) => number)
 }
 
 /**

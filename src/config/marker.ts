@@ -49,7 +49,7 @@ function defaultMarkerConfig(size: number): MarkerConfig {
     >(
       node: Node,
       config: GraphConfig<T, Node, Link>
-    ) => config.getNodeRadius(node) + 2 * size,
+    ) => config.nodeRadius(node) + 2 * size,
     ref: [size / 2, size / 2],
     path: [
       [0, 0],

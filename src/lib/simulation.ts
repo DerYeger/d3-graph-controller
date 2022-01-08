@@ -36,7 +36,7 @@ export function defineSimulation<
 }: DefineSimulationParams<T, Node, Link>): GraphSimulation<T, Node, Link> {
   const simulation = forceSimulation<Node, Link>(graph.nodes)
 
-  const centeringForce = config.forces.centering
+  const centeringForce = config.simulation.forces.centering
   if (centeringForce && centeringForce.enabled) {
     const strength = centeringForce.strength
     simulation
@@ -44,7 +44,7 @@ export function defineSimulation<
       .force('y', forceY<Node>(() => center().y).strength(strength))
   }
 
-  const chargeForce = config.forces.charge
+  const chargeForce = config.simulation.forces.charge
   if (chargeForce && chargeForce.enabled) {
     simulation.force(
       'charge',
@@ -52,17 +52,17 @@ export function defineSimulation<
     )
   }
 
-  const collisionForce = config.forces.collision
+  const collisionForce = config.simulation.forces.collision
   if (collisionForce && collisionForce.enabled) {
     simulation.force(
       'collision',
       forceCollide<Node>().radius(
-        (d) => (collisionForce.radiusMultiplier ?? 1) * config.getNodeRadius(d)
+        (d) => (collisionForce.radiusMultiplier ?? 1) * config.nodeRadius(d)
       )
     )
   }
 
-  const linkForce = config.forces.link
+  const linkForce = config.simulation.forces.link
   if (linkForce && linkForce.enabled) {
     simulation.force(
       'link',

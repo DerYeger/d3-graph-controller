@@ -77,7 +77,7 @@ export interface SimulationForceConfig<
 /**
  * Create the default force configuration.
  */
-export function createDefaultForces<
+export function createDefaultForceConfig<
   T extends NodeTypeToken,
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>

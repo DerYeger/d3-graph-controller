@@ -1,6 +1,6 @@
-import { Alphas } from 'src/config/alpha'
+import { createDefaultAlphaConfig } from 'src/config/alpha'
 import { Callbacks } from 'src/config/callbacks'
-import { createDefaultForces, SimulationForceConfig } from 'src/config/forces'
+import { createDefaultForceConfig } from 'src/config/forces'
 import {
   createDefaultInitialGraphSettings,
   InitialGraphSettings,
@@ -8,6 +8,7 @@ import {
 import { MarkerConfig, Markers } from 'src/config/marker'
 import { Modifiers } from 'src/config/modifiers'
 import { PositionInitializer, PositionInitializers } from 'src/config/position'
+import { SimulationConfig } from 'src/config/simulation'
 import { ZoomConfig } from 'src/config/zoom'
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
@@ -20,10 +21,6 @@ export interface GraphConfig<
   Link extends GraphLink<T, Node>
 > {
   /**
-   * Alpha value configuration for controlling simulation activity.
-   */
-  alphas: Alphas<T, Node>
-  /**
    * Set to true to enable automatic resizing.
    * Warning: Do call shutdown(), once the controller is no longer required.
    */
@@ -33,15 +30,11 @@ export interface GraphConfig<
    */
   callbacks: Callbacks<T, Node>
   /**
-   * Simulation force configuration.
-   */
-  forces: SimulationForceConfig<T, Node, Link>
-  /**
    * Get the radius of a node for the simulation and visualization.
    * @param node - The node.
    * @returns The node's radius.
    */
-  getNodeRadius(node: Node): number // TODO: rename to nodeRadius
+  nodeRadius(node: Node): number
   /**
    * Get the length of a link for the simulation.
    * @param link - The link.
@@ -63,7 +56,11 @@ export interface GraphConfig<
   /**
    * Initializes a node's position in context of a graph's width and height.
    */
-  positionInitializer: PositionInitializer<NodeTypeToken, Node>
+  positionInitializer: PositionInitializer<T, Node>
+  /**
+   * Simulation configuration.
+   */
+  simulation: SimulationConfig<T, Node, Link>
   /**
    * Zoom configuration.
    */
@@ -76,45 +73,18 @@ function defaultGraphConfig<
   Link extends GraphLink<T, Node>
 >(): GraphConfig<T, Node, Link> {
   return {
-    alphas: {
-      drag: {
-        end: 0,
-        start: 0.1,
-      },
-      filter: {
-        link: 1,
-        type: 0.1,
-        unlinked: {
-          include: 0.1,
-          exclude: 0.1,
-        },
-      },
-      focus: {
-        acquire: () => 0.1,
-        release: () => 0.1,
-      },
-      initialize: 1,
-      labels: {
-        links: {
-          hide: 0,
-          show: 0,
-        },
-        nodes: {
-          hide: 0,
-          show: 0,
-        },
-      },
-      resize: 0.5,
-    },
     autoResize: false,
     callbacks: {},
-    forces: createDefaultForces(),
     initial: createDefaultInitialGraphSettings(),
     getLinkLength: () => 128,
-    getNodeRadius: () => 16,
+    nodeRadius: () => 16,
     marker: Markers.Arrow(4),
     modifiers: {},
     positionInitializer: PositionInitializers.Centered,
+    simulation: {
+      alphas: createDefaultAlphaConfig(),
+      forces: createDefaultForceConfig(),
+    },
     zoom: {
       initial: 1,
       min: 0.1,

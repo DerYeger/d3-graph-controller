@@ -59,7 +59,7 @@ export function createNodes<
         .append('circle')
         .classed('node', true)
         .attr('aria-label', (d) => d.label)
-        .attr('r', (d) => config.getNodeRadius(d))
+        .attr('r', (d) => config.nodeRadius(d))
         .on('contextmenu', (event, d) => {
           terminateEvent(event)
           onNodeContext(d)

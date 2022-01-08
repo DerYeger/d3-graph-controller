@@ -14,24 +14,24 @@ export interface InitialGraphSettings<
   /**
    * Whether nodes without incoming or outgoing links will be shown or not.
    */
-  includeUnlinked: boolean
+  readonly includeUnlinked: boolean
   /**
    * Link filter that decides whether links should be included or not.
    */
-  linkFilter: LinkFilter<T, Node, Link>
+  readonly linkFilter: LinkFilter<T, Node, Link>
   /**
    * Node types that should be included.
    * If undefined, all node types will be included.
    */
-  nodeTypeFilter?: T[] | undefined
+  readonly nodeTypeFilter?: T[] | undefined
   /**
    * Whether link labels are shown or not.
    */
-  showLinkLabels: boolean
+  readonly showLinkLabels: boolean
   /**
    * Whether node labels are shown or not.
    */
-  showNodeLabels: boolean
+  readonly showNodeLabels: boolean
 }
 
 /**

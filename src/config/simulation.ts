@@ -12,9 +12,9 @@ export interface SimulationConfig<
   /**
    * Alpha value configuration.
    */
-  alphas: AlphaConfig<T, Node>
+  readonly alphas: AlphaConfig<T, Node>
   /**
    * Force configuration.
    */
-  forces: SimulationForceConfig<T, Node, Link>
+  readonly forces: SimulationForceConfig<T, Node, Link>
 }

@@ -10,7 +10,7 @@ export interface Modifiers<T extends NodeTypeToken, Node extends GraphNode<T>> {
    * Modify the node selection.
    * @param selection - The selection of nodes.
    */
-  node?: (
+  readonly node?: (
     selection: Selection<SVGCircleElement, Node, SVGGElement, undefined>
   ) => void
 }

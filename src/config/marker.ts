@@ -10,14 +10,14 @@ export interface MarkerConfig {
   /**
    * Size of the marker's box.
    */
-  size: number
+  readonly size: number
   /**
    * Get padding of the marker for calculating link paths.
    * @param node - The node the marker is pointing at.
    * @param config - The current config.
    * @returns The padding of the marker.
    */
-  padding: <
+  readonly padding: <
     T extends NodeTypeToken,
     Node extends GraphNode<T>,
     Link extends GraphLink<T, Node>
@@ -28,15 +28,15 @@ export interface MarkerConfig {
   /**
    * The ref of the marker.
    */
-  ref: [number, number]
+  readonly ref: [number, number]
   /**
    * The path of the marker.
    */
-  path: [number, number][]
+  readonly path: [number, number][]
   /**
    * The ViewBox of the marker.
    */
-  viewBox: string
+  readonly viewBox: string
 }
 
 function defaultMarkerConfig(size: number): MarkerConfig {

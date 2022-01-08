@@ -24,17 +24,17 @@ export interface GraphConfig<
    * Set to true to enable automatic resizing.
    * Warning: Do call shutdown(), once the controller is no longer required.
    */
-  autoResize: boolean
+  readonly autoResize: boolean
   /**
    * Callback configuration.
    */
-  callbacks: Callbacks<T, Node>
+  readonly callbacks: Callbacks<T, Node>
   /**
    * Get the radius of a node for the simulation and visualization.
    * @param node - The node.
    * @returns The node's radius.
    */
-  nodeRadius(node: Node): number
+  readonly nodeRadius: (node: Node) => number
   /**
    * Get the length of a link for the simulation.
    * @param link - The link.
@@ -44,27 +44,27 @@ export interface GraphConfig<
   /**
    * Initial settings of a controller.
    */
-  initial: InitialGraphSettings<T, Node, Link>
+  readonly initial: InitialGraphSettings<T, Node, Link>
   /**
    * Marker configuration.
    */
-  marker: MarkerConfig
+  readonly marker: MarkerConfig
   /**
    * Low-level callbacks for modifying the underlying d3-selection.
    */
-  modifiers: Modifiers<T, Node>
+  readonly modifiers: Modifiers<T, Node>
   /**
    * Initializes a node's position in context of a graph's width and height.
    */
-  positionInitializer: PositionInitializer<T, Node>
+  readonly positionInitializer: PositionInitializer<T, Node>
   /**
    * Simulation configuration.
    */
-  simulation: SimulationConfig<T, Node, Link>
+  readonly simulation: SimulationConfig<T, Node, Link>
   /**
    * Zoom configuration.
    */
-  zoom: ZoomConfig
+  readonly zoom: ZoomConfig
 }
 
 function defaultGraphConfig<

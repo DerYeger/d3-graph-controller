@@ -17,6 +17,33 @@
     "parser": "@typescript-eslint/parser",
     "sourceType": "module"
   },
+  "overrides": [
+    {
+      "files": ["demo/**/*", "docs/**/*"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              { "group": [".*"], "message": "Use absolute paths instead." },
+              {
+                "group": ["src/**"],
+                "message": "Use d3-graph-controller instead."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["docs/**/samples/*"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-console": "off",
+        "unused-imports/no-unused-vars": "off"
+      }
+    }
+  ],
   "rules": {
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
@@ -52,7 +79,10 @@
     "no-restricted-imports": [
       "error",
       {
-        "patterns": [".*"]
+        "patterns": [
+          { "group": [".*"], "message": "Use absolute paths instead." },
+          { "group": ["d3-graph-controller"], "message": "Use src instead." }
+        ]
       }
     ],
     "unused-imports/no-unused-imports": "error",

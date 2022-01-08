@@ -1,5 +1,6 @@
 import { SimulationNodeDatum } from 'd3-force'
 import { NodeTypeToken } from 'src/model/graph'
+import { Label } from 'src/model/shared'
 
 /**
  * Node representing a datum of a graph.
@@ -21,23 +22,14 @@ export interface GraphNode<T extends NodeTypeToken = NodeTypeToken>
   readonly color: string
   /**
    * The label of the node.
+   * Using false will disable the node's label.
    */
-  readonly label: string
-  /**
-   * The color of the node's label.
-   * Can be any valid CSS expression.
-   */
-  readonly labelColor: string
+  readonly label: false | Label
   /**
    * The focus state of a node.
    * Warning: Used for internal logic. Should not be set manually!
    */
   isFocused: boolean
-  /**
-   * The font size of a node.
-   * Can be any valid CSS expression.
-   */
-  readonly fontSize: string
   /**
    * The x-coordinate of a node.
    */
@@ -85,16 +77,18 @@ export function defineNode<
 export function defineNodeWithDefaults<T extends NodeTypeToken = NodeTypeToken>(
   data: Partial<GraphNode<T>> & Pick<GraphNode, 'id' | 'type'>
 ): GraphNode<T> {
-  return {
+  return defineNode<T>({
     ...nodeDefaults,
     ...data,
-  }
+  })
 }
 
 const nodeDefaults: Omit<GraphNode, 'id' | 'type'> = {
   color: 'lightgray',
-  label: '',
-  fontSize: '1rem',
+  label: {
+    color: 'black',
+    fontSize: '1rem',
+    text: '',
+  },
   isFocused: false,
-  labelColor: 'black',
 }

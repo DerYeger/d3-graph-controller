@@ -58,7 +58,7 @@ export function createNodes<
       const nodeCircle = nodeGroup
         .append('circle')
         .classed('node', true)
-        .attr('aria-label', (d) => d.label)
+        .attr('aria-label', (d) => (d.label ? d.label.text : d.id))
         .attr('r', (d) => config.nodeRadius(d))
         .on('contextmenu', (event, d) => {
           terminateEvent(event)
@@ -77,10 +77,10 @@ export function createNodes<
         .append('text')
         .classed('node__label', true)
         .attr('dy', `0.33em`)
-        .style('fill', (d) => d.labelColor)
-        .style('font-size', (d) => d.fontSize)
+        .style('fill', (d) => (d.label ? d.label.color : null))
+        .style('font-size', (d) => (d.label ? d.label.fontSize : null))
         .style('stroke', 'none')
-        .text((d) => d.label)
+        .text((d) => (d.label ? d.label.text : null))
 
       return nodeGroup
     })

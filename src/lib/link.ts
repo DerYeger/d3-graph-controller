@@ -46,14 +46,15 @@ export function createLinks<
       linkGroup
         .append('text')
         .classed('link__label', true)
-        .style('fill', (d) => d.labelColor)
-        .text((d) => d.label.toString())
+        .style('fill', (d) => (d.label ? d.label.color : null))
+        .style('font-size', (d) => (d.label ? d.label.fontSize : null))
+        .text((d) => (d.label ? d.label.text : null))
       return linkGroup
     })
 
   result
     ?.select('.link__label')
-    .attr('opacity', (d) => (d.showLabel && showLabels ? 1 : 0))
+    .attr('opacity', (d) => (d.label && showLabels ? 1 : 0))
 
   return result
 }

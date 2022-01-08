@@ -34,22 +34,26 @@ import { defineGraph, defineLink, defineNode } from 'd3-graph-controller'
 const a = defineNode<CustomType, CustomNode>({
   id: 'a',
   type: 'primary',
-  fontSize: '1rem',
   isFocused: false,
   color: 'green',
-  label: 'A',
-  labelColor: 'black',
+  label: {
+    color: 'black',
+    fontSize: '1rem',
+    text: 'A',
+  },
   radius: 64,
 })
 
 const b = defineNode<CustomType, CustomNode>({
   id: 'b',
   type: 'secondary',
-  fontSize: '1rem',
   isFocused: false,
   color: 'blue',
-  label: 'B',
-  labelColor: 'black',
+  label: {
+    color: 'black',
+    fontSize: '1rem',
+    text: 'B',
+  },
   radius: 32,
 })
 
@@ -57,9 +61,11 @@ const aToB = defineLink<CustomType, CustomNode, CustomNode, CustomLink>({
   source: a,
   target: b,
   color: 'red',
-  label: '128',
-  labelColor: 'black',
-  showLabel: true,
+  label: {
+    color: 'black',
+    fontSize: '1rem',
+    text: '128',
+  },
   length: 128,
 })
 

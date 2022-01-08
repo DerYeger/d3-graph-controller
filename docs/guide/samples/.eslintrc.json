@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off",
+    "import/order": "off",
+    "no-console": "off",
+    "unused-imports/no-unused-vars": "off"
+  }
+}

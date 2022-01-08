@@ -1,4 +1,5 @@
 import {
+  defineGraph,
   defineGraphConfig,
   Graph,
   GraphConfig,
@@ -11,10 +12,10 @@ export type DemoType = 'primary' | 'secondary'
 
 export type DemoGraph = Graph<DemoType, DemoNode, DemoLink>
 
-export const demoGraph: DemoGraph = {
+export const demoGraph: DemoGraph = defineGraph({
   nodes: Object.values(nodes),
   links: Object.values(links),
-}
+})
 
 export type DemoGraphController = GraphController<DemoType, DemoNode, DemoLink>
 

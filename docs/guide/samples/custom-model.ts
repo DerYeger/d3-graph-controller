@@ -1,4 +1,4 @@
-/* eslint-disable import/no-duplicates */
+/* eslint-disable import/no-duplicates, import/order */
 export type CustomType = 'primary' | 'secondary'
 
 import { GraphNode } from 'd3-graph-controller'
@@ -25,7 +25,7 @@ const config = defineGraphConfig<CustomType, CustomNode, CustomLink>({
   },
 })
 
-import { Graph, defineLink, defineNode } from 'd3-graph-controller'
+import { defineGraph, defineLink, defineNode } from 'd3-graph-controller'
 
 const a = defineNode<CustomType, CustomNode>({
   id: 'a',
@@ -59,10 +59,10 @@ const aToB = defineLink<CustomType, CustomNode, CustomNode, CustomLink>({
   length: 128,
 })
 
-const graph: Graph<CustomType, CustomNode, CustomLink> = {
+const graph = defineGraph<CustomType, CustomNode, CustomLink>({
   nodes: [a, b],
   links: [aToB],
-}
+})
 
 import { GraphController } from 'd3-graph-controller'
 

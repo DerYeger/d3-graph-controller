@@ -1,4 +1,8 @@
-import { defineGraphConfig, PositionInitializers } from 'd3-graph-controller'
+import {
+  defineGraph,
+  defineGraphConfig,
+  PositionInitializers,
+} from 'd3-graph-controller'
 import { DemoGraph, DemoGraphConfig } from 'demo/src/model'
 import { defineDemoNode, DemoNode } from 'demo/src/node'
 
@@ -36,10 +40,9 @@ export function generateRandomGraph(): DemoGraph {
   //   return defineDemoLink(source, target, weight)
   // })
 
-  return {
+  return defineGraph({
     nodes,
-    links: [],
-  }
+  })
 }
 
 // function randomNodeId(nodeCount: number): string {

@@ -51,7 +51,7 @@ Do not forget to unset `pointerdown` and `contextmenu` if required.
 ## Node radius
 
 The radius of nodes is used for their visualization as well as the underlying simulation.
-It can be configured using the `getNodeRadius` property of the config.
+It can be configured using the `nodeRadius` property of the config.
 You can use instances to calculate dynamic node radii.
 
 @[code](samples/node-radius.ts)
@@ -82,7 +82,7 @@ Its forces and behavior can be configured for precise control.
 
 ### Alphas
 
-Alpha values determine the *heat* or *activity* of the similation. 
+Alpha values determine the *heat* or *activity* of a simulation. 
 The higher the value, the stronger the simulation will react.
 After certain actions, the simulations needs to be restarted.
 The alpha values for those restarts can be configured.
@@ -91,8 +91,8 @@ Reference the default configuration below for the available options.
 @[code](samples/alphas.ts)
 
 ::: tip
-`alphas.focus.acquire` and `alphas.focus.release` receive the (un-)focused node as a parameter.
-`alphas.resize` can either be a static `number` or a function receiving a `ResizeContext` as its parameter.
+`simulation.alphas.focus.acquire` and `simulation.alphas.focus.release` receive the (un-)focused node as a parameter.
+`simulation.alphas.resize` can either be a static `number` or a function receiving a `ResizeContext` as its parameter.
 :::
 
 ### Forces
@@ -102,7 +102,7 @@ Some forces provide additional customizability.
 Reference the configuration below, which matches the default values.
 
 ::: tip
-Settings `forces.collision.radiusMultiplier` to a higher value can drastically reduce the number of intersecting edges.
+Settings `simulation.forces.collision.radiusMultiplier` to a higher value can drastically reduce the number of intersecting edges.
 :::
 
 All `strength` properties can also be functions that receive the subject of the force as a parameter for individual strength.
@@ -115,10 +115,6 @@ Except `forces.link`, the subject is always a `GraphNode` (or the custom type us
 Link length is used to determine the length of links for the simulation.
 Similar to node radii, link length can be configured on a per-link basis.
 Once again, custom link types can be used to provide the required data.
-
-::: warning
-This property will be moved to `forces.link` in a future release.
-:::
 
 @[code](samples/link-length.ts)
 

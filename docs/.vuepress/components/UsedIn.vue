@@ -3,12 +3,12 @@
     <h2>Used In</h2>
     <section>
       <div v-for="project of projects" :key="project.name" class="project">
-        <h2>
-          <img :src="project.logo" :alt="project.name" class="logo" />
+        <h3>
           <a href="https://vitest.dev/" target="_blank" rel="noopener">
+            <img :src="project.logo" :alt="project.name" class="logo" />
             {{ project.name }}
           </a>
-        </h2>
+        </h3>
         <p class="description">
           {{ project.description }}
         </p>
@@ -64,14 +64,17 @@ const projects: Project[] = [
   max-width: 30%;
 }
 
-.project > h2 {
-  align-items: center;
+.project > h3 {
   border-bottom: none;
-  display: flex;
   font-size: 1.25rem;
-  gap: 0.5em;
   margin: 0;
   padding: 0;
+}
+
+.project > h3 > a {
+  align-items: center;
+  display: flex;
+  gap: 0.5em;
 }
 
 .project .logo {

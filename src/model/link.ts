@@ -13,26 +13,26 @@ export interface GraphLink<
   /**
    * The source node of the link.
    */
-  source: SourceNode
+  readonly source: SourceNode
   /**
    * The target node of the link
    */
-  target: TargetNode
+  readonly target: TargetNode
   /**
    * The color of the link.
    * Can be any valid CSS expression.
    */
-  color: string
+  readonly color: string
   /**
    * The label of the link.
    */
-  label: string
+  readonly label: string
   /**
    * The color of the link's label.
    * Can be any valid CSS expression.
    */
-  labelColor: string
-  showLabel: boolean
+  readonly labelColor: string
+  readonly showLabel: boolean
 }
 
 /**

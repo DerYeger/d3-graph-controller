@@ -17,11 +17,11 @@ export interface Graph<
   /**
    * The nodes of the graph.
    */
-  nodes: Node[]
+  readonly nodes: Node[]
   /**
    * The links of the graph.
    */
-  links: Link[]
+  readonly links: Link[]
 }
 
 /**

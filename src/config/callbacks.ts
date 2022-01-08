@@ -9,5 +9,5 @@ export interface Callbacks<T extends NodeTypeToken, Node extends GraphNode<T>> {
    * Callback when a node is double-clicked or double-tapped.
    * @param node - The node.
    */
-  nodeClicked?: (node: Node) => void
+  readonly nodeClicked?: (node: Node) => void
 }

@@ -8,11 +8,11 @@ export interface LabelAlphas {
   /**
    * Alpha value when labels are turned off.
    */
-  hide: number
+  readonly hide: number
   /**
    * Alpha value when labels are turned on.
    */
-  show: number
+  readonly show: number
 }
 
 /**
@@ -22,19 +22,19 @@ export interface ResizeContext {
   /**
    * The old height.
    */
-  oldHeight: number
+  readonly oldHeight: number
   /**
    * The old width.
    */
-  oldWidth: number
+  readonly oldWidth: number
   /**
    * The new height.
    */
-  newHeight: number
+  readonly newHeight: number
   /**
    * The new width.
    */
-  newWidth: number
+  readonly newWidth: number
 }
 
 /**

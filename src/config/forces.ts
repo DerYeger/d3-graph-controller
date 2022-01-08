@@ -50,7 +50,7 @@ export interface LinkForce<
   /**
    * Define the length of a link for the simulation.
    */
-  length: number | ((link: Link) => number)
+  readonly length: number | ((link: Link) => number)
 }
 
 /**

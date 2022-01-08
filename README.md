@@ -60,22 +60,28 @@ import 'd3-graph-controller/default.css'
 const a = defineNodeWithDefaults({
   type: 'node',
   id: 'a',
-  label: 'A',
+  label: {
+    color: 'black',
+    fontSize: '1rem',
+    text: 'A',
+  },
 })
 
 const b = defineNodeWithDefaults({
   type: 'node',
   id: 'b',
-  label: 'B',
+  label: {
+    color: 'black',
+    fontSize: '1rem',
+    text: 'B',
+  },
 })
 
 const link = defineLink({
   source: a,
   target: b,
   color: 'gray',
-  label: '',
-  labelColor: 'black',
-  showLabel: false,
+  label: false,
 })
 
 const graph = defineGraph({
@@ -85,7 +91,7 @@ const graph = defineGraph({
 
 // A reference to the native host element, e.g., an HTMLDivElement. This is framework agnostic.
 // You may use Angular's @ViewChild, Vue's $ref, plain JavaScript or something else entirely.
-const container = document.getElementById('graph')
+const container = document.getElementById('graph') as HTMLDivElement
 
 const controller = new GraphController(container, graph, defineGraphConfig())
 ```
@@ -108,7 +114,11 @@ import { defineNodeWithDefaults } from 'd3-graph-controller'
 const a = defineNodeWithDefaults({
   type: 'node',
   id: 'a',
-  label: 'A',
+  label: {
+    color: 'black',
+    fontSize: '2rem',
+    text: 'A',
+  },
   color: 'var(--color-primary)'
 })
 ```

@@ -117,7 +117,7 @@ export class GraphController<
     }
 
     this.filterGraph(undefined)
-    this.initGraph(true)
+    this.initGraph()
     this.restart(config.alphas.initialize)
 
     if (config.autoResize) {
@@ -309,7 +309,7 @@ export class GraphController<
     this.simulation?.stop()
   }
 
-  private initGraph(isInitial: boolean): void {
+  private initGraph(): void {
     this.zoom = defineZoom({
       canvasContainer: () => select(this.container).select('svg'),
       min: this.config.zoom.min,
@@ -317,7 +317,7 @@ export class GraphController<
       onZoom: (event) => this.onZoom(event),
     })
     this.canvas = defineCanvas({
-      applyZoom: !isInitial || this.scale !== 1,
+      applyZoom: this.scale !== 1,
       container: select(this.container),
       offset: [this.xOffset, this.yOffset],
       scale: this.scale,

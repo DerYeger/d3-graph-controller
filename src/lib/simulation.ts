@@ -5,19 +5,13 @@ import {
   forceSimulation,
   forceX,
   forceY,
-  Simulation,
 } from 'd3-force'
 import { GraphConfig } from 'src/config/config'
+import { GraphSimulation } from 'src/lib/types'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
 import { Vector } from 'vecti'
-
-export type GraphSimulation<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>,
-  Link extends GraphLink<T, Node>
-> = Simulation<Node, Link>
 
 export interface DefineSimulationParams<
   T extends NodeTypeToken,

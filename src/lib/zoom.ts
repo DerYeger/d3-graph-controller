@@ -1,7 +1,6 @@
 import { Selection } from 'd3-selection'
-import { D3ZoomEvent, zoom, ZoomBehavior } from 'd3-zoom'
-
-export type Zoom = ZoomBehavior<SVGSVGElement, undefined>
+import { D3ZoomEvent, zoom } from 'd3-zoom'
+import { Zoom } from 'src/lib/types'
 
 export interface DefineZoomParams {
   canvasContainer: () => Selection<SVGSVGElement, unknown, null, undefined>

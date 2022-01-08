@@ -1,16 +1,8 @@
-import { D3DragEvent, drag, DragBehavior } from 'd3-drag'
+import { drag } from 'd3-drag'
 import { select } from 'd3-selection'
+import { Drag, NodeDragEvent } from 'src/lib/types'
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphNode } from 'src/model/node'
-
-export type Drag<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>
-> = DragBehavior<SVGGElement, Node, Node>
-export type NodeDragEvent<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>
-> = D3DragEvent<SVGCircleElement, Node, Node>
 
 export interface DefineDragParams<
   T extends NodeTypeToken,

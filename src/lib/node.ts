@@ -1,16 +1,10 @@
 import { Selection } from 'd3-selection'
 import { GraphConfig } from 'src/config/config'
-import { Canvas } from 'src/lib/canvas'
-import { Drag } from 'src/lib/drag'
+import { Canvas, Drag, NodeSelection } from 'src/lib/types'
 import { terminateEvent } from 'src/lib/utils'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
-
-export type NodeSelection<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>
-> = Selection<SVGGElement, Node, SVGGElement, undefined>
 
 export function defineNodeSelection<
   T extends NodeTypeToken,

@@ -10,14 +10,14 @@ export interface MarkerConfig {
   /**
    * Size of the marker's box.
    */
-  markerBoxSize: number
+  size: number
   /**
    * Get padding of the marker for calculating link paths.
    * @param node - The node the marker is pointing at.
    * @param config - The current config.
    * @returns The padding of the marker.
    */
-  getMarkerPadding: <
+  padding: <
     T extends NodeTypeToken,
     Node extends GraphNode<T>,
     Link extends GraphLink<T, Node>
@@ -28,23 +28,21 @@ export interface MarkerConfig {
   /**
    * The ref of the marker.
    */
-  markerRef: [number, number]
-  // TODO: rename to path
+  ref: [number, number]
   /**
    * The path of the marker.
    */
-  markerPoints: [number, number][]
-  // TODO: Rename to viewBox
+  path: [number, number][]
   /**
    * The ViewBox of the marker.
    */
-  markerPath: string
+  viewBox: string
 }
 
 function defaultMarkerConfig(size: number): MarkerConfig {
   return {
-    markerBoxSize: size,
-    getMarkerPadding: <
+    size: size,
+    padding: <
       T extends NodeTypeToken,
       Node extends GraphNode<T>,
       Link extends GraphLink<T, Node>
@@ -52,13 +50,13 @@ function defaultMarkerConfig(size: number): MarkerConfig {
       node: Node,
       config: GraphConfig<T, Node, Link>
     ) => config.getNodeRadius(node) + 2 * size,
-    markerRef: [size / 2, size / 2],
-    markerPoints: [
+    ref: [size / 2, size / 2],
+    path: [
       [0, 0],
       [0, size],
       [size, size / 2],
     ] as [number, number][],
-    markerPath: [0, 0, size, size].join(','),
+    viewBox: [0, 0, size, size].join(','),
   }
 }
 

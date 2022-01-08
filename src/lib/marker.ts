@@ -34,15 +34,15 @@ export function createMarkers<
       const marker = enter
         .append('marker')
         .attr('id', (d) => getMarkerId(d))
-        .attr('markerHeight', 4 * config.marker.markerBoxSize)
-        .attr('markerWidth', 4 * config.marker.markerBoxSize)
+        .attr('markerHeight', 4 * config.marker.size)
+        .attr('markerWidth', 4 * config.marker.size)
         .attr('markerUnits', 'userSpaceOnUse')
         .attr('orient', 'auto')
-        .attr('refX', config.marker.markerRef[0])
-        .attr('refY', config.marker.markerRef[1])
-        .attr('viewBox', config.marker.markerPath)
+        .attr('refX', config.marker.ref[0])
+        .attr('refY', config.marker.ref[1])
+        .attr('viewBox', config.marker.viewBox)
         .style('fill', (d) => d)
-      marker.append('path').attr('d', makeLine(config.marker.markerPoints))
+      marker.append('path').attr('d', makeLine(config.marker.path))
       return marker
     })
 }

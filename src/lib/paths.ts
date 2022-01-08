@@ -92,9 +92,7 @@ function calculateSourceAndTarget<
 >({ config, source, target }: PathParams<T, Node, Link>) {
   const { s, t, norm } = calculateVectorData({ config, source, target })
   const start = s.add(norm.multiply(config.getNodeRadius(source) - 1))
-  const end = t.subtract(
-    norm.multiply(config.marker.getMarkerPadding(target, config))
-  )
+  const end = t.subtract(norm.multiply(config.marker.padding(target, config)))
   return {
     start,
     end,
@@ -151,11 +149,7 @@ function paddedArcPath<
     .rotateByDegrees(rotation)
     .multiply(config.getNodeRadius(target))
     .add(t)
-    .add(
-      endNorm
-        .rotateByDegrees(rotation)
-        .multiply(2 * config.marker.markerBoxSize)
-    )
+    .add(endNorm.rotateByDegrees(rotation).multiply(2 * config.marker.size))
   const arcRadius = 1.2 * dist
   return `M${start.x},${start.y}
           A${arcRadius},${arcRadius},0,0,1,${end.x},${end.y}`
@@ -183,9 +177,7 @@ function paddedReflexivePath<
     .rotateByDegrees(-rotation)
     .multiply(radius)
     .add(n)
-    .add(
-      norm.rotateByDegrees(-rotation).multiply(2 * config.marker.markerBoxSize)
-    )
+    .add(norm.rotateByDegrees(-rotation).multiply(2 * config.marker.size))
   return `M${start.x},${start.y}
           A${radius},${radius},0,1,0,${end.x},${end.y}`
 }

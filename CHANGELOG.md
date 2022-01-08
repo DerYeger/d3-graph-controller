@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.15.1...v1.16.0) (2022-01-08)
+
+
+### Features
+
+* add `defineGraph` helper ([46b2c4b](https://github.com/DerYeger/d3-graph-controller/commit/46b2c4b25cab81c9d090cddcf89f9ffa8a23361e))
+
 ## [1.15.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.15.0...v1.15.1) (2022-01-07)
 
 

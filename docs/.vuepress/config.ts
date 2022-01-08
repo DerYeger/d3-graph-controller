@@ -1,6 +1,6 @@
 import { defineUserConfig, ViteBundlerOptions } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
-// @ts-expect-error
+import { path } from '@vuepress/utils'
 import Package from '../../package.json'
 
 const ogImage = `${Package.homepage}/logo.png`
@@ -68,4 +68,13 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
       configFile: 'docs/vite.config.ts',
     },
   },
+
+  plugins: [
+    [
+      '@vuepress/register-components',
+      {
+        componentsDir: path.resolve(__dirname, './components'),
+      },
+    ],
+  ],
 })

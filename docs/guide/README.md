@@ -50,20 +50,20 @@ While not shown in the example below, `GraphLink` can have specific node types f
 
 The config can then use the custom types.
 
-@[code{16-26}](samples/custom-model.ts)
+@[code{16-30}](samples/custom-model.ts)
 
 ### Model
 
 The actual model can be created using the helper methods seen below.
 They are type safe and support custom properties.
 
-@[code{28-65}](samples/custom-model.ts)
+@[code{32-75}](samples/custom-model.ts)
 
 ### Controller
 
 The last step is putting it all together and creating the controller.
 
-@[code{67-72}](samples/custom-model.ts)
+@[code{77-82}](samples/custom-model.ts)
 
 ::: tip
 Do not forget to call `controller.shutdown()` when the graph is no longer required or your component will be destroyed.

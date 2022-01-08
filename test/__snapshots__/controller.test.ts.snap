@@ -22,8 +22,8 @@ exports[`GraphController > matches the snapshot 1`] = `
           />
           <text
             class="link__label"
-            opacity="0"
-            style="fill: black;"
+            opacity="1"
+            style="fill: black; font-size: 1rem;"
           >
             aToB
           </text>
@@ -35,8 +35,8 @@ exports[`GraphController > matches the snapshot 1`] = `
           />
           <text
             class="link__label"
-            opacity="0"
-            style="fill: black;"
+            opacity="1"
+            style="fill: black; font-size: 1rem;"
           >
             bToA
           </text>
@@ -48,8 +48,8 @@ exports[`GraphController > matches the snapshot 1`] = `
           />
           <text
             class="link__label"
-            opacity="0"
-            style="fill: black;"
+            opacity="1"
+            style="fill: black; font-size: 1rem;"
           >
             bToC
           </text>
@@ -62,10 +62,7 @@ exports[`GraphController > matches the snapshot 1`] = `
           <text
             class="link__label"
             opacity="0"
-            style="fill: black;"
-          >
-            cToC
-          </text>
+          />
         </g>
       </g>
       <g
@@ -73,7 +70,7 @@ exports[`GraphController > matches the snapshot 1`] = `
       >
         <g>
           <circle
-            aria-label="A"
+            aria-label=""
             class="node"
             r="16"
             style="fill: lightgray;"
@@ -83,13 +80,11 @@ exports[`GraphController > matches the snapshot 1`] = `
             dy="0.33em"
             opacity="1"
             style="fill: black; font-size: 1rem; stroke: none;"
-          >
-            A
-          </text>
+          />
         </g>
         <g>
           <circle
-            aria-label="B"
+            aria-label=""
             class="node"
             r="16"
             style="fill: lightgray;"
@@ -99,13 +94,11 @@ exports[`GraphController > matches the snapshot 1`] = `
             dy="0.33em"
             opacity="1"
             style="fill: black; font-size: 1rem; stroke: none;"
-          >
-            B
-          </text>
+          />
         </g>
         <g>
           <circle
-            aria-label="C"
+            aria-label="c"
             class="node"
             r="16"
             style="fill: lightgray;"
@@ -114,14 +107,12 @@ exports[`GraphController > matches the snapshot 1`] = `
             class="node__label"
             dy="0.33em"
             opacity="1"
-            style="fill: black; font-size: 1rem; stroke: none;"
-          >
-            C
-          </text>
+            style="stroke: none;"
+          />
         </g>
         <g>
           <circle
-            aria-label="D"
+            aria-label=""
             class="node"
             r="16"
             style="fill: lightgray;"
@@ -131,9 +122,7 @@ exports[`GraphController > matches the snapshot 1`] = `
             dy="0.33em"
             opacity="1"
             style="fill: black; font-size: 1rem; stroke: none;"
-          >
-            D
-          </text>
+          />
         </g>
       </g>
       <defs>

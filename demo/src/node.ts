@@ -13,11 +13,13 @@ export function defineDemoNode(
   return defineNode<DemoType, DemoNode>({
     id,
     type,
-    fontSize: '1rem',
     isFocused: false,
     color: `var(--color-${type})`,
-    label: id.toUpperCase(),
-    labelColor: 'var(--text-on-primary)',
+    label: {
+      color: 'var(--text-on-primary)',
+      fontSize: '1rem',
+      text: id.toUpperCase(),
+    },
     radiusMultiplier,
   })
 }

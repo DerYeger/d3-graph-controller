@@ -1,6 +1,7 @@
 import { SimulationLinkDatum } from 'd3-force'
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphNode } from 'src/model/node'
+import { Label } from 'src/model/shared'
 
 /**
  * Link defining an edge from one node to another.
@@ -24,15 +25,10 @@ export interface GraphLink<
    */
   readonly color: string
   /**
-   * The label of the link.
+   * The label of the node.
+   * Using false will disable the node's label.
    */
-  readonly label: string
-  /**
-   * The color of the link's label.
-   * Can be any valid CSS expression.
-   */
-  readonly labelColor: string
-  readonly showLabel: boolean
+  readonly label: false | Label
 }
 
 /**

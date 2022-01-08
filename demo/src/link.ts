@@ -15,9 +15,11 @@ export function defineDemoLink(
     source,
     target,
     color: `var(--color-secondary)`,
-    label: weight.toString(),
-    labelColor: 'var(--text-on-secondary)',
-    showLabel: true,
+    label: {
+      color: 'var(--text-on-secondary)',
+      fontSize: '1rem',
+      text: weight.toString(),
+    },
     weight,
   })
 }

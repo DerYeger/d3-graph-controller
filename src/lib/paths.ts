@@ -91,7 +91,7 @@ function calculateSourceAndTarget<
   Link extends GraphLink<T, Node>
 >({ config, source, target }: PathParams<T, Node, Link>) {
   const { s, t, norm } = calculateVectorData({ config, source, target })
-  const start = s.add(norm.multiply(config.getNodeRadius(source) - 1))
+  const start = s.add(norm.multiply(config.nodeRadius(source) - 1))
   const end = t.subtract(norm.multiply(config.marker.padding(target, config)))
   return {
     start,
@@ -143,11 +143,11 @@ function paddedArcPath<
   const rotation = 10
   const start = norm
     .rotateByDegrees(-rotation)
-    .multiply(config.getNodeRadius(source) - 1)
+    .multiply(config.nodeRadius(source) - 1)
     .add(s)
   const end = endNorm
     .rotateByDegrees(rotation)
-    .multiply(config.getNodeRadius(target))
+    .multiply(config.nodeRadius(target))
     .add(t)
     .add(endNorm.rotateByDegrees(rotation).multiply(2 * config.marker.size))
   const arcRadius = 1.2 * dist
@@ -165,7 +165,7 @@ function paddedReflexivePath<
   Link extends GraphLink<T, Node>
 >({ center, config, node }: ReflexivePathParams<T, Node, Link>): string {
   const { n, c } = calculateCenter({ center, config, node })
-  const radius = config.getNodeRadius(node)
+  const radius = config.nodeRadius(node)
   const diff = n.subtract(c)
   const norm = diff.multiply(1 / diff.length())
   const rotation = 40
@@ -205,7 +205,7 @@ function reflexiveLinkTextTransform<
   const diff = n.subtract(c)
   const offset = diff
     .multiply(1 / diff.length())
-    .multiply(3 * config.getNodeRadius(node) + 8)
+    .multiply(3 * config.nodeRadius(node) + 8)
     .add(n)
   return `translate(${offset.x},${offset.y})`
 }

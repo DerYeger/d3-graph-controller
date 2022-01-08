@@ -16,9 +16,11 @@ export const randomGraphConfig: DemoGraphConfig = defineGraphConfig({
     showNodeLabels: false,
   },
   positionInitializer: PositionInitializers.Randomized,
-  forces: {
-    charge: {
-      strength: -50,
+  simulation: {
+    forces: {
+      charge: {
+        strength: -50,
+      },
     },
   },
 })

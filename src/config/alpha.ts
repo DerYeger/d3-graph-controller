@@ -40,7 +40,10 @@ export interface ResizeContext {
 /**
  * Alpha value configuration for controlling simulation activity.
  */
-export interface Alphas<T extends NodeTypeToken, Node extends GraphNode<T>> {
+export interface AlphaConfig<
+  T extends NodeTypeToken,
+  Node extends GraphNode<T>
+> {
   /**
    * Target alpha values for dragging.
    */
@@ -120,4 +123,43 @@ export interface Alphas<T extends NodeTypeToken, Node extends GraphNode<T>> {
    * Alpha values when the graph is resized.
    */
   resize: number | ((context: ResizeContext) => number)
+}
+
+/**
+ * Create the default alpha configuration.
+ */
+export function createDefaultAlphaConfig<
+  T extends NodeTypeToken,
+  Node extends GraphNode<T>
+>(): AlphaConfig<T, Node> {
+  return {
+    drag: {
+      end: 0,
+      start: 0.1,
+    },
+    filter: {
+      link: 1,
+      type: 0.1,
+      unlinked: {
+        include: 0.1,
+        exclude: 0.1,
+      },
+    },
+    focus: {
+      acquire: () => 0.1,
+      release: () => 0.1,
+    },
+    initialize: 1,
+    labels: {
+      links: {
+        hide: 0,
+        show: 0,
+      },
+      nodes: {
+        hide: 0,
+        show: 0,
+      },
+    },
+    resize: 0.5,
+  }
 }

@@ -30,11 +30,17 @@ import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
 import { Vector } from 'vecti'
 
+/**
+ * Controller for a graph view.
+ */
 export class GraphController<
   T extends NodeTypeToken = NodeTypeToken,
   Node extends GraphNode<T> = GraphNode<T>,
   Link extends GraphLink<T, Node> = GraphLink<T, Node>
 > {
+  /**
+   * Array of all node types included in the controller's graph.
+   */
   public readonly nodeTypes: T[]
   private _nodeTypeFilter: T[]
   private _includeUnlinked = true
@@ -67,6 +73,12 @@ export class GraphController<
 
   private resizeObserver?: ResizeObserver
 
+  /**
+   * Create a new controller and initialize the view.
+   * @param container - The container the graph will be placed in.
+   * @param graph - The graph of the controller.
+   * @param config - The config of the controller.
+   */
   public constructor(
     private readonly container: HTMLDivElement,
     private readonly graph: Graph<T, Node, Link>,
@@ -114,14 +126,25 @@ export class GraphController<
     }
   }
 
+  /**
+   * Get the current node type filter.
+   * Only nodes whose type is included will be shown.
+   */
   public get nodeTypeFilter(): T[] {
     return this._nodeTypeFilter
   }
 
+  /**
+   * Get whether nodes without incoming or outgoing links will be shown or not.
+   */
   public get includeUnlinked(): boolean {
     return this._includeUnlinked
   }
 
+  /**
+   * Set whether nodes without incoming or outgoing links will be shown or not.
+   * @param value - The value.
+   */
   public set includeUnlinked(value: boolean) {
     this._includeUnlinked = value
     this.filterGraph(this.focusedNode)
@@ -130,16 +153,27 @@ export class GraphController<
     this.restart(alpha)
   }
 
+  /**
+   * Set a new link filter and update the controller's state.
+   * @param value - The new link filter.
+   */
   public set linkFilter(value: LinkFilter<T, Node, Link>) {
     this._linkFilter = value
     this.filterGraph(this.focusedNode)
     this.restart(this.config.alphas.filter.link)
   }
 
+  /**
+   * Get whether node labels are shown or not.
+   */
   public get showNodeLabels(): boolean {
     return this._showNodeLabels
   }
 
+  /**
+   * Set whether node labels will be shown or not.
+   * @param value - The value.
+   */
   public set showNodeLabels(value: boolean) {
     this._showNodeLabels = value
     const { hide, show } = this.config.alphas.labels.nodes
@@ -147,10 +181,17 @@ export class GraphController<
     this.restart(alpha)
   }
 
+  /**
+   * Get whether link labels are shown or not.
+   */
   public get showLinkLabels(): boolean {
     return this._showLinkLabels
   }
 
+  /**
+   * Set whether link labels will be shown or not.
+   * @param value - The value.
+   */
   public set showLinkLabels(value: boolean) {
     this._showLinkLabels = value
     const { hide, show } = this.config.alphas.labels.links
@@ -173,6 +214,9 @@ export class GraphController<
       .divide(this.scale)
   }
 
+  /**
+   * Resize the graph to fit its container.
+   */
   public resize(): void {
     const oldWidth = this.width
     const oldHeight = this.height
@@ -197,6 +241,10 @@ export class GraphController<
     )
   }
 
+  /**
+   * Restart the controller.
+   * @param alpha - The alpha value of the controller's simulation after the restart.
+   */
   public restart(alpha: number): void {
     this.markerSelection = createMarkers({
       config: this.config,
@@ -232,6 +280,11 @@ export class GraphController<
       .restart()
   }
 
+  /**
+   * Update the node type filter by either including or removing the specified type from the filter.
+   * @param include - Whether the type will be included or removed from the filter.
+   * @param nodeType - The type to be added or removed from the filter.
+   */
   public filterNodesByType(include: boolean, nodeType: T) {
     if (include) {
       this._nodeTypeFilter.push(nodeType)
@@ -244,6 +297,9 @@ export class GraphController<
     this.restart(this.config.alphas.filter.type)
   }
 
+  /**
+   * Shut down the controller's simulation and (optional) automatic resizing.
+   */
   public shutdown(): void {
     if (this.focusedNode !== undefined) {
       this.focusedNode.isFocused = false

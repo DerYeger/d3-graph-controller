@@ -1,3 +1,33 @@
+# [2.0.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.16.1...v2.0.0) (2022-01-08)
+
+
+### Code Refactoring
+
+* **config:** add `simulation` property ([e707ca1](https://github.com/DerYeger/d3-graph-controller/commit/e707ca18025430ad25f313e0476a53f913ec88d2))
+* **config:** make all properties `readonly` ([6aace25](https://github.com/DerYeger/d3-graph-controller/commit/6aace2558ff22947d70bcf513fabc3da1d4f4cda))
+* **config:** make config properties `readonly` ([84d4803](https://github.com/DerYeger/d3-graph-controller/commit/84d4803199aa7dbbc5f2e45532d9c8b7b07a43c2))
+* do not export lib ([4fed1a3](https://github.com/DerYeger/d3-graph-controller/commit/4fed1a35c9482a8f3d7391fb35be3f5b82931f0f))
+* **model:** make most properties `readonly` ([d8fa7be](https://github.com/DerYeger/d3-graph-controller/commit/d8fa7be8904772b2d5487595d15c0bd3f4c2145e))
+* move link length config to its force ([1b7af94](https://github.com/DerYeger/d3-graph-controller/commit/1b7af94dafbcc7f438941931df3431c8c8cd8d0b))
+* rename `MarkerConfig` properties ([2330800](https://github.com/DerYeger/d3-graph-controller/commit/233080017dad1e8bb40955ef244c23c5e466786b))
+
+
+### Features
+
+* **model:** improve label model ([8502d42](https://github.com/DerYeger/d3-graph-controller/commit/8502d420dc97068b6a4d0d84bfb60f909cbba881))
+
+
+### BREAKING CHANGES
+
+* **model:** Merged label properties into single property
+* **model:** most model properties are now `readonly`
+* **config:** config properties are now `readonly`
+* link length config has been moved
+* **config:** config properties are now `readonly`
+* **config:** Various properties have been moved
+* `MarkerConfig` properties have been renamed
+* lib is no longer exported
+
 ## [1.16.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.16.0...v1.16.1) (2022-01-08)
 
 

@@ -26,15 +26,6 @@ export type NodeForce<
 > = Force<Node>
 
 /**
- * Simulation force applied to links.
- */
-export type LinkForce<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>,
-  Link extends GraphLink<T, Node>
-> = Force<Link>
-
-/**
  * Collision force applied to nodes.
  */
 export interface CollisionForce<
@@ -46,6 +37,20 @@ export interface CollisionForce<
    * Tip: Large values can drastically reduce link intersection.
    */
   readonly radiusMultiplier: number
+}
+
+/**
+ * Simulation force applied to links.
+ */
+export interface LinkForce<
+  T extends NodeTypeToken,
+  Node extends GraphNode<T>,
+  Link extends GraphLink<T, Node>
+> extends Force<Link> {
+  /**
+   * Define the length of a link for the simulation.
+   */
+  length: number | ((link: Link) => number)
 }
 
 /**
@@ -99,6 +104,7 @@ export function createDefaultForceConfig<
     link: {
       enabled: true,
       strength: 1,
+      length: 128,
     },
   }
 }

@@ -16,11 +16,15 @@ export interface CustomLink extends GraphLink<CustomType, CustomNode> {
 import { defineGraphConfig } from 'd3-graph-controller'
 
 const config = defineGraphConfig<CustomType, CustomNode, CustomLink>({
-  getNodeRadius: (node: CustomNode) => node.radius,
-  getLinkLength: (link: CustomLink) => link.length,
-  forces: {
-    centering: {
-      strength: (node: CustomNode) => (node.type === 'primary' ? 0.5 : 0.1),
+  nodeRadius: (node: CustomNode) => node.radius,
+  simulation: {
+    forces: {
+      centering: {
+        strength: (node: CustomNode) => (node.type === 'primary' ? 0.5 : 0.1),
+      },
+      link: {
+        length: (link: CustomLink) => link.length,
+      },
     },
   },
 })

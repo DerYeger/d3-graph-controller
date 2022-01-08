@@ -57,7 +57,7 @@ export function defineSimulation<
     simulation.force(
       'collision',
       forceCollide<Node>().radius(
-        (d) => (collisionForce.radiusMultiplier ?? 1) * config.nodeRadius(d)
+        (d) => collisionForce.radiusMultiplier * config.nodeRadius(d)
       )
     )
   }
@@ -68,7 +68,7 @@ export function defineSimulation<
       'link',
       forceLink<Node, Link>(graph.links)
         .id((d) => d.id)
-        .distance((d) => config.getLinkLength(d))
+        .distance(config.simulation.forces.link.length)
         .strength(linkForce.strength)
     )
   }

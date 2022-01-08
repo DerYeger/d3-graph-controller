@@ -27,16 +27,14 @@ export const demoGraphConfig: DemoGraphConfig = defineGraphConfig<
   DemoLink
 >({
   autoResize: true,
-  getLinkLength(link: DemoLink): number {
-    return link.weight * 128
-  },
-  nodeRadius(node: DemoNode): number {
-    return node.radiusMultiplier * 32
-  },
+  nodeRadius: (node: DemoNode) => node.radiusMultiplier * 32,
   simulation: {
     forces: {
       collision: {
         radiusMultiplier: 4,
+      },
+      link: {
+        length: (link: DemoLink) => link.weight * 128,
       },
     },
   },

@@ -20,5 +20,5 @@
       "demo/*": ["demo/*"]
     }
   },
-  "include": ["./src"]
+  "include": ["src"]
 }

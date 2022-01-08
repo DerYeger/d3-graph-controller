@@ -1,5 +1,5 @@
 import { defineGraphConfig } from 'src/config/config'
-import { Graph } from 'src/model/graph'
+import { defineGraph, Graph } from 'src/model/graph'
 import { defineLink } from 'src/model/link'
 import { defineNodeWithDefaults } from 'src/model/node'
 
@@ -65,10 +65,10 @@ const cToC = defineLink<TestNodeType>({
   showLabel: false,
 })
 
-const graph: Graph<TestNodeType> = {
+const graph: Graph<TestNodeType> = defineGraph<TestNodeType>({
   nodes: [a, b, c, d],
   links: [aToB, bToA, bToC, cToC],
-}
+})
 
 const config = defineGraphConfig<TestNodeType>()
 

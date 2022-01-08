@@ -1,3 +1,13 @@
+## [1.16.1](https://github.com/DerYeger/d3-graph-controller/compare/v1.16.0...v1.16.1) (2022-01-08)
+
+
+### Bug Fixes
+
+* add TSDoc to config ([d59d500](https://github.com/DerYeger/d3-graph-controller/commit/d59d5001f34c5be285afa7008e64a82c2294a700))
+* add TSDoc to controller ([ee0d918](https://github.com/DerYeger/d3-graph-controller/commit/ee0d918aa0d7ffb0ad35145c430d6682564de79a))
+* add TSDoc to model ([8c3baf1](https://github.com/DerYeger/d3-graph-controller/commit/8c3baf1acb74000e709b9d9cbaa1a66ea4f7887d))
+* **node:** always set default values for internal properties ([22f4a90](https://github.com/DerYeger/d3-graph-controller/commit/22f4a903e71af0224b63ec27e9393b068d0eca40))
+
 # [1.16.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.15.1...v1.16.0) (2022-01-08)
 
 

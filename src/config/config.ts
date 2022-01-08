@@ -19,16 +19,54 @@ export interface GraphConfig<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
+  /**
+   * Alpha value configuration for controlling simulation activity.
+   */
   alphas: Alphas<T, Node>
+  /**
+   * Set to true to enable automatic resizing.
+   * Warning: Do call shutdown(), once the controller is no longer required.
+   */
   autoResize: boolean
+  /**
+   * Callback configuration.
+   */
   callbacks: Callbacks<T, Node>
+  /**
+   * Simulation force configuration.
+   */
   forces: SimulationForceConfig<T, Node, Link>
+  /**
+   * Get the radius of a node for the simulation and visualization.
+   * @param node - The node.
+   * @returns The node's radius.
+   */
   getNodeRadius(node: Node): number // TODO: rename to nodeRadius
+  /**
+   * Get the length of a link for the simulation.
+   * @param link - The link.
+   * @returns The link's length.
+   */
   getLinkLength(link: Link): number // TODO: move to forces.link
+  /**
+   * Initial settings of a controller.
+   */
   initial: InitialGraphSettings<T, Node, Link>
+  /**
+   * Marker configuration.
+   */
   marker: MarkerConfig
+  /**
+   * Low-level callbacks for modifying the underlying d3-selection.
+   */
   modifiers: Modifiers<T, Node>
+  /**
+   * Initializes a node's position in context of a graph's width and height.
+   */
   positionInitializer: PositionInitializer<NodeTypeToken, Node>
+  /**
+   * Zoom configuration.
+   */
   zoom: ZoomConfig
 }
 
@@ -85,10 +123,19 @@ function defaultGraphConfig<
   }
 }
 
+/**
+ * Utility type for deeply partial objects.
+ */
 export type DeepPartial<T> = {
   [P in keyof T]?: DeepPartial<T[P]>
 }
 
+/**
+ * Define the configuration of a controller.
+ * Will be merged with the default configuration.
+ * @param config - The partial configuration.
+ * @returns The merged configuration.
+ */
 export function defineGraphConfig<
   T extends NodeTypeToken = NodeTypeToken,
   Node extends GraphNode<T> = GraphNode<T>,

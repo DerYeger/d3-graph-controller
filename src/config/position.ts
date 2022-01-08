@@ -1,6 +1,9 @@
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphNode } from 'src/model/node'
 
+/**
+ * Initializes a node's position in context of a graph's width and height.
+ */
 export type PositionInitializer<
   T extends NodeTypeToken,
   Node extends GraphNode<T>
@@ -22,7 +25,16 @@ function randomInRange(min: number, max: number): number {
   return Math.random() * (max - min) + min
 }
 
+/**
+ * Collection of built-in position initializers.
+ */
 export const PositionInitializers = {
+  /**
+   * Initializes node positions to a graph's center.
+   */
   Centered,
+  /**
+   * Randomly initializes node positions within the visible area.
+   */
   Randomized,
 }

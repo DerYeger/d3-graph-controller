@@ -3,8 +3,20 @@ import { NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
 
+/**
+ * Marker configuration.
+ */
 export interface MarkerConfig {
+  /**
+   * Size of the marker's box.
+   */
   markerBoxSize: number
+  /**
+   * Get padding of the marker for calculating link paths.
+   * @param node - The node the marker is pointing at.
+   * @param config - The current config.
+   * @returns The padding of the marker.
+   */
   getMarkerPadding: <
     T extends NodeTypeToken,
     Node extends GraphNode<T>,
@@ -13,10 +25,19 @@ export interface MarkerConfig {
     node: Node,
     config: GraphConfig<T, Node, Link>
   ) => number
+  /**
+   * The ref of the marker.
+   */
   markerRef: [number, number]
   // TODO: rename to path
+  /**
+   * The path of the marker.
+   */
   markerPoints: [number, number][]
   // TODO: Rename to viewBox
+  /**
+   * The ViewBox of the marker.
+   */
   markerPath: string
 }
 
@@ -41,6 +62,13 @@ function defaultMarkerConfig(size: number): MarkerConfig {
   }
 }
 
+/**
+ * Collection of built-in markers.
+ */
 export const Markers = {
+  /**
+   * Create an arrow marker configuration.
+   * @param size - The size of the arrow
+   */
   Arrow: (size: number): MarkerConfig => defaultMarkerConfig(size),
 }

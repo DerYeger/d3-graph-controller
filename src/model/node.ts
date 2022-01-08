@@ -9,25 +9,25 @@ export interface GraphNode<T extends NodeTypeToken = NodeTypeToken>
   /**
    * The type of the node.
    */
-  type: T
+  readonly type: T
   /**
    * The ID of the node.
    */
-  id: string
+  readonly id: string
   /**
    * The color of the node.
    * Can be any valid CSS expression.
    */
-  color: string
+  readonly color: string
   /**
    * The label of the node.
    */
-  label: string
+  readonly label: string
   /**
    * The color of the node's label.
    * Can be any valid CSS expression.
    */
-  labelColor: string
+  readonly labelColor: string
   /**
    * The focus state of a node.
    * Warning: Used for internal logic. Should not be set manually!
@@ -37,7 +37,7 @@ export interface GraphNode<T extends NodeTypeToken = NodeTypeToken>
    * The font size of a node.
    * Can be any valid CSS expression.
    */
-  fontSize: string
+  readonly fontSize: string
   /**
    * The x-coordinate of a node.
    */

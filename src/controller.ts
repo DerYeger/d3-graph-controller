@@ -2,29 +2,24 @@ import { select } from 'd3-selection'
 import { D3ZoomEvent } from 'd3-zoom'
 import { GraphConfig } from 'src/config/config'
 import { LinkFilter } from 'src/config/filter'
-import { Canvas, defineCanvas, updateCanvasTransform } from 'src/lib/canvas'
-import { defineDrag, Drag } from 'src/lib/drag'
+import { defineCanvas, updateCanvasTransform } from 'src/lib/canvas'
+import { defineDrag } from 'src/lib/drag'
 import { filterGraph } from 'src/lib/filter'
+import { createLinks, defineLinkSelection, updateLinks } from 'src/lib/link'
+import { createMarkers, defineMarkerSelection } from 'src/lib/marker'
+import { createNodes, defineNodeSelection, updateNodes } from 'src/lib/node'
+import { defineSimulation } from 'src/lib/simulation'
 import {
-  createLinks,
-  defineLinkSelection,
+  Canvas,
+  Drag,
+  GraphSimulation,
   LinkSelection,
-  updateLinks,
-} from 'src/lib/link'
-import {
-  createMarkers,
-  defineMarkerSelection,
   MarkerSelection,
-} from 'src/lib/marker'
-import {
-  createNodes,
-  defineNodeSelection,
   NodeSelection,
-  updateNodes,
-} from 'src/lib/node'
-import { defineSimulation, GraphSimulation } from 'src/lib/simulation'
+  Zoom,
+} from 'src/lib/types'
 import { debounce, isNumber } from 'src/lib/utils'
-import { defineZoom, Zoom } from 'src/lib/zoom'
+import { defineZoom } from 'src/lib/zoom'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'

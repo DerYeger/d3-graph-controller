@@ -1,11 +1,6 @@
-import { Selection } from 'd3-selection'
 import { zoomIdentity } from 'd3-zoom'
+import { Canvas, GraphHost, Zoom } from 'src/lib/types'
 import { terminateEvent } from 'src/lib/utils'
-import { Zoom } from 'src/lib/zoom'
-
-export type GraphHost = Selection<HTMLDivElement, undefined, null, undefined>
-
-export type Canvas = Selection<SVGGElement, undefined, null, undefined>
 
 export interface DefineCanvasParams {
   applyZoom: boolean

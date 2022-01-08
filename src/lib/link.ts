@@ -1,17 +1,11 @@
-import { Selection } from 'd3-selection'
 import { GraphConfig } from 'src/config/config'
-import { Canvas } from 'src/lib/canvas'
 import Paths from 'src/lib/paths'
+import { Canvas, LinkSelection } from 'src/lib/types'
+import { getLinkId, getMarkerUrl } from 'src/lib/utils'
 import { Graph, NodeTypeToken } from 'src/model/graph'
-import { getLinkId, getMarkerUrl, GraphLink } from 'src/model/link'
+import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
 import { Vector } from 'vecti'
-
-export type LinkSelection<
-  T extends NodeTypeToken,
-  Node extends GraphNode<T>,
-  Link extends GraphLink<T, Node>
-> = Selection<SVGGElement, Link, SVGGElement, undefined>
 
 export function defineLinkSelection<
   T extends NodeTypeToken,

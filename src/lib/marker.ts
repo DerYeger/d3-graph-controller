@@ -1,16 +1,9 @@
-import { Selection } from 'd3-selection'
 import { GraphConfig } from 'src/config/config'
-import { Canvas } from 'src/lib/canvas'
+import { Canvas, MarkerSelection } from 'src/lib/types'
+import { getMarkerId } from 'src/lib/utils'
 import { Graph, NodeTypeToken } from 'src/model/graph'
-import { getMarkerId, GraphLink } from 'src/model/link'
+import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
-
-export type MarkerSelection = Selection<
-  SVGMarkerElement,
-  string,
-  SVGGElement,
-  undefined
->
 
 export function defineMarkerSelection(canvas: Canvas): MarkerSelection {
   return canvas.append('defs').selectAll('marker')

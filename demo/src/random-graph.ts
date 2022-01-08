@@ -8,9 +8,7 @@ import { defineDemoNode, DemoNode } from 'demo/src/node'
 
 export const randomGraphConfig: DemoGraphConfig = defineGraphConfig({
   autoResize: true,
-  getNodeRadius(node: DemoNode): number {
-    return node.radiusMultiplier * 4
-  },
+  nodeRadius: (node: DemoNode) => 4 * node.radiusMultiplier,
   initial: {
     showLinkLabels: false,
     showNodeLabels: false,

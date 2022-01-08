@@ -30,17 +30,11 @@ export interface GraphConfig<
    */
   readonly callbacks: Callbacks<T, Node>
   /**
-   * Get the radius of a node for the simulation and visualization.
+   * Define the radius of a node for the simulation and visualization.
    * @param node - The node.
    * @returns The node's radius.
    */
   readonly nodeRadius: (node: Node) => number
-  /**
-   * Get the length of a link for the simulation.
-   * @param link - The link.
-   * @returns The link's length.
-   */
-  getLinkLength(link: Link): number // TODO: move to forces.link
   /**
    * Initial settings of a controller.
    */
@@ -76,7 +70,6 @@ function defaultGraphConfig<
     autoResize: false,
     callbacks: {},
     initial: createDefaultInitialGraphSettings(),
-    getLinkLength: () => 128,
     nodeRadius: () => 16,
     marker: Markers.Arrow(4),
     modifiers: {},
@@ -97,7 +90,7 @@ function defaultGraphConfig<
  * Utility type for deeply partial objects.
  */
 export type DeepPartial<T> = {
-  [P in keyof T]?: DeepPartial<T[P]>
+  readonly [P in keyof T]?: DeepPartial<T[P]>
 }
 
 /**

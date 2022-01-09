@@ -1,7 +1,7 @@
 <h1 align="center">d3-graph-controller</h1>
 
 <p align="center">
-  <img src="docs/.vuepress/public/logo.png" alt="Logo" width="128px" height="128px">
+  <img src="docs/.vuepress/public/logo.svg" alt="Logo" width="128px" height="128px">
 </p>
 
 <p align="center">

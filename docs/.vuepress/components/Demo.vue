@@ -14,6 +14,7 @@
 
 <style scoped>
 iframe {
+  border-radius: 0.5rem;
   border-width: 0;
   height: clamp(600px, 70vh, 100rem);
   display: block;

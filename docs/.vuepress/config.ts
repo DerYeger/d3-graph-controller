@@ -56,7 +56,7 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     editLink: true,
     editLinkText: 'Suggest changes',
     lastUpdated: false,
-    logo: '/logo.png',
+    logo: '/logo.svg',
     navbar: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },

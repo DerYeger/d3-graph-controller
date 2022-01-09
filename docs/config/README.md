@@ -15,7 +15,7 @@ If set, the default behavior of focusing a node is disabled.
 
 @[code](samples/callbacks.ts)
 
-## Initial settings
+## Initial Settings
 
 The `GraphController` settings that can be changed after initialization can have their initial values configured.
 The reference below shows the default configuration.
@@ -47,7 +47,7 @@ Configuring modifiers is generally only required for custom control schemes.
 Do not forget to unset `pointerdown` and `contextmenu` if required.
 :::
 
-## Node radius
+## Node Radius
 
 The radius of nodes is used for their visualization as well as the underlying simulation.
 It can be configured using the `nodeRadius` property of the config.
@@ -58,7 +58,7 @@ It is also possible to use a function for dynamic node radii.
 
 @[code](samples/dynamic-node-radius.ts)
 
-## Position initialization
+## Position Initialization
 
 When a `GraphController` is created, it initializes the positions of nodes that do not have their coordinates set.
 The behavior of this initialization can be customized by providing a `PositionInitializer`.
@@ -112,7 +112,7 @@ Except `forces.link`, the subject is always a `GraphNode` (or the custom type us
 
 @[code](samples/forces.ts)
 
-### Link length
+### Link Length
 
 Link length is used to determine the length of links for the simulation.
 Similar to node radii, link length can be configured on a per-link basis.

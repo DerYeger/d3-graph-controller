@@ -1,10 +1,18 @@
 html.dark {
   --c-bg: #141414;
-  --c-border: #242424;
+  --c-bg-light: #242424;
+  --c-border: var(--c-bg-light);
   --c-brand: #fdd888;
   --c-brand-light: #ffe189;
+  --code-bg-color: var(--c-bg-light);
 
   code {
     color: var(--c-brand);
+  }
+}
+
+tr:nth-child(2n) {
+  code {
+    background-color: var(--c-bg);
   }
 }

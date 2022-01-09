@@ -26,7 +26,7 @@ npm install d3-graph-controller
 The data model of a graph can be customized to fit any need.
 The following sections show a model with two node types, `primary` and `secondary`, custom node radius and link length as well as dynamic force strength.
 
-### Type tokens
+### Type Tokens
 
 First, define the types of nodes the graph may contain.
 
@@ -81,4 +81,27 @@ This allows you to use dynamic colors with CSS variables.
 
 @[code](samples/styling.ts)
 
-For customization of the default theme, the custom CSS property `--color-node-stroke` can be used.
+For customization of the default theme, the custom CSS properties `--color-stroke` and `--color-node-stroke` can be used.
+
+### Classes
+
+Graphs can also be styled using CSS.
+For this purpose, various classes are defined.
+Reference the table below for a description of all available classes.
+
+| Class         | Element                 | Description                                                                             |
+|---------------|-------------------------|-----------------------------------------------------------------------------------------|
+| `graph`       | Container of the graph  | Added to the graph's container on initialization.                                       |
+| `link`        | Path of a link          |                                                                                         |
+| `link__label` | Label of a link         |                                                                                         |
+| `node`        | Circle of a node        |                                                                                         |
+| `node__label` | Label of a node         |                                                                                         |
+| `focused`     | Focused node            | Applied to a focused node. Recommended usage is `.node.focused`                         |
+| `dragged`     | Dragged nodes or canvas | Added to a node or the canvas while it is being dragged. Sets the cursor to `grabbing`. |
+
+### Default Stylesheet
+
+Usually, importing the default stylesheet and configuring variables should be enough to fit all needs.
+If a full custom styling is required, the default stylesheet as seen below might act as a template.
+
+@[code](../../default.css)

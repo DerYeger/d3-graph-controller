@@ -34,14 +34,32 @@ Hence, it is recommended to only use the default marker `Markers.Arrow` with cus
 
 ## Modifiers
 
-If absolute control is required, `modifiers` can be used to customize the D3 `Selection`.
+If absolute control is required, `modifiers` can be used to customize D3 internals.
 
-@[code](samples/modifiers.ts)
-
-::: warning
-Configuring modifiers is generally only required for custom control schemes.
-Do not forget to unset `pointerdown` and `contextmenu` if required.
+::: tip
+Configuring modifiers is usually not required.
+Do not forget to unset predefined callbacks like `pointerdown` and `contextmenu` for `node` if required.
 :::
+
+### Drag
+
+@[code](samples/modifiers/drag.ts)
+
+### Links
+
+@[code](samples/modifiers/links.ts)
+
+### Nodes
+
+@[code](samples/modifiers/nodes.ts)
+
+### Simulation
+
+@[code](samples/modifiers/simulation.ts)
+
+### Zoom
+
+@[code](samples/modifiers/zoom.ts)
 
 ## Node Radius
 

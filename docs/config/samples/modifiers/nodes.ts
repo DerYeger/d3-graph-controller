@@ -6,7 +6,12 @@ const config = defineGraphConfig({
     node: (
       selection: Selection<SVGCircleElement, GraphNode, SVGGElement, undefined>
     ) => {
-      // Define custom callbacks or visuals
+      // Customize node circles
+    },
+    nodeLabel: (
+      selection: Selection<SVGTextElement, GraphNode, SVGGElement, undefined>
+    ) => {
+      // Customize node labels
     },
   },
 })

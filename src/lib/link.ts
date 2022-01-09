@@ -20,6 +20,7 @@ export interface CreateLinksParams<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 > {
+  readonly config: GraphConfig<T, Node, Link>
   readonly graph: Graph<T, Node, Link>
   readonly selection?: LinkSelection<T, Node, Link> | undefined
   readonly showLabels: boolean
@@ -30,6 +31,7 @@ export function createLinks<
   Node extends GraphNode<T>,
   Link extends GraphLink<T, Node>
 >({
+  config,
   graph,
   selection,
   showLabels,
@@ -38,17 +40,24 @@ export function createLinks<
     ?.data(graph.links, (d) => getLinkId(d))
     .join((enter) => {
       const linkGroup = enter.append('g')
-      linkGroup
+
+      const linkPath = linkGroup
         .append('path')
         .classed('link', true)
         .style('marker-end', (d) => getMarkerUrl(d))
         .style('stroke', (d) => d.color)
-      linkGroup
+
+      config.modifiers.link?.(linkPath)
+
+      const linkLabel = linkGroup
         .append('text')
         .classed('link__label', true)
         .style('fill', (d) => (d.label ? d.label.color : null))
         .style('font-size', (d) => (d.label ? d.label.fontSize : null))
         .text((d) => (d.label ? d.label.text : null))
+
+      config.modifiers.linkLabel?.(linkLabel)
+
       return linkGroup
     })
 

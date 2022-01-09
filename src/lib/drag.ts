@@ -1,22 +1,31 @@
 import { drag } from 'd3-drag'
 import { select } from 'd3-selection'
+import { GraphConfig } from 'src/config/config'
 import { Drag, NodeDragEvent } from 'src/lib/types'
 import { NodeTypeToken } from 'src/model/graph'
+import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
 
 export interface DefineDragParams<
   T extends NodeTypeToken,
-  Node extends GraphNode<T>
+  Node extends GraphNode<T>,
+  Link extends GraphLink<T, Node>
 > {
+  readonly config: GraphConfig<T, Node, Link>
   readonly onDragStart: (event: NodeDragEvent<T, Node>, d: Node) => void
   readonly onDragEnd: (event: NodeDragEvent<T, Node>, d: Node) => void
 }
 
-export function defineDrag<T extends NodeTypeToken, Node extends GraphNode<T>>({
+export function defineDrag<
+  T extends NodeTypeToken,
+  Node extends GraphNode<T>,
+  Link extends GraphLink<T, Node>
+>({
+  config,
   onDragStart,
   onDragEnd,
-}: DefineDragParams<T, Node>): Drag<T, Node> {
-  return drag<SVGGElement, Node, Node>()
+}: DefineDragParams<T, Node, Link>): Drag<T, Node> {
+  const drg = drag<SVGGElement, Node, Node>()
     .filter((event: MouseEvent | TouchEvent) => {
       if (event.type === 'mousedown') {
         return (event as MouseEvent).button === 0 // primary (left) mouse button
@@ -45,4 +54,8 @@ export function defineDrag<T extends NodeTypeToken, Node extends GraphNode<T>>({
       d.fx = undefined
       d.fy = undefined
     })
+
+  config.modifiers.drag?.(drg)
+
+  return drg
 }

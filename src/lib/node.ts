@@ -1,4 +1,3 @@
-import { Selection } from 'd3-selection'
 import { GraphConfig } from 'src/config/config'
 import { Canvas, Drag, NodeSelection } from 'src/lib/types'
 import { getNodeRadius, terminateEvent } from 'src/lib/utils'
@@ -21,11 +20,6 @@ export interface CreateNodesParams<
   readonly config: GraphConfig<T, Node, Link>
   readonly drag?: Drag<T, Node> | undefined
   readonly graph: Graph<T, Node, Link>
-  readonly modifier:
-    | ((
-        selection: Selection<SVGCircleElement, Node, SVGGElement, undefined>
-      ) => void)
-    | undefined
   readonly onNodeSelected: ((node: Node) => void) | undefined
   readonly onNodeContext: (node: Node) => void
   readonly selection?: NodeSelection<T, Node> | undefined
@@ -40,7 +34,6 @@ export function createNodes<
   config,
   drag,
   graph,
-  modifier,
   onNodeContext,
   onNodeSelected,
   selection,
@@ -69,11 +62,9 @@ export function createNodes<
         )
         .style('fill', (d) => d.color)
 
-      if (modifier !== undefined) {
-        modifier(nodeCircle)
-      }
+      config.modifiers.node?.(nodeCircle)
 
-      nodeGroup
+      const nodeLabel = nodeGroup
         .append('text')
         .classed('node__label', true)
         .attr('dy', `0.33em`)
@@ -81,6 +72,8 @@ export function createNodes<
         .style('font-size', (d) => (d.label ? d.label.fontSize : null))
         .style('stroke', 'none')
         .text((d) => (d.label ? d.label.text : null))
+
+      config.modifiers.nodeLabel?.(nodeLabel)
 
       return nodeGroup
     })

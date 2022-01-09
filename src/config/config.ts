@@ -40,7 +40,7 @@ export interface GraphConfig<
   /**
    * Low-level callbacks for modifying the underlying d3-selection.
    */
-  readonly modifiers: Modifiers<T, Node>
+  readonly modifiers: Modifiers<T, Node, Link>
   /**
    * Define the radius of a node for the simulation and visualization.
    * Can be a static number or a function receiving a node as its parameter.

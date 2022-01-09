@@ -248,6 +248,7 @@ export class GraphController<
     })
 
     this.linkSelection = createLinks({
+      config: this.config,
       graph: this.filteredGraph,
       selection: this.linkSelection,
       showLabels: this._showLinkLabels,
@@ -257,7 +258,6 @@ export class GraphController<
       config: this.config,
       drag: this.drag,
       graph: this.filteredGraph,
-      modifier: this.config.modifiers.node,
       onNodeContext: (d) => this.toggleNodeFocus(d),
       onNodeSelected: this.config.callbacks.nodeClicked,
       selection: this.nodeSelection,
@@ -306,6 +306,7 @@ export class GraphController<
 
   private initGraph(): void {
     this.zoom = defineZoom({
+      config: this.config,
       canvasContainer: () => select(this.container).select('svg'),
       min: this.config.zoom.min,
       max: this.config.zoom.max,
@@ -323,6 +324,7 @@ export class GraphController<
     this.nodeSelection = defineNodeSelection(this.canvas)
     this.markerSelection = defineMarkerSelection(this.canvas)
     this.drag = defineDrag({
+      config: this.config,
       onDragStart: () =>
         this.simulation
           ?.alphaTarget(this.config.simulation.alphas.drag.start)

@@ -73,5 +73,10 @@ export function defineSimulation<
         .strength(linkForce.strength)
     )
   }
-  return simulation.on('tick', () => onTick())
+
+  simulation.on('tick', () => onTick())
+
+  config.modifiers.simulation?.(simulation)
+
+  return simulation
 }

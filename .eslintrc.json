@@ -42,7 +42,7 @@
       }
     },
     {
-      "files": ["docs/**/samples/*"],
+      "files": ["docs/**/samples/**/*"],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off",
         "no-console": "off",

@@ -1,7 +1,3 @@
----
-editLink: true
----
-
 # Configuration
 
 Both behavior and visuals of graphs can be customized by passing additional parameters to `defineGraphConfig()`.
@@ -38,7 +34,7 @@ Hence, it is recommended to only use the default marker `Markers.Arrow` with cus
 
 ## Modifiers
 
-If absolute control is required, `modifiers` can be used to customize the d3-selections.
+If absolute control is required, `modifiers` can be used to customize the D3 `Selection`.
 
 @[code](samples/modifiers.ts)
 

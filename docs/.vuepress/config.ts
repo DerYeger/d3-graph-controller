@@ -53,11 +53,14 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     contributors: false, // Would always show the release bot
     docsBranch: 'master',
     docsDir: 'docs',
+    editLink: true,
+    editLinkText: 'Suggest changes',
     lastUpdated: false,
     logo: '/logo.png',
     navbar: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
+      { text: 'API', link: '/api/' },
       { text: 'Config', link: '/config/' },
       { text: 'Demo', link: '/demo/' },
     ],

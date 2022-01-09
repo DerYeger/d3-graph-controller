@@ -94,6 +94,9 @@ const graph = defineGraph({
 const container = document.getElementById('graph') as HTMLDivElement
 
 const controller = new GraphController(container, graph, defineGraphConfig())
+
+// Integrate the controller into the lifecylce of your application
+controller.shutdown()
 ```
 
 ### Styling

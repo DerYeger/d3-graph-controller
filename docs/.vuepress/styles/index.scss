@@ -1,0 +1,10 @@
+html.dark {
+  --c-bg: #141414;
+  --c-border: #242424;
+  --c-brand: #fdd888;
+  --c-brand-light: #ffe189;
+
+  code {
+    color: var(--c-brand);
+  }
+}

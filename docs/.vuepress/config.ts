@@ -50,16 +50,18 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
   // theme and its config
   theme: '@vuepress/theme-default',
   themeConfig: {
+    contributors: false, // Would always show the release bot
+    docsBranch: 'master',
+    docsDir: 'docs',
+    lastUpdated: false,
     logo: '/logo.png',
-    repo: Package.repository.replace('github:', ''),
     navbar: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Config', link: '/config/' },
       { text: 'Demo', link: '/demo/' },
     ],
-    docsBranch: 'master',
-    docsDir: 'docs',
+    repo: Package.repository.replace('github:', ''),
   },
 
   bundler: '@vuepress/vite',

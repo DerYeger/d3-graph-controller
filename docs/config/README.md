@@ -1,9 +1,8 @@
 ---
 editLink: true
-contributors: false
 ---
 
-# Config
+# Configuration
 
 Both behavior and visuals of graphs can be customized by passing additional parameters to `defineGraphConfig()`.
 

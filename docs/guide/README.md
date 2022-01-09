@@ -1,6 +1,5 @@
 ---
 editLink: true
-contributors: false
 ---
 
 # Guide

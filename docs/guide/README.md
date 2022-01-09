@@ -14,7 +14,7 @@ This library allows for custom node and link data types that extend the default 
 These custom properties can then be used anywhere in the configuration.
 
 Lastly, this library is framework-agnostic.
-A graph's container element can be retrieved by any means, including [Vue's refs](https://v3.vuejs.org/guide/component-template-refs.html), [React's refs](https://reactjs.org/docs/refs-and-the-dom.html), [Angular's ViewChield](https://angular.io/api/core/ViewChild), or the old and trustworthy `document.gelElementById`.
+A graph's container element can be retrieved by any means, including [Vue's refs](https://v3.vuejs.org/guide/component-template-refs.html), [React's refs](https://reactjs.org/docs/refs-and-the-dom.html), [Angular's ViewChild](https://angular.io/api/core/ViewChild), or the old and trustworthy `document.gelElementById`.
 Just do not forget to [integrate the graph in the framework's lifecycle](/api/#shutdown).
 
 ## Installation
@@ -111,7 +111,7 @@ Reference the table below for a description of all available classes.
 | `link__label` | Label of a link         |                                                                                         |
 | `node`        | Circle of a node        |                                                                                         |
 | `node__label` | Label of a node         |                                                                                         |
-| `focused`     | Focused node            | Applied to a focused node. Recommended usage is `.node.focused`                         |
+| `focused`     | Focused node            | Applied to a focused node. Recommended usage is `.node.focused`.                        |
 | `dragged`     | Dragged nodes or canvas | Added to a node or the canvas while it is being dragged. Sets the cursor to `grabbing`. |
 
 ### Default Stylesheet

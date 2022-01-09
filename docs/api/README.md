@@ -26,7 +26,7 @@ While graphs can be [configured to resize automatically](/config/#resizing), man
 Simulations are automatically restarted when required.
 Should the need arise in some edge cases, simulations can be manually restarted using `GraphController.restart`.
 
-An alpha value defining the *heat* of the simulation after restarting must be provided.
+An alpha value defining the _heat_ of the simulation after restarting must be provided.
 
 @[code{15-19}](samples/restart.ts)
 

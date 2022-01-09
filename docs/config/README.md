@@ -80,7 +80,7 @@ Its forces and behavior can be configured for precise control.
 
 ### Alphas
 
-Alpha values determine the *heat* or *activity* of a simulation. 
+Alpha values determine the _heat_ or _activity_ of a simulation.
 The higher the value, the stronger the simulation will react.
 After certain actions, the simulations needs to be restarted.
 The alpha values for those restarts can be configured.

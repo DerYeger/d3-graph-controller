@@ -54,7 +54,14 @@ $ npm install d3-graph-controller
 ## Usage
 
 ```typescript
-import { defineGraph, defineGraphConfig, defineLink, defineNodeWithDefaults, Graph, GraphController } from 'd3-graph-controller'
+import {
+  defineGraph,
+  defineGraphConfig,
+  defineLink,
+  defineNodeWithDefaults,
+  Graph,
+  GraphController,
+} from 'd3-graph-controller'
 import 'd3-graph-controller/default.css'
 
 const a = defineNodeWithDefaults({

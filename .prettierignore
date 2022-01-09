@@ -1,9 +1,9 @@
 .cache
 .nyc_output
+CHANGELOG.md
 coverage
 dist
 demo/components.d.ts
 docs/.vuepress/.cache
 docs/.vuepress/.temp
-docs/components.d.ts
 node_modules

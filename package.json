@@ -30,12 +30,12 @@
     "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:commits": "yarn commitlint --from=HEAD~1",
     "lint:eslint": "eslint \"./**/*.{js,json,md,ts,vue}\"",
-    "lint:prettier": "prettier --check \"./**/*.{html,js,json,scss,ts,vue,yml}\"",
+    "lint:prettier": "prettier --check \"./**/*.{html,js,json,md,scss,ts,vue,yml}\"",
     "fix": "yarn pretty && yarn lint:eslint --fix ",
     "test": "vitest --ui",
     "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text --all --src \"src\" --include \"src/*\" vitest --run",
     "test:run": "vitest --run",
-    "pretty": "prettier --write \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
+    "pretty": "prettier --write \"./**/*.{js,json,html,md,scss,ts,vue,yml}\"",
     "prepublishOnly": "yarn build"
   },
   "files": [
@@ -108,7 +108,7 @@
     "access": "public"
   },
   "lint-staged": {
-    "*.{html,js,json,scss,ts,vue,yml}": "prettier --write",
+    "*.{html,js,json,md,scss,ts,vue,yml}": "prettier --write",
     "*.{js,json,md,ts,vue}": "eslint --fix"
   }
 }

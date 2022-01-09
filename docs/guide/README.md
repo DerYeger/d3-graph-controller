@@ -15,7 +15,7 @@ These custom properties can then be used anywhere in the configuration.
 
 Lastly, this library is framework-agnostic.
 A graph's container element can be retrieved by any means, including [Vue's refs](https://v3.vuejs.org/guide/component-template-refs.html), [React's refs](https://reactjs.org/docs/refs-and-the-dom.html), [Angular's ViewChield](https://angular.io/api/core/ViewChild), or the old and trustworthy `document.gelElementById`.
-Just do not forget to [integrate the graph in the framework's lifecycle](/api/#shutdown). 
+Just do not forget to [integrate the graph in the framework's lifecycle](/api/#shutdown).
 
 ## Installation
 
@@ -25,12 +25,14 @@ Just do not forget to [integrate the graph in the framework's lifecycle](/api/#s
 ```bash:no-line-numbers
 yarn add d3-graph-controller
 ```
+
   </CodeGroupItem>
   <CodeGroupItem title="npm">
 
 ```bash:no-line-numbers
 npm install d3-graph-controller
 ```
+
   </CodeGroupItem>
 </CodeGroup>
 
@@ -103,7 +105,7 @@ For this purpose, various classes are defined.
 Reference the table below for a description of all available classes.
 
 | Class         | Element                 | Description                                                                             |
-|---------------|-------------------------|-----------------------------------------------------------------------------------------|
+| ------------- | ----------------------- | --------------------------------------------------------------------------------------- |
 | `graph`       | Container of the graph  | Added to the graph's container on initialization.                                       |
 | `link`        | Path of a link          |                                                                                         |
 | `link__label` | Label of a link         |                                                                                         |

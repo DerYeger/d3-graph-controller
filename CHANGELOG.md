@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/DerYeger/d3-graph-controller/compare/v2.1.0...v2.2.0) (2022-01-09)
+
+
+### Features
+
+* **config:** expose additional modifiers ([1705dfb](https://github.com/DerYeger/d3-graph-controller/commit/1705dfbb6468f27411c1ad7f763dd4af4d2f17df))
+
 # [2.1.0](https://github.com/DerYeger/d3-graph-controller/compare/v2.0.0...v2.1.0) (2022-01-09)
 
 

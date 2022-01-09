@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/DerYeger/d3-graph-controller/compare/v2.0.0...v2.1.0) (2022-01-09)
+
+
+### Features
+
+* **config:** accept number for `nodeRadius` ([5bd7d31](https://github.com/DerYeger/d3-graph-controller/commit/5bd7d312383e40affe661f8d658a372d5d928daf))
+
 # [2.0.0](https://github.com/DerYeger/d3-graph-controller/compare/v1.16.1...v2.0.0) (2022-01-08)
 
 

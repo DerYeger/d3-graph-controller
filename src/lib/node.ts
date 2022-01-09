@@ -1,7 +1,7 @@
 import { Selection } from 'd3-selection'
 import { GraphConfig } from 'src/config/config'
 import { Canvas, Drag, NodeSelection } from 'src/lib/types'
-import { terminateEvent } from 'src/lib/utils'
+import { getNodeRadius, terminateEvent } from 'src/lib/utils'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
@@ -59,7 +59,7 @@ export function createNodes<
         .append('circle')
         .classed('node', true)
         .attr('aria-label', (d) => (d.label ? d.label.text : d.id))
-        .attr('r', (d) => config.nodeRadius(d))
+        .attr('r', (d) => getNodeRadius(config, d))
         .on('contextmenu', (event, d) => {
           terminateEvent(event)
           onNodeContext(d)

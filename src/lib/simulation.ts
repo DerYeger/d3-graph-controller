@@ -8,6 +8,7 @@ import {
 } from 'd3-force'
 import { GraphConfig } from 'src/config/config'
 import { GraphSimulation } from 'src/lib/types'
+import { getNodeRadius } from 'src/lib/utils'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
@@ -57,7 +58,7 @@ export function defineSimulation<
     simulation.force(
       'collision',
       forceCollide<Node>().radius(
-        (d) => collisionForce.radiusMultiplier * config.nodeRadius(d)
+        (d) => collisionForce.radiusMultiplier * getNodeRadius(config, d)
       )
     )
   }

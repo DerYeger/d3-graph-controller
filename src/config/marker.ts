@@ -1,4 +1,5 @@
 import { GraphConfig } from 'src/config/config'
+import { getNodeRadius } from 'src/lib/utils'
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
@@ -49,7 +50,7 @@ function defaultMarkerConfig(size: number): MarkerConfig {
     >(
       node: Node,
       config: GraphConfig<T, Node, Link>
-    ) => config.nodeRadius(node) + 2 * size,
+    ) => getNodeRadius(config, node) + 2 * size,
     ref: [size / 2, size / 2],
     path: [
       [0, 0],

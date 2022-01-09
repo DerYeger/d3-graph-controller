@@ -52,9 +52,12 @@ Do not forget to unset `pointerdown` and `contextmenu` if required.
 
 The radius of nodes is used for their visualization as well as the underlying simulation.
 It can be configured using the `nodeRadius` property of the config.
-You can use instances to calculate dynamic node radii.
 
-@[code](samples/node-radius.ts)
+@[code](samples/static-node-radius.ts)
+
+It is also possible to use a function for dynamic node radii.
+
+@[code](samples/dynamic-node-radius.ts)
 
 ## Position initialization
 

@@ -30,12 +30,6 @@ export interface GraphConfig<
    */
   readonly callbacks: Callbacks<T, Node>
   /**
-   * Define the radius of a node for the simulation and visualization.
-   * @param node - The node.
-   * @returns The node's radius.
-   */
-  readonly nodeRadius: (node: Node) => number
-  /**
    * Initial settings of a controller.
    */
   readonly initial: InitialGraphSettings<T, Node, Link>
@@ -47,6 +41,11 @@ export interface GraphConfig<
    * Low-level callbacks for modifying the underlying d3-selection.
    */
   readonly modifiers: Modifiers<T, Node>
+  /**
+   * Define the radius of a node for the simulation and visualization.
+   * Can be a static number or a function receiving a node as its parameter.
+   */
+  readonly nodeRadius: number | ((node: Node) => number)
   /**
    * Initializes a node's position in context of a graph's width and height.
    */
@@ -70,7 +69,7 @@ function defaultGraphConfig<
     autoResize: false,
     callbacks: {},
     initial: createDefaultInitialGraphSettings(),
-    nodeRadius: () => 16,
+    nodeRadius: 16,
     marker: Markers.Arrow(4),
     modifiers: {},
     positionInitializer: PositionInitializers.Centered,

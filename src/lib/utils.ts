@@ -1,3 +1,4 @@
+import { GraphConfig } from 'src/config/config'
 import { NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'
 import { GraphNode } from 'src/model/node'
@@ -9,6 +10,16 @@ export function terminateEvent(event: Event): void {
 
 export function isNumber(value: unknown): value is number {
   return typeof value === 'number'
+}
+
+export function getNodeRadius<
+  T extends NodeTypeToken,
+  Node extends GraphNode<T>,
+  Link extends GraphLink<T, Node>
+>(config: GraphConfig<T, Node, Link>, node: Node) {
+  return isNumber(config.nodeRadius)
+    ? config.nodeRadius
+    : config.nodeRadius(node)
 }
 
 export function debounce(cb: () => void) {

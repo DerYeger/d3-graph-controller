@@ -53,7 +53,7 @@ jobs:
       - name: Create 404.html file
         run: cp ./demo/dist/index.html ./demo/dist/404.html
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.8
+        uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
           repository-name: DerYeger/d3-graph-controller-demo
           branch: main
@@ -80,7 +80,7 @@ jobs:
       - name: Build
         run: yarn docs:build
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.8
+        uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
           branch: gh-pages
           folder: ./docs/.vuepress/dist

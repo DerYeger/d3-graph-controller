@@ -11,9 +11,10 @@
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:import/recommended",
-    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:markdown/recommended",
+    "plugin:prettier/recommended",
     "plugin:vue/vue3-recommended"
   ],
   "parser": "vue-eslint-parser",

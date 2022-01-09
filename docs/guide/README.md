@@ -4,6 +4,23 @@ editLink: true
 
 # Guide
 
+## Motivation
+
+[D3](https://d3js.org/) is powerful but requires some effort to get good results.
+Furthermore, managing a robust lifecycle with extensive customization options is downright difficult.
+This library aims to make graph building a declarative task and provide an abstraction layer for the complexity of D3.
+
+It does so by using an [extensive configuration](/config/) as the basis for creating graphs.
+Everything should be configurable in a declarative way that is understandable without insight into the inner workings of D3.
+
+In addition, models of graphs should be type-safe and extensible.
+This library allows for custom node and link data types that extend the default model with custom properties.
+These custom properties can then be used anywhere in the configuration.
+
+Lastly, this library is framework-agnostic.
+A graph's container element can be retrieved by any means, including [Vue's refs](https://v3.vuejs.org/guide/component-template-refs.html), [React's refs](https://reactjs.org/docs/refs-and-the-dom.html), [Angular's ViewChield](https://angular.io/api/core/ViewChild), or the old and trustworthy `document.gelElementById`.
+Just do not forget to integrate the graph in the framework's lifecycle by calling `shutdown()` when the component is no longer required. 
+
 ## Installation
 
 <CodeGroup>

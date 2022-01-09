@@ -4,3 +4,4 @@ docs/.vuepress/.cache
 docs/.vuepress/.temp
 dist
 node_modules
+README.md

@@ -122,7 +122,7 @@ const a = defineNodeWithDefaults({
     fontSize: '2rem',
     text: 'A',
   },
-  color: 'var(--color-primary)'
+  color: 'var(--color-primary)',
 })
 ```
 

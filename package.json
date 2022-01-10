@@ -57,7 +57,7 @@
   "types": "dist/types/src/main.d.ts",
   "sideEffects": false,
   "devDependencies": {
-    "@commitlint/cli": "16.0.1",
+    "@commitlint/cli": "16.0.2",
     "@commitlint/config-conventional": "16.0.0",
     "@types/d3-drag": "3.0.1",
     "@types/d3-force": "3.0.3",

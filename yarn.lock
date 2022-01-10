@@ -4567,10 +4567,10 @@ vecti@2.0.0:
   resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.0.0.tgz#6479376a144cdd85e61fd3123564878be75ed14a"
   integrity sha512-HyUw7WgC52Ioudn2ibN5UnqF06Aalh8UoURBLUORpkNGQWj0OxqblXysH4km10bMWb4F9wrZc8iHXdF/mpL4Qg==
 
-vite-plugin-dts@0.9.7:
-  version "0.9.7"
-  resolved "https://registry.yarnpkg.com/vite-plugin-dts/-/vite-plugin-dts-0.9.7.tgz#7f9a187ee1cf87a4929f670529a551ecce767985"
-  integrity sha512-XZ/vIv8nNSLTxanxoMw6B8sDXfZfQHKwZsiYZmY7eK11sDzDnEo4VJbYzsgDosTD/JtbOC7NA5TGqqzsstaGGQ==
+vite-plugin-dts@0.9.8:
+  version "0.9.8"
+  resolved "https://registry.yarnpkg.com/vite-plugin-dts/-/vite-plugin-dts-0.9.8.tgz#93b73ce6e28cf134648b25300084b09bfee95c66"
+  integrity sha512-TBjdGgsJfZuifRmrj9OwtSP/rVFUYAdJOaNTkMK/k06QEANrHQ6giGLKN0rXwG0Td/mUdjVI3dRRgW0IzSF3gw==
   dependencies:
     fast-glob "^3.2.7"
     fs-extra "^10.0.0"

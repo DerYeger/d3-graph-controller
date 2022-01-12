@@ -90,7 +90,7 @@
     "unocss": "0.22.0",
     "unplugin-vue-components": "0.17.11",
     "vite": "2.7.10",
-    "vite-plugin-dts": "0.9.8",
+    "vite-plugin-dts": "0.9.9",
     "vitest": "0.0.140",
     "vue": "3.2.26",
     "vue-eslint-parser": "8.0.1",

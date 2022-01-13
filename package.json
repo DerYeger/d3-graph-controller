@@ -69,8 +69,8 @@
     "@typescript-eslint/parser": "5.9.1",
     "@vitejs/plugin-vue": "2.0.1",
     "@vitest/ui": "0.0.142",
-    "@vuepress/plugin-register-components": "2.0.0-beta.32",
-    "@vuepress/plugin-search": "2.0.0-beta.32",
+    "@vuepress/plugin-register-components": "2.0.0-beta.33",
+    "@vuepress/plugin-search": "2.0.0-beta.33",
     "c8": "7.11.0",
     "d3-graph-controller": "link:.",
     "eslint": "8.6.0",
@@ -94,7 +94,7 @@
     "vitest": "0.0.142",
     "vue": "3.2.26",
     "vue-eslint-parser": "8.0.1",
-    "vuepress": "2.0.0-beta.32"
+    "vuepress": "2.0.0-beta.33"
   },
   "dependencies": {
     "d3-drag": "3.0.0",

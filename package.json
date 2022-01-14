@@ -102,7 +102,7 @@
     "d3-selection": "3.0.0",
     "d3-zoom": "3.0.0",
     "ts-deepmerge": "1.1.0",
-    "vecti": "2.0.0"
+    "vecti": "2.0.1"
   },
   "publishConfig": {
     "access": "public"

@@ -68,7 +68,7 @@
     "@typescript-eslint/eslint-plugin": "5.9.1",
     "@typescript-eslint/parser": "5.9.1",
     "@vitejs/plugin-vue": "2.0.1",
-    "@vitest/ui": "0.1.17",
+    "@vitest/ui": "0.1.19",
     "@vuepress/plugin-register-components": "2.0.0-beta.33",
     "@vuepress/plugin-search": "2.0.0-beta.33",
     "c8": "7.11.0",

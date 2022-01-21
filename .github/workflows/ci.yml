@@ -42,7 +42,7 @@ jobs:
           name: dist
           path: dist
       - name: Build
-        run: yarn demo:build
+        run: yarn demo
   build-docs:
     name: Build Docs
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
           name: dist
           path: dist
       - name: Build
-        run: yarn docs:build
+        run: yarn docs
   lint:
     name: Lint
     runs-on: ubuntu-latest

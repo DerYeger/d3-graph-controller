@@ -35,6 +35,7 @@
     "test": "vitest --ui",
     "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text --all --src \"src\" --include \"src/*\" vitest --run",
     "test:run": "vitest --run",
+    "test:watch": "vitest",
     "pretty": "prettier --write \"./**/*.{js,json,html,md,scss,ts,vue,yml}\"",
     "prepublishOnly": "yarn build"
   },

@@ -19,9 +19,10 @@ describe.concurrent('Config', () => {
           },
         },
       })
-      expect(customConfig.simulation.forces.collision.radiusMultiplier).toEqual(
-        42
-      )
+      const customCollisionForce = customConfig.simulation.forces.collision
+      expect(customCollisionForce).not.toBe(false)
+      // @ts-expect-error It has been asserted that the force is not false
+      expect(customCollisionForce.radiusMultiplier).toEqual(42)
       expect(customConfig).not.toEqual(defaultConfig)
 
       const customMerge = {

@@ -33,7 +33,7 @@
     "lint:prettier": "prettier --check \"./**/*.{html,js,json,md,scss,ts,vue,yml}\"",
     "fix": "yarn pretty && yarn lint:eslint --fix ",
     "test": "vitest --ui",
-    "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text --all --src \"src\" --include \"src/*\" vitest --run",
+    "test:ci": "tsc --noEmit -p test && rimraf ./coverage && c8 --reporter=lcov --reporter=text --all --src \"src\" --include \"src/*\" vitest --run",
     "test:run": "vitest --run",
     "test:watch": "vitest",
     "pretty": "prettier --write \"./**/*.{js,json,html,md,scss,ts,vue,yml}\"",

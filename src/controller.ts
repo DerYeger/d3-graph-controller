@@ -1,3 +1,4 @@
+import { debounce } from '@yeger/debounce'
 import { select } from 'd3-selection'
 import { D3ZoomEvent } from 'd3-zoom'
 import { GraphConfig } from 'src/config/config'
@@ -18,7 +19,7 @@ import {
   NodeSelection,
   Zoom,
 } from 'src/lib/types'
-import { debounce, isNumber } from 'src/lib/utils'
+import { isNumber } from 'src/lib/utils'
 import { defineZoom } from 'src/lib/zoom'
 import { Graph, NodeTypeToken } from 'src/model/graph'
 import { GraphLink } from 'src/model/link'

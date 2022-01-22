@@ -22,14 +22,6 @@ export function getNodeRadius<
     : config.nodeRadius(node)
 }
 
-export function debounce(cb: () => void) {
-  let h = 0
-  return () => {
-    window.clearTimeout(h)
-    h = window.setTimeout(() => cb())
-  }
-}
-
 /**
  * Get the id of a link.
  * @param link - The link.

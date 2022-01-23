@@ -1712,7 +1712,6 @@ d3-force@3.0.0:
 
 "d3-graph-controller@link:.":
   version "0.0.0"
-  uid ""
 
 "d3-interpolate@1 - 3":
   version "3.0.1"
@@ -4608,22 +4607,10 @@ vite-plugin-dts@0.9.9:
     fs-extra "^10.0.0"
     ts-morph "^13.0.0"
 
-vite@2.7.13:
+vite@2.7.13, vite@>=2.7.13:
   version "2.7.13"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.7.13.tgz#99b56e27dfb1e4399e407cf94648f5c7fb9d77f5"
   integrity sha512-Mq8et7f3aK0SgSxjDNfOAimZGW9XryfHRa/uV0jseQSilg+KhYDSoNb9h1rknOy6SuMkvNDLKCYAYYUMCE+IgQ==
-  dependencies:
-    esbuild "^0.13.12"
-    postcss "^8.4.5"
-    resolve "^1.20.0"
-    rollup "^2.59.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-vite@>=2.7.12:
-  version "2.7.12"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.7.12.tgz#7784ab19e7ff98f6a192d2d7d877480a8c2b7e7d"
-  integrity sha512-KvPYToRQWhRfBeVkyhkZ5hASuHQkqZUUdUcE3xyYtq5oYEPIJ0h9LWiWTO6v990glmSac2cEPeYeXzpX5Z6qKQ==
   dependencies:
     esbuild "^0.13.12"
     postcss "^8.4.5"
@@ -4644,10 +4631,10 @@ vite@^2.7.10:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@0.1.19:
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.1.19.tgz#b795a79344ae4559d9514459ed5a81d5973e3c73"
-  integrity sha512-HVdkK6f2fKUrfyziCaluaYewwZNczpEqRghuGeLNYRpC6WM/IK3clgGfP0/3Ad6A3AgGGpgqL04TD9LGgEy/sA==
+vitest@0.1.27:
+  version "0.1.27"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.1.27.tgz#1c42677e5ef98162ba4e86f40c72fbb9d27505c8"
+  integrity sha512-w95Izu+jzust3Ov0KdvN9xZPQm8dG5P1hNOB+uKQ+HFexFcdUW/oa0C0/NR2m2wVpsr23psRPzrBPNlBKgm0qA==
   dependencies:
     "@types/chai" "^4.3.0"
     "@types/chai-subset" "^1.3.3"
@@ -4655,7 +4642,7 @@ vitest@0.1.19:
     local-pkg "^0.4.1"
     tinypool "^0.1.1"
     tinyspy "^0.2.8"
-    vite ">=2.7.12"
+    vite ">=2.7.13"
 
 vue-demi@*:
   version "0.12.1"

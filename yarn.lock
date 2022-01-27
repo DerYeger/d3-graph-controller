@@ -4605,10 +4605,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vecti@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.0.2.tgz#bbcc5e90d5284b77bec149a26895b395e0ef725e"
-  integrity sha512-g0sqpsPifxYemPfp+A2V3zre0Wl2oRbnoEzuyh3oSYqe6Ir6ouaptYyxkCdJlZvOWTDkAlVqCHNydhBgMEXGJg==
+vecti@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.0.3.tgz#da9c7c21ff68b9fec5e8ada10881f88dc1cdd938"
+  integrity sha512-OLyLU+oSoPGnNDux/prYkDFE96mmkYY+YJUnn52moN7eIDR0hbZ3gXyNCM8lINtewwtdmoQIMPuYms1tLawpOQ==
 
 vite-plugin-dts@0.9.9:
   version "0.9.9"

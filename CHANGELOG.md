@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.4...v2.2.5) (2022-01-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vecti to v2.0.3 ([98a587d](https://github.com/DerYeger/d3-graph-controller/commit/98a587db0839a6542c683e0427d0639a4cd59cc2))
+
 ## [2.2.4](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.3...v2.2.4) (2022-01-22)
 
 

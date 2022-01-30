@@ -1058,10 +1058,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.0.tgz#f3bd1255979615530237faea288a96a2ab462106"
-  integrity sha512-AeqbPFF81xGyrgNdEukz78cNcfaYNP6tZuMfyLaBxHpsD5Xo9PWjdpVoSYS7vsCZr1Av49/WNAxRcGUnZFlAAQ==
+"@yeger/debounce@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.1.tgz#ab89f2162bcf18fabfbbad651c8552c2961c8877"
+  integrity sha512-EsvmBuZ2725EF4OA7zjgB26zfY2K6OZjgp++Bh71ih7+FW4u7a4ObXOOJQjcjP3JOGr0nHtyKhefbU81IGSNqA==
 
 JSONStream@^1.0.4:
   version "1.3.5"

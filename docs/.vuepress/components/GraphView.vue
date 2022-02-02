@@ -1,10 +1,4 @@
 <script lang="ts" setup>
-import {
-  GraphController,
-  defineGraphConfig,
-  defineNodeWithDefaults,
-  Graph,
-} from 'd3-graph-controller'
 import { computed, onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 import 'd3-graph-controller/default.css'
 
@@ -16,13 +10,7 @@ const { graph } = toRefs(props)
 
 const el = ref<HTMLDivElement>()
 
-const a = defineNodeWithDefaults({
-  id: 'a',
-  type: 'node',
-  label: 'A',
-})
-
-const controller = ref<GraphController | undefined>()
+const controller = ref(undefined)
 
 onMounted(() => {
   resetGraphController()
@@ -33,7 +21,10 @@ onUnmounted(() => {
 
 watch(graph, resetGraphController)
 
-function resetGraphController() {
+async function resetGraphController() {
+  const { defineGraphConfig, GraphController } = await import(
+    'd3-graph-controller'
+  )
   controller.value?.shutdown()
   if (!graph.value || !el.value) return
   controller.value = new GraphController(

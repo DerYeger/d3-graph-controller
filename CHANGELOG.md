@@ -1,3 +1,10 @@
+## [2.2.8](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.7...v2.2.8) (2022-02-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @yeger/debounce to v1.0.2 ([5ff6ada](https://github.com/DerYeger/d3-graph-controller/commit/5ff6ada7275ca0ae12949057991ab45afbe12669))
+
 ## [2.2.7](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.6...v2.2.7) (2022-02-04)
 
 

@@ -73,7 +73,7 @@
     "@types/resize-observer-browser": "0.1.7",
     "@typescript-eslint/eslint-plugin": "5.11.0",
     "@typescript-eslint/parser": "5.11.0",
-    "@vitejs/plugin-vue": "2.1.0",
+    "@vitejs/plugin-vue": "2.2.0",
     "@vitest/ui": "0.2.8",
     "@vuepress/plugin-register-components": "2.0.0-beta.35",
     "@vuepress/plugin-search": "2.0.0-beta.35",

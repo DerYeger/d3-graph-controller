@@ -1,5 +1,6 @@
 import { defineGraphConfig } from 'src/config/config'
-import { defineGraph, Graph } from 'src/model/graph'
+import type { Graph } from 'src/model/graph'
+import { defineGraph } from 'src/model/graph'
 import { defineLink } from 'src/model/link'
 import { defineNodeWithDefaults } from 'src/model/node'
 

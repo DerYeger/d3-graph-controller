@@ -121,7 +121,7 @@ This allows you to use dynamic colors with CSS variables:
 ```ts
 import { defineNodeWithDefaults } from 'd3-graph-controller'
 
-const a = defineNodeWithDefaults({
+defineNodeWithDefaults({
   type: 'node',
   id: 'a',
   label: {

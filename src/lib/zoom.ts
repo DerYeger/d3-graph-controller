@@ -1,10 +1,11 @@
-import { Selection } from 'd3-selection'
-import { D3ZoomEvent, zoom } from 'd3-zoom'
-import { GraphConfig } from 'src/config/config'
-import { Zoom } from 'src/lib/types'
-import { NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { Selection } from 'd3-selection'
+import type { D3ZoomEvent } from 'd3-zoom'
+import { zoom } from 'd3-zoom'
+import type { GraphConfig } from 'src/config/config'
+import type { Zoom } from 'src/lib/types'
+import type { NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 
 export interface DefineZoomParams<
   T extends NodeTypeToken,

@@ -1,7 +1,7 @@
-import { LinkFilter } from 'src/config/filter'
-import { NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { LinkFilter } from 'src/config/filter'
+import type { NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 
 /**
  * Initial settings of a controller.

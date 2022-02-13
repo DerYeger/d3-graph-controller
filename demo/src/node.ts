@@ -1,5 +1,6 @@
-import { defineNode, GraphNode } from 'd3-graph-controller'
-import { DemoType } from 'demo/src/model'
+import type { GraphNode } from 'd3-graph-controller'
+import { defineNode } from 'd3-graph-controller'
+import type { DemoType } from 'demo/src/model'
 
 export interface DemoNode extends GraphNode<DemoType> {
   radiusMultiplier: number

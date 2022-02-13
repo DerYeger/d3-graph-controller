@@ -1,9 +1,9 @@
-import { GraphConfig } from 'src/config/config'
-import { Canvas, MarkerSelection } from 'src/lib/types'
+import type { GraphConfig } from 'src/config/config'
+import type { Canvas, MarkerSelection } from 'src/lib/types'
 import { getMarkerId } from 'src/lib/utils'
-import { Graph, NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { Graph, NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 
 export function defineMarkerSelection(canvas: Canvas): MarkerSelection {
   return canvas.append('defs').selectAll('marker')
@@ -61,7 +61,7 @@ function makeLine(points: [number, number][]): string {
   }
   const [[startX, startY], ...rest] = points
   return rest.reduce(
-    (line, [x, y]) => line + `L${x},${y}`,
+    (line, [x, y]) => `${line}L${x},${y}`,
     `M${startX},${startY}`
   )
 }

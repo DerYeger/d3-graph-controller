@@ -1,7 +1,9 @@
-# Ignore artifacts
+.cache
+.nyc_output
+CHANGELOG.md
 coverage
+demo/components.d.ts
+dist
 docs/.vuepress/.cache
 docs/.vuepress/.temp
-dist
 node_modules
-README.md

@@ -1,4 +1,4 @@
-import { defineGraphConfig, GraphLink } from 'd3-graph-controller'
+import { GraphLink, defineGraphConfig } from 'd3-graph-controller'
 import type { Selection } from 'd3-selection'
 
 const config = defineGraphConfig({

@@ -1,8 +1,8 @@
 import {
-  defineGraph,
-  defineGraphConfig,
   GraphController,
   GraphLink,
+  defineGraph,
+  defineGraphConfig,
 } from 'd3-graph-controller'
 
 const container = document.getElementById('graph') as HTMLDivElement

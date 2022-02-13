@@ -1,8 +1,8 @@
 import { debounce } from '@yeger/debounce'
 import { select } from 'd3-selection'
-import { D3ZoomEvent } from 'd3-zoom'
-import { GraphConfig } from 'src/config/config'
-import { LinkFilter } from 'src/config/filter'
+import type { D3ZoomEvent } from 'd3-zoom'
+import type { GraphConfig } from 'src/config/config'
+import type { LinkFilter } from 'src/config/filter'
 import { defineCanvas, updateCanvasTransform } from 'src/lib/canvas'
 import { defineDrag } from 'src/lib/drag'
 import { filterGraph } from 'src/lib/filter'
@@ -10,7 +10,7 @@ import { createLinks, defineLinkSelection, updateLinks } from 'src/lib/link'
 import { createMarkers, defineMarkerSelection } from 'src/lib/marker'
 import { createNodes, defineNodeSelection, updateNodes } from 'src/lib/node'
 import { defineSimulation } from 'src/lib/simulation'
-import {
+import type {
   Canvas,
   Drag,
   GraphSimulation,
@@ -21,9 +21,9 @@ import {
 } from 'src/lib/types'
 import { isNumber } from 'src/lib/utils'
 import { defineZoom } from 'src/lib/zoom'
-import { Graph, NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { Graph, NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 import { Vector } from 'vecti'
 
 /**
@@ -157,6 +157,14 @@ export class GraphController<
     this._linkFilter = value
     this.filterGraph(this.focusedNode)
     this.restart(this.config.simulation.alphas.filter.link)
+  }
+
+  /**
+   * Get the current link filter.
+   * @returns - The current link filter.
+   */
+  public get linkFilter(): LinkFilter<T, Node, Link> {
+    return this._linkFilter
   }
 
   /**

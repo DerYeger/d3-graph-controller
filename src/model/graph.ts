@@ -1,5 +1,5 @@
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 
 /**
  * Type token for nodes.

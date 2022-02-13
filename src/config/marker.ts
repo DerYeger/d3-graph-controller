@@ -1,8 +1,8 @@
-import { GraphConfig } from 'src/config/config'
+import type { GraphConfig } from 'src/config/config'
 import { getNodeRadius } from 'src/lib/utils'
-import { NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 
 /**
  * Marker configuration.
@@ -42,7 +42,7 @@ export interface MarkerConfig {
 
 function defaultMarkerConfig(size: number): MarkerConfig {
   return {
-    size: size,
+    size,
     padding: <
       T extends NodeTypeToken,
       Node extends GraphNode<T>,

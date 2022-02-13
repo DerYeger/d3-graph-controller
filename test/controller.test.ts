@@ -1,5 +1,7 @@
-import { defineGraphConfig, GraphController, GraphLink } from 'src/main'
-import TestData, { TestNodeType } from 'test/test-data'
+import type { GraphLink } from 'src/main'
+import { GraphController, defineGraphConfig } from 'src/main'
+import type { TestNodeType } from 'test/test-data'
+import TestData from 'test/test-data'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 describe('GraphController', () => {

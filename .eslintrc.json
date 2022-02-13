@@ -1,28 +1,5 @@
 {
-  "root": true,
-  "env": {
-    "node": true
-  },
-  "plugins": [
-    "@typescript-eslint",
-    "eslint-plugin-tsdoc",
-    "import",
-    "unused-imports"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
-    "plugin:markdown/recommended",
-    "plugin:prettier/recommended",
-    "plugin:vue/vue3-recommended"
-  ],
-  "parser": "vue-eslint-parser",
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "parser": "@typescript-eslint/parser",
-    "sourceType": "module"
-  },
+  "extends": ["@yeger"],
   "overrides": [
     {
       "files": ["demo/**/*", "docs/**/*"],
@@ -44,72 +21,12 @@
     {
       "files": ["docs/**/samples/**/*"],
       "rules": {
+        "@typescript-eslint/consistent-type-imports": "off",
         "@typescript-eslint/no-unused-vars": "off",
+        "import/first": "off",
         "no-console": "off",
         "unused-imports/no-unused-vars": "off"
       }
     }
-  ],
-  "rules": {
-    "@typescript-eslint/explicit-member-accessibility": [
-      "error",
-      {
-        "accessibility": "explicit",
-        "overrides": {
-          "accessors": "explicit",
-          "constructors": "explicit",
-          "parameterProperties": "explicit"
-        }
-      }
-    ],
-    "import/order": [
-      "error",
-      {
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
-    ],
-    "import/named": "off",
-    "import/no-unresolved": "off",
-    "no-console": ["error", { "allow": [""] }],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 1,
-        "maxEOF": 1
-      }
-    ],
-    "no-restricted-imports": [
-      "error",
-      {
-        "patterns": [
-          { "group": [".*"], "message": "Use absolute paths instead." },
-          { "group": ["d3-graph-controller"], "message": "Use src instead." }
-        ]
-      }
-    ],
-    "tsdoc/syntax": "error",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "error",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
-    ],
-    "vue/html-self-closing": "off",
-    "vue/max-attributes-per-line": "off",
-    "vue/multi-word-component-names": "off",
-    "vue/singleline-html-element-content-newline": "off"
-  },
-  "globals": {
-    "defineProps": "readonly",
-    "defineEmits": "readonly",
-    "withDefaults": "readonly"
-  }
+  ]
 }

@@ -1,6 +1,7 @@
 import { filterGraph } from 'src/lib/filter'
-import { GraphLink } from 'src/model/link'
-import TestData, { TestNodeType } from 'test/test-data'
+import type { GraphLink } from 'src/model/link'
+import type { TestNodeType } from 'test/test-data'
+import TestData from 'test/test-data'
 import { describe, expect, it } from 'vitest'
 
 describe.concurrent('filter', () => {

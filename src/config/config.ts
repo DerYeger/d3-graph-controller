@@ -1,18 +1,18 @@
 import { createDefaultAlphaConfig } from 'src/config/alpha'
-import { Callbacks } from 'src/config/callbacks'
+import type { Callbacks } from 'src/config/callbacks'
 import { createDefaultForceConfig } from 'src/config/forces'
-import {
-  createDefaultInitialGraphSettings,
-  InitialGraphSettings,
-} from 'src/config/initial'
-import { MarkerConfig, Markers } from 'src/config/marker'
-import { Modifiers } from 'src/config/modifiers'
-import { PositionInitializer, PositionInitializers } from 'src/config/position'
-import { SimulationConfig } from 'src/config/simulation'
-import { ZoomConfig } from 'src/config/zoom'
-import { NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { InitialGraphSettings } from 'src/config/initial'
+import { createDefaultInitialGraphSettings } from 'src/config/initial'
+import type { MarkerConfig } from 'src/config/marker'
+import { Markers } from 'src/config/marker'
+import type { Modifiers } from 'src/config/modifiers'
+import type { PositionInitializer } from 'src/config/position'
+import { PositionInitializers } from 'src/config/position'
+import type { SimulationConfig } from 'src/config/simulation'
+import type { ZoomConfig } from 'src/config/zoom'
+import type { NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 import merge from 'ts-deepmerge'
 
 export interface GraphConfig<

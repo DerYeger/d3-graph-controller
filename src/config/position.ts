@@ -1,5 +1,5 @@
-import { NodeTypeToken } from 'src/model/graph'
-import { GraphNode } from 'src/model/node'
+import type { NodeTypeToken } from 'src/model/graph'
+import type { GraphNode } from 'src/model/node'
 
 /**
  * Initializes a node's position in context of a graph's width and height.

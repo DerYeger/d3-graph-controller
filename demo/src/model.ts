@@ -1,12 +1,9 @@
-import {
-  defineGraph,
-  defineGraphConfig,
-  Graph,
-  GraphConfig,
-  GraphController,
-} from 'd3-graph-controller'
-import { DemoLink, links } from 'demo/src/link'
-import { DemoNode, nodes } from 'demo/src/node'
+import type { Graph, GraphConfig, GraphController } from 'd3-graph-controller'
+import { defineGraph, defineGraphConfig } from 'd3-graph-controller'
+import type { DemoLink } from 'demo/src/link'
+import { links } from 'demo/src/link'
+import type { DemoNode } from 'demo/src/node'
+import { nodes } from 'demo/src/node'
 
 export type DemoType = 'primary' | 'secondary'
 

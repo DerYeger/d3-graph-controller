@@ -6,13 +6,13 @@ import {
   forceX,
   forceY,
 } from 'd3-force'
-import { GraphConfig } from 'src/config/config'
-import { GraphSimulation } from 'src/lib/types'
+import type { GraphConfig } from 'src/config/config'
+import type { GraphSimulation } from 'src/lib/types'
 import { getNodeRadius } from 'src/lib/utils'
-import { Graph, NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
-import { Vector } from 'vecti'
+import type { Graph, NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
+import type { Vector } from 'vecti'
 
 export interface DefineSimulationParams<
   T extends NodeTypeToken,

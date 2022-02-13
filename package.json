@@ -1,7 +1,12 @@
 {
   "name": "d3-graph-controller",
-  "description": "A TypeScript library for visualizing and simulating directed, interactive graphs.",
   "version": "2.2.8",
+  "description": "A TypeScript library for visualizing and simulating directed, interactive graphs.",
+  "keywords": [
+    "d3",
+    "graph",
+    "controller"
+  ],
   "license": "MIT",
   "repository": "github:DerYeger/d3-graph-controller",
   "homepage": "https://graph-controller.yeger.eu",
@@ -12,11 +17,22 @@
     "name": "Jan Müller",
     "url": "https://github.com/DerYeger"
   },
-  "keywords": [
-    "d3",
-    "graph",
-    "controller"
+  "files": [
+    "dist",
+    "default.css"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/d3-graph-controller.es.js",
+      "require": "./dist/d3-graph-controller.umd.js"
+    },
+    "./default.css": {
+      "import": "./default.css",
+      "require": "./default.css"
+    }
+  },
+  "main": "./dist/d3-graph-controller.umd.js",
+  "module": "./dist/d3-graph-controller.es.js",
   "scripts": {
     "prepare": "husky install",
     "prebuild": "rimraf ./dist",
@@ -31,11 +47,9 @@
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
     "docs:typecheck": "tsc --noEmit -p docs",
-    "lint": "yarn lint:prettier && yarn lint:eslint",
-    "lint:commits": "yarn commitlint --from=HEAD~1",
-    "lint:eslint": "eslint \"./**/*.{js,json,md,ts,vue}\"",
+    "lint": "eslint \"./**/*.{js,json,md,ts,vue,yaml,yml}\"",
     "lint:prettier": "prettier --check \"./**/*.{html,js,json,md,scss,ts,vue,yml}\"",
-    "fix": "yarn pretty && yarn lint:eslint --fix ",
+    "fix": "yarn lint --fix ",
     "test": "yarn test:typecheck && yarn test:ci",
     "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text --all --src \"src\" --include \"src/*\" vitest --run",
     "test:run": "vitest --run",
@@ -44,63 +58,10 @@
     "pretty": "prettier --write \"./**/*.{js,json,html,md,scss,ts,vue,yml}\"",
     "prepublishOnly": "yarn build"
   },
-  "files": [
-    "dist",
-    "default.css"
-  ],
-  "main": "./dist/d3-graph-controller.umd.js",
-  "module": "./dist/d3-graph-controller.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/d3-graph-controller.es.js",
-      "require": "./dist/d3-graph-controller.umd.js"
-    },
-    "./default.css": {
-      "import": "./default.css",
-      "require": "./default.css"
-    }
-  },
   "types": "dist/types/src/main.d.ts",
   "sideEffects": false,
-  "devDependencies": {
-    "@commitlint/cli": "16.1.0",
-    "@commitlint/config-conventional": "16.0.0",
-    "@types/d3-drag": "3.0.1",
-    "@types/d3-force": "3.0.3",
-    "@types/d3-selection": "3.0.2",
-    "@types/d3-zoom": "3.0.1",
-    "@types/node": "16.11.24",
-    "@types/resize-observer-browser": "0.1.7",
-    "@typescript-eslint/eslint-plugin": "5.11.0",
-    "@typescript-eslint/parser": "5.11.0",
-    "@vitejs/plugin-vue": "2.2.0",
-    "@vitest/ui": "0.3.4",
-    "@vuepress/plugin-register-components": "2.0.0-beta.35",
-    "@vuepress/plugin-search": "2.0.0-beta.35",
-    "c8": "7.11.0",
-    "d3-graph-controller": "link:.",
-    "eslint": "8.9.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-markdown": "2.2.1",
-    "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-tsdoc": "0.2.14",
-    "eslint-plugin-unused-imports": "2.0.0",
-    "eslint-plugin-vue": "8.4.1",
-    "husky": "7.0.4",
-    "jsdom": "19.0.0",
-    "lint-staged": "12.3.3",
-    "prettier": "2.5.1",
-    "rimraf": "3.0.2",
-    "typescript": "4.5.5",
-    "unocss": "0.24.3",
-    "unplugin-vue-components": "0.17.18",
-    "vite": "2.8.1",
-    "vite-plugin-dts": "0.9.9",
-    "vitest": "0.3.4",
-    "vue": "3.2.30",
-    "vue-eslint-parser": "8.2.0",
-    "vuepress": "2.0.0-beta.35"
+  "lint-staged": {
+    "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
   },
   "dependencies": {
     "@yeger/debounce": "1.0.2",
@@ -111,11 +72,37 @@
     "ts-deepmerge": "2.0.1",
     "vecti": "2.0.5"
   },
+  "devDependencies": {
+    "@commitlint/cli": "16.1.0",
+    "@commitlint/config-conventional": "16.0.0",
+    "@types/d3-drag": "3.0.1",
+    "@types/d3-force": "3.0.3",
+    "@types/d3-selection": "3.0.2",
+    "@types/d3-zoom": "3.0.1",
+    "@types/node": "16.11.24",
+    "@types/resize-observer-browser": "0.1.7",
+    "@vitejs/plugin-vue": "2.2.0",
+    "@vitest/ui": "0.3.4",
+    "@vuepress/plugin-register-components": "2.0.0-beta.35",
+    "@vuepress/plugin-search": "2.0.0-beta.35",
+    "@yeger/eslint-config": "^1.4.0",
+    "c8": "7.11.0",
+    "d3-graph-controller": "link:.",
+    "eslint": "8.9.0",
+    "husky": "7.0.4",
+    "jsdom": "19.0.0",
+    "lint-staged": "12.3.3",
+    "rimraf": "3.0.2",
+    "typescript": "4.5.5",
+    "unocss": "0.24.3",
+    "unplugin-vue-components": "0.17.18",
+    "vite": "2.8.1",
+    "vite-plugin-dts": "0.9.9",
+    "vitest": "0.3.4",
+    "vue": "3.2.30",
+    "vuepress": "2.0.0-beta.35"
+  },
   "publishConfig": {
     "access": "public"
-  },
-  "lint-staged": {
-    "*.{html,js,json,md,scss,ts,vue,yml}": "prettier --write",
-    "*.{js,json,md,ts,vue}": "eslint --fix"
   }
 }

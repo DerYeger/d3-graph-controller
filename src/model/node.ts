@@ -1,6 +1,6 @@
-import { SimulationNodeDatum } from 'd3-force'
-import { NodeTypeToken } from 'src/model/graph'
-import { Label } from 'src/model/shared'
+import type { SimulationNodeDatum } from 'd3-force'
+import type { NodeTypeToken } from 'src/model/graph'
+import type { Label } from 'src/model/shared'
 
 /**
  * Node representing a datum of a graph.
@@ -70,6 +70,16 @@ export function defineNode<
   }
 }
 
+const nodeDefaults: Omit<GraphNode, 'id' | 'type'> = {
+  color: 'lightgray',
+  label: {
+    color: 'black',
+    fontSize: '1rem',
+    text: '',
+  },
+  isFocused: false,
+}
+
 /**
  * Define a node with type inference and some default values.
  * @param data - The data of the node.
@@ -81,14 +91,4 @@ export function defineNodeWithDefaults<T extends NodeTypeToken = NodeTypeToken>(
     ...nodeDefaults,
     ...data,
   })
-}
-
-const nodeDefaults: Omit<GraphNode, 'id' | 'type'> = {
-  color: 'lightgray',
-  label: {
-    color: 'black',
-    fontSize: '1rem',
-    text: '',
-  },
-  isFocused: false,
 }

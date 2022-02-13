@@ -1,11 +1,11 @@
-import { GraphConfig } from 'src/config/config'
+import type { GraphConfig } from 'src/config/config'
 import Paths from 'src/lib/paths'
-import { Canvas, LinkSelection } from 'src/lib/types'
+import type { Canvas, LinkSelection } from 'src/lib/types'
 import { getLinkId, getMarkerUrl } from 'src/lib/utils'
-import { Graph, NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
-import { Vector } from 'vecti'
+import type { Graph, NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
+import type { Vector } from 'vecti'
 
 export function defineLinkSelection<
   T extends NodeTypeToken,

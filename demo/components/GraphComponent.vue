@@ -37,8 +37,13 @@
 
 <script lang="ts">
 import { GraphController } from 'd3-graph-controller'
-import { DemoGraph, DemoGraphConfig, DemoGraphController } from 'demo/src/model'
-import { defineComponent, PropType } from 'vue'
+import type {
+  DemoGraph,
+  DemoGraphConfig,
+  DemoGraphController,
+} from 'demo/src/model'
+import type { PropType } from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {

@@ -1,10 +1,10 @@
-import { D3DragEvent, DragBehavior } from 'd3-drag'
-import { Simulation } from 'd3-force'
-import { Selection } from 'd3-selection'
-import { ZoomBehavior } from 'd3-zoom'
-import { NodeTypeToken } from 'src/model/graph'
-import { GraphLink } from 'src/model/link'
-import { GraphNode } from 'src/model/node'
+import type { D3DragEvent, DragBehavior } from 'd3-drag'
+import type { Simulation } from 'd3-force'
+import type { Selection } from 'd3-selection'
+import type { ZoomBehavior } from 'd3-zoom'
+import type { NodeTypeToken } from 'src/model/graph'
+import type { GraphLink } from 'src/model/link'
+import type { GraphNode } from 'src/model/node'
 
 export type Canvas = Selection<SVGGElement, undefined, null, undefined>
 

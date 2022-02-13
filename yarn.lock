@@ -1137,7 +1137,7 @@
   resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.2.tgz#2e7377804e87f00ce1191bc1f7f3d33bac35fab3"
   integrity sha512-+lkYkGLGy4tySOVJrFU+qOYyCajKUcS1d0brKkjIJ5kAGTbKHi0C46/0V1qAxJZB8ObXqR5jfsdQJoFVZacG7g==
 
-"@yeger/eslint-config@^1.4.0":
+"@yeger/eslint-config@1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.0.tgz#ff5a48d9939ea96fe57fe983e59bf389794ee878"
   integrity sha512-SLzyhnQjYhDakeaI0CVnfuFShOE7McmSji93QGJRKkZdxOR2NdE74g93HAWyGkEj3hn+US2IMwntFSmwa9oz2w==

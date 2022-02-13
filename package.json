@@ -51,7 +51,7 @@
     "lint:prettier": "prettier --check \"./**/*.{html,js,json,md,scss,ts,vue,yml}\"",
     "fix": "yarn lint --fix ",
     "test": "yarn test:typecheck && yarn test:ci",
-    "test:ci": "rimraf ./coverage && c8 --reporter=lcov --reporter=text --all --src \"src\" --include \"src/*\" vitest --run",
+    "test:ci": "rimraf ./coverage && vitest --run --coverage",
     "test:run": "vitest --run",
     "test:typecheck": "tsc --noEmit -p test",
     "test:watch": "vitest",

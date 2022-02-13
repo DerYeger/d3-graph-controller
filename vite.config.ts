@@ -54,5 +54,9 @@ export default defineConfig({
   test: {
     include: ['test/**/*.test.ts'],
     environment: 'jsdom',
+    coverage: {
+      all: true,
+      include: ['src/**/*.ts'],
+    },
   },
 })

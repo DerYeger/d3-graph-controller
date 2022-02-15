@@ -78,7 +78,7 @@
     "@types/d3-force": "3.0.3",
     "@types/d3-selection": "3.0.2",
     "@types/d3-zoom": "3.0.1",
-    "@types/node": "16.11.24",
+    "@types/node": "16.11.25",
     "@types/resize-observer-browser": "0.1.7",
     "@vitejs/plugin-vue": "2.2.0",
     "@vitest/ui": "0.3.4",

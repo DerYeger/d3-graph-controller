@@ -1145,13 +1145,13 @@
   resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.3.tgz#ca528d9507501614e471cb7789db86ab11ff7cd2"
   integrity sha512-cSdpaNzsGOIPRwVPCi/DA9wxR4cDyrUtbVIZw27zWnF4dh/BjKeFz0oQw5gYYRTg09kKBcS+DUJ9HioXPH5qlw==
 
-"@yeger/eslint-config@1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.1.tgz#2638326cc968870c1a10e8b7b4c2f045ef4d3500"
-  integrity sha512-aSHRS9WkGTmdaBfgAZmwl6cVfaJiJOOi8N1gBB7cbO/5gJ2ILyrGUpDq4yJoIcssmUTADVI5xDUqH+IQhfL4Ng==
+"@yeger/eslint-config@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.2.tgz#15512f8ba8cef3a36ef9bb74a1ad5f6aaadcc6c4"
+  integrity sha512-NbJUVLjwctRbMqvQdA2Q41IahdxTzdHl43ewYX1mWfcxuJGGmOlR5BUmLTdDEZBFUxWlferqlcXW11Bl4iQV7w==
   dependencies:
     "@antfu/eslint-config" "0.16.1"
-    eslint-config-prettier "8.3.0"
+    eslint-config-prettier "8.4.0"
     eslint-plugin-cypress "2.12.1"
     eslint-plugin-import "2.25.4"
     eslint-plugin-markdown "2.2.1"
@@ -2438,10 +2438,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
-  integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
+eslint-config-prettier@8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.4.0.tgz#8e6d17c7436649e98c4c2189868562921ef563de"
+  integrity sha512-CFotdUcMY18nGRo5KGsnNxpznzhkopOcOo0InID+sgQssPrzjvsyKZPvOgymTFeHrFuC3Tzdf2YndhXtULK9Iw==
 
 eslint-config-standard@17.0.0-0:
   version "17.0.0-0"

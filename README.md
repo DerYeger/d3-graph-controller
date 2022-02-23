@@ -7,6 +7,9 @@
 <p align="center">
   <a href="https://graph-controller.yeger.eu">
     Documentation
+  </a> ·
+  <a href="https://graph-controller.yeger.eu/demo/">
+    Demo
   </a>
 </p>
 

@@ -1157,10 +1157,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.4.tgz#dfc49975ec21c146f831c81d94ecd5c0b3582b55"
-  integrity sha512-WrFqdUcht8hBH7OodBMIkbj5T8MTg7f/twk7J2hp+r2KtIAf3iIzAZI9KPgnJtMGrmSh3NPGwwmyHa7qdbrpVA==
+"@yeger/debounce@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.5.tgz#482064969fa0ea53a1e05765ac028c1ba3e614a2"
+  integrity sha512-eCemKCbVg6RdN8NWjWc1qtJXJDdWHdYPinNO4J68/OJywYnRdZcA9SIXTcMUL/Wpg/89cchfaAfWCfD7d+kGGg==
 
 "@yeger/eslint-config@1.4.3":
   version "1.4.3"

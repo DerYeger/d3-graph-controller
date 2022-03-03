@@ -63,7 +63,7 @@
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
   },
   "dependencies": {
-    "@yeger/debounce": "1.0.4",
+    "@yeger/debounce": "1.0.5",
     "d3-drag": "3.0.0",
     "d3-force": "3.0.0",
     "d3-selection": "3.0.0",

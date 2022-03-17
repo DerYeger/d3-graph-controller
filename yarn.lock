@@ -1151,10 +1151,10 @@
   resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.6.tgz#f9938f651337d226f1099e4959028e0077efbfac"
   integrity sha512-anzoorCVRzaP7HrX3tZABWZavc8PTVukr1H+TGzXRMvNo1V5U4wjsy9TQE/BheQFVLxVyZxEXRz+Hqq0nrvGPg==
 
-"@yeger/eslint-config@1.4.4":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.4.tgz#19cbc0352f6426e7f60e80e86f2491a7952f883f"
-  integrity sha512-XYOsgczesYycHRFGdVc7mqRYF631enL91rXO18EfyPKg+OYb/ewhHJvTU3QYIifgP6StVcndLDW3zhNvgaFCeg==
+"@yeger/eslint-config@1.4.5":
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.5.tgz#37c53634a0ff3d15b32449b7c4c36592e4dbbdba"
+  integrity sha512-qBpWm0xN6wRTkIlDlavkHg8IXNz3PxGWJ3ATPpwTM7fQ1Uc6WGV7geN4RBtVKcyj74xNR4AGYi2CnJ+GHfFfwg==
   dependencies:
     "@antfu/eslint-config" "0.18.3"
     eslint-config-prettier "8.5.0"
@@ -1166,7 +1166,7 @@
     eslint-plugin-tsdoc "0.2.14"
     eslint-plugin-unused-imports "2.0.0"
     eslint-plugin-yml "0.14.0"
-    prettier "2.5.1"
+    prettier "2.6.0"
     yaml-eslint-parser "0.5.0"
 
 JSONStream@^1.0.4:
@@ -4644,10 +4644,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
-  integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
+prettier@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.0.tgz#12f8f504c4d8ddb76475f441337542fa799207d4"
+  integrity sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==
 
 prismjs@^1.26.0:
   version "1.27.0"

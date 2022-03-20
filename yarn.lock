@@ -6184,10 +6184,10 @@ unocss@0.29.4:
     "@unocss/transformer-variant-group" "0.29.4"
     "@unocss/vite" "0.29.4"
 
-unplugin-vue-components@0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.18.1.tgz#f4bf80d2dbb75c407c8abbecf2c72a1ff3808674"
-  integrity sha512-z+dY8LBf7fhlNNK30kSRnmOjc36pjOVF0pg/x2kPUko5iDOGKU2jTp4XOxvbqWzG1fFleCfFPwKYx1GhqYT+8Q==
+unplugin-vue-components@0.18.3:
+  version "0.18.3"
+  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.18.3.tgz#b6b4720610db9c35582d20bf45a176e1e52c9a73"
+  integrity sha512-pi+BWPyN3f3AQ/Yqp6QemY8QXwIH4+ChmtcUtzcf3DD4a2926II41ZNinXp+KiN5UOSxk8fG0J6qbRpZBsD1Ew==
   dependencies:
     "@antfu/utils" "^0.5.0"
     "@rollup/pluginutils" "^4.2.0"

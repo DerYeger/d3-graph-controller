@@ -98,7 +98,7 @@
     "unplugin-vue-components": "0.18.3",
     "vite": "2.8.6",
     "vite-plugin-dts": "0.9.10",
-    "vitest": "0.7.4",
+    "vitest": "0.7.6",
     "vue": "3.2.31",
     "vuepress": "2.0.0-beta.36"
   }

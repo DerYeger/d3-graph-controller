@@ -6252,10 +6252,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vecti@2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.0.9.tgz#bd9aca99582c1c7861bd491a49735e4574670714"
-  integrity sha512-JELqCo7nYOe/NL6Qkm1m6F52/VkjtYNtc8xtjep1fV7T7Dxrv5CaBva0HLf01SXpqfRk57EG0NlrnZ0TFjYS+Q==
+vecti@2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.0.10.tgz#5b1184649c63c351add730be7bb4a6a6ecbc74d6"
+  integrity sha512-UMFEgVcpRC9h4wdGvi0HKEnNcvJVLDIXdfWgZ9Lr5WilnIvXtK0qcnQcnVHVdcrEl5A1e3wMBuMreQ23X/zd+A==
 
 vfile-location@^2.0.0, vfile-location@^2.0.1:
   version "2.0.6"

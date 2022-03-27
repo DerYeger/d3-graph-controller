@@ -60,7 +60,7 @@
     "pretty": "prettier --write \"./**/*.{js,json,html,md,scss,ts,vue,yml}\""
   },
   "dependencies": {
-    "@yeger/debounce": "1.0.7",
+    "@yeger/debounce": "1.0.8",
     "d3-drag": "3.0.0",
     "d3-force": "3.0.0",
     "d3-selection": "3.0.0",

@@ -79,8 +79,8 @@
     "@types/resize-observer-browser": "0.1.7",
     "@vitejs/plugin-vue": "2.2.4",
     "@vitest/ui": "0.8.1",
-    "@vuepress/plugin-register-components": "2.0.0-beta.36",
-    "@vuepress/plugin-search": "2.0.0-beta.36",
+    "@vuepress/plugin-register-components": "2.0.0-beta.37",
+    "@vuepress/plugin-search": "2.0.0-beta.37",
     "@yeger/eslint-config": "1.4.7",
     "c8": "7.11.0",
     "d3-graph-controller": "link:.",
@@ -97,7 +97,7 @@
     "vite-plugin-dts": "0.9.10",
     "vitest": "0.7.12",
     "vue": "3.2.31",
-    "vuepress": "2.0.0-beta.36"
+    "vuepress": "2.0.0-beta.37"
   },
   "lint-staged": {
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"

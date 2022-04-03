@@ -81,7 +81,7 @@
     "@vitest/ui": "0.8.3",
     "@vuepress/plugin-register-components": "2.0.0-beta.37",
     "@vuepress/plugin-search": "2.0.0-beta.37",
-    "@yeger/eslint-config": "1.4.7",
+    "@yeger/eslint-config": "1.4.11",
     "c8": "7.11.0",
     "d3-graph-controller": "link:.",
     "eslint": "8.12.0",

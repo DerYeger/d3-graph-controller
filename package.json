@@ -93,7 +93,7 @@
     "typescript": "4.6.3",
     "unocss": "0.31.16",
     "unplugin-vue-components": "0.19.3",
-    "vite": "2.9.5",
+    "vite": "2.9.6",
     "vite-plugin-dts": "1.1.1",
     "vitest": "0.9.4",
     "vue": "3.2.33",

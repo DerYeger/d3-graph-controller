@@ -78,7 +78,7 @@
     "@types/node": "16.11.33",
     "@types/resize-observer-browser": "0.1.7",
     "@vitejs/plugin-vue": "2.3.2",
-    "@vitest/ui": "0.10.5",
+    "@vitest/ui": "0.11.0",
     "@vuepress/plugin-register-components": "2.0.0-beta.38",
     "@vuepress/plugin-search": "2.0.0-beta.38",
     "@yeger/eslint-config": "1.4.21",

@@ -1,6 +1,6 @@
 {
   "name": "d3-graph-controller",
-  "version": "2.2.31",
+  "version": "2.2.32",
   "description": "A TypeScript library for visualizing and simulating directed, interactive graphs.",
   "keywords": [
     "d3",

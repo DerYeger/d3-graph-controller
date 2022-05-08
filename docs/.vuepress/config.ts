@@ -1,5 +1,7 @@
-import { defineUserConfig, Page, ViteBundlerOptions } from 'vuepress'
+import { defineUserConfig, viteBundler, defaultTheme, Page } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
+import searchPlugin from '@vuepress/plugin-search'
+import registerComponentsPlugin from '@vuepress/plugin-register-components'
 import { path } from '@vuepress/utils'
 import Package from '../../package.json'
 
@@ -48,8 +50,7 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
   ],
 
   // theme and its config
-  theme: '@vuepress/theme-default',
-  themeConfig: {
+  theme: defaultTheme({
     contributors: false, // Would always show the release bot
     docsBranch: 'master',
     docsDir: 'docs',
@@ -65,31 +66,24 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
       { text: 'Demo', link: '/demo/' },
     ],
     repo: Package.repository.replace('github:', ''),
-  },
+  }),
 
-  bundler: '@vuepress/vite',
-  bundlerConfig: {
+  bundler: viteBundler({
     viteOptions: {
       configFile: 'docs/vite.config.ts',
     },
-  },
+  }),
 
   plugins: [
-    [
-      '@vuepress/register-components',
-      {
+    registerComponentsPlugin({
         componentsDir: path.resolve(__dirname, './components'),
-      },
-    ],
-    [
-      '@vuepress/plugin-search',
-      {
-        locales: {
-          '/': {
-            placeholder: 'Search',
-          },
+    }),
+    searchPlugin({
+      locales: {
+        '/': {
+            placeholder: 'Search'
         },
       },
-    ],
+    }),
   ],
 })

@@ -1232,10 +1232,10 @@
   resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.15.tgz#832727b0735ee90e532aa41e27db52c9bbf67395"
   integrity sha512-0zwaa73R91p3wm7gzrTv0OLsRiGxnbsIIsRJbwPD/RRlbgOkyAfP1vmIy+1NaBxYDdygzcLQc9DJfClRarGGJA==
 
-"@yeger/eslint-config@1.4.22":
-  version "1.4.22"
-  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.22.tgz#f80e455affda599129ff4661c1a9f026ab74c9aa"
-  integrity sha512-8/ZHwo3aIoMPOyTl+oozfgksqM2X1XPQPZ1C2OyjjuG+r2XNvZA6vfcskRqdcvVG5ZgD4WqgEXXZaI4h/Xbtqw==
+"@yeger/eslint-config@1.4.23":
+  version "1.4.23"
+  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.23.tgz#b9e3939b10168b8cd2658313a5d1d941eefd50dc"
+  integrity sha512-012rbmzJrXhatVA50D2wfFcGJccsCMHiEKL4bxGKsSuJBT1cNJ8gH3V4VXr6TlpkE7rm6Rfw3Kla6CJb3EsVWQ==
   dependencies:
     "@antfu/eslint-config" "0.23.1"
     eslint-config-prettier "8.5.0"
@@ -1246,7 +1246,7 @@
     eslint-plugin-prettier "4.0.0"
     eslint-plugin-tsdoc "0.2.16"
     eslint-plugin-unused-imports "2.0.0"
-    eslint-plugin-yml "0.14.0"
+    eslint-plugin-yml "0.15.0"
     prettier "2.6.2"
     yaml-eslint-parser "0.5.0"
 
@@ -2783,7 +2783,17 @@ eslint-plugin-vue@^8.7.1:
     semver "^7.3.5"
     vue-eslint-parser "^8.0.1"
 
-eslint-plugin-yml@0.14.0, eslint-plugin-yml@^0.14.0:
+eslint-plugin-yml@0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-yml/-/eslint-plugin-yml-0.15.0.tgz#99b9ed22a8d9d51e189e822c2f78eeb4eda080ce"
+  integrity sha512-fRx7wNmRvK2FjwCmnsTm71FcHlmH7eMyXpa/GgfwAfb/7RDH0XeOaM8Z8KupYxoizYu8eBLGcPv1DzRZzvhnww==
+  dependencies:
+    debug "^4.3.2"
+    lodash "^4.17.21"
+    natural-compare "^1.4.0"
+    yaml-eslint-parser "^0.5.0"
+
+eslint-plugin-yml@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-yml/-/eslint-plugin-yml-0.14.0.tgz#110e1126ebe983d830e4ab8754e437f2279d2b72"
   integrity sha512-+0+bBV/07txENbxfrHF9olGoLCHez64vmnOmjWOoLwmXOwfdaSRleBSPIi4nWQs7WwX8lm/fSLadOjbVEcsXQQ==

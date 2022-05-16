@@ -82,7 +82,7 @@
     "@vuepress/plugin-register-components": "2.0.0-beta.45",
     "@vuepress/plugin-search": "2.0.0-beta.45",
     "@yeger/eslint-config": "1.4.23",
-    "c8": "7.11.2",
+    "c8": "7.11.3",
     "d3-graph-controller": "link:.",
     "eslint": "8.15.0",
     "husky": "8.0.1",

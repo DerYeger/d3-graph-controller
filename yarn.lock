@@ -6480,10 +6480,10 @@ validator@^13.7.0:
   resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
   integrity sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==
 
-vecti@2.0.16:
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.0.16.tgz#e19c9ab04b48df7336d409ab2685e12bacc3bc47"
-  integrity sha512-cWn4PlkQlioRC8/zgHTEwFaJKAafQ2yvcMhAGAotgVOEQl3BOtWQYKjuk6cJiwd6U77MitcttlFFwCq/RvtD+g==
+vecti@2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.0.17.tgz#0680a9836e9185bc8b8b31d52ceb23a392376ad7"
+  integrity sha512-Y2DCpJ64bxbvheAKUZbXDhOpKHbuKo4f8SE4cRlM3yok8cy4ci+RPFYd4+10I2j2+H6i0V2MS3gBDtw75S9jow==
 
 vfile-location@^2.0.0, vfile-location@^2.0.1:
   version "2.0.6"

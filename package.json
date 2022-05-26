@@ -2,24 +2,22 @@
   "name": "d3-graph-controller",
   "version": "2.2.36",
   "description": "A TypeScript library for visualizing and simulating directed, interactive graphs.",
+  "author": {
+    "name": "Jan Müller",
+    "url": "https://github.com/DerYeger"
+  },
+  "license": "MIT",
+  "homepage": "https://graph-controller.yeger.eu",
+  "repository": "github:DerYeger/d3-graph-controller",
+  "bugs": {
+    "url": "https://github.com/DerYeger/d3-graph-controller/issues"
+  },
   "keywords": [
     "d3",
     "graph",
     "controller"
   ],
-  "license": "MIT",
-  "author": {
-    "name": "Jan Müller",
-    "url": "https://github.com/DerYeger"
-  },
-  "repository": "github:DerYeger/d3-graph-controller",
-  "homepage": "https://graph-controller.yeger.eu",
-  "bugs": {
-    "url": "https://github.com/DerYeger/d3-graph-controller/issues"
-  },
-  "main": "./dist/d3-graph-controller.umd.js",
-  "module": "./dist/d3-graph-controller.es.js",
-  "types": "dist/types/main.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/d3-graph-controller.es.js",
@@ -30,11 +28,13 @@
       "require": "./default.css"
     }
   },
+  "main": "./dist/d3-graph-controller.umd.js",
+  "module": "./dist/d3-graph-controller.es.js",
+  "types": "dist/types/main.d.ts",
   "files": [
     "dist",
     "default.css"
   ],
-  "sideEffects": false,
   "scripts": {
     "prepare": "is-ci || husky install",
     "prebuild": "rimraf ./dist",
@@ -81,7 +81,7 @@
     "@vitest/ui": "0.12.9",
     "@vuepress/plugin-register-components": "2.0.0-beta.46",
     "@vuepress/plugin-search": "2.0.0-beta.46",
-    "@yeger/eslint-config": "1.4.24",
+    "@yeger/eslint-config": "1.4.25",
     "c8": "7.11.3",
     "d3-graph-controller": "link:.",
     "eslint": "8.16.0",

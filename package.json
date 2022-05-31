@@ -20,12 +20,12 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/d3-graph-controller.es.js",
-      "require": "./dist/d3-graph-controller.umd.js"
+      "require": "./dist/d3-graph-controller.umd.js",
+      "import": "./dist/d3-graph-controller.es.js"
     },
     "./default.css": {
-      "import": "./default.css",
-      "require": "./default.css"
+      "require": "./default.css",
+      "import": "./default.css"
     }
   },
   "main": "./dist/d3-graph-controller.umd.js",
@@ -81,7 +81,7 @@
     "@vitest/ui": "0.13.0",
     "@vuepress/plugin-register-components": "2.0.0-beta.46",
     "@vuepress/plugin-search": "2.0.0-beta.46",
-    "@yeger/eslint-config": "1.4.25",
+    "@yeger/eslint-config": "1.4.26",
     "c8": "7.11.3",
     "d3-graph-controller": "link:.",
     "eslint": "8.16.0",

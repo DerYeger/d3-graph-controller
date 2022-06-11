@@ -1240,10 +1240,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.18":
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.18.tgz#c2096e0f62194b38afe423f7d084acf61aef426f"
-  integrity sha512-QwW6oR6g+5vo1VNUUdHOJrK5/Yr6j27DEvwzh9KzgIE7GB/vt9izLoPv/52h3a7AaQLYN8CP0pRhzbkr+M8LWw==
+"@yeger/debounce@1.0.19":
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.19.tgz#7df858781b7a0c7382f2854b92da1200c22e9228"
+  integrity sha512-ynzlNQIqKyMnAERNPyp1qez553+U51yYTvDQiOWwpj2Y0HCS9xlShWyEdNmnVcM4fIzhHcHYDxO6AlvcyH/faA==
 
 "@yeger/eslint-config@1.4.27":
   version "1.4.27"

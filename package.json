@@ -84,7 +84,7 @@
     "@yeger/eslint-config": "1.4.29",
     "c8": "7.11.3",
     "d3-graph-controller": "link:.",
-    "eslint": "8.17.0",
+    "eslint": "8.18.0",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
     "jsdom": "19.0.0",

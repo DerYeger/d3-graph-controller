@@ -69,8 +69,8 @@
     "vecti": "2.0.22"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.2",
-    "@commitlint/config-conventional": "17.0.2",
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
     "@types/d3-drag": "3.0.1",
     "@types/d3-force": "3.0.3",
     "@types/d3-selection": "3.0.2",

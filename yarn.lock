@@ -1245,10 +1245,10 @@
   resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.21.tgz#bca70d36645c6563584efc72691a8b4731667df6"
   integrity sha512-FdsbPljt8IQuexMhk+Bv1UFPbcj4qMqHwZGZxfS/4S3GAj3SzrmpIKjx909Tbz22Sfc9GvNhZIwB2Yvin+FzEg==
 
-"@yeger/eslint-config@1.4.30":
-  version "1.4.30"
-  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.30.tgz#27136e41bb3cbf53cfacf551d0536a5dfb820261"
-  integrity sha512-yRvhXgmMwVfl4ryXC5HY8p7JV8jQnypZmmC55BWMdf5jH9gw0bwlDbvPz9F1iXNlt3nEKQV7w+IN2btnMjBR/w==
+"@yeger/eslint-config@1.4.31":
+  version "1.4.31"
+  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.31.tgz#dca0da2ec8dc03c938d5c376e54e9a7f87a41bf2"
+  integrity sha512-Gqu2JWkXsbQizopAjmZuA9SNuKp69g9nWAqoCn0tKgfXu88HlVAoAEozlpKkAcCP1xBv90YDdfL3fl86z6Lm3Q==
   dependencies:
     "@antfu/eslint-config" "0.25.2"
     eslint-config-prettier "8.5.0"
@@ -1256,7 +1256,7 @@
     eslint-plugin-import "2.26.0"
     eslint-plugin-markdown "2.2.1"
     eslint-plugin-md "1.0.19"
-    eslint-plugin-prettier "4.0.0"
+    eslint-plugin-prettier "4.1.0"
     eslint-plugin-tsdoc "0.2.16"
     eslint-plugin-unused-imports "2.0.0"
     eslint-plugin-yml "1.0.0"
@@ -2604,10 +2604,10 @@ eslint-plugin-n@^15.2.0:
     resolve "^1.10.1"
     semver "^7.3.7"
 
-eslint-plugin-prettier@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-4.0.0.tgz#8b99d1e4b8b24a762472b4567992023619cb98e0"
-  integrity sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==
+eslint-plugin-prettier@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-4.1.0.tgz#1cd4b3fadf3b3cdb30b1874b55e7f93f85eb43ad"
+  integrity sha512-A3AXIEfTnq3D5qDFjWJdQ9c4BLhw/TqhSR+6+SVaoPJBAWciFEuJiNQh275OnjRrAi7yssZzuWBRw66VG2g6UA==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
@@ -6454,7 +6454,19 @@ vite-plugin-dts@1.2.0:
     fs-extra "^10.0.1"
     ts-morph "^14.0.0"
 
-vite@2.9.12, vite@^2.9.12, vite@~2.9.9:
+vite@2.9.13:
+  version "2.9.13"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.13.tgz#859cb5d4c316c0d8c6ec9866045c0f7858ca6abc"
+  integrity sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==
+  dependencies:
+    esbuild "^0.14.27"
+    postcss "^8.4.13"
+    resolve "^1.22.0"
+    rollup "^2.59.0"
+  optionalDependencies:
+    fsevents "~2.3.2"
+
+vite@^2.9.12, vite@~2.9.9:
   version "2.9.12"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.12.tgz#b1d636b0a8ac636afe9d83e3792d4895509a941b"
   integrity sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==

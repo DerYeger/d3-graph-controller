@@ -1,3 +1,10 @@
+## [2.2.45](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.44...v2.2.45) (2022-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([9d581e7](https://github.com/DerYeger/d3-graph-controller/commit/9d581e79f5bb27f6e79f2b9b5509bb0e98d033ff))
+
 ## [2.2.44](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.43...v2.2.44) (2022-06-26)
 
 

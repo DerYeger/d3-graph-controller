@@ -14,6 +14,7 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "exactOptionalPropertyTypes": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "preserve"
   }
 }

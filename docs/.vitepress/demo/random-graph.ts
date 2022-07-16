@@ -3,9 +3,10 @@ import {
   defineGraph,
   defineGraphConfig,
 } from 'd3-graph-controller'
-import type { DemoGraph, DemoGraphConfig } from 'demo/src/model'
-import type { DemoNode } from 'demo/src/node'
-import { defineDemoNode } from 'demo/src/node'
+
+import type { DemoGraph, DemoGraphConfig } from './model'
+import type { DemoNode } from './node'
+import { defineDemoNode } from './node'
 
 export const randomGraphConfig: DemoGraphConfig = defineGraphConfig({
   autoResize: true,

@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 
-// eslint-disable-next-line no-restricted-imports
 import Package from '../../package.json'
 
 const ogImage = `${Package.homepage}/logo.png`

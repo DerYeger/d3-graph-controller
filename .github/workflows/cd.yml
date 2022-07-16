@@ -4,7 +4,6 @@ on:
   push:
     branches: [master]
     paths:
-      - 'demo/**'
       - 'docs/**'
   release:
     types: [created]
@@ -34,35 +33,6 @@ jobs:
         with:
           name: dist
           path: dist
-  deploy-demo:
-    name: Deploy Demo
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Setup
-        uses: DerYeger/yarn-setup-action@master
-        with:
-          node-version: 16
-      - name: Download
-        uses: actions/download-artifact@v3
-        with:
-          name: dist
-          path: dist
-      - name: Build
-        run: yarn demo:build
-      - name: Create 404.html file
-        run: cp ./demo/dist/index.html ./demo/dist/404.html
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.3.4
-        with:
-          repository-name: DerYeger/d3-graph-controller-demo
-          branch: main
-          folder: ./demo/dist
-          clean: true
-          single-commit: true
-          token: ${{ secrets.PAT }}
-          git-config-name: Jan Müller
-          git-config-email: janmueller3698@gmail.com
   deploy-docs:
     name: Deploy Docs
     runs-on: ubuntu-latest

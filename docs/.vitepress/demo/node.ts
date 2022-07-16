@@ -1,6 +1,7 @@
 import type { GraphNode } from 'd3-graph-controller'
 import { defineNode } from 'd3-graph-controller'
-import type { DemoType } from 'demo/src/model'
+
+import type { DemoType } from './model'
 
 export interface DemoNode extends GraphNode<DemoType> {
   radiusMultiplier: number
@@ -17,7 +18,7 @@ export function defineDemoNode(
     isFocused: false,
     color: `var(--color-${type})`,
     label: {
-      color: 'var(--text-on-primary)',
+      color: 'var(--text-on-node)',
       fontSize: '1rem',
       text: id.toUpperCase(),
     },

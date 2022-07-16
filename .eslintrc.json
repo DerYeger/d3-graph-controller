@@ -2,7 +2,7 @@
   "extends": ["@yeger"],
   "overrides": [
     {
-      "files": ["demo/**/*", "docs/**/*"],
+      "files": ["docs/**/*"],
       "rules": {
         "no-restricted-imports": [
           "error",

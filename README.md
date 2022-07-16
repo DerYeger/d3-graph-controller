@@ -153,9 +153,6 @@ $ yarn dev
 # lint project files
 $ yarn lint
 
-# serve demo
-$ yarn demo:dev
-
 # serve docs
 $ yarn docs:dev
 ```

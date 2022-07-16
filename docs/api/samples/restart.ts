@@ -12,8 +12,10 @@ const config = defineGraphConfig({
   /* ... */
 })
 
+// #region snippet
 const controller = new GraphController(container, graph, config)
 
 const alpha = 0.5
 
 controller.restart(alpha)
+// #endregion snippet

@@ -7,7 +7,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    App: typeof import('./components/App.vue')['default']
-    GraphComponent: typeof import('./components/GraphComponent.vue')['default']
+    Demo: typeof import('./components/Demo.vue')['default']
+    Home: typeof import('./components/Home.vue')['default']
+    Status: typeof import('./components/Status.vue')['default']
+    UsedIn: typeof import('./components/UsedIn.vue')['default']
   }
 }

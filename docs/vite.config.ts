@@ -1,21 +1,17 @@
-import * as path from 'path'
-
+import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: 'docs',
-  resolve: {
-    alias: [
-      {
-        find: 'src',
-        replacement: path.resolve(__dirname, '../src'),
-      },
-      {
-        find: 'demo',
-        replacement: path.resolve(__dirname, '../demo'),
-      },
-    ],
-  },
+
+  plugins: [
+    Components({
+      include: [/\.vue/, /\.md/],
+      dirs: '.vitepress/components',
+      dts: '.vitepress/components.d.ts',
+    }),
+  ],
+
   optimizeDeps: {
     include: ['vue'],
   },

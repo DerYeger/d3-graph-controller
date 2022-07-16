@@ -1,18 +1,25 @@
 /* eslint-disable import/no-duplicates, import/order */
+// #region token
 export type CustomType = 'primary' | 'secondary'
+// #endregion token
 
+// #region node
 import { GraphNode } from 'd3-graph-controller'
 
 export interface CustomNode extends GraphNode<CustomType> {
   radius: number
 }
+// #endregion node
 
+// #region link
 import { GraphLink } from 'd3-graph-controller'
 
 export interface CustomLink extends GraphLink<CustomType, CustomNode> {
   length: number
 }
+// #endregion link
 
+// #region config
 import { defineGraphConfig } from 'd3-graph-controller'
 
 const config = defineGraphConfig<CustomType, CustomNode, CustomLink>({
@@ -28,7 +35,9 @@ const config = defineGraphConfig<CustomType, CustomNode, CustomLink>({
     },
   },
 })
+// #endregion config
 
+// #region model
 import { defineGraph, defineLink, defineNode } from 'd3-graph-controller'
 
 const a = defineNode<CustomType, CustomNode>({
@@ -73,10 +82,13 @@ const graph = defineGraph<CustomType, CustomNode, CustomLink>({
   nodes: [a, b],
   links: [aToB],
 })
+// #endregion model
 
+// #region controller
 import { GraphController } from 'd3-graph-controller'
 
 // Any HTMLDivElement can be used as the container
 const container = document.getElementById('graph') as HTMLDivElement
 
 const controller = new GraphController(container, graph, config)
+// #endregion controller

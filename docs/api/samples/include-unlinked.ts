@@ -12,6 +12,8 @@ const config = defineGraphConfig({
   /* ... */
 })
 
+// #region snippet
 const controller = new GraphController(container, graph, config)
 
 controller.includeUnlinked = false
+// #endregion snippet

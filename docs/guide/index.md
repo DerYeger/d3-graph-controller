@@ -19,22 +19,16 @@ Just do not forget to [integrate the graph in the framework's lifecycle](/api/#s
 
 ## Installation
 
-<CodeGroup>
-  <CodeGroupItem title="Yarn" active>
-
-```bash:no-line-numbers
+```bash
+# with yarn
 yarn add d3-graph-controller
-```
 
-  </CodeGroupItem>
-  <CodeGroupItem title="npm">
-
-```bash:no-line-numbers
+# or with npm
 npm install d3-graph-controller
-```
 
-  </CodeGroupItem>
-</CodeGroup>
+# or with pnpm
+pnpm add d3-graph-controller
+```
 
 ## Usage
 
@@ -45,39 +39,39 @@ The following sections show a model with two node types, `primary` and `secondar
 
 First, define the types of nodes the graph may contain.
 
-@[code{2-2}](samples/custom-model.ts)
+<<< @/guide/samples/custom-model.ts#token{0}
 
 ### Node
 
 Then you can enhance the `GraphNode` interface with custom properties that can be accessed later on.
 
-@[code{4-8}](samples/custom-model.ts)
+<<< @/guide/samples/custom-model.ts#node{0}
 
 ### Link
 
 Analogous to nodes, `GraphLink` can be extended.
 While not shown in the example below, `GraphLink` can have specific node types for `source` and `target`.
 
-@[code{10-14}](samples/custom-model.ts)
+<<< @/guide/samples/custom-model.ts#link{0}
 
 ### Config
 
 The config can then use the custom types.
 
-@[code{16-30}](samples/custom-model.ts)
+<<< @/guide/samples/custom-model.ts#config{0}
 
 ### Model
 
 The actual model can be created using the helper methods seen below.
 They are type safe and support custom properties.
 
-@[code{32-75}](samples/custom-model.ts)
+<<< @/guide/samples/custom-model.ts#model{0}
 
 ### Controller
 
 The last step is putting it all together and creating the controller.
 
-@[code{77-82}](samples/custom-model.ts)
+<<< @/guide/samples/custom-model.ts#controller{0}
 
 ::: tip
 Do not forget to call `controller.shutdown()` when the graph is no longer required or your component will be destroyed.
@@ -87,14 +81,14 @@ Do not forget to call `controller.shutdown()` when the graph is no longer requir
 
 The library provides default styles, which need to be imported manually.
 
-@[code{2-2}](samples/styling.ts)
+<<< @/guide/samples/style-import.ts
 
 In addition, the properties `color` and `fontSize` of nodes and links accept any valid CSS value.
 This allows you to use dynamic colors with CSS variables.
 
-@[code](samples/styling.css)
+<<< @/guide/samples/styling.css
 
-@[code](samples/styling.ts)
+<<< @/guide/samples/styling.ts
 
 For customization of the default theme, the custom CSS properties `--color-stroke` and `--color-node-stroke` can be used.
 
@@ -119,4 +113,4 @@ Reference the table below for a description of all available classes.
 Usually, importing the default stylesheet and configuring variables should be enough to fit all needs.
 If a full custom styling is required, the default stylesheet as seen below might act as a template.
 
-@[code](../../default.css)
+<<< @/../default.css

@@ -9,7 +9,7 @@ Both behavior and visuals of graphs can be customized by passing additional para
 The `nodeClicked` callback is called whenever a node is double-clicked (using the primary mouse button) or double-tapped in a short time.
 If set, the default behavior of focusing a node is disabled.
 
-@[code](samples/callbacks.ts)
+<<< @/config/samples/callbacks.ts
 
 ## Initial Settings
 
@@ -22,7 +22,7 @@ The reference below shows the default configuration.
 Only nodes whose type is included in the array will be shown.
 If omitted, the graph will include all nodes.
 
-@[code](samples/initial.ts)
+<<< @/config/samples/initial.ts
 
 ## Markers
 
@@ -30,7 +30,7 @@ Markers are displayed at the end of links.
 Because precise marker dimensions are required for path calculations, it is necessary to provide a lot of data.
 Hence, it is recommended to only use the default marker `Markers.Arrow` with customizable size as seen below.
 
-@[code](samples/marker.ts)
+<<< @/config/samples/marker.ts
 
 ## Modifiers
 
@@ -43,34 +43,34 @@ Do not forget to unset predefined callbacks like `pointerdown` and `contextmenu`
 
 ### Drag
 
-@[code](samples/modifiers/drag.ts)
+<<< @/config/samples/modifiers/drag.ts
 
 ### Links
 
-@[code](samples/modifiers/links.ts)
+<<< @/config/samples/modifiers/links.ts
 
 ### Nodes
 
-@[code](samples/modifiers/nodes.ts)
+<<< @/config/samples/modifiers/nodes.ts
 
 ### Simulation
 
-@[code](samples/modifiers/simulation.ts)
+<<< @/config/samples/modifiers/simulation.ts
 
 ### Zoom
 
-@[code](samples/modifiers/zoom.ts)
+<<< @/config/samples/modifiers/zoom.ts
 
 ## Node Radius
 
 The radius of nodes is used for their visualization as well as the underlying simulation.
 It can be configured using the `nodeRadius` property of the config.
 
-@[code](samples/static-node-radius.ts)
+<<< @/config/samples/static-node-radius.ts
 
 It is also possible to use a function for dynamic node radii.
 
-@[code](samples/dynamic-node-radius.ts)
+<<< @/config/samples/dynamic-node-radius.ts
 
 ## Position Initialization
 
@@ -82,14 +82,14 @@ This library provides two `PositionInitializer`s out of the box.
 By default, `PositionInitializers.Centered` is used.
 Alternatively, `PositionInitializers.Randomized` or custom implementations can be used.
 
-@[code](samples/position-initializers.ts)
+<<< @/config/samples/position-initializers.ts
 
 ## Resizing
 
 Graphs can be resized to fit their container.
 This can either happen manually by calling a `GraphController`'s `resize` method or automatically by setting `autoResize` to `true`.
 
-@[code](samples/resizing.ts)
+<<< @/config/samples/resizing.ts
 
 ## Simulation
 
@@ -104,7 +104,7 @@ After certain actions, the simulations needs to be restarted.
 The alpha values for those restarts can be configured.
 Reference the default configuration below for the available options.
 
-@[code](samples/alphas.ts)
+<<< @/config/samples/alphas.ts
 
 ::: tip
 `simulation.alphas.focus.acquire` and `simulation.alphas.focus.release` receive the (un-)focused node as a parameter.
@@ -124,7 +124,7 @@ Settings `simulation.forces.collision.radiusMultiplier` to a higher value can dr
 All `strength` properties can also be functions that receive the subject of the force as a parameter for individual strength.
 Except `forces.link`, the subject is always a `GraphNode` (or the custom type used).
 
-@[code](samples/forces.ts)
+<<< @/config/samples/forces.ts
 
 ### Link Length
 
@@ -132,7 +132,7 @@ Link length is used to determine the length of links for the simulation.
 Similar to node radii, link length can be configured on a per-link basis.
 Once again, custom link types can be used to provide the required data.
 
-@[code](samples/link-length.ts)
+<<< @/config/samples/link-length.ts
 
 ## Zoom
 
@@ -143,4 +143,4 @@ Currently, there's no validation of the values.
 The `min` value must be larger than 0 and the initial value must be withing the range `[min, max]`.
 :::
 
-@[code](samples/zoom.ts)
+<<< @/config/samples/zoom.ts

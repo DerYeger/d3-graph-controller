@@ -1,3 +1,19 @@
+<script lang="ts" setup>
+interface Project {
+  name: string
+  logo: string
+  description: string
+}
+
+const projects: Project[] = [
+  {
+    name: 'Vitest',
+    description: 'Visualization of interactive module graphs.',
+    logo: 'https://vitest.dev/logo.svg',
+  },
+]
+</script>
+
 <template>
   <div id="projects">
     <h2>Used In</h2>
@@ -16,22 +32,6 @@
     </section>
   </div>
 </template>
-
-<script lang="ts" setup>
-interface Project {
-  name: string
-  logo: string
-  description: string
-}
-
-const projects: Project[] = [
-  {
-    name: 'Vitest',
-    description: 'Visualization of interactive module graphs.',
-    logo: 'https://vitest.dev/logo.svg',
-  },
-]
-</script>
 
 <style scoped>
 #projects {
@@ -62,11 +62,18 @@ const projects: Project[] = [
   flex-grow: 1;
   justify-content: center;
   max-width: 30%;
+
+  border: 1px solid var(--vp-c-bg-soft);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  background-color: var(--vp-c-bg-soft);
 }
 
 .project > h3 {
   border-bottom: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }
@@ -83,8 +90,9 @@ const projects: Project[] = [
 }
 
 .project .description {
-  color: var(--c-text-lighter);
+  color: var(--vp-c-text-2);
   text-align: center;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 719px) {

@@ -4,7 +4,7 @@
 These are described in the following sections.
 The following setup is omitted from the samples for brevity.
 
-@[code](samples/setup.ts)
+<<< @/api/samples/setup.ts
 
 ## Methods
 
@@ -13,13 +13,13 @@ The following setup is omitted from the samples for brevity.
 Graphs can be filtered by node types.
 The filter can be updated at runtime as seen below.
 
-@[code{15-19}](samples/node-type-filter.ts)
+<<< @/api/samples/node-type-filter.ts#snippet{0}
 
 ### Resize
 
 While graphs can be [configured to resize automatically](/config/#resizing), manual resizing is also possible.
 
-@[code{15-17}](samples/resize.ts)
+<<< @/api/samples/resize.ts#snippet{0}
 
 ### Restart
 
@@ -28,14 +28,14 @@ Should the need arise in some edge cases, simulations can be manually restarted 
 
 An alpha value defining the _heat_ of the simulation after restarting must be provided.
 
-@[code{15-19}](samples/restart.ts)
+<<< @/api/samples/restart.ts#snippet{0}
 
 ### Shutdown
 
 Graphs need to be integrated in framework lifecycles.
 In particular, it is necessary to stop the simulation and the (optional) automatic resizing.
 
-@[code{15-17}](samples/shutdown.ts)
+<<< @/api/samples/shutdown.ts#snippet{0}
 
 ::: danger
 Not calling `GraphController.shutdown` when a graph is removed can cause memory leaks.
@@ -49,24 +49,24 @@ Unlinked nodes, i.e., nodes without incoming or outgoing links, can be included 
 The setting can be changed at runtime using the `includeUnlinked` property.
 The property can also be read to get the current state.
 
-@[code{15-19}](samples/include-unlinked.ts)
+<<< @/api/samples/include-unlinked.ts#snippet{0}
 
 ### Labels
 
 Node and link labels can be toggled on and off using the respective property.
 Both properties can also be read to get the current state.
 
-@[code{15-19}](samples/labels.ts)
+<<< @/api/samples/labels.ts#snippet{0}
 
 ### Link Filter
 
 Link filters can be changed at runtime by assigning a new value as seen below.
 The property can also be read to get the current filter.
 
-@[code{16-19}](samples/link-filter.ts)
+<<< @/api/samples/link-filter.ts#snippet{0}
 
 ### Node Types
 
 An array of available and currently filtered node types can be read using properties seen below.
 
-@[code{15-19}](samples/node-types.ts)
+<<< @/api/samples/node-types.ts#snippet{0}

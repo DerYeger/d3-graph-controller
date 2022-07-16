@@ -4,6 +4,4 @@ CHANGELOG.md
 coverage
 demo/components.d.ts
 dist
-docs/.vuepress/.cache
-docs/.vuepress/.temp
 node_modules

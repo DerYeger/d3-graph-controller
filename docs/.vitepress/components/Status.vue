@@ -1,15 +1,5 @@
-<template>
-  <div id="status">
-    <h2>Status</h2>
-    <div id="badges">
-      <a v-for="badge of badges" :key="badge.src" :href="badge.href">
-        <img :alt="badge.alt" :src="badge.src" />
-      </a>
-    </div>
-  </div>
-</template>
-
 <script lang="ts" setup>
+// eslint-disable-next-line no-restricted-imports
 import Package from '../../../package.json'
 const packageName = Package.name
 const repo = Package.repository.replace('github:', '')
@@ -53,6 +43,17 @@ const badges: Badge[] = [
   },
 ]
 </script>
+
+<template>
+  <div id="status">
+    <h2>Status</h2>
+    <div id="badges">
+      <a v-for="badge of badges" :key="badge.src" :href="badge.href">
+        <img :alt="badge.alt" :src="badge.src" />
+      </a>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 #status {

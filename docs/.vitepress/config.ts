@@ -1,13 +1,11 @@
-import { defineUserConfig, viteBundler, defaultTheme, Page } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
-import searchPlugin from '@vuepress/plugin-search'
-import registerComponentsPlugin from '@vuepress/plugin-register-components'
-import { path } from '@vuepress/utils'
+import { defineConfig } from 'vitepress'
+
+// eslint-disable-next-line no-restricted-imports
 import Package from '../../package.json'
 
 const ogImage = `${Package.homepage}/logo.png`
 
-export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
+export default defineConfig({
   // site config
   lang: 'en-US',
   title: Package.name,
@@ -49,41 +47,48 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
   ],
 
+  markdown: {
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
+  },
+
   // theme and its config
-  theme: defaultTheme({
-    contributors: false, // Would always show the release bot
-    docsBranch: 'master',
-    docsDir: 'docs',
-    editLink: true,
-    editLinkText: 'Suggest changes',
-    lastUpdated: false,
+  themeConfig: {
+    editLink: {
+      pattern:
+        'https://github.com/DerYeger/d3-graph-controller/tree/master/docs/:path',
+      text: 'Suggest changes to this page',
+    },
+
     logo: '/logo.svg',
-    navbar: [
+
+    algolia: {
+      appId: '4CTZ1G9WOB',
+      apiKey: 'a550c4c200fcb92d10ca051fe108796e',
+      indexName: 'graph-controller',
+    },
+
+    nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'API', link: '/api/' },
       { text: 'Config', link: '/config/' },
       { text: 'Demo', link: '/demo/' },
     ],
-    repo: Package.repository.replace('github:', ''),
-  }),
 
-  bundler: viteBundler({
-    viteOptions: {
-      configFile: 'docs/vite.config.ts',
-    },
-  }),
-
-  plugins: [
-    registerComponentsPlugin({
-        componentsDir: path.resolve(__dirname, './components'),
-    }),
-    searchPlugin({
-      locales: {
-        '/': {
-            placeholder: 'Search'
-        },
+    socialLinks: [
+      { icon: 'twitter', link: 'https://twitter.com/DerYeger' },
+      {
+        icon: 'github',
+        link: 'https://github.com/DerYeger/d3-graph-controller',
       },
-    }),
-  ],
+    ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2021-PRESENT Jan Müller',
+    },
+  },
 })

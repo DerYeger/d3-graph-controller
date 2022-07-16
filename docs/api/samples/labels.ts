@@ -12,8 +12,10 @@ const config = defineGraphConfig({
   /* ... */
 })
 
+// #region snippet
 const controller = new GraphController(container, graph, config)
 
 controller.showLinkLabels = true
 
 controller.showNodeLabels = false
+// #endregion snippet

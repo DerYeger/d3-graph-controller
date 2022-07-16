@@ -1,34 +1,61 @@
-<template>
-  <GraphView :graph="graph" />
-</template>
+<script setup lang="ts">
+import { ref } from 'vue'
 
-<script lang="ts" setup>
-import { defineNodeWithDefaults, GraphLink } from 'd3-graph-controller'
+import { demoGraph, demoGraphConfig } from '../demo/model'
+import { generateRandomGraph, randomGraphConfig } from '../demo/random-graph'
+const graph = ref(demoGraph)
+const config = ref(demoGraphConfig)
 
-const a = defineNodeWithDefaults({
-  id: 'a',
-  type: 'node',
-  color: 'var(--c-brand-light)',
-  label: {
-    color: 'black',
-    fontSize: '1rem',
-    text: 'A',
-  },
-})
+function useDemoGraph() {
+  config.value = demoGraphConfig
+  graph.value = demoGraph
+}
 
-const graph = {
-  nodes: [a],
-  links: [] as GraphLink[],
+function useRandomGraph() {
+  config.value = randomGraphConfig
+  graph.value = generateRandomGraph()
 }
 </script>
 
+<template>
+  <div class="graph-select-buttons">
+    <button @click="useDemoGraph()">Example</button>
+    <button @click="useRandomGraph()">Random</button>
+  </div>
+  <GraphView :graph="graph" :config="config" class="graph-view" />
+</template>
+
 <style>
-.theme-default-content {
-  max-width: unset !important;
+.content > .content-container {
+  width: 100%;
+}
+
+.container > .aside {
+  display: none !important;
 }
 
 .graph {
   border: 1px solid var(--c-border);
-  margin-top: 2rem;
+  margin-top: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.graph-view {
+  margin-top: 1rem;
+  height: 600px;
+}
+</style>
+
+<style scoped>
+.graph-select-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.graph-select-buttons > button {
+  color: var(--vp-c-brand-dark);
+  font-weight: 600;
 }
 </style>

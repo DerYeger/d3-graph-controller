@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// eslint-disable-next-line no-restricted-imports
 import Package from '../../../package.json'
 const packageName = Package.name
 const repo = Package.repository.replace('github:', '')

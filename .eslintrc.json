@@ -8,7 +8,6 @@
           "error",
           {
             "patterns": [
-              { "group": [".*"], "message": "Use absolute paths instead." },
               {
                 "group": ["src/**"],
                 "message": "Use d3-graph-controller instead."

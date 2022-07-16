@@ -4,5 +4,4 @@
 yarn lint-staged
 yarn build
 yarn test
-yarn demo
 yarn docs

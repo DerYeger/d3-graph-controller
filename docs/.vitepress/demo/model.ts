@@ -1,9 +1,10 @@
 import type { Graph, GraphConfig, GraphController } from 'd3-graph-controller'
 import { defineGraph, defineGraphConfig } from 'd3-graph-controller'
-import type { DemoLink } from 'demo/src/link'
-import { links } from 'demo/src/link'
-import type { DemoNode } from 'demo/src/node'
-import { nodes } from 'demo/src/node'
+
+import type { DemoLink } from './link'
+import { links } from './link'
+import type { DemoNode } from './node'
+import { nodes } from './node'
 
 export type DemoType = 'primary' | 'secondary'
 

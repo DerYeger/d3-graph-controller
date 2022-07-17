@@ -1143,16 +1143,16 @@
   resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.23.tgz#81462ee2d56e40051fb18cf29d4081a9ec78edb6"
   integrity sha512-3dVJtK1iyFonLUKTTE0F+1Z7DUxRLbkCQCjFz0hmRtoLdTIPAkMfRblGcsYTblH6Jp9NG0DK1Hn5z21yMMR+1w==
 
-"@yeger/eslint-config@1.4.32":
-  version "1.4.32"
-  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.32.tgz#cedd4114e3827aff8834afc4019b990870c24ea2"
-  integrity sha512-ugm0bdC5eHGeqBUcOgBaU4LN4VsGZSRrELYmaWyucQsg10pOcQglK5J76tm4utTFAHSe1QRaKUN5ZUqfRp+S/Q==
+"@yeger/eslint-config@1.4.33":
+  version "1.4.33"
+  resolved "https://registry.yarnpkg.com/@yeger/eslint-config/-/eslint-config-1.4.33.tgz#a897e29ef291630708a9154549f7baa2e77a9174"
+  integrity sha512-6QtmiypAure+HzLxSJsMK7hsKDKUDWjc4+nars5EaZhZEaaieAkeiH09pXzhr6zIuWlhrzSjoz0hdOg1Aw2CsQ==
   dependencies:
     "@antfu/eslint-config" "0.25.2"
     eslint-config-prettier "8.5.0"
     eslint-plugin-cypress "2.12.1"
     eslint-plugin-import "2.26.0"
-    eslint-plugin-markdown "2.2.1"
+    eslint-plugin-markdown "3.0.0"
     eslint-plugin-md "1.0.19"
     eslint-plugin-prettier "4.2.1"
     eslint-plugin-tsdoc "0.2.16"
@@ -2409,7 +2409,14 @@ eslint-plugin-jsonc@^2.2.1:
     jsonc-eslint-parser "^2.0.4"
     natural-compare "^1.4.0"
 
-eslint-plugin-markdown@2.2.1, eslint-plugin-markdown@^2.2.1:
+eslint-plugin-markdown@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-markdown/-/eslint-plugin-markdown-3.0.0.tgz#69a63ab3445076a3c2eb6fce6f5114785b19d318"
+  integrity sha512-hRs5RUJGbeHDLfS7ELanT0e29Ocyssf/7kBM+p7KluY5AwngGkDf8Oyu4658/NZSGTTq05FZeWbkxXtbVyHPwg==
+  dependencies:
+    mdast-util-from-markdown "^0.8.5"
+
+eslint-plugin-markdown@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-markdown/-/eslint-plugin-markdown-2.2.1.tgz#76b8a970099fbffc6cc1ffcad9772b96911c027a"
   integrity sha512-FgWp4iyYvTFxPwfbxofTvXxgzPsDuSKHQy2S+a8Ve6savbujey+lgrFFbXQA0HPygISpRYWYBjooPzhYSF81iA==

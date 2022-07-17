@@ -74,7 +74,7 @@
     "@types/resize-observer-browser": "0.1.7",
     "@vitejs/plugin-vue": "3.0.0",
     "@vitest/ui": "0.18.1",
-    "@yeger/eslint-config": "1.4.32",
+    "@yeger/eslint-config": "1.4.33",
     "c8": "7.11.3",
     "d3-graph-controller": "link:.",
     "eslint": "8.20.0",

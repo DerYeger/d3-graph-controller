@@ -5777,10 +5777,10 @@ trough@^1.0.0:
   resolved "https://registry.yarnpkg.com/trough/-/trough-1.0.5.tgz#b8b639cefad7d0bb2abd37d433ff8293efa5f406"
   integrity sha512-rvuRbTarPXmMb79SmzEp8aqXNKcK+y0XaB298IXueQ8I2PsrATcPBCSPyK/dDNa2iWOhKlfNnOjdAOTBU/nkFA==
 
-ts-deepmerge@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/ts-deepmerge/-/ts-deepmerge-2.0.3.tgz#65c11a62959c9cfeb5f0338d907da3db1e7a96e7"
-  integrity sha512-0s3a5ilpV5ZF+K6tcfM//P3jOmS1SBXhYtl/jsLe3cDPIkHrT5Tbt4xmX6Pkee530iF46q/pAI7r6URuXzIiTg==
+ts-deepmerge@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/ts-deepmerge/-/ts-deepmerge-2.0.4.tgz#294d08c0b6957cb15f3eac2dfa020611e0db8cf1"
+  integrity sha512-+xUYN/yYCwAtK7NtE0M1w5U1TlJg8ODoepMttmfsuRSo/Pz49bv7ZCILkCiBEpGBOIRrFMynnIhrY42U57Rl1g==
 
 ts-morph@^14.0.0:
   version "14.0.0"

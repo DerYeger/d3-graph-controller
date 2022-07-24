@@ -73,7 +73,7 @@
     "@types/node": "16.11.45",
     "@types/resize-observer-browser": "0.1.7",
     "@vitejs/plugin-vue": "3.0.1",
-    "@vitest/ui": "0.18.1",
+    "@vitest/ui": "0.19.0",
     "@yeger/eslint-config": "1.4.33",
     "c8": "7.12.0",
     "d3-graph-controller": "link:.",
@@ -84,12 +84,12 @@
     "lint-staged": "13.0.3",
     "rimraf": "3.0.2",
     "typescript": "4.7.4",
-    "unocss": "0.44.5",
+    "unocss": "0.44.7",
     "unplugin-vue-components": "0.21.1",
     "vite": "3.0.2",
     "vite-plugin-dts": "1.4.0",
     "vitepress": "1.0.0-alpha.4",
-    "vitest": "0.18.1",
+    "vitest": "0.19.0",
     "vue": "3.2.37"
   },
   "lint-staged": {

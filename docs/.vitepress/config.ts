@@ -64,9 +64,9 @@ export default defineConfig({
     logo: '/logo.svg',
 
     algolia: {
-      appId: '4CTZ1G9WOB',
-      apiKey: 'a550c4c200fcb92d10ca051fe108796e',
-      indexName: 'graph-controller',
+      appId: 'P6B0O55SU2',
+      apiKey: '8191ba63a5c47585bbc996cd8db4f201',
+      indexName: 'd3-graph-controller',
     },
 
     nav: [

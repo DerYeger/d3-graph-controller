@@ -46,13 +46,6 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
   ],
 
-  markdown: {
-    theme: {
-      light: 'vitesse-light',
-      dark: 'vitesse-dark',
-    },
-  },
-
   // theme and its config
   themeConfig: {
     editLink: {

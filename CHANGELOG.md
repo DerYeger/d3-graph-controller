@@ -1,3 +1,10 @@
+## [2.2.52](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.51...v2.2.52) (2022-08-03)
+
+
+### Bug Fixes
+
+* **release:** schedule release ([7b739de](https://github.com/DerYeger/d3-graph-controller/commit/7b739dec5b6413766e15d9d8be993724121cdf30))
+
 ## [2.2.51](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.50...v2.2.51) (2022-07-26)
 
 

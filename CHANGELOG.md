@@ -1,3 +1,10 @@
+## [2.2.55](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.54...v2.2.55) (2022-08-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ts-deepmerge to v3 ([58dfb80](https://github.com/DerYeger/d3-graph-controller/commit/58dfb80bd811292819338bfcdbb5106246dcf81b))
+
 ## [2.2.54](https://github.com/DerYeger/d3-graph-controller/compare/v2.2.53...v2.2.54) (2022-08-11)
 
 

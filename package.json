@@ -60,7 +60,7 @@
     "d3-force": "3.0.0",
     "d3-selection": "3.0.0",
     "d3-zoom": "3.0.0",
-    "ts-deepmerge": "2.0.7",
+    "ts-deepmerge": "3.0.0",
     "vecti": "2.0.28"
   },
   "devDependencies": {

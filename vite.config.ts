@@ -20,14 +20,7 @@ export default defineConfig({
       fileName: (format) => `d3-graph-controller.${format}.js`,
     },
     rollupOptions: {
-      external: [
-        'd3-drag',
-        'd3-force',
-        'd3-selection',
-        'd3-zoom',
-        'ts-deepmerge',
-        'vecti',
-      ],
+      external: ['d3-drag', 'd3-force', 'd3-selection', 'd3-zoom', 'vecti'],
       output: {
         globals: {
           'd3-drag': 'd3',

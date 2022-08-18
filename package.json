@@ -55,13 +55,13 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@yeger/debounce": "1.0.27",
+    "@yeger/debounce": "1.0.30",
     "d3-drag": "3.0.0",
     "d3-force": "3.0.0",
     "d3-selection": "3.0.0",
     "d3-zoom": "3.0.0",
     "ts-deepmerge": "3.0.0",
-    "vecti": "2.0.28"
+    "vecti": "2.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
@@ -70,11 +70,11 @@
     "@types/d3-force": "3.0.3",
     "@types/d3-selection": "3.0.3",
     "@types/d3-zoom": "3.0.1",
-    "@types/node": "16.11.48",
+    "@types/node": "16.11.49",
     "@types/resize-observer-browser": "0.1.7",
     "@vitejs/plugin-vue": "3.0.3",
     "@vitest/coverage-c8": "0.22.1",
-    "@vitest/ui": "0.21.1",
+    "@vitest/ui": "0.22.1",
     "@yeger/eslint-config": "1.4.36",
     "c8": "7.12.0",
     "d3-graph-controller": "link:.",
@@ -85,12 +85,12 @@
     "lint-staged": "13.0.3",
     "rimraf": "3.0.2",
     "typescript": "4.7.4",
-    "unocss": "0.45.6",
+    "unocss": "0.45.8",
     "unplugin-vue-components": "0.22.4",
-    "vite": "3.0.7",
+    "vite": "3.0.8",
     "vite-plugin-dts": "1.4.1",
-    "vitepress": "1.0.0-alpha.4",
-    "vitest": "0.21.1",
+    "vitepress": "1.0.0-alpha.8",
+    "vitest": "0.22.1",
     "vue": "3.2.37"
   },
   "lint-staged": {

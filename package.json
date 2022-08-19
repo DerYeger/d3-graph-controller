@@ -55,12 +55,12 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@yeger/debounce": "1.0.30",
+    "@yeger/debounce": "1.0.31",
     "d3-drag": "3.0.0",
     "d3-force": "3.0.0",
     "d3-selection": "3.0.0",
     "d3-zoom": "3.0.0",
-    "vecti": "2.1.0"
+    "vecti": "2.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",

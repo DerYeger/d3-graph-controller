@@ -1158,10 +1158,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.30":
-  version "1.0.30"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.30.tgz#52ebfb328470c67441738be1c872b6d7ac79bba3"
-  integrity sha512-T41uEON1LqM2a9xwNbM6+pRYmZUslB9GPEzToNV8BTPhioiHn9vItJPzb3AwwajEV1obXOnrEC+H5aBxruCesg==
+"@yeger/debounce@1.0.31":
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.31.tgz#a2d0c35163740ba17f3e9ac02140e480415196ca"
+  integrity sha512-sOSSMYjkQFrxi0/n449LB1OJa3u/TbG7NpRaLtrCCIc1sw0aExrdeVnAGe8Xiw8IauwXcq5ygSQgnwbWBwYgVw==
 
 "@yeger/eslint-config@1.4.36":
   version "1.4.36"
@@ -6062,10 +6062,10 @@ validator@^13.7.0:
   resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
   integrity sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==
 
-vecti@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.1.0.tgz#412338b86dced407406d7467d590570fce408b7b"
-  integrity sha512-RpLQ3Aj/qVfOV6j1yw5nJVUz5InDIeg/x/xUbyKVQeb6ivCaDmI6PTWRe0vAksxtS80ylUEJYjkb+k1OwgEW5g==
+vecti@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.1.1.tgz#f28c2b7a9974d46735747487b9938e57f599404b"
+  integrity sha512-EYV6XZZPPaBjvYu8tp+1tcAoXfdnv2TkrhiSWuFzzFEg1cLbcGHcS6X3yqsCwIKy/baoX2pZwwva7iMC3TRAaA==
 
 vfile-location@^2.0.0, vfile-location@^2.0.1:
   version "2.0.6"

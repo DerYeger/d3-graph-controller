@@ -55,12 +55,12 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@yeger/debounce": "1.0.31",
+    "@yeger/debounce": "1.0.32",
     "d3-drag": "3.0.0",
     "d3-force": "3.0.0",
     "d3-selection": "3.0.0",
     "d3-zoom": "3.0.0",
-    "vecti": "2.1.1"
+    "vecti": "2.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
@@ -69,7 +69,7 @@
     "@types/d3-force": "3.0.3",
     "@types/d3-selection": "3.0.3",
     "@types/d3-zoom": "3.0.1",
-    "@types/node": "16.11.49",
+    "@types/node": "16.11.51",
     "@types/resize-observer-browser": "0.1.7",
     "@vitejs/plugin-vue": "3.0.3",
     "@vitest/coverage-c8": "0.22.1",
@@ -87,7 +87,7 @@
     "typescript": "4.7.4",
     "unocss": "0.45.8",
     "unplugin-vue-components": "0.22.4",
-    "vite": "3.0.8",
+    "vite": "3.0.9",
     "vite-plugin-dts": "1.4.1",
     "vitepress": "1.0.0-alpha.8",
     "vitest": "0.22.1",

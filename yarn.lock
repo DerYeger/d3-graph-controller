@@ -759,10 +759,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.24.tgz#c37ac69cb2948afb4cef95f424fa0037971a9a5c"
   integrity sha512-yxDeaQIAJlMav7fH5AQqPH1u8YIuhYJXYBzxaQ4PifsU0GDO38MSdmEDeRlIxrKbC6NbEaaEHDanWb+y30U8SQ==
 
-"@types/node@16.11.49":
-  version "16.11.49"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.49.tgz#560b1ea774b61e19a89c3fc72d2dcaa3863f38b2"
-  integrity sha512-Abq9fBviLV93OiXMu+f6r0elxCzRwc0RC5f99cU892uBITL44pTvgvEqlRlPRi8EGcO1z7Cp8A4d0s/p3J/+Nw==
+"@types/node@16.11.51":
+  version "16.11.51"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.51.tgz#bb2114485e6fc1460f630702fb992007d120e928"
+  integrity sha512-h6p1A77pHBDdOcI9y6Wfh9iRGa8lMUZMk2ebHJTNTtRwgbQzgemZow6PW7+Xs7Z0r0IQFY1+iRlcNAkRrf53nA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1158,10 +1158,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.31":
-  version "1.0.31"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.31.tgz#a2d0c35163740ba17f3e9ac02140e480415196ca"
-  integrity sha512-sOSSMYjkQFrxi0/n449LB1OJa3u/TbG7NpRaLtrCCIc1sw0aExrdeVnAGe8Xiw8IauwXcq5ygSQgnwbWBwYgVw==
+"@yeger/debounce@1.0.32":
+  version "1.0.32"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.32.tgz#4869983f0365bae084656822ecc94f56b21612a3"
+  integrity sha512-STDPLk3Puzx4cflFYs/ra4NZcejLmHKA2ePkMjuGNMuVzddLvBRO7Dc2+AwM5xvc00vTA9sXEo7LW8oY9FhFew==
 
 "@yeger/eslint-config@1.4.36":
   version "1.4.36"
@@ -6062,10 +6062,10 @@ validator@^13.7.0:
   resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
   integrity sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==
 
-vecti@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.1.1.tgz#f28c2b7a9974d46735747487b9938e57f599404b"
-  integrity sha512-EYV6XZZPPaBjvYu8tp+1tcAoXfdnv2TkrhiSWuFzzFEg1cLbcGHcS6X3yqsCwIKy/baoX2pZwwva7iMC3TRAaA==
+vecti@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.1.2.tgz#0e519848009947a32834a3c7f55bf05c07ad6b9d"
+  integrity sha512-C+4qlO2pO0bxbh4PpQR4mOT+9m0cv9WipV1RtJs1qlHdmOjRYEWnEMN6fWFxebbVuzRKkLKPykvRsxUQRU51Tw==
 
 vfile-location@^2.0.0, vfile-location@^2.0.1:
   version "2.0.6"
@@ -6103,10 +6103,10 @@ vite-plugin-dts@1.4.1:
     fs-extra "^10.0.1"
     ts-morph "^14.0.0"
 
-vite@3.0.8, vite@^3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.8.tgz#aa095ad8e3e5da46d9ec7e878f262678965d6531"
-  integrity sha512-AOZ4eN7mrkJiOLuw8IA7piS4IdOQyQCA81GxGsAQvAZzMRi9ZwGB3TOaYsj4uLAWK46T5L4AfQ6InNGlxX30IQ==
+vite@3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.9.tgz#45fac22c2a5290a970f23d66c1aef56a04be8a30"
+  integrity sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==
   dependencies:
     esbuild "^0.14.47"
     postcss "^8.4.16"
@@ -6119,6 +6119,18 @@ vite@3.0.8, vite@^3.0.8:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.7.tgz#f1e379857e9c5d652126f8b20d371e1365eb700f"
   integrity sha512-dILhvKba1mbP1wCezVQx/qhEK7/+jVn9ciadEcyKMMhZpsuAi/eWZfJRMkmYlkSFG7Qq9NvJbgFq4XOBxugJsA==
+  dependencies:
+    esbuild "^0.14.47"
+    postcss "^8.4.16"
+    resolve "^1.22.1"
+    rollup ">=2.75.6 <2.77.0 || ~2.77.0"
+  optionalDependencies:
+    fsevents "~2.3.2"
+
+vite@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.8.tgz#aa095ad8e3e5da46d9ec7e878f262678965d6531"
+  integrity sha512-AOZ4eN7mrkJiOLuw8IA7piS4IdOQyQCA81GxGsAQvAZzMRi9ZwGB3TOaYsj4uLAWK46T5L4AfQ6InNGlxX30IQ==
   dependencies:
     esbuild "^0.14.47"
     postcss "^8.4.16"

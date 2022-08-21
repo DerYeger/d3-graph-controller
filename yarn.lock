@@ -6062,10 +6062,10 @@ validator@^13.7.0:
   resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
   integrity sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==
 
-vecti@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.1.2.tgz#0e519848009947a32834a3c7f55bf05c07ad6b9d"
-  integrity sha512-C+4qlO2pO0bxbh4PpQR4mOT+9m0cv9WipV1RtJs1qlHdmOjRYEWnEMN6fWFxebbVuzRKkLKPykvRsxUQRU51Tw==
+vecti@2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/vecti/-/vecti-2.1.3.tgz#9f460a4da19f5da599f12606318125f8753c0a47"
+  integrity sha512-i2AcZAUeMr1cJAlR9gbBRe76bi0Wrsg1Cv39Ynzv2u8Wgj0mUuJ+dbrZTpdmtd94GrWU/95Ci4Wr1NbAU9UcHg==
 
 vfile-location@^2.0.0, vfile-location@^2.0.1:
   version "2.0.6"
@@ -6139,10 +6139,10 @@ vite@^3.0.8:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@1.0.0-alpha.8:
-  version "1.0.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.0.0-alpha.8.tgz#b6a3b503c2ea3ed0a44a16539849c02fa996c090"
-  integrity sha512-kTRN5DCagvMqr9OjylSV9/waGg0IHrxL0hBVuJoz7ykleZq2qR02n5CaiFq5QrSB/VRBGqiVsFQzet9vJsXS8g==
+vitepress@1.0.0-alpha.9:
+  version "1.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.0.0-alpha.9.tgz#3426c8c6da2a63a811356f27e42fb9d521038aeb"
+  integrity sha512-+VxgjflIcssbuyUBRYjZRpQ8w25v6XnIbXFmm9qwLVaqZdC0rN6qViEp7oRwA3HUlrGxj7GEzqQjW7xj4+E83w==
   dependencies:
     "@docsearch/css" "^3.2.1"
     "@docsearch/js" "^3.2.1"

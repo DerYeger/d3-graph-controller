@@ -759,10 +759,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.24.tgz#c37ac69cb2948afb4cef95f424fa0037971a9a5c"
   integrity sha512-yxDeaQIAJlMav7fH5AQqPH1u8YIuhYJXYBzxaQ4PifsU0GDO38MSdmEDeRlIxrKbC6NbEaaEHDanWb+y30U8SQ==
 
-"@types/node@16.11.53":
-  version "16.11.53"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.53.tgz#0826570a96f46cdba185c7129f11628bd6d3ab11"
-  integrity sha512-3yJerjVV8GlGSWCjEPal2cDymbQEE/1bhUr1NdW5apDPZo6EjBaqHxR7AC4wKmZ24Hzqcz+tgJyAGe9qcGHw7w==
+"@types/node@16.11.55":
+  version "16.11.55"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.55.tgz#4b1e4fa4238b083cf0d0b4ad9077629123950caa"
+  integrity sha512-ZZepNkqPNCBy6PlCjeOY0gI1q91v7l5MUhVc5RMAUV39OxRO8lF8fqGnhY2j8FWz8fxcN8HvAUWoccWpOzl/Ug==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1167,10 +1167,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.32":
-  version "1.0.32"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.32.tgz#4869983f0365bae084656822ecc94f56b21612a3"
-  integrity sha512-STDPLk3Puzx4cflFYs/ra4NZcejLmHKA2ePkMjuGNMuVzddLvBRO7Dc2+AwM5xvc00vTA9sXEo7LW8oY9FhFew==
+"@yeger/debounce@1.0.33":
+  version "1.0.33"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.33.tgz#e47ac653d6ca7770cf14c1e5d5ff3303c96a2977"
+  integrity sha512-X7SuAHY2FZR4iTxWSqVG/0kTu1I0EdIcknp5qkQXSvnMNqg7Pd4/E02sKOsuI6ddyzasHkvpQbhooiF78rN2Tg==
 
 "@yeger/eslint-config@1.4.36":
   version "1.4.36"

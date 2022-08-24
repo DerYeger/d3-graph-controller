@@ -1,3 +1,10 @@
+## [2.3.8](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.7...v2.3.8) (2022-08-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v16.11.56 ([32a0dee](https://github.com/DerYeger/d3-graph-controller/commit/32a0dee1e0eea673d6e8ee5888f3b3e62d381f95))
+
 ## [2.3.7](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.6...v2.3.7) (2022-08-24)
 
 

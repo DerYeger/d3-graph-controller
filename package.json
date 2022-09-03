@@ -91,7 +91,7 @@
     "vite-plugin-dts": "1.4.1",
     "vitepress": "1.0.0-alpha.13",
     "vitest": "0.22.1",
-    "vue": "3.2.37"
+    "vue": "3.2.38"
   },
   "lint-staged": {
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"

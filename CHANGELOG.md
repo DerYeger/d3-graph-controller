@@ -1,3 +1,10 @@
+## [2.3.13](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.12...v2.3.13) (2022-09-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue to v3.2.39 ([41f1342](https://github.com/DerYeger/d3-graph-controller/commit/41f134227209b8d53ab3716aa39c1ddfb55147d1))
+
 ## [2.3.12](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.11...v2.3.12) (2022-09-10)
 
 

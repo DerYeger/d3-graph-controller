@@ -1,3 +1,10 @@
+## [2.3.14](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.13...v2.3.14) (2022-09-17)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo ([40a8299](https://github.com/DerYeger/d3-graph-controller/commit/40a8299cf8241994bca8c4ee15c13c79d7c19b20))
+
 ## [2.3.13](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.12...v2.3.13) (2022-09-10)
 
 

@@ -1,3 +1,10 @@
+## [2.3.16](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.15...v2.3.16) (2022-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update actions/stale action to v6 ([bddbf65](https://github.com/DerYeger/d3-graph-controller/commit/bddbf650d22d0a4fd07b1ff8935246db47450571))
+
 ## [2.3.15](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.14...v2.3.15) (2022-09-17)
 
 

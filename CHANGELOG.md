@@ -1,3 +1,10 @@
+## [2.3.24](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.23...v2.3.24) (2022-11-12)
+
+
+### Bug Fixes
+
+* **deps:** update vitest monorepo to v0.25.1 ([f3e2ed8](https://github.com/DerYeger/d3-graph-controller/commit/f3e2ed8ce7040ef7fee51724fbe40899f56e6835))
+
 ## [2.3.23](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.22...v2.3.23) (2022-11-12)
 
 

@@ -1,3 +1,10 @@
+## [2.3.28](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.27...v2.3.28) (2022-11-26)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to v17.3.0 ([9e79ce5](https://github.com/DerYeger/d3-graph-controller/commit/9e79ce5c1179d826d1e9b5941d35c93b8d3682f0))
+
 ## [2.3.27](https://github.com/DerYeger/d3-graph-controller/compare/v2.3.26...v2.3.27) (2022-11-26)
 
 
